@@ -1,0 +1,5 @@
+.teams
+  .title= link_to "Equipo de #{@team.country} (#{@team.name})" , @team
+  .body= @team.bio
+      
+= link_to "Ver todos los equipos", teams_path

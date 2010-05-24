@@ -1,0 +1,26 @@
+- @title = "Jugadores"
+
+.block
+  .content
+    %table.table.matches
+      %thead
+        %tr
+          %th.first Jugador 
+          %th Nacido el
+          %th.last="&nbsp;"
+      %tbody
+        -@players.each do |player|
+          %tr{:class=>cycle("even","odd")}
+            %td=link_to player.name, player
+            %td.last=l(player.born_at) if player.born_at
+            
+- content_for :sidebar do
+
+  #ranking.block
+    %h2 Los que siempre aciertan
+
+    %h2 Los más rankeados
+
+  #featured_posts.block
+    %h2 Destacadas
+    .content_box Destacada

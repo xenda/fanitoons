@@ -1,0 +1,645 @@
+/* @override 
+	http://localhost:3000/stylesheets/style.css?1273449244
+	http://localhost:3000/stylesheets/style.css?1273874307
+	http://localhost:3000/stylesheets/style.css?1273874954
+	http://localhost:3000/stylesheets/style.css?1273875273
+	http://localhost:3000/stylesheets/style.css?1273875551
+	http://localhost:3000/stylesheets/style.css?1273875743
+	http://localhost:3000/stylesheets/style.css?1273875888
+	http://localhost:3000/stylesheets/style.css?1273875955
+	http://localhost:3000/stylesheets/style.css?1273876396
+	http://localhost:3000/stylesheets/style.css?1273876773
+	http://fanitoons.heroku.com/stylesheets/style.css?1273868934
+	http://localhost:3000/stylesheets/style.css?1273878415
+	http://localhost:3000/stylesheets/style.css?1274038063
+	http://localhost:3000/stylesheets/style.css?1274039869
+	http://localhost:3000/stylesheets/style.css?1274048238
+	http://localhost:3000/stylesheets/style.css?1274048728
+	http://localhost:3000/stylesheets/style.css?1274048796
+	http://localhost:3000/stylesheets/style.css?1274048914
+	http://localhost:3000/stylesheets/style.css?1274049878
+	http://localhost:3000/stylesheets/style.css?1274050024
+	http://localhost:3000/stylesheets/style.css?1274050114
+	http://localhost:3000/stylesheets/style.css?1274050421
+	http://localhost:3002/stylesheets/style.css?1274050722
+	http://localhost:3002/stylesheets/style.css?1274063039
+	http://localhost:3000/stylesheets/style.css?1274069600
+	http://localhost:3000/stylesheets/style.css?1274117477
+	http://localhost:3000/stylesheets/style.css?1274117572
+	http://localhost:3000/stylesheets/style.css?1274118089
+	http://localhost:3000/stylesheets/style.css?1274648819
+	http://localhost:3000/stylesheets/style.css?1274650593
+	http://localhost:3000/stylesheets/style.css?1274650934
+	http://localhost:3000/stylesheets/style.css?1274651382
+	http://localhost:3000/stylesheets/style.css?1274652786
+	http://localhost:3000/stylesheets/style.css?1274654593
+*/
+
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  background-color: #ffffff; }
+  body a {
+    color: #336699; }
+  body h2 {
+    padding-bottom: 12px;
+    font-weight: bold; }
+  body h3 {
+    padding-bottom: 10px; }
+
+  body pre {
+    display: block;
+    background-color: #F8F8FF;
+    border: 1px solid #DEDEDE;
+    color: #444444;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    padding: 0.5em; }
+  body ul.bulleted {
+    margin-left: 20px;
+    margin-bottom: 10px; }
+    body ul.bulleted li {
+      list-style-type: square; }
+      body ul.bulleted li span {
+        font-weight: bold; }
+
+.flash .message {
+	clear: both;
+	text-align: center;
+	padding: 5px 20px;
+	background-color: #beffab;
+	text-transform: lowercase;
+	color: #617560;
+	border: 1px solid #88c94f;	
+	font-size: 1.2em;
+	margin-bottom: 1em;
+
+}
+
+#container {
+  width: 1010px;
+  margin: 20px auto;
+  margin-top: 0px;
+  overflow: hidden; }
+
+#header {
+  background-color: #ffffff;
+  padding: 30px 10px 20px 10px;
+  overflow: hidden; }
+  
+  div#header_content {
+	overflow: hidden;
+	width: 1010px;
+	margin: 0px auto;
+	line-height: 1.6em;
+}
+
+
+  #header h1 a{
+    float: left;
+    text-decoration: none;
+    color: #00c6a1;
+    font-size: 5em;
+    line-height: 1.2em;
+    font-weight: bold; 
+    }
+    
+  #header ul.menu {
+
+    margin-top: 30px;
+    float: right;
+    padding-top: 5px;
+    padding-left: 10px;
+	background-color: #00c6a1;
+	padding-right: 10px;
+	text-align: center;
+}
+    #header ul.menu li {
+      float: left;
+      padding-bottom: 5px;
+	text-align: center;
+}
+      #header ul.menu li a {
+        font-size: 1.1em;
+        color: white;
+        display: block;
+        text-decoration: none;
+	font-weight: bold;
+	text-align: right;
+	text-transform: lowercase;
+	margin-right: 10px;
+}
+
+#header_content ul.menu li a.last {
+	margin-right: 0px;
+}
+        #header ul.menu li a:hover {
+          text-decoration: underline; }
+
+div#logged_as {
+	clear: both;
+	text-align: right;
+	float: right;
+	padding: 3px 20px;
+	background-color: rgba(157,255,96,0.33);
+	text-transform: lowercase;
+	color: #007917;
+	border: 1px solid #88c94f;	
+	font-size: .9em;
+}
+
+div#logged_as a {
+	color: #787a7a;
+	margin-left: 10px
+}
+
+#main div.block div.content table.table.matches {
+	padding: 0px;
+	border-collapse:collapse;
+}
+
+#main div.block div.content table.table.matches thead tr {
+	background-color: #00c6a1;
+	color: white;
+	font-size: 12px;
+}
+
+#main div.block div.content table.table.matches thead tr th{
+	padding: 5px;
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	
+}
+
+#main div.block div.content table.table.matches tbody td{
+	text-align: center;
+	font-size: 12px;
+
+}
+
+#logged_as img {
+	margin-left: 10px;
+	padding: 2px;
+	background: #cfd2d2;
+	border: 1px solid #949494;
+}
+
+#main {
+  float: left;
+  width: 600px;
+
+
+ }
+
+div#welcome {
+	margin-bottom: 1em;
+	overflow: auto;
+	padding-bottom: 20px;
+}
+
+#welcome h3 {
+	color: #71bd45;
+	margin-top: ;
+	font: 1.3em Arial, Helvetica, Geneva, sans-serif;
+}
+
+#welcome p {
+	color: #767676;
+	line-height: 1.5em;
+}
+
+#welcome div.small {
+	clear: both;
+	margin-left: 27em;
+	margin-top: .8em;
+	font-size: .8em;
+	color: #5f6258;
+}
+
+#welcome div.small a {
+	font-weight: bold;
+	color: #2e2e2e;
+}
+
+#welcome div.small a:hover {
+	color: black;
+}
+
+#welcome div.small a:active {
+	color: green;
+}
+
+div#register {
+	margin-top: 20px;
+	width: 370px;
+	overflow: hidden;
+	clear: both;
+	display: block;
+	margin-left: 15em;
+
+}
+
+a#register_new_user {
+	padding: 10px !important;
+	display: block;
+	float: left;
+	background-color: #9dff60;
+	margin-right: 10px;
+	text-transform: lowercase;
+	color: #007917;
+	border: 1px solid #88c94f;
+}
+
+a#register_facebook {
+	padding: 10px !important;
+	float: left;
+	color: white;
+	background-color: #2657a4;
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+	font-weight: bold;
+}
+
+div#new_account a#register_facebook {
+	margin-left: 15px;
+}
+
+div#register a{
+	padding: 20px;
+text-decoration: none;
+}
+
+div#welcome img {
+	display: block;
+	background-color: #9dff60;
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin-right: 2em;
+}
+
+div.block {
+	margin-bottom: 2em;
+}
+  #main h2 {
+    font-size: 1.5em;
+	color: #000;
+	margin-bottom: 0.5em;
+}
+#main_content #welcome h2 {
+    font-size: 2.1em;
+	color: #787a7a;
+}
+  #main .post {
+    margin-bottom: 20px; }
+    #main .post p {
+      padding-bottom: 10px; 
+      line-height: 1.6em;
+      margin-bottom: 1em;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	color: #7f7f7f;
+}
+
+#posts div.post div.date {
+	color: #dda81e;
+}
+    #main .post .title {
+      font-size: 2em;
+      color: #752A26; }
+      #main .post .title a {
+        color: #69685e;
+        text-decoration: none;
+	font-weight: bold;
+}
+        #main .post .title a:hover {
+          text-decoration: underline; }
+    #main .post .date {
+      font-size: 1.1em;
+      color: #999999;
+      display: block;
+      margin-bottom: 15px;
+      margin-top: 2px; }
+    #main .post .body {
+      padding-bottom: 10px; }
+    #main .post .details {
+      border-top: 1px solid #CCCCCC;
+      margin-bottom: 0.25em;
+      padding: 5px 0;
+      overflow: hidden; }
+      #main .post .details .author {
+        float: left;
+        padding-right: 5px;
+        border-right: 1px solid #CCCCCC; }
+  #main #show .author {
+    border-right: none; }
+
+#sidebar {
+  padding: 20px;
+  margin-left: 20px;
+  float: right;
+  height: 650px;
+  width: 320px;
+  
+ }
+
+#sidebar h2 {
+	padding: 10px;
+	background-color: #00c6a1;
+	color: white;
+	margin-bottom: 10px;
+}
+
+#sidebar form {
+	margin-bottom: 15px;
+	padding: 10px;
+	background-color: #eee;
+	border: 1px solid #c3c2c3;
+	overflow: auto;
+}
+
+#sidebar form label {
+	font: bold 1.5em Arial, Helvetica, Geneva, sans-serif;
+	margin: 0px;
+	color: #858884;
+}
+
+#sidebar form input{
+	clear: both;
+	display: block;
+	text-align: right;
+}
+
+#sidebar input#search_button {
+	float: right;
+}
+
+input#search_input_field {
+	padding: 5px 10px;
+	width: 90%;
+	margin-bottom: 1em;
+	border-style: solid;
+	background-color: #fff;
+	border-color: #cdd0d0;
+	color: #585858;
+	letter-spacing: 0;
+	font-size: 1.1em;	
+}
+
+
+
+div.content_box {
+	padding: 10px;
+	border: 1px solid rgba(0,198,161,0.24);
+	margin-bottom: 10px;
+	margin-top: 10px;
+	overflow: auto;
+}
+
+.content.box {
+	background-color: #eaeaea;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding: 20px;
+	background-color: #caece7;	
+}
+
+#new_account div.content_box form.form div.content.box {
+	margin-right: 0px;	
+}
+
+
+label.label {
+	display: block;
+	font-size: 2em;
+}
+
+input.text_field,
+input.password_field {
+	padding: 10px;
+	width: 300px;
+	margin-bottom: 1em;
+	margin-top: 1em;
+	border-style: solid;
+	background-color: #fff;
+	border-color: #00c6a1;
+	color: #585858;
+	letter-spacing: 0;
+	font-size: 1.1em;
+}
+
+
+
+
+div.match.block {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	width: 254px;
+	padding: 15px;
+	background-color: #caece7;
+}
+
+#ranking div.content_box div.match.block.last {
+	margin-right: 0px;
+}
+
+div.local,
+div.visitor {
+	float: left;
+	width: 100px;
+	text-align: center;
+	margin-bottom: 10px;
+	display: block;
+}
+
+#ranking div.content_box div.match.block div.match_players {
+	overflow: auto;
+}
+
+#ranking div.content_box div.match.block div.match_players div img {
+	margin-top: 10px;	
+}
+
+#ranking div.content_box div.match.block div.match_players strong.versus {
+	float: left;
+	margin-left: 10px;
+	margin-top: 20px;
+	margin-right: 10px;
+	font-weight: bolder
+}
+
+#ranking div.content_box div.match.block a.small {
+clear: both;
+	display: block;	
+}
+
+#ranking div.content_box div.match.block div.date {
+	font-weight: bold;
+	color: #4e4f4a;
+	margin-bottom: 15px;
+}
+  #sidebar p {
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 12px; }
+
+#about h2 {
+  font-family: "Georgia,Times New Roman,serif";
+  font-size: 2em;
+  color: #752A26; }
+#about h3 {
+  font-family: "Georgia,Times New Roman,serif";
+  font-size: 1.5em;
+  color: #752A26;
+  padding-bottom: 6px; }
+#about p {
+  padding-bottom: 12px; }
+
+#footer {
+  padding: 30px 10px 10px 10px; }
+
+#edit_account div.content_box form.form div.group span.description {
+	font-size: 0.8em;
+	display: block;
+	color: #626262;
+	margin: 2em 0px;
+	margin-top: 1em;
+}
+
+#edit_account input.text_field {
+	margin-bottom: 2em;
+}
+
+#main div.block div.content table.table.matches tbody tr td {
+	padding:15px;
+	color: #515151;
+}
+
+#main div.block div.content table.table.matches tbody tr.odd {
+	background-color: #dfffb5;
+}
+
+#main div.player div.title a {
+	margin-bottom: .5em;
+	display: block;
+	font: bold 2.5em Arial, Helvetica, Geneva, sans-serif;
+	color: #6e7165;
+}
+
+#main div.player div.body {
+	margin-bottom: 1em;
+	color: #727272;
+	line-height: 1.4em;
+}
+
+
+
+/* @group Predictions */
+
+div.prediction {
+	border-top: 25px solid #00c6a1;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+ div#main_content div.prediction h3 {
+	font-size: 2em;
+	padding-bottom: 0px;
+}
+
+ div#main_content div.prediction h4 {
+	color: #848484;
+	margin-bottom: 1em;
+}
+
+div.match_versus {
+	overflow: hidden;
+}
+
+
+div.team {
+	float: left;
+	width: 120px;
+	padding: 20px 10px;
+	text-align: center;
+	cursor: pointer;
+	margin-bottom: 20px;
+	margin-left: 140px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+
+	}
+
+div.team.last {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+div.team:hover,
+div.team.active
+ {
+	background-color: #b5e7a5;
+}	
+
+div.team:active {
+	background-color: #89dc90;
+	
+}
+
+div.team.selected {
+	background-color: #c5e790;
+}
+
+div.team a.small {
+	display: block;
+	padding: 5px;
+	width: 70px;
+	margin: 0px auto;
+	margin-top: 10px;
+	display:none;
+}
+
+div.prediction div.prediction_content div.match_versus span {
+	float: left;
+	width: 50px;
+	height: 20px;
+	text-align: center;
+	padding-top: 50px;	
+	font-weight: bold;
+}
+
+div.team label.team_name {
+	display: block;
+	text-align: center;
+	font-weight:bold;
+	margin-bottom: 5px;
+}
+
+
+div.goals.hidden {
+	margin-top: 10px;	
+}
+
+div.goals.hidden label {
+	font-weight: bolder;
+}
+
+div.goals.hidden input {
+	padding: 0px;
+}
+
+div.prediction div.winner {
+	text-align: center;
+}
+
+div.prediction div.prediction_content div.group.navform.wat-cf {
+	text-align: center;
+	margin-top: 10px;
+	padding: 10px 0px;
+	background-color: #e4e4e4}
+
+
+/* @end */

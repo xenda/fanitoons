@@ -1,0 +1,35 @@
+!!! Strict
+%html
+  %head
+    %title= [@title, "Patatoon"].compact.join(" | ")
+    = stylesheet_link_tag 'reset', 'style'
+    = yield :include
+        
+  %body
+    #header
+      #header_content
+        %h1= link_to "Patatoon", root_path
+        %ul.menu
+          %li= link_to 'Inicio', root_path
+          %li= link_to 'Campeonatos', matches_path        
+          %li= link_to 'Jugadores', players_path
+          / %li= link_to 'Predicciones', "#" #url_for(:predictions, :index)        
+          %li= link_to 'Acerca de...', "#", :class=>"last" # url_for(:posts, :about)
+        - if account_signed_in?
+          #logged_as
+            = "Iniciada sesión como"
+            = image_tag current_account.picture.url(:thumb), :style=>"float:right;" if current_account.picture
+            = link_to current_account.email, edit_registration_path(current_account)
+            = link_to "salir", destroy_account_session_path
+    #container
+      #main= yield
+      #sidebar
+        - form_tag posts_path, :method => 'get'do
+          = label_tag "Buscar"
+          = text_field_tag 'query', params[:query], :id=>"search_input_field"
+          = submit_tag 'Search', :id=>"search_button"
+        = yield :sidebar
+
+    #footer
+      Copyright (c)
+    = javascript_include_tag 'jquery', 'application'

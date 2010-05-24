@@ -1,0 +1,31 @@
+- @title = "FaniToons ::  Creando tu cuenta"
+
+#banner 
+
+#main_content
+
+  #welcome
+    %h2 Bienvenidos a la nueva comunidad para los amantes del fútbol
+   
+  #new_account
+    %h2 Registrándote en FaniToons es fácil
+    
+    %h3 Sólo introduce tu correo electrónico y una contraseña:
+    .content_box
+    
+      -form_for :account, new_account_registration_path, :class => :form do |f|
+        = render :partial=>'registrations/form', :locals => { :f => f }
+
+
+    = link_to "o entra con Facebook", fb_connect_path, :id=>"register_facebook"
+
+- content_for :sidebar do
+
+  #ranking.block
+    %h2 Los que siempre aciertan
+
+    %h2 Los más rankeados
+
+  #featured_posts.block
+    %h2 Destacadas
+    .content_box Destacada

@@ -1,0 +1,16 @@
+- if home_match
+  - last = cycle(" last", "") # ? ? " last" : ""
+  %div{:class =>"match block#{last}" }
+    .date= time_ago_in_words(home_match.played_at)
+    .match_players
+      .local
+        %strong= home_match.local.name
+        %br
+        = image_tag(random_flag)
+      %strong.versus vs
+      .visitor
+        %strong= home_match.visitor.name  
+        %br
+        = image_tag(random_flag)
+      
+    = link_to "deja tu predicción", match_prediction(home_match), :class=>"small"

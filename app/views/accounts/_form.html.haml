@@ -1,0 +1,19 @@
+.content.box
+  .group
+    =f.label "Correo Electrónico", :class=>"label"
+    =f.error_message_on :email
+    =f.text_field :email, :class => :text_field
+
+  .group
+    =f.label "Contraseña", :class=>"label"
+    =f.error_message_on :password
+    =f.password_field :password, :class => :password_field
+
+  .group
+    =f.label "Verifica tu contraseña", :class=>"label"
+    =f.error_message_on :password_confirmation
+    =f.password_field :password_confirmation, :class => :password_field
+
+  .group.navform.wat-cf
+    =f.submit "Registrarse", :class => :button
+    =f.submit "Cancelar", :onclick => "window.location='#{url(:home, :index)}';return false", :class => :button

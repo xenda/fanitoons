@@ -1,0 +1,5 @@
+- if post
+  .post
+    .title= link_to post.title, post
+    .date= "hace " + time_ago_in_words(post.created_at || Time.now)
+    .body= truncate(simple_format(post.content),:length=>400)

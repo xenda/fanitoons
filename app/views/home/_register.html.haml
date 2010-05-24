@@ -1,0 +1,14 @@
+%img
+%h3 Regístrate para participar, dejar tus pronósticos, crear tu avatar y más
+%p 
+  Puedes ganar puntos por acertar en tus pronósticos, recibir comentarios, invitar
+  a tus amigos y pasarla bien
+#register
+  = link_to "Crea tu cuenta fanitoon", new_registration_path("account"), {:id=>"register_new_user"}
+  
+  = link_to "o entra con Facebook", fb_connect_path, {:id=>"register_facebook"}
+  
+  
+.small
+  ¿ya tienes cuenta? 
+  = link_to "ingresa con ella", new_account_session_path, {:id=>"new_session", :class=>"small"}

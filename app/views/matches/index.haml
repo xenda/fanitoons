@@ -1,0 +1,37 @@
+.block
+  .content
+    %table.table.matches
+      %thead
+        %tr
+          %th.first Partido 
+          %th Jugado en
+          %th Lugar
+          %th Estadio
+          %th Equipo A
+          %th Equipo B
+          %th Goles A
+          %th Goles B
+          %th.last="&nbsp;"
+      %tbody
+        -@matches.each do |match|
+          %tr{:class=>cycle("even","odd")}
+            %td=match.number
+            %td=l(match.played_at)
+            %td=match.place
+            %td=match.stadium.name if match.stadium
+            %td=match.local.name if match.local
+            %td=match.visitor.name if match.visitor
+            %td=match.first_team_goals || 0
+            %td=match.second_team_goals || 0
+            %td.last
+            
+- content_for :sidebar do
+
+  #ranking.block
+    %h2 Los que siempre aciertan
+
+    %h2 Los más rankeados
+
+  #featured_posts.block
+    %h2 Destacadas
+    .content_box Destacada

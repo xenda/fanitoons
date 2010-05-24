@@ -1,0 +1,12 @@
+- @title = @post.title
+#show
+  #posts.block
+    .content_box
+      .post
+        .title= link_to @post.title, @post
+        .date= "hace " + time_ago_in_words(@post.created_at || Time.now)
+        .body= simple_format(@post.content)
+    
+%p= link_to 'Ver todas las entradas', posts_path
+
+

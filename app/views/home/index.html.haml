@@ -1,0 +1,34 @@
+- @title = "FaniToons ::  tu pasión en la red"
+
+#banner 
+= display_flashes
+
+#main_content
+
+  #welcome
+    %h2 Bienvenidos a la nueva comunidad para los amantes del fútbol
+    
+    - if account_signed_in?
+      = render "home/whats_new"
+    - else
+      = render "home/register"
+      
+  #ranking.block
+    %h2 Predicciones
+    .content_box= render "matches/home_match", :collection => @matches
+    
+    
+  #posts.block
+    %h2 Noticias
+    .content_box= render 'posts/post', :collection => @posts
+
+- content_for :sidebar do
+
+  #ranking.block
+    %h2 Los que siempre aciertan
+
+    %h2 Los más rankeados
+
+  #featured_posts.block
+    %h2 Destacadas
+    .content_box Destacada

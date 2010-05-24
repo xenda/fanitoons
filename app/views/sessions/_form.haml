@@ -1,0 +1,22 @@
+.content.login.box
+  = display_flashes
+  
+  - form_for resource_name, resource, :url => session_path(resource_name), :class=>"form_login" do |f| 
+    .group.wat-cf
+      .left
+        %label.label.right Tu email
+      .right=text_field_tag :email, :value => params[:email], :class => :text_field
+    .group.wat-cf
+      .left
+        %label.label.right Contraseña
+      .right=password_field_tag :password, :value => params[:password], :class => :text_field
+    
+    .group.wat-ct  
+      - if devise_mapping.rememberable? 
+        %p 
+          = f.check_box :remember_me  
+          = f.label "Recordarme"
+      
+    .group.navform.wat-cf
+      .right=submit_tag('Entrar', :class => :button)
+      .right=submit_tag "Cancelar", :onclick => "window.location='#{root_path}';return false", :class => :button
