@@ -58,19 +58,22 @@ Rails::Initializer.run do |config|
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   config.i18n.default_locale = :es
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
+  
 end
 
 
-  ActionMailer::Base.delivery_method = :smtp
 
-  ActionMailer::Base.smtp_settings = {
-    :address => "smtp.gmail.com",
-    :enable_starttls_auto => true,  
-    :port => 587,
-    :domain => "skykidsperu.com",
-    :authentication => :plain,
-    :user_name => "control@skykidsperu.com",
-    :password => "control"
-  }
+
+  # ActionMailer::Base.smtp_settings = {
+  #    :address => "smtp.gmail.com",
+  #    :enable_starttls_auto => true,  
+  #    :port => 587,
+  #    :domain => "skykidsperu.com",
+  #    :authentication => :plain,
+  #    :user_name => "control@skykidsperu.com",
+  #    :password => "control"
+  #  }
 
 
