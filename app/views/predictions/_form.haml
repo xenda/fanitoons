@@ -1,6 +1,8 @@
 %h3 Escuchamos tu pronóstico
 %h4 Concéntrate mucho y dinos qué piensas sucederás
 
+= display_prediction_flash
+
 .group
   =f.hidden_field :user_id
 
@@ -11,33 +13,33 @@
 
   .match_versus
 
-    #first_team.team{:rel=>@prediction.match.local.id}
-      = label_tag @prediction.match.local.name, :class=>"team_name"
+    #first_team.team{:rel=>@prediction.match.local.id, :class=>("selected" if @prediction.local_winner?)}
+      = f.label :winner_id, @prediction.match.local.name, :class=>"team_name"
       = image_tag(random_flag)
 
       %a.small{:href => "#"} ¿Goles?
       .goals.hidden
-        =f.label "Goles"
+        =f.label :first_team_result, "Goles"
         =f.error_message_on :first_team_result
-        =f.select :first_team_result, :options=>(0..20).to_a, :include_blank=>"--", :class=>"goals"
-        = link_to "cancelar", :class=>"small_close_button"        
+        =f.select :first_team_result, (0..20).to_a.collect{|g| [g,g]},{ :include_blank=>"--"}, :class=>"goals"
+        = link_to "cancelar", "", :class=>"small_close_button"        
 
     %span vs
 
-    #second_team.team.last{:rel=>@prediction.match.visitor.id}
-      = label_tag @prediction.match.visitor.name, :class=>"team_name"
+    #second_team.team.last{:rel=>@prediction.match.visitor.id, :class=>("selected" if @prediction.visitor_winner?)}
+      = f.label :winner_id, @prediction.match.visitor.name, :class=>"team_name"
       = image_tag(random_flag)
 
       %a.small{:href => "#"} ¿Goles?
       .goals.hidden
-        =f.label "Goles"
+        =f.label :second_team_result, "Goles"
         =f.error_message_on :second_team_result
-        =f.select :second_team_result, :options=>(0..20).to_a, :include_blank=>"--", :class=>"goals"
-        = link_to "cancelar", :class=>"small_close_button"
+        =f.select :second_team_result, (0..20).to_a.collect{|g| [g,g]},{ :include_blank=>"--"}, :class=>"goals"
+        = link_to "cancelar", "", :class=>"small_close_button"
 
   .winner.hidden
     = label_tag "Ganador"
-    = f.select(:winner_id,:collection=>@prediction.teams, :fields=>[:name,:id], :include_blank=>"empate")
+    = f.select(:winner_id,@prediction.teams.collect{|t| [t.name, t.id]}, {:include_blank=>"empate"})
 
   / .group
   /   =f.label "Goleador"
@@ -46,4 +48,4 @@
 
   .group.navform.wat-cf
     =f.submit "¡Pronosticar!", :class => :button
-    =f.submit "Me arrepentí", :onclick => "window.location='#{url(:home, :index)}';return false", :class => :button
+    =f.submit "Me arrepentí", :onclick => "parent.$.fancybox.close();return false", :class => :button

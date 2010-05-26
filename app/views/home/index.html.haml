@@ -15,12 +15,12 @@
       
   #ranking.block
     %h2 Predicciones
-    .content_box= render "matches/home_match", :collection => @matches
+    .content_box= render :partial=>"matches/home_match", :collection => @matches
     
     
   #posts.block
     %h2 Noticias
-    .content_box= render 'posts/post', :collection => @posts
+    .content_box= render :partial=>'posts/post', :collection => @posts
 
 - content_for :sidebar do
 

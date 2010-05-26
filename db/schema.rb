@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100524041219) do
+ActiveRecord::Schema.define(:version => 20100526152448) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(:version => 20100524041219) do
     t.string   "fb_token"
     t.integer  "fb_id"
     t.string   "gender"
-    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
-    t.string   "password_salt",                       :default => "", :null => false
+    t.string   "encrypted_password",   :limit => 128, :default => ""
+    t.string   "password_salt",                       :default => ""
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
@@ -38,7 +38,11 @@ ActiveRecord::Schema.define(:version => 20100524041219) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "invitation_token",     :limit => 20
+    t.datetime "invitation_sent_at"
   end
+
+  add_index "accounts", ["invitation_token"], :name => "index_accounts_on_invitation_token"
 
   create_table "admins", :force => true do |t|
     t.string   "email",                             :default => "", :null => false

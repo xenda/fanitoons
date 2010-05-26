@@ -69,6 +69,24 @@ $(document).ready(function() {
   })
   
   
+  // Actives popup
+  $("a.iframe").fancybox({
+  		'transitionIn'	:	'elastic',
+  		'transitionOut'	:	'elastic',
+  		'speedIn'		:	100, 
+  		'speedOut'		:	100,
+  		'padding' : 0,
+      // 'modal'  : true,
+  		'hideOnOverlayClick': true, 
+  		'hideOnContentClick': true,
+  		'enableEscapeButton':true,
+  		'scrolling' :false,
+  		'centerOnScroll':true,
+  		'width': 600,
+  		'height': 340
+  	});
+  
+  
 });
 
 function selectTeam(team){

@@ -13,7 +13,7 @@
     %h3 Sólo introduce tu correo electrónico y una contraseña:
     .content_box
     
-      -form_for :account, new_account_registration_path, :class => :form do |f|
+      -form_for resource_name, resource_name, :url=>registration_path(resource_name), :class => :form do |f|
         = render :partial=>'registrations/form', :locals => { :f => f }
 
 
@@ -28,4 +28,4 @@
 
   #featured_posts.block
     %h2 Destacadas
-    .content_box Destacada
+    .content_box Destacada    

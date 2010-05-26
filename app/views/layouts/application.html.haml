@@ -2,7 +2,7 @@
 %html
   %head
     %title= [@title, "Patatoon"].compact.join(" | ")
-    = stylesheet_link_tag 'reset', 'style'
+    = stylesheet_link_tag 'reset', '../javascripts/fancybox/jquery.fancybox-1.3.1','style'
     = yield :include
         
   %body
@@ -32,4 +32,4 @@
 
     #footer
       Copyright (c)
-    = javascript_include_tag 'jquery', 'application'
+    = javascript_include_tag 'jquery', 'jrails','fancybox/jquery.fancybox-1.3.1.pack','fancybox/jquery.easing-1.3.pack','fancybox/jquery.mousewheel-3.0.2.pack','application'

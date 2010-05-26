@@ -1,16 +1,4 @@
-- @title = "FaniToons ::  Tu predicción"
-
-#banner 
-
 #main_content
-
-  #welcome
-    %h2 Bienvenidos a la nueva comunidad para los amantes del fútbol
-    
   #new_prediction.prediction
     - form_for [@prediction.match,@prediction] do |f|
-      = render "predictions/form", :locals => {:f => f}
-  
-
-- content_for :sidebar do
-  = render "home/sidebar"
+      = render :partial => "predictions/form", :locals => {:f => f}

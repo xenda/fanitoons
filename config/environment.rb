@@ -30,7 +30,7 @@ Rails::Initializer.run do |config|
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
 
   # Skip frameworks you're not going to use. To use Rails without a database,
-  # you must remove the Active Record framework.
+  # you must remove the Active Record framework.a
   # config.frameworks -= [ :active_record, :active_resource, :action_mailer ]
   config.gem 'nokogiri'
   config.gem 'faker'
@@ -44,6 +44,7 @@ Rails::Initializer.run do |config|
   config.gem 'warden'
   config.gem "devise", :version=>"1.0.7"
   config.gem "bcrypt-ruby", :lib=>"bcrypt"
+  config.gem 'devise_invitable', :version=>"0.2.3"
   # config.gem 'sqlite3-ruby', :require => "sqlite3"
   
   # Activate observers that should always be running
@@ -55,5 +56,5 @@ Rails::Initializer.run do |config|
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
-  # config.i18n.default_locale = :de
+  config.i18n.default_locale = :es
 end

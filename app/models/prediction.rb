@@ -7,4 +7,30 @@ class Prediction < ActiveRecord::Base
     [match.local,match.visitor]
   end
   
+  def local_winner?
+    match.local == winner
+  end
+  
+  def visitor_winner?
+    match.visitor == winner
+  end
+    
 end
+
+# == Schema Information
+#
+# Table name: predictions
+#
+#  id                 :integer         not null, primary key
+#  user_id            :integer
+#  predicted_at       :datetime
+#  match_id           :integer
+#  winner_id          :integer
+#  first_team_result  :integer
+#  second_team_result :integer
+#  scoring_player_id  :integer
+#  victory_type_id    :integer
+#  created_at         :datetime
+#  updated_at         :datetime
+#
+

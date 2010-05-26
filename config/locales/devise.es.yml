@@ -1,0 +1,37 @@
+es:
+  devise:
+    sessions:        
+      link: 'Entrar'
+      signed_in: 'Has iniciado sesión exitosamente'
+      signed_out: 'Has cerrado sesión exitosamente. ¿Regresarás pronto?'
+      unauthenticated: 'Necesitas iniciar tu sesión antes de continuar :)'
+      unconfirmed: 'Tienes que confirmar tu cuenta antes de continuar. ¡Revisa tu correo!'
+      locked: 'Tu cuenta está bloqueda. Contáctanos para ver qué ha sucedido'
+      invalid: 'Has ingresado datos erróneos. Tranquilo, a todos nos pasa. Intenta de nuevo'
+      invalid_token: 'Has ingresado un token de autorización inválido. Revisa bien tu correo'
+      timeout: 'Parece que has estado mucho tiempo inactivo por acá y tu sesión ha expirado. Ingresa de nuevo :)'
+      inactive: 'Tu cuenta aún no está activa'
+    passwords:
+      link: '¿Olvidaste tu contraseña?'
+      send_instructions: 'Recibirás instrucciones de cómo cambiar tu contraseña en los próximos minutos.'
+      updated: 'Tu contraseña se ha cambiado exitosamente. Para usar bien el tiempo, ¡ya hemos iniciado sesión por ti!'
+    confirmations:
+      link: "¿No recibiste instrucciones para confirmar tu cuenta?"
+      send_instructions: 'Recibirás instrucciones de cómo confirmar tu cuenta en los próximos minutos.'
+      confirmed: 'Tu cuenta se ha confirmado exitosamente. Para usar bien el tiempo, ¡ya hemos iniciado sesión por ti!'
+    registrations:
+      link: 'Registrarse'
+      signed_up: '¡Te has registrado en Patatoon! Te llegará pronto un correo con instrucciones.'
+      updated: '¡Has actualizado tu cuenta exitosamente!'
+      destroyed: '¡Adios! Estamos algo tristes por tu partida :(, pero ojalá regreses pronto :)'
+    unlocks:
+      link: "¿No recibiste instrucciones para desbloquear tu cuenta?"
+      send_instructions: 'Recibirás instrucciones de cómo desbloquear tu cuenta en los próximos minutos.'
+      unlocked: '¡Tu cuenta se ha desbloqueado! Mira, ¡incluso ya hemos iniciado sesión por ti!'
+    mailer:
+      confirmation_instructions: 'Instrucciones de confirmación'
+      reset_password_instructions: 'Instrucciones para cambiar contraseña'
+      unlock_instructions: 'Instrucciones para desbloquear tu cuenta'
+    
+      
+

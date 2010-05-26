@@ -11,7 +11,7 @@
     %h2 Entra a tu cuenta: 
 
     .content_box
-      = partial "sessions/form"
+      = render :partial => "sessions/form"
 
 
     = link_to "o entra con Facebook", fb_connect_path, :id=>"register_facebook"

@@ -7,7 +7,7 @@ class Account < ActiveRecord::Base
   EXISTING_ACCOUNT = "existing" 
   WRONG_ACCOUNT = "wrong_data"
   
-  devise :registerable, :database_authenticatable, :confirmable, :recoverable, :rememberable, :trackable, :validatable, :encryptor => :bcrypt
+  devise :registerable, :database_authenticatable, :confirmable, :recoverable, :rememberable, :trackable, :validatable, :invitable, :encryptor => :bcrypt
   
   
   # Validations
@@ -62,17 +62,26 @@ class Account < ActiveRecord::Base
     # We look for the user's account in the database 
     account = Account.find_by_email(user["email"])
     
+    logger.info "Authenticating from Facebook"
+    
     #If it exists...
     if account
 
+      logger.info "Account exists"
+      
       # We see if it's updated. If not, we update it
-      if (not account.fb_id) or (not account.fb_token) or (not account.gender)
+      if (not account.fb_id) or (not account.fb_token) or (not account.gender) or (not account.confirmed_at)
         account.fb_id = user["id"]
         account.fb_token = access_token
         account.gender = user["gender"]
+        account.confirmed_at ||= Time.zone.now
         account.save
+        logger.info "Account was old and upgraded"
       end
-      
+    
+      logger.info account.inspect
+      logger.info "Errors:"
+      logger.info account.errors
       # We return it as complete
       [EXISTING_ACCOUNT,account]
       
@@ -122,3 +131,39 @@ class Account < ActiveRecord::Base
   #     crypted_password.blank? || !password.blank?
   #   end
 end
+
+# == Schema Information
+#
+# Table name: accounts
+#
+#  id                   :integer         not null, primary key
+#  name                 :string(255)
+#  surname              :string(255)
+#  email                :string(255)     default(""), not null
+#  crypted_password     :string(255)
+#  salt                 :string(255)
+#  role                 :string(255)
+#  picture_file_name    :string(255)
+#  picture_content_type :string(255)
+#  picture_file_size    :integer
+#  picture_updated_at   :datetime
+#  fb_token             :string(255)
+#  fb_id                :integer
+#  gender               :string(255)
+#  encrypted_password   :string(128)     default("")
+#  password_salt        :string(255)     default("")
+#  confirmation_token   :string(255)
+#  confirmed_at         :datetime
+#  confirmation_sent_at :datetime
+#  reset_password_token :string(255)
+#  remember_token       :string(255)
+#  remember_created_at  :datetime
+#  sign_in_count        :integer         default(0)
+#  current_sign_in_at   :datetime
+#  last_sign_in_at      :datetime
+#  current_sign_in_ip   :string(255)
+#  last_sign_in_ip      :string(255)
+#  invitation_token     :string(20)
+#  invitation_sent_at   :datetime
+#
+

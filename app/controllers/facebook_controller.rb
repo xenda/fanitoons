@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class FacebookController < ApplicationController
 
   def fb_connect
        
@@ -30,11 +30,17 @@ class SessionsController < ApplicationController
         # set_current_account(account)
         redirect_to root_path
       when Account::WRONG_ACCOUNT
-        flash[:notice] = "Hubieron problemas accediendo a tus datos de Facebook. Prueba de nuevo o <a href='#{url_for(:controller=>'accounts',:action=>'new')}'>créala directamente acá</a>"
+        flash[:notice] = "Hubieron problemas accediendo a tus datos de Facebook. Prueba de nuevo o <a href='#{new_account_registration_path}'>créala directamente acá</a>"
         redirect_to root_path # TODO: url(:accounts,:new)
           
     end
             
+  end
+  
+  def destroy
+    sign_out(current_account) if current_account
+    flash[:notice] = "Has cerrado sesión"
+    redirect_to root_path
   end
 
 

@@ -12,5 +12,7 @@
         %strong= home_match.visitor.name  
         %br
         = image_tag(random_flag)
-      
-    = link_to "deja tu predicción", match_prediction(home_match), :class=>"small"
+    
+    = link_to "ver predicciones", "#"
+    - if account_signed_in?
+      = link_to "deja tu predicción", match_prediction_path(home_match, :format=>"js"), :class=>"small iframe"
