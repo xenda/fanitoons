@@ -47,6 +47,20 @@ Rails::Initializer.run do |config|
   config.gem 'devise_invitable', :version=>"0.2.3"
   # config.gem 'sqlite3-ruby', :require => "sqlite3"
   
+  
+  ActionMailer::Base.delivery_method = :smtp
+
+  ActionMailer::Base.smtp_settings = {
+    :address => "smtp.gmail.com",
+    :enable_starttls_auto => true,  
+    :port => 587,
+    :domain => "xendacentral.com",
+    :authentication => :plain,
+    :user_name => "alvaro@skykidsperu.com",
+    :password => "yaraher2"
+  }
+
+  
   # Activate observers that should always be running
   # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
 
