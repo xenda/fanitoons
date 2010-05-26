@@ -14,13 +14,14 @@
       %br
       = image_tag(random_flag)
   
+  %div{:style=>"clear:both;overflow:auto;"}
   = link_to "ver pronósticos", "#"
   - if account_signed_in?
     = link_to "deja tu pronóstico", match_prediction_path(@match), :class=>"small iframe"
 
 %div{:style=>"clear:both;overflow:auto;"}
 
-%h3 Pronósticos      
+%h3{:style=>"font-size:2em;"}= "#{@match.predictions.size} pronósticos"
 
 .block
   .content
