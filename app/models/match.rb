@@ -4,7 +4,7 @@ class Match < ActiveRecord::Base
   belongs_to :visitor, :class_name => "Team", :foreign_key => "second_team_id"
   belongs_to :group
   
-  has_many :prediction
+  has_many :predictions
   
   def to_param
     "#{id}-#{local.name.parameterize}-vs-#{visitor.name.parameterize}"
