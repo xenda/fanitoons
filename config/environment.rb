@@ -43,7 +43,7 @@ Rails::Initializer.run do |config|
   config.gem 'haml'
   config.gem 'warden'
   config.gem "devise", :version=>"1.0.7"
-  config.gem "bcrypt-ruby", :lib=>"bcrypt"
+  config.gem "bcrypt-ruby", :lib=>"bcrypt", :version=>"2.1.2"
   config.gem 'devise_invitable', :version=>"0.2.3"
   # config.gem 'sqlite3-ruby', :require => "sqlite3"
   

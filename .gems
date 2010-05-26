@@ -9,5 +9,5 @@ fbgraph
 haml
 warden
 devise --version "1.0.7"
-bcrypt-ruby
+bcrypt-ruby --version "2.1.2"
 devise_invitable --version "0.2.3"

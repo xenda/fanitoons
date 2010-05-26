@@ -80,12 +80,15 @@ end
 # User account creation
 
 require 'faker'
-
+ require 'base64'
+  #If no, we try to create it
 puts "creando cuentas falsas"
 1000.times do  
+
+  d = Base64.encode64(Time.now.strftime("%d%Y"))
   
   puts "Creando a #{Faker::Name.name}"
-  a = Account.create(:email => Faker::Internet.email, :name => Faker::Name.name, :surname => Faker::Name.last_name, :password=>"99999", :password_confirmation=>"99999", :role =>"user" )
+  a = Account.create(:email => Faker::Internet.email, :name => Faker::Name.name, :surname => Faker::Name.last_name, :password=>d, :password_confirmation=>d, :role =>"user" )
   puts "Creada"
       # account = Account.create(:email => email, :name => "Xenda", :surname => "Account", :password => password, :password_confirmation => password, :role => "admin")
   
