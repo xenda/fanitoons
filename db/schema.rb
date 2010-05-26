@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100526152448) do
+ActiveRecord::Schema.define(:version => 20100526205951) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(:version => 20100526152448) do
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
     t.string   "fb_token"
-    t.integer  "fb_id"
+    t.string   "fb_id"
     t.string   "gender"
     t.string   "encrypted_password",   :limit => 128, :default => ""
     t.string   "password_salt",                       :default => ""
