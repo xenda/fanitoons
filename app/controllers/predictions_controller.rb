@@ -10,7 +10,7 @@ class PredictionsController < ApplicationController
     if @prediction.save
       flash[:prediction_notice] = '¡Muy bien tigre.! Veamos si resulta así.'
        # client = reauthenticate(current_account.fb_token)
-       client.selection.user(current_account.fb_id).feed.publish!(:message => "¡He pronosticado en Patatoon! " , :name =>"Ganador: #{@prediction.winner.name}",:link=>"http://patatoon.heroku.com#{match_path(@prediction.match)}",:description=>"He dado un pronóstico en Patatoon. Yo creo que #{@prediction.winner.name} gana en el partido de #{@prediction.match.local.name} vs #{@prediction.match.visitor.name} ", :picture => "http://patatoon.heroku.com/images/patatoon.png") if current_account.from_facebook?
+       client.selection.user(current_account.fb_id).feed.publish!(:message => "¡He pronosticado en Patatoon! Creo que #{@prediction.winner.name} gana en el partido de #{@prediction.match.local.name} vs #{@prediction.match.visitor.name} " , :name =>"Ganador: #{@prediction.winner.name}",:link=>"http://patatoon.heroku.com#{match_path(@prediction.match)}",:description=>"#{current_account.name} ha dejado su pronóstico en Patatoon y ha ganado puntos por eso. ¿No te animas?", :picture => "http://patatoon.heroku.com/images/patatoon.png") if current_account.from_facebook?
        
       redirect_to edit_match_prediction_path(@prediction.match,@prediction)
     else
@@ -27,8 +27,7 @@ class PredictionsController < ApplicationController
     if @prediction.update_attributes(params[:prediction])
       flash[:prediction_notice] = 'Listo campeón. Hemos actualizado tu predicción.'
       # client = reauthenticate(current_account.fb_token)
-       client.selection.user(current_account.fb_id).feed.publish!(:message => "¡He pronosticado en Patatoon! " , :name =>"Ganador: #{@prediction.winner.name}",:link=>"http://patatoon.heroku.com/#{match_path(@prediction.match)}",:description=>"He dado un pronóstico en Patatoon. Yo creo que #{@prediction.winner.name} gana en el partido de #{@prediction.match.local.name} vs #{@prediction.match.visitor.name} ", :picture => "http://patatoon.heroku.com/images/patatoon.png") if current_account.from_facebook?      
-      redirect_to edit_match_prediction_path [@prediction.match,@prediction]
+       client.selection.user(current_account.fb_id).feed.publish!(:message => "¡He pronosticado en Patatoon! Creo que #{@prediction.winner.name} gana en el partido de #{@prediction.match.local.name} vs #{@prediction.match.visitor.name} " , :name =>"Ganador: #{@prediction.winner.name}",:link=>"http://patatoon.heroku.com#{match_path(@prediction.match)}",:description=>"#{current_account.name} ha dejado su pronóstico en Patatoon y ha ganado puntos por eso. ¿No te animas?", :picture => "http://patatoon.heroku.com/images/patatoon.png") if current_account.from_facebook?
     else
       render 'predictions/edit'
     end
