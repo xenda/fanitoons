@@ -13,6 +13,6 @@
         %br
         = image_tag(random_flag)
     
-    = link_to "ver predicciones", "#"
+    = link_to "ver pronósticos", home_match
     - if account_signed_in?
-      = link_to "deja tu predicción", match_prediction_path(home_match, :format=>"js"), :class=>"small iframe"
+      = link_to "deja tu pronóstico", match_prediction_path(home_match), :class=>"small iframe"

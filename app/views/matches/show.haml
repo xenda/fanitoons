@@ -1,0 +1,58 @@
+%div{:class =>"match block#{last}" }
+  .date= time_ago_in_words(@match.played_at)
+  .match_players
+    .local
+      %strong= @match.local.name
+      %br
+      = image_tag(random_flag)
+    %strong.versus vs
+    .visitor
+      %strong= @match.visitor.name  
+      %br
+      = image_tag(random_flag)
+  
+  = link_to "ver pronósticos", "#"
+  - if account_signed_in?
+    = link_to "deja tu pronóstico", match_prediction_path(@match), :class=>"small iframe"
+
+%h3 Pronósticos      
+
+#
+#  id                 :integer         not null, primary key
+#  user_id            :integer
+#  predicted_at       :datetime
+#  match_id           :integer
+#  winner_id          :integer
+#  first_team_result  :integer
+#  second_team_result :integer
+#  scoring_player_id  :integer
+#  victory_type_id    :integer
+#  created_at         :datetime
+#  updated_at         :datetime
+#
+
+.block
+  .content
+    %table.table.matches
+      %thead
+        %tr
+          %th.first Ganador
+          %th= "Goles de #{@match.local.name}"
+          %th= "Goles de #{@match.visitor.name}"
+      %tbody
+        -@match.predictions.each do |prediction|
+          %tr{:class=>cycle("even","odd")}
+            %td= prediction.winner.name
+            %td= prediction.first_team_result 
+            %td.last= prediction.second_team_result 
+            
+- content_for :sidebar do
+
+  #ranking.block
+    %h2 Los que siempre aciertan
+
+    %h2 Los más rankeados
+
+  #featured_posts.block
+    %h2 Destacadas
+    .content_box Destacada

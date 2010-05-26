@@ -22,5 +22,11 @@ class MatchesController < ApplicationController
     end
     
   end
+  
+  def predictions
+    @match = Match.find(params[:id])
+    @predictions = @match.predictions
+    
+  end
     
 end
