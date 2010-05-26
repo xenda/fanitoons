@@ -1,0 +1,13 @@
+nokogiri
+faker
+paperclip
+facebooker
+oauth2
+json
+aws-s3
+fbgraph
+haml
+warden
+devise, :version=>"1.0.7"
+bcrypt-ruby
+devise_invitable, :version=>"0.2.3"
