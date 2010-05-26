@@ -111,7 +111,7 @@ class Account < ActiveRecord::Base
     
   end
 
-  def name
+  def full_name
     "#{name} #{surname}"
   end
   
