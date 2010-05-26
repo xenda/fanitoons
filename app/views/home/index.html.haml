@@ -4,14 +4,6 @@
 = display_flashes
 
 #main_content
-
-  #welcome
-    %h2 Bienvenidos a la nueva comunidad para los amantes del fútbol
-    
-    - if account_signed_in?
-      = render "home/whats_new"
-    - else
-      = render "home/register"
       
   #ranking.block
     %h2 Predicciones
@@ -32,3 +24,12 @@
   #featured_posts.block
     %h2 Destacadas
     .content_box Destacada
+    
+- content_for :main_banner do
+  #welcome
+    %h2 Bienvenidos a la nueva comunidad para los amantes del fútbol
+  
+    - if account_signed_in?
+      = render "home/whats_new"
+    - else
+      = render "home/register"

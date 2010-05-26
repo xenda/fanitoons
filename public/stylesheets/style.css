@@ -33,12 +33,16 @@
 	http://localhost:3000/stylesheets/style.css?1274651382
 	http://localhost:3000/stylesheets/style.css?1274652786
 	http://localhost:3000/stylesheets/style.css?1274654593
+	http://localhost:3000/stylesheets/style.css?1274658533
+	http://localhost:3000/stylesheets/style.css?1274910434
+	http://localhost:3000/stylesheets/style.css?1274910969
 */
 
 body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
-  background-color: #ffffff; }
+	background: #ffffff url(../images/background.png) no-repeat 0 0;
+}
   body a {
     color: #336699; }
   body h2 {
@@ -83,9 +87,13 @@ body {
   overflow: hidden; }
 
 #header {
-  background-color: #ffffff;
+
   padding: 30px 10px 20px 10px;
-  overflow: hidden; }
+  overflow: hidden;
+	background: url(../images/background-menu.png) no-repeat center top;
+	height: 160px;
+	padding-bottom: 0px;
+}
   
   div#header_content {
 	overflow: hidden;
@@ -102,15 +110,16 @@ body {
     font-size: 5em;
     line-height: 1.2em;
     font-weight: bold; 
+    text-indent: -9999px;
     }
     
   #header ul.menu {
 
-    margin-top: 30px;
+    margin-top: 45px;
     float: right;
     padding-top: 5px;
     padding-left: 10px;
-	background-color: #00c6a1;
+	margin-right: 5em;
 	padding-right: 10px;
 	text-align: center;
 }
@@ -127,7 +136,7 @@ body {
 	font-weight: bold;
 	text-align: right;
 	text-transform: lowercase;
-	margin-right: 10px;
+	margin-right: 90px;
 }
 
 #header_content ul.menu li a.last {
@@ -193,20 +202,30 @@ div#logged_as a {
  }
 
 div#welcome {
-	margin-bottom: 1em;
+	margin-bottom: 6em;
 	overflow: auto;
 	padding-bottom: 20px;
+	height: 300px;
+	background: url(../images/banner.png) no-repeat center;
+}
+
+#welcome h2 {
+	display: none;
 }
 
 #welcome h3 {
 	color: #71bd45;
 	margin-top: ;
 	font: 1.3em Arial, Helvetica, Geneva, sans-serif;
+	text-indent: -9999px;
+	display: none;
 }
 
 #welcome p {
 	color: #767676;
 	line-height: 1.5em;
+	text-indent: -9999px;
+	display: none;
 }
 
 #welcome div.small {
@@ -231,12 +250,12 @@ div#welcome {
 }
 
 div#register {
-	margin-top: 20px;
+	margin-top: 240px;
 	width: 370px;
 	overflow: hidden;
 	clear: both;
 	display: block;
-	margin-left: 15em;
+	margin-left: 35em;
 
 }
 
@@ -276,6 +295,7 @@ div#welcome img {
 	height: 100px;
 	float: left;
 	margin-right: 2em;
+	display: none;
 }
 
 div.block {
@@ -289,6 +309,7 @@ div.block {
 #main_content #welcome h2 {
     font-size: 2.1em;
 	color: #787a7a;
+	text-indent: -9999px;
 }
   #main .post {
     margin-bottom: 20px; }

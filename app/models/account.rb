@@ -87,7 +87,7 @@ class Account < ActiveRecord::Base
       
     else
       
-      surname = (user["middle_name"] || "") + (user["last_name"]||"")
+      surname = (user["middle_name"] || "") + " " +(user["last_name"]||"")
 
       require 'base64'
       #If no, we try to create it
@@ -111,6 +111,9 @@ class Account < ActiveRecord::Base
     
   end
 
+  def name
+    "#{name} #{surname}"
+  end
   ##
   # This method is used for retrive the original password.
   #

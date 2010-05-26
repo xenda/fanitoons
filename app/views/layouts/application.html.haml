@@ -22,6 +22,9 @@
             = link_to current_account.email, edit_registration_path(current_account)
             = link_to "salir", destroy_account_session_path
     #container
+      
+      = yield :main_banner
+    
       #main= yield
       #sidebar
         - form_tag posts_path, :method => 'get'do

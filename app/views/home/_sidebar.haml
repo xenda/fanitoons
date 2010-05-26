@@ -1,7 +1,17 @@
 #ranking.block
   %h2 Los que siempre aciertan
+  %ul
+    - Account.all.each do |a|
+      %li
+        = a.name
+        %strong{:style=>"font-size:20px;"}= rand(100) 
 
   %h2 Los más rankeados
+  %ul
+    - Account.all.each do |a|
+      %li
+        = a.name
+        %strong{:style=>"font-size:20px;"}= rand(100) 
 
 #featured_posts.block
   %h2 Destacadas
