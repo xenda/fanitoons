@@ -1,3 +1,6 @@
+%h2 Viendo encuentro deportivo
+%h3= "Del #{l(@match.played_at, :format=>:short)}"
+
 %div{:class =>"match block" }
   .date= time_ago_in_words(@match.played_at)
   .match_players
