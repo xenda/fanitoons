@@ -16,4 +16,4 @@ inherited_resources -v "1.0.3"
 has_scope  
 formtastic  
 show_for -v '0.1.3'
-will_paginate -v '2.3.11'
+mislav-will_paginate -v '2.3.11' -s gems.github.com
