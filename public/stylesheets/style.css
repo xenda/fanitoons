@@ -1,43 +1,3 @@
-/* @override 
-	http://localhost:3000/stylesheets/style.css?1273449244
-	http://localhost:3000/stylesheets/style.css?1273874307
-	http://localhost:3000/stylesheets/style.css?1273874954
-	http://localhost:3000/stylesheets/style.css?1273875273
-	http://localhost:3000/stylesheets/style.css?1273875551
-	http://localhost:3000/stylesheets/style.css?1273875743
-	http://localhost:3000/stylesheets/style.css?1273875888
-	http://localhost:3000/stylesheets/style.css?1273875955
-	http://localhost:3000/stylesheets/style.css?1273876396
-	http://localhost:3000/stylesheets/style.css?1273876773
-	http://fanitoons.heroku.com/stylesheets/style.css?1273868934
-	http://localhost:3000/stylesheets/style.css?1273878415
-	http://localhost:3000/stylesheets/style.css?1274038063
-	http://localhost:3000/stylesheets/style.css?1274039869
-	http://localhost:3000/stylesheets/style.css?1274048238
-	http://localhost:3000/stylesheets/style.css?1274048728
-	http://localhost:3000/stylesheets/style.css?1274048796
-	http://localhost:3000/stylesheets/style.css?1274048914
-	http://localhost:3000/stylesheets/style.css?1274049878
-	http://localhost:3000/stylesheets/style.css?1274050024
-	http://localhost:3000/stylesheets/style.css?1274050114
-	http://localhost:3000/stylesheets/style.css?1274050421
-	http://localhost:3002/stylesheets/style.css?1274050722
-	http://localhost:3002/stylesheets/style.css?1274063039
-	http://localhost:3000/stylesheets/style.css?1274069600
-	http://localhost:3000/stylesheets/style.css?1274117477
-	http://localhost:3000/stylesheets/style.css?1274117572
-	http://localhost:3000/stylesheets/style.css?1274118089
-	http://localhost:3000/stylesheets/style.css?1274648819
-	http://localhost:3000/stylesheets/style.css?1274650593
-	http://localhost:3000/stylesheets/style.css?1274650934
-	http://localhost:3000/stylesheets/style.css?1274651382
-	http://localhost:3000/stylesheets/style.css?1274652786
-	http://localhost:3000/stylesheets/style.css?1274654593
-	http://localhost:3000/stylesheets/style.css?1274658533
-	http://localhost:3000/stylesheets/style.css?1274910434
-	http://localhost:3000/stylesheets/style.css?1274910969
-*/
-
 body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
@@ -457,9 +417,27 @@ div.match.block {
 	float: left;
 	margin-right: 10px;
 	margin-bottom: 10px;
-	width: 254px;
+	width: 240px;
 	padding: 15px;
 	background-color: #caece7;
+	height: 100px;
+}
+
+li.match {
+  
+  float:left;
+  margin-right:10px;
+  position:relative;
+  width:190px;
+  
+}
+
+#matches li.match div.head {
+background-color:rgba(0, 0, 0, 0.6);
+color:#FFFFFF;
+padding:5px;
+position:absolute;
+top:0;
 }
 
 #ranking div.content_box div.match.block.last {

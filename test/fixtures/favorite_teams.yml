@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  team_id: 1
+  account_id: 1
+
+two:
+  team_id: 1
+  account_id: 1
+
+# == Schema Information
+#
+# Table name: favorite_teams
+#
+#  id         :integer         not null, primary key
+#  team_id    :integer
+#  account_id :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+

@@ -46,6 +46,10 @@
   /   =f.error_message_on :scoring_player_id
   /   =f.text_field :scoring_player_id, :class => :text_field
 
+  .group
+    = f.check_box :to_facebook, {}, true
+    = f.label :to_facebook, "Publicar mi pronóstico en Facebook"
+
   .group.navform.wat-cf
     =f.submit "¡Pronosticar!", :class => :button
     =f.submit "Me arrepentí", :onclick => "parent.$.fancybox.close();return false", :class => :button

@@ -1,7 +1,7 @@
 class Account < ActiveRecord::Base
   
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :name, :fb_token, :role, :gender, :fb_id, :surname, :picture
+  attr_accessible :email, :password, :password_confirmation, :name, :fb_token, :role, :gender, :fb_id, :surname, :picture, :remember_me
   
   NEW_ACCOUNT = "new"
   EXISTING_ACCOUNT = "existing" 
@@ -25,19 +25,34 @@ class Account < ActiveRecord::Base
   # Callbacks
   # before_save :generate_password
 
-  has_one :avatar
+  has_one :avatar, :foreign_key => "user_id"
   has_many :predictions, :foreign_key => "user_id"
+  
+  has_many :favorite_teams, :class_name => "FavoriteTeam", :foreign_key => "account_id"
+  has_many :teams, :through => :favorite_teams
+  
+  has_many :friendships
+  has_many :friends, :through => :friendships, :source => :friend
+  
+  has_many :friendsters, :through => :frienships, :source => :account 
+  
+  has_many :user_badges, :class_name => "user_badge", :foreign_key => "user_id"
+  has_many :badges, :through => :user_badges
   
   # Paperclip::Interpolations::RAILS_ROOT = "."
   # Paperclip::Storage::S3::RAILS_ENV = PADRINO_ENV
   
-    has_attached_file :picture, :styles => { :medium => "300x300>", :thumb => "50x50>" }
+    has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "50x50>" }
     # ,
     #                    :storage => :s3,
     #                    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
     #                    :path => ":attachment/:id/:style.:extension"
     
 
+
+    def score
+      @score ||= self.user_badges.sum(:points)
+    end
 
    def has_predicted_match?(match)
      not prediction_for_match(match).empty?
@@ -46,6 +61,50 @@ class Account < ActiveRecord::Base
    def prediction_for_match(match)
      self.predictions.find(:all,:conditions=>{:match_id=>match.id})
    end
+   
+   def right_predictions_average
+     (self.right_predictions_count.to_f / self.predictions.size.to_f).round(2)
+   end
+
+  def future_predictions(limit=3,future=3.months.from_now)
+    self.predictions.find(:all,:include=>[:match],:conditions=>{:matches=>{:played_at=>Time.zone.now..future}},:limit=>limit)
+  end
+  
+  def past_predictions(limit=3)
+    self.predictions.find(:all, :include=>[:match], :conditions=>["matches.played_at < ?",Time.zone.now], :limit=>limit)
+  end
+  
+  def right_predictions
+   @right_predictions ||= self.predictions.find(:all, :include=>[:match], :conditions=>"matches.first_team_goals like predictions.first_team_result and matches.second_team_goals like predictions.second_team_result")
+  end
+  
+  def right_predictions_count
+    @right_predictions_count ||= self.predictions.count(:all, :include=>[:match], :conditions=>"matches.first_team_goals like predictions.first_team_result and matches.second_team_goals like predictions.second_team_result")    
+  end
+  
+  def wrong_predictions
+   @wrong_predictions ||= self.predictions.find(:all, :include=>[:match], :conditions=>"matches.first_team_goals not like predictions.first_team_result and matches.second_team_goals not like predictions.second_team_result")
+  end
+  
+  def wrong_predictions_count
+   @wrong_predictions_count ||= self.predictions.count(:all, :include=>[:match], :conditions=>"matches.first_team_goals not like predictions.first_team_result and matches.second_team_goals not like predictions.second_team_result")
+  end  
+  
+  def close_predictions
+   @close_predictions ||= self.predictions.find(:all, :include=>[:match], :conditions=>"(matches.first_team_goals -  predictions.first_team_result) <= 1 and (matches.second_team_goals - predictions.second_team_result) <= 1")
+  end
+
+  def close_predictions_count
+   @close_predictions_count ||= self.predictions.count(:all, :include=>[:match], :conditions=>"(matches.first_team_goals -  predictions.first_team_result) <= 1 and (matches.second_team_goals - predictions.second_team_result) <= 1")
+  end
+  
+  def almost_close_predictions
+   @almost_close_predictions ||= self.predictions.find(:all, :include=>[:match], :conditions=>"(matches.first_team_goals -  predictions.first_team_result) <= 2 and (matches.second_team_goals - predictions.second_team_result) <= 2")
+  end
+
+  def almost_close_predictions_count
+   @almost_close_predictions_count ||= self.predictions.count(:all, :include=>[:match], :conditions=>"(matches.first_team_goals -  predictions.first_team_result) <= 2 and (matches.second_team_goals - predictions.second_team_result) <= 2")
+  end
 
   
   ##
@@ -56,6 +115,56 @@ class Account < ActiveRecord::Base
   #   account && account.password_clean == password ? account : nil
   # end
   
+  def password_required?
+    new_record? || ( no_token? && (!password.nil? || !password_confirmation.nil?) )
+  end
+  
+  def update_with_password(params={})
+    current_password = params.delete(:current_password)
+    fb_token = params.delete(:fb_token)
+    if params[:password].blank?
+      params.delete(:password)
+      params.delete(:password_confirmation) if params[:password_confirmation].blank?
+    end
+
+    result = if fb_token or valid_password?(current_password)
+      update_attributes(params)
+    else
+      message = current_password.blank? ? :blank : :invalid
+      self.class.add_error_on(self, :current_password, message, false)
+      self.attributes = params
+      false
+    end
+
+    clean_up_passwords unless result
+    result
+  end
+  
+  def no_token?
+    fb_token.blank? or fb_token.empty? or fb_token.nil?
+  end
+  
+  def from_facebook?
+    not (fb_token.blank? or fb_token.empty? or fb_token.nil?)
+  end
+
+  def authenticate_from_facebook(user,access_token)
+    update_with_facebook(user,access_token)
+  end
+  
+  def update_with_facebook(user,access_token)
+    logger.info "Account exists"
+    
+    # We see if it's updated. If not, we update it
+    if (not fb_id) or (not fb_token) or (not gender) or (not confirmed_at)
+      self.fb_id = user["id"]
+      self.fb_token = access_token
+      self.gender = user["gender"]
+      self.confirmed_at ||= Time.zone.now
+      self.save
+      logger.info "Account was old and upgraded"
+    end
+  end
 
   def self.authenticate_from_facebook(user,access_token)
     
@@ -67,17 +176,7 @@ class Account < ActiveRecord::Base
     #If it exists...
     if account
 
-      logger.info "Account exists"
-      
-      # We see if it's updated. If not, we update it
-      if (not account.fb_id) or (not account.fb_token) or (not account.gender) or (not account.confirmed_at)
-        account.fb_id = user["id"]
-        account.fb_token = access_token
-        account.gender = user["gender"]
-        account.confirmed_at ||= Time.zone.now
-        account.save
-        logger.info "Account was old and upgraded"
-      end
+      account.update_from_facebook(user,access_token)
     
       logger.info account.inspect
       logger.info "Errors:"
@@ -115,6 +214,10 @@ class Account < ActiveRecord::Base
     "#{name} #{surname}"
   end
   
+  def to_param
+    "#{id}-#{full_name.parameterize}"
+  end
+  
   def from_facebook?
     fb_token
   end
@@ -139,6 +242,7 @@ class Account < ActiveRecord::Base
   #   end
 end
 
+
 # == Schema Information
 #
 # Table name: accounts
@@ -155,7 +259,7 @@ end
 #  picture_file_size    :integer
 #  picture_updated_at   :datetime
 #  fb_token             :string(255)
-#  fb_id                :integer
+#  fb_id                :string(255)
 #  gender               :string(255)
 #  encrypted_password   :string(128)     default("")
 #  password_salt        :string(255)     default("")
@@ -172,5 +276,6 @@ end
 #  last_sign_in_ip      :string(255)
 #  invitation_token     :string(20)
 #  invitation_sent_at   :datetime
+#  birth_date           :date
 #
 

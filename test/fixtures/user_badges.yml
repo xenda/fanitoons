@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  badge_id: 1
+  earned_at: 2010-06-02 11:40:29
+  points: 1
+
+two:
+  user_id: 1
+  badge_id: 1
+  earned_at: 2010-06-02 11:40:29
+  points: 1
+
+# == Schema Information
+#
+# Table name: user_badges
+#
+#  id         :integer         not null, primary key
+#  user_id    :integer
+#  badge_id   :integer
+#  earned_at  :datetime
+#  points     :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+

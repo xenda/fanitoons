@@ -11,6 +11,9 @@
         
     .content_box
       -form_for resource_name, resource, :url => registration_path(resource_name), :html => {:class => :form, :multipart=>"true", :method => :put } do |f|
+      
+        = f.error_messages
+        
         .group
           =f.label :name, "Nombres", :class=>"label"
           =f.error_message_on :name
@@ -34,16 +37,26 @@
           %br
           %span.description Por seguridad, no puedes cambiar tu correo una vez creada tu cuenta
 
-        .group
-          =f.label :password, "Contraseña", :class=>"label"
-          =f.error_message_on :password
-          =f.password_field :password, :class => :password_field
-          %span.description Si no deseas cambiar tu contraseña, deja este campo vacío
+        - if @account.from_facebook?
+          %span.description Has enlazado tu cuenta en Facebook
+          = f.hidden_field :fb_token
+          = hidden_field_tag "account[current_password]", @account.fb_token
+        - else
+          .group
+            =f.label :password, "Contraseña", :class=>"label"
+            =f.error_message_on :password
+            =f.password_field :password, :class => :password_field
+            %span.description Si no deseas cambiar tu contraseña, deja este campo vacío
 
-        .group
-          =f.label :password_confirmation, "Confirma tu contraseña", :class=>"label"
-          =f.error_message_on :password_confirmation
-          =f.password_field :password_confirmation, :class => :password_field
+          .group
+            =f.label :password_confirmation, "Confirma tu contraseña", :class=>"label"
+            =f.error_message_on :password_confirmation
+            =f.password_field :password_confirmation, :class => :password_field
+            
+          .group
+            = f.label :current_password, "Contraseña actual", :class=>"label" 
+            = f.password_field :current_password, :class=>:password_field
+            %span.description Necesitamos tu contraseña para confirmar tus datos
 
         .group.navform.wat-cf
           =f.submit "Actualizar", :class => :button

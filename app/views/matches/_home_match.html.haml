@@ -1,18 +1,8 @@
 - if home_match
-  - last = cycle(" last", "") # ? ? " last" : ""
-  %div{:class =>"match block#{last}" }
-    .date= time_ago_in_words(home_match.played_at)
-    .match_players
-      .local
-        %strong= home_match.local.name
-        %br
-        = image_tag(random_flag)
-      %strong.versus vs
-      .visitor
-        %strong= home_match.visitor.name  
-        %br
-        = image_tag(random_flag)
-    
-    = link_to "ver pronósticos", home_match
-    - if account_signed_in?
-      = link_to "deja tu pronóstico", match_prediction_path(home_match), :class=>"small iframe"
+  %li{:class =>"match"}
+    = link_to image_tag(home_match.picture.url(:front)), home_match
+    .head 
+      %strong= link_to home_match.title, home_match
+      %span= "en " + distance_of_time_in_words_to_now(home_match.played_at)
+      - if account_signed_in?
+        = link_to "¡pronostica!", match_prediction_path(home_match), :class=>"small iframe"

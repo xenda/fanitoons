@@ -1,0 +1,16 @@
+%h2 ¡Hola!
+
+%p Has sido invitado a Patatoon. Para aceptar la invitación, sólo necesitas crear una contraseña: 
+
+- form_for resource_name, resource, :url => invitation_path(resource_name), :html => { :method => :put } do |f| 
+  = f.error_messages 
+  = f.hidden_field :invitation_token 
+  %p= f.label :password, "Contraseña"
+  %p= f.password_field :password 
+  %p= f.label :password_confirmation, "Confirmación" 
+  %p= f.password_field :password_confirmation 
+  %p= f.submit "Grabar contraseña"
+
+%p O si tienes una cuenta en Facebook, ¡también puedes usarla!
+= link_to "o entra con Facebook", fb_connect_path, :id=>"register_facebook"
+  

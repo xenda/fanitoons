@@ -1,0 +1,59 @@
+%h1 Viendo perfil de #{@account.full_name}
+%h2= link_to("Actualizar datos", edit_account_registration_path ) if @account == current_account
+#profile_sidebar
+  .content
+    = image_tag @account.picture.url(:medium) if @account.picture_file_name
+    = link_to "#", "cambiar mi avatar" if @account.avatar
+    
+  .special.content
+    %h3 Título
+    %h2 Lord del Futbol
+    
+    %h3 Edad
+    %h2= account_age
+    
+    .content
+      %h2 Equipos favoritos
+      = render :partial => "teams/favorite_team", :collection => @account.teams
+      
+    .content
+      %h2 Amigos
+      = render :partial => "friends/profile_friend", :collection => @account.friends
+
+    
+
+#main_content
+  
+  #needed_points
+    Puntos restantes para ser Ultra-Fan
+    %strong 120
+  
+  #profile_predictions.content
+    %h2 Pronósticos hechos
+    .incoming
+      %h3 Por venir
+      = render :partial => "profiles/future_match", :collection =>@account.future_predictions
+      = link_to "ver todas", player_predictions_path(@account.id, :anchor=>"future")
+    .done
+      %h3 Pasadas
+      = render :partial => "profiles/past_match", :colecction => @account.past_predictions
+      = link_to "ver todas", player_predictions_path(@account.id, :anchor =>"past")
+      
+  #game_status.content
+    %h2 ¿Cómo va en Patatoon?
+    
+    %ul
+      %li
+        %strong= "Acertó #{@account.right_predictions_count} (#{@account.right_predictions_average})"
+        %span= "De #{Match.matches_count_till_now} partidos"
+      %li
+        %strong= "Ha participado en #{@account.predictions.size} predicciones" 
+        %span= "Más del 10% de tus amigos"
+      %li
+        %strong= "Has ganado #{rand(100)}" 
+        %span= "2% más que tus amigos"
+      %li
+        %strong= "Te faltan 120 puntos para mejorar de título" 
+        %span= "Estás en el Top 10 de la semana"
+        
+    

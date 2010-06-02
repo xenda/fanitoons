@@ -1,5 +1,6 @@
-<p>Welcome <%= @resource.email %>!</p>
+<h1>Hola desde Patatoon</h1>
+<p>Hola <%= @resource.email %>!</p>
 
-<p>You can confirm your account through the link below:</p>
+<p>Puedes confirmar la creación de tu cuenta más abajo:</p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+<p><%= link_to 'Confirmar mi cuenta', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>

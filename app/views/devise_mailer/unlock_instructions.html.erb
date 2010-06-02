@@ -1,7 +1,9 @@
-<p>Hello <%= @resource.email %>!</p>
+<h1>¡Saludos desde Patatoon!</h1>
 
-<p>Your account has been locked due to an excessive amount of unsuccessful sign in attempts.</p>
+<p>Hola <%= @resource.email %>!</p>
 
-<p>Click the link below to unlock your account:</p>
+<p>Tu cuenta ha sido bloqueada temporalmente por una cantidad excesiva de intentos de logueo sin éxito. Como comprenderás, nos interesa proteger tu cuenta y tu información y por eso bloqueamos las cuentas hasta estar seguro que eres tú realmente el que ha tratado de entrar. </p>
 
-<p><%= link_to 'Unlock my account', unlock_url(@resource, :unlock_token => @resource.unlock_token) %></p>
+<p>Desbloquearla es muy sencillo, sólo necesitas entra en el siguiente enlace:</p>
+
+<p><%= link_to 'Desbloquear mi cuenta', unlock_url(@resource, :unlock_token => @resource.unlock_token) %></p>

@@ -1,3 +1,12 @@
+- form_tag posts_path, :method => 'get' do
+  = label_tag "Buscar"
+  = text_field_tag 'query', params[:query], :id=>"search_input_field"
+  = submit_tag 'Search', :id=>"search_button"
+
+#invite_friends
+  %h2 Invita a tus amigos
+  #invite_img= link_to image_tag("",:id=>"invite_friends"), invite_friends_path #r new_account_invitation_path
+
 #ranking.block
   %h2 Los que siempre aciertan
   %ul

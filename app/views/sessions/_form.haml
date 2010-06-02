@@ -2,6 +2,7 @@
   = display_flashes
   
   - form_for resource_name, resource, :url => session_path(resource_name), :class=>"form_login" do |f| 
+    = f.error_messages
     .group.wat-cf
       .left
         %label.label.right= f.label :email, "Tu email"

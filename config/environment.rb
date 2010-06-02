@@ -45,6 +45,14 @@ Rails::Initializer.run do |config|
   config.gem "devise", :version=>"1.0.7"
   config.gem "bcrypt-ruby", :lib=>"bcrypt", :version=>"2.1.2"
   config.gem 'devise_invitable', :version=>"0.2.3"
+  config.gem 'inherited_resources', :version=>"1.0.3"
+  config.gem 'has_scope'
+  config.gem 'formtastic'
+  config.gem 'show_for', :version=>"0.1.3"
+  config.gem 'mislav-will_paginate',
+             :lib => 'will_paginate',
+             :source => 'http://gems.github.com',
+             :version => '~> 2.3.11'
   # config.gem 'sqlite3-ruby', :require => "sqlite3"
   
   

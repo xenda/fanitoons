@@ -1,8 +1,12 @@
 class Prediction < ActiveRecord::Base
-  belongs_to :match
+  belongs_to :match, :counter_cache => true
   belongs_to :account, :class_name => "Account", :foreign_key => "user_id"
   belongs_to :winner, :class_name => "Team", :foreign_key => "winner_id"
 
+  named_scope :last, lambda{|last| {:limit => last, :order =>"predicted_at DESC"}}
+
+  attr_accessor :to_facebook
+  
   def teams
     [match.local,match.visitor]
   end
@@ -15,6 +19,30 @@ class Prediction < ActiveRecord::Base
     match.visitor == winner
   end
     
+  def prediction_text
+    "#{first_team_result} a #{second_team_result}"
+  end  
+  
+  def closeness
+    first_team_abs = (first_team_result - match.first_team_goals).abs
+    second_team_abs = (second_team_result - match.second_team_goals).abs
+    
+    first_team_abs + second_team_abs
+  end
+  
+  def prediction_title
+    case closeness
+      when 0
+        "¡acertada!"
+      when 1
+        "¡cerca!"
+      when 1..2
+        "cerca.. cerca.."
+      else
+        "¡para nada!"
+      end
+  end
+  
 end
 
 # == Schema Information

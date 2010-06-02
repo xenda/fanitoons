@@ -1,0 +1,14 @@
+- semantic_form_for ["admin",@match], :html => { :multipart => true } do |form|
+  - form.inputs do
+    = form.input :number
+    = form.input :played_at, :as=>:date
+    = form.input :stadium
+    = form.input :local, :label=>"Local"
+    = form.input :visitor, :label=>"Visitante"
+    = form.input :first_team_goals, :label=>"Goles Local"
+    = form.input :second_team_goals, :labels=>"Goles Visitante"
+    = form.input :group
+    = form.input :picture, :as=>:file
+    
+  - form.buttons do
+    = form.commit_button 'Grabar',:button_html => { :class => "submit" }

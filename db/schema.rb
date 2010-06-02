@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100526205951) do
+ActiveRecord::Schema.define(:version => 20100602164620) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20100526205951) do
     t.string   "last_sign_in_ip"
     t.string   "invitation_token",     :limit => 20
     t.datetime "invitation_sent_at"
+    t.date     "birth_date"
   end
 
   add_index "accounts", ["invitation_token"], :name => "index_accounts_on_invitation_token"
@@ -75,6 +76,14 @@ ActiveRecord::Schema.define(:version => 20100526205951) do
     t.datetime "updated_at"
   end
 
+  create_table "badges", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "type"
+  end
+
   create_table "comments", :force => true do |t|
     t.integer  "post_id"
     t.string   "title"
@@ -88,6 +97,27 @@ ActiveRecord::Schema.define(:version => 20100526205951) do
 
   create_table "countries", :force => true do |t|
     t.string "name"
+  end
+
+  create_table "favorite_teams", :force => true do |t|
+    t.integer  "team_id"
+    t.integer  "account_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "friends", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "friendships", :force => true do |t|
+    t.integer  "account_id"
+    t.integer  "friend_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "groups", :force => true do |t|
@@ -106,6 +136,11 @@ ActiveRecord::Schema.define(:version => 20100526205951) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "group_id"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
+    t.integer  "predictions_count"
   end
 
   create_table "places", :force => true do |t|
@@ -178,6 +213,15 @@ ActiveRecord::Schema.define(:version => 20100526205951) do
     t.datetime "updated_at"
     t.text     "bio"
     t.integer  "country_id"
+  end
+
+  create_table "user_badges", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "badge_id"
+    t.datetime "earned_at"
+    t.integer  "points"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|

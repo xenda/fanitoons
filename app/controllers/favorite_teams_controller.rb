@@ -1,0 +1,2 @@
+class FavoriteTeamsController < ApplicationController
+end

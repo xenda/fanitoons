@@ -1,0 +1,18 @@
+- show_for @match do |a| 
+
+  - a.association :group do |group|
+    = group.name
+
+  = image_tag @match.picture.url(:front) if @match.picture
+
+  = a.attribute :number
+  = a.attribute :played_at, :format => :short 
+  = a.attribute :place
+
+  - a.association :stadium do |stadium|
+    = stadium.name
+  - a.association :local do |local|
+    = local.name
+  - a.association :visitor do |visitor|
+    = visitor.name
+

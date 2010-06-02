@@ -1,0 +1,9 @@
+- if future_match
+  .match
+    .match_content
+      .flag= image_tag(random_flag)
+      .flag= image_tag(random_flag)
+      .match_time= distance_of_time_in_words_to_now(future_match.match.played_at)
+    .match_links
+      .send= link_to "manda tu predicción", match_prediction_path(future_match.match), :class=>"small iframe"
+      .view= link_to "mira la de tus amigos", match_path(future_match.match), :class=>"small"

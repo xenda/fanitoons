@@ -1,5 +1,8 @@
 es:
   devise:
+    invitations:
+      account:
+        send_instructions: "Hemos enviado instrucciones para aceptar la invitación a tus amigos"
     sessions:        
       link: 'Entrar'
       signed_in: 'Has iniciado sesión exitosamente'
@@ -32,6 +35,3 @@ es:
       confirmation_instructions: 'Instrucciones de confirmación'
       reset_password_instructions: 'Instrucciones para cambiar contraseña'
       unlock_instructions: 'Instrucciones para desbloquear tu cuenta'
-    
-      
-

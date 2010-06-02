@@ -1,0 +1,13 @@
+%h1 ¡Has sido invitado a unirte a Patatoon! 
+
+%p Para aceptar tu invitación, sólo necesitas entra acá: 
+
+%p= link_to 'Aceptar invitación', accept_invitation_url(@resource, :invitation_token => @resource.invitation_token)
+
+%p 
+  Si no quieres aceptar la invitación, ¡no hay problema! 
+  %br Tu cuenta no se creará hasta que no accedas al link anterior, asi que puedes continuar sin problemas :) Pero de hecho pensamos que te vas a perder de algo bueno. 
+
+%p 
+  ¡Te esperamos!
+  %br (o no, sin presiones)

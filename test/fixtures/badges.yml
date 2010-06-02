@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+
+two:
+  name: MyString
+  description: MyText
+
+
+# == Schema Information
+#
+# Table name: badges
+#
+#  id          :integer         not null, primary key
+#  name        :string(255)
+#  description :text
+#  created_at  :datetime
+#  updated_at  :datetime
+#  type        :string(255)
+#
+

@@ -1,0 +1,29 @@
+- @title = "Administración de Encuentros"
+
+= link_to "Nuevo encuentro", new_admin_match_path
+
+%table
+  %thematch
+    %tr
+      %th Id
+      %th Numero
+      %th Jugado en
+      %th Estadio
+      %th Primer Equipo
+      %th Segundo Equipo
+      %th Grupo
+  %tbody
+  - @matches.each do |match|
+    %tr{:class=>cycle('even','odd') }
+      %td= match.id
+      %td= match.number
+      %td= match.played_at
+      %td= match.stadium.name
+      %td= match.local.name
+      %td= match.visitor.name
+      %td= match.group.name
+      %td= link_to 'Editar', edit_admin_match_path(match)
+      %td= link_to 'Eliminar', ["admin",match], :confirm => 'Are you sure?', :method => :delete
+      
+.pagination= will_paginate @matches
+      

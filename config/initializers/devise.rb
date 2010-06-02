@@ -99,7 +99,7 @@ Devise.setup do |config|
 
   # Configure default_url_options if you are using dynamic segments in :path_prefix
   # for devise_for.
-  config.default_url_options do
-    { :locale => I18n.locale }
-  end
+  # config.default_url_options do
+  #   { :locale => "en" }
+  # end
 end

@@ -1,0 +1,9 @@
+%h2 Enviar invitación
+- form_for resource_name, resource, :url => invitation_path(resource_name) do |f| 
+  = f.error_messages 
+  %p= f.label :email, "¿A qué correo se la enviamos?"
+  %p= f.text_field :email 
+  %p= f.submit "Invitarlo" 
+
+= link_to "Regresar al inicio", after_sign_in_path_for(resource_name) 
+%br/

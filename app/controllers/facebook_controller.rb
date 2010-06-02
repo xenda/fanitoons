@@ -1,5 +1,8 @@
 class FacebookController < ApplicationController
 
+  before_filter :authenticate_account!, :only =>[:fb_invite_friends]
+ 
+
   def fb_connect
        
       redirect_to facebook_authentication  
@@ -35,6 +38,18 @@ class FacebookController < ApplicationController
           
     end
             
+  end
+  
+  def fb_invite_friends
+    facebook_authentication
+    client = reauthenticate(current_account.fb_token)
+    @friends = client.selection.me.friends.info!
+    # @friends[:data].each do |friend|
+    #   
+    # end
+    
+    
+    render :text => @friends.to_json
   end
   
   def destroy
