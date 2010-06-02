@@ -2,13 +2,13 @@
   .local
     .flag{:class=>("winner" if home_prediction.local_winner?)}
       = link_to image_tag(random_flag, :title=>home_prediction.match.local.name), home_prediction.match
-    - result = home_prediction.first_team_result
-    - result ||= "--"
-    %strong= link_to , result, home_prediction.match
+    - #result = home_prediction.first_team_result
+    - #result ||= "--"
+    %strong= #  link_to , result, home_prediction.match
 
   .visitor
     .flag{:class=>("winner" if home_prediction.visitor_winner?)}
       = link_to image_tag(random_flag, :title=>home_prediction.match.visitor.name), home_prediction.match
-    - result = home_prediction.second_team_result
-    - result ||= "--" 
-    %strong= link_to result, home_prediction.match
+    / - #result = home_prediction.second_team_result
+    / - #result ||= "--" 
+    / %#strong= link_to result, home_prediction.match
