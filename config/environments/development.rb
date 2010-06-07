@@ -19,3 +19,14 @@ config.action_mailer.raise_delivery_errors = false
 config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
 config.gem "rails-footnotes"
+
+config.after_initialize do
+  Bullet.enable = true 
+  Bullet.alert = true
+  Bullet.bullet_logger = true  
+  Bullet.console = true
+  Bullet.rails_logger = true
+  Bullet.disable_browser_cache = true
+end
+
+ENV['RAILS_ASSET_ID'] = '' 

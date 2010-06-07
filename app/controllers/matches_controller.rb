@@ -4,7 +4,7 @@ class MatchesController < ApplicationController
 
 
   def index
-    @matches = Match.all(:order => "played_at DESC", :limit => 40)
+    @groups = Group.all(:order => "name", :include => [:matches => [:local,:visitor,:stadium]])
   end
 
   def show

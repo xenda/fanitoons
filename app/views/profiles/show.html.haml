@@ -38,7 +38,7 @@
       %h3 Pasadas
       = render :partial => "profiles/past_match", :colecction => @account.past_predictions
       = link_to "ver todas", player_predictions_path(@account.id, :anchor =>"past")
-      
+    %div{:style=>"clear:both;"} 
   #game_status.content
     %h2 ¿Cómo va en Patatoon?
     
@@ -55,5 +55,5 @@
       %li
         %strong= "Te faltan 120 puntos para mejorar de título" 
         %span= "Estás en el Top 10 de la semana"
-        
+    %div{:style=>"clear:both;"}
     

@@ -3,7 +3,7 @@ class Match < ActiveRecord::Base
   belongs_to :local, :class_name => "Team", :foreign_key => "first_team_id"
   belongs_to :visitor, :class_name => "Team", :foreign_key => "second_team_id"
   belongs_to :group
-  
+  has_many :comments, :as => :commentable
   has_many :predictions
   
   has_attached_file :picture, :styles => { :front=>"190x110#", :medium => "300x300#", :thumb => "50x50#" }

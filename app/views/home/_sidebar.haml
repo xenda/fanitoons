@@ -12,14 +12,14 @@
   %ul
     - Account.all.each do |a|
       %li
-        = a.name
+        = link_to a.name, profile_path(a.id)
         %strong{:style=>"font-size:20px;"}= rand(100) 
 
   %h2 Los más rankeados
   %ul
     - Account.all.each do |a|
       %li
-        = a.name
+        = link_to a.name, profile_path(a.id)
         %strong{:style=>"font-size:20px;"}= rand(100) 
 
 #featured_posts.block

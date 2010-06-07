@@ -63,7 +63,15 @@ class Account < ActiveRecord::Base
    end
    
    def right_predictions_average
-     (self.right_predictions_count.to_f / self.predictions.size.to_f).round(2)
+     right = self.right_predictions_count.to_f
+     right ||= 0.0
+     total = self.predictions.size
+     
+     if total > 0
+          ( right / total ).round(2)
+     else
+          0
+      end
    end
 
   def future_predictions(limit=3,future=3.months.from_now)

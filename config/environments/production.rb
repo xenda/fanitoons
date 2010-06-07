@@ -29,4 +29,4 @@ config.action_view.cache_template_loading            = true
 
 config.gem "pg"
 
-config.action_mailer.default_url_options = { :host => 'fanitoons.heroku.com' }
+config.action_mailer.default_url_options = { :host => 'patatoon.heroku.com' }

@@ -1,8 +1,14 @@
+/* @override 
+	http://localhost:3000/stylesheets/style.css?1275259398
+	http://localhost:3000/stylesheets/style.css
+*/
+
 body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
 	background: #ffffff url(../images/background.png) no-repeat 0 0;
 }
+
   body a {
     color: #336699; }
   body h2 {
@@ -54,7 +60,11 @@ body {
 	height: 160px;
 	padding-bottom: 0px;
 }
-  
+
+.profiles #header {
+	height: 100px;
+	margin-bottom: 20px;
+}  
   div#header_content {
 	overflow: hidden;
 	width: 1010px;
@@ -261,10 +271,44 @@ div#welcome img {
 div.block {
 	margin-bottom: 2em;
 }
+
+#sidebar div.block {
+	margin-bottom: 10px;
+}
+
   #main h2 {
     font-size: 1.5em;
 	color: #000;
 	margin-bottom: 0.5em;
+}
+
+ul#matches.content_box {
+	overflow: hidden;
+}
+
+#ranking ul li {
+	height: 40px;	
+	padding-left: 10px;
+	padding-top: 10px;
+	background-color: #d6d6d6;
+	color: #555;
+	margin-bottom: 1px;
+	overflow: hidden;
+}
+
+#ranking ul li strong {
+	float: right;
+	margin-right: 10px;
+	font-size: 3.5em !important;
+	color: #b0b0b0;
+	font-style: italic;
+	font-weight: bold;
+}
+
+#ranking ul li a {
+	text-decoration: none;
+	color: #484848;
+	font-size: 2em;
 }
 #main_content #welcome h2 {
     font-size: 2.1em;
@@ -329,6 +373,9 @@ div.block {
 	padding: 10px;
 	background-color: #00c6a1;
 	color: white;
+}
+
+#sidebar ul {
 	margin-bottom: 10px;
 }
 
@@ -642,3 +689,146 @@ div.prediction div.prediction_content div.group.navform.wat-cf {
 
 
 /* @end */
+
+.profiles div#main {
+	width: 900px;
+	background-color: white;
+	padding: 20px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+
+.profiles #main h1 {
+	font-size: 2em;
+	font-style: normal;
+	font-weight: normal;
+	margin-bottom: 10px;
+	color: #423b13;
+}
+
+#profile_sidebar div.special.content h3 {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	font-weight: bold;
+	color: #423b13;
+}
+
+#profile_sidebar div.special.content h2 {
+	color: #748b3b;
+}
+
+div#needed_points {
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+	color: #6d8237;
+	background-color: #ebf3d7;
+	margin-bottom: 1em;
+}
+
+#profile_predictions h2 {
+	color: #6e8338;
+}
+
+#profile_predictions div.incoming {
+	float: left;
+	margin-right: 10px;
+	width: 250px;
+}
+
+#profile_predictions div.done {
+	width: 250px;
+}
+
+div#game_status.content {
+	padding: 20px 0px;
+	overflow: auto;
+	width: 550px;
+}
+
+#game_status h2 {
+	color: #423b13;
+}
+	
+#game_status ul li {
+	float: left;
+	width: 250px;
+	margin-bottom: 20px;
+}
+
+#game_status ul {
+	overflow: auto;
+	padding: 20px 20px;
+	background-color: #f1fadf;
+}
+
+#game_status ul li span {
+display: block;
+	color: #8c7e33;
+}
+
+#game_status ul li strong {
+	color: #4a552f;
+	font-weight: bold;
+}
+
+#profile_predictions div.incoming div.match div.match_content div.flag {
+	float: left;
+	width: 120px;
+}
+
+#profile_predictions div.incoming div.match div.match_content div.match_time {
+	font-weight: bold;
+	color: #423b13;
+	text-transform: lowercase;
+	font-family: Arial, Helvetica, Geneva, sans-serif;
+}
+
+#profile_predictions div.incoming div.match {
+	margin-bottom: 15px;
+	text-align: center;
+	padding: 10px 0px;
+	background-color: #ebf3d7;
+}
+
+div#profile_predictions.content {
+	margin-bottom: 10px;	
+}
+
+#profile_predictions div.incoming div.match a {
+	color: #8a9e5c;
+}
+
+#profile_predictions div.incoming h3,
+#profile_predictions div.done h3 {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #423b13;
+}
+
+#profile_predictions div.done {
+	float: left;
+}
+
+div#profile_sidebar {
+	float: left;
+	width: 300px;
+	margin-right: 20px;
+}
+
+.profiles div#main_content {
+	float: left;
+}
+
+
+.matches div#main {
+	background-color: white;
+	width: 600px !important;
+	padding: 10px 20px;
+}
+
+.matches #main h1 {
+	font-size: 2em;
+	margin-bottom: 20px;
+	color: #3c392a;
+}

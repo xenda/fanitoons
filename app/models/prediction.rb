@@ -2,6 +2,8 @@ class Prediction < ActiveRecord::Base
   belongs_to :match, :counter_cache => true
   belongs_to :account, :class_name => "Account", :foreign_key => "user_id"
   belongs_to :winner, :class_name => "Team", :foreign_key => "winner_id"
+  has_many :comments, :as => :commentable
+
 
   named_scope :last, lambda{|last| {:limit => last, :order =>"predicted_at DESC"}}
 

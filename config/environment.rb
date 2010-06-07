@@ -12,6 +12,17 @@ $api_key, $secret_key = $keys['api_key'], $keys['secret_key']
 
 
 Rails::Initializer.run do |config|
+  # config.gem 'oauth', :version => '>= 0.3.5'
+  # config.gem 'rubyist-aasm', :lib => 'aasm', :version => '~> 2.1.1'
+  # config.gem 'linkingpaths-acts_as_abusable', :lib => 'acts_as_abusable', :version => '0.0.2'
+  # config.gem 'mbleigh-acts-as-taggable-on', :lib => 'acts-as-taggable-on', :version => '1.0.5'
+  # config.gem 'RedCloth', :lib => 'redcloth', :version => '>= 4.2.0'
+  # config.gem 'mreinsch-acts_as_rateable', :lib => 'acts_as_rateable', :version => '2.0.1'
+  # config.gem 'jackdempsey-acts_as_commentable', :lib => 'acts_as_commentable', :version => '2.0.1'
+  # config.gem 'thoughtbot-factory_girl', :lib => 'factory_girl'
+  # config.gem 'tog-tog', :lib => 'tog', :version => '>= 0.5'
+  # config.gem 'mislav-will_paginate', :lib => 'will_paginate', :version => '~> 2.3.6'
+  # config.gem 'desert', :lib => 'desert', :version => '>= 0.5.2'
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
@@ -53,6 +64,7 @@ Rails::Initializer.run do |config|
              :lib => 'will_paginate',
              :source => 'http://gems.github.com',
              :version => '~> 2.3.11'
+  config.gem 'bullet', :source => 'http://gemcutter.org'             
   # config.gem 'sqlite3-ruby', :require => "sqlite3"
   
   

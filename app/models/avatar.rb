@@ -1,6 +1,6 @@
 class Avatar < ActiveRecord::Base
  belongs_to :account, :foreign_key => "user_id"
- 
+ has_many :comments, :as => :commentable
 end
 
 # == Schema Information
