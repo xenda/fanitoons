@@ -1,18 +1,28 @@
-- show_for @match do |a| 
+- @title = "Viendo match"
 
-  - a.association :group do |group|
-    = group.name
+#admin
 
-  = image_tag @match.picture.url(:front) if @match.picture
+  %h1 "Viendo match"
 
-  = a.attribute :number
-  = a.attribute :played_at, :format => :short 
-  = a.attribute :place
+  - show_for @match do |a| 
+    = a.attribute :id
+        = a.attribute :number
+        = a.attribute :played_at
+        = a.attribute :place
+        = a.attribute :stadium
+        = a.attribute :first_team
+        = a.attribute :second_team
+        = a.attribute :first_team_goals
+        = a.attribute :second_team_goals
+        = a.attribute :group
+        = a.attribute :picture_file_name
+        = a.attribute :picture_content_type
+        = a.attribute :picture_file_size
+        = a.attribute :picture_updated_at
+        = a.attribute :predictions_count
+    
 
-  - a.association :stadium do |stadium|
-    = stadium.name
-  - a.association :local do |local|
-    = local.name
-  - a.association :visitor do |visitor|
-    = visitor.name
-
+  .bottom_menu
+    = link_to "Ver todos", admin_matches_path
+    = link_to "Editar match",  edit_admin_match_path(match)
+    = link_to "Crear otro", new_admin_match_path

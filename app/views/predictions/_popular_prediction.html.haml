@@ -1,10 +1,10 @@
 .popular_prediction
   .local
     .flag{:class=>("winner" if popular_prediction.average_local_winner?)}
-      = link_to image_tag(random_flag, :title=>popular_prediction.local.name), popular_prediction
+      = link_to image_tag(random_flag, :title=>popular_prediction.try(:local).try(:name)), popular_prediction
     %strong= link_to "#{popular_prediction.local_winner_count} votos", popular_prediction
 
   .visitor
     .flag{:class=>("winner" if popular_prediction.average_visitor_winner?)}
-      = link_to image_tag(random_flag, :title=>popular_prediction.visitor.name), popular_prediction
+      = link_to image_tag(random_flag, :title=>popular_prediction.try(:visitor).try(:name)), popular_prediction
     %strong= link_to "#{popular_prediction.visitor_winner_count} votos", popular_prediction

@@ -2,11 +2,13 @@ class Prediction < ActiveRecord::Base
   belongs_to :match, :counter_cache => true
   belongs_to :account, :class_name => "Account", :foreign_key => "user_id"
   belongs_to :winner, :class_name => "Team", :foreign_key => "winner_id"
+  belongs_to :scoring_player, :class_name => "Player", :foreign_key => "scoring_player_id"
   has_many :comments, :as => :commentable
 
 
   named_scope :last, lambda{|last| {:limit => last, :order =>"predicted_at DESC"}}
-
+  validates_presence_of :match_id
+  
   attr_accessor :to_facebook
   
   def teams

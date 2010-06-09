@@ -10,8 +10,15 @@ class Match < ActiveRecord::Base
   
   named_scope :most_popular, lambda{|limit| {:order=>"predictions_count DESC", :limit => limit } }
   
+  validates_presence_of :first_team_id
+  validates_presence_of :second_team_id
+  
   def to_param
+    if local and visitor
     "#{id}-#{local.name.parameterize}-vs-#{visitor.name.parameterize}"
+    else
+      "#{id}"
+    end
   end
   
   def title
@@ -19,11 +26,11 @@ class Match < ActiveRecord::Base
   end
   
   def local_winner_count
-    @local_winner_count ||= predictions.count(:conditions=>{:winner_id=>local.id})
+    @local_winner_count ||= predictions.count(:conditions=>{:winner_id=>local.id}) if local
   end
   
   def visitor_winner_count
-    @visitor_winner_count ||= predictions.count(:conditions=>{:winner_id=>visitor.id})
+    @visitor_winner_count ||= predictions.count(:conditions=>{:winner_id=>visitor.id}) if visitor
   end
   
   def average_tie
@@ -31,10 +38,12 @@ class Match < ActiveRecord::Base
   end
   
   def average_local_winner?
-    local_winner_count > visitor_winner_count
+    return 0 unless local and visitor
+    local_winner_count > visitor_winner_count 
   end
   
   def average_visitor_winner?
+    return 0 unless local and visitor
     visitor_winner_count > local_winner_count
   end
     

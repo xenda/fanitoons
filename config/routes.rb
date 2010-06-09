@@ -1,4 +1,41 @@
 ActionController::Routing::Routes.draw do |map|
+  
+	map.namespace :admin do |admin| 
+		admin.resources :shirts 
+	end
+
+
+  
+	map.namespace :admin do |admin| 
+		admin.resources :posts 
+	end
+
+
+  
+	map.namespace :admin do |admin| 
+		admin.resources :posts 
+	end
+
+
+  
+	map.namespace :admin do |admin| 
+		admin.resources :posts 
+	end
+
+
+  
+	map.namespace :admin do |admin| 
+		admin.resources :posts 
+	end
+
+
+  
+	map.namespace :admin do |admin| 
+		admin.resources :posts 
+	end
+
+
+    
   map.resources :user_badges
 
   map.resources :badges
@@ -29,6 +66,15 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :predictions, :as=>"pronosticos"
     admin.resources :stadia, :as=>"estadios"
     admin.resources :teams, :as=>"equipos"
+    admin.resources :snickers, :as=>"zapatillas"
+		admin.resources :shorts, :as => "pantalones"
+		admin.resources :shirts , :as => "camisetas"
+		admin.resources :groups, :as => "grupos"
+		admin.resources :countries, :as => "paises"
+		admin.resources :comments, :as => "comentarios" 
+		admin.resources :badges, :as => "medallas" 
+		admin.resources :avatars, :as => "avatares" 
+		
   end
   
   map.resources :matches, :as =>"encuentros" do |matches|

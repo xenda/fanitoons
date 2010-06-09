@@ -1,29 +1,42 @@
-- @title = "Administración de Encuentros"
+- @title = "Administración Matches "
 
-= link_to "Nuevo encuentro", new_admin_match_path
+#admin
+  %h1= "Administrando Matches"
 
-%table
-  %thematch
-    %tr
-      %th Id
-      %th Numero
-      %th Jugado en
-      %th Estadio
-      %th Primer Equipo
-      %th Segundo Equipo
-      %th Grupo
-  %tbody
-  - @matches.each do |match|
-    %tr{:class=>cycle('even','odd') }
-      %td= match.id
-      %td= match.number
-      %td= match.played_at
-      %td= match.stadium.name
-      %td= match.local.name
-      %td= match.visitor.name
-      %td= match.group.name
-      %td= link_to 'Editar', edit_admin_match_path(match)
-      %td= link_to 'Eliminar', ["admin",match], :confirm => 'Are you sure?', :method => :delete
+  #admin_menu
+    = link_to "Nuevo match", new_admin_match_path
+
+  %table{:id=>"matches_table"}
+    %thead
+      %tr
+        %td Id
+        %td Número
+        %td Fecha
+        %td Estadio
+        %td Equipo
+        %td Equipo
+        %td Goles
+        %td Goles
+        %td Grupo
+        %td Foto
+        %td Predicciones
+        %td
+        %td
+    %tbody
+    - @matches.each do |match|
+      %tr{:class=>cycle('even','odd') }
+        %td= match.id
+        %td= match.number
+        %td= l(match.played_at, :format=>:short)
+        %td= match.stadium
+        %td= match.local.name if match.local
+        %td= match.visitor.name if match.visitor
+        %td= match.first_team_goals
+        %td= match.second_team_goals
+        %td= match.group
+        %td= match.picture.url(:thumbnail)
+        %td= match.predictions_count
+        %td= link_to 'Editar', edit_admin_match_path(match)
+        %td= link_to 'Eliminar', ["admin",match], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
       
-.pagination= will_paginate @matches
-      
+  .pagination= will_paginate @matches

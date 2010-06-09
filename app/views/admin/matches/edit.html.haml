@@ -1,5 +1,9 @@
-- @title = "Editando encuentro"
+- @title = "Editando match"
 
-= render :partial => 'form'
+#admin
+  %h1= "Editando match"
 
-%p= link_to "ver todos", admin_matches_path
+  = render :partial => 'form'
+
+  .bottom_menu
+    %p= link_to "Ver todos", admin_matches_path
