@@ -1,0 +1,15 @@
+- @title = "Viendo #{I18n.t 'activerecord.models.<%= singular_name -%>'}"
+
+#admin
+
+  %h1= "Viendo #{I18n.t 'activerecord.models.<%= singular_name -%>'}"
+
+  - show_for @<%= singular_name -%> do |a| 
+    <%- column_names.each do |column| -%>
+    = a.attribute :<%= column %>
+    <% end %>
+
+  .bottom_menu
+    = link_to "Ver todos", admin_<%= plural_name -%>_path
+    = link_to "Editar #{I18n.t 'activerecord.models.<%= singular_name -%>'}",  edit_admin_<%= singular_name %>_path(<%= singular_name %>)
+    = link_to "Crear otro", new_admin_<%= singular_name -%>_path

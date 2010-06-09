@@ -1,0 +1,9 @@
+- semantic_form_for ["admin",@badge] do |form|
+  - form.inputs do
+    = form.input :id
+    = form.input :name
+    = form.input :description, :input_html => {:class => "tinymce"}
+    = form.input :type
+    
+  - form.buttons do
+    = form.commit_button 'Grabar',:button_html => { :class => "submit" }

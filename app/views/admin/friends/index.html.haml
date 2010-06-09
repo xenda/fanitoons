@@ -1,0 +1,30 @@
+- @title = "Administración Friends "
+
+#admin
+  %h1= "Administrando Friends"
+
+  #admin_menu
+    = link_to "Nuevo friend", new_admin_friend_path
+
+  %table{:id=>"friends_table"}
+    %thead
+      %tr
+        %td Id
+        %td Name
+        %td Email
+        %td Created_at
+        %td Updated_at
+        %td
+        %td
+    %tbody
+    - @friends.each do |friend|
+      %tr{:class=>cycle('even','odd') }
+        %td= friend.id
+        %td= friend.name
+        %td= friend.email
+        %td= friend.created_at
+        %td= friend.updated_at
+        %td= link_to 'Editar', edit_admin_friend_path(friend)
+        %td= link_to 'Eliminar', ["admin",friend], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
+      
+  .pagination= will_paginate @friends

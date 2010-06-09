@@ -1,0 +1,19 @@
+- @title = "Viendo stadium"
+
+#admin
+
+  %h1 "Viendo stadium"
+
+  - show_for @stadium do |a| 
+    = a.attribute :id
+        = a.attribute :name
+        = a.attribute :city
+        = a.attribute :country
+        = a.attribute :bio
+        = a.attribute :country
+    
+
+  .bottom_menu
+    = link_to "Ver todos", admin_stadia_path
+    = link_to "Editar stadium",  edit_admin_stadium_path(stadium)
+    = link_to "Crear otro", new_admin_stadium_path

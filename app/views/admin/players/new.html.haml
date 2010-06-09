@@ -1,0 +1,9 @@
+- @title = "Nuevo player"
+
+#admin
+  %h1= "Nuevo player"
+
+  = render :partial => 'form'
+
+  .bottom_menu
+    %p= link_to "Ver todos", admin_players_path

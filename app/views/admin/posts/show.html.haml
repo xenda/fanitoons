@@ -1,0 +1,17 @@
+- @title = "Viendo #{I18n.t 'activerecord.models.post'}"
+
+#admin
+
+  %h1= "Viendo #{I18n.t 'activerecord.models.post'}"
+
+  - show_for @post do |a| 
+    = a.attribute :id
+        = a.attribute :title
+        = a.attribute :content
+        = a.attribute :account
+    
+
+  .bottom_menu
+    = link_to "Ver todos", admin_posts_path
+    = link_to "Editar #{I18n.t 'activerecord.models.post'}",  edit_admin_post_path(post)
+    = link_to "Crear otro", new_admin_post_path

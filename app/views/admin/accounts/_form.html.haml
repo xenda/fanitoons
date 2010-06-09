@@ -1,0 +1,35 @@
+- semantic_form_for ["admin",@account] do |form|
+  - form.inputs do
+    = form.input :id
+    = form.input :name
+    = form.input :surname
+    = form.input :email
+    = form.input :crypted_password
+    = form.input :salt
+    = form.input :role
+    = form.input :picture_file_name
+    = form.input :picture_content_type
+    = form.input :picture_file_size
+    = form.input :picture_updated_at
+    = form.input :fb_token
+    = form.input :fb
+    = form.input :gender
+    = form.input :encrypted_password
+    = form.input :password_salt
+    = form.input :confirmation_token
+    = form.input :confirmed_at
+    = form.input :confirmation_sent_at
+    = form.input :reset_password_token
+    = form.input :remember_token
+    = form.input :remember_created_at
+    = form.input :sign_in_count
+    = form.input :current_sign_in_at
+    = form.input :last_sign_in_at
+    = form.input :current_sign_in_ip
+    = form.input :last_sign_in_ip
+    = form.input :invitation_token
+    = form.input :invitation_sent_at
+    = form.input :birth_date
+    
+  - form.buttons do
+    = form.commit_button 'Grabar',:button_html => { :class => "submit" }

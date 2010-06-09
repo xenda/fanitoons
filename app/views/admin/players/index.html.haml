@@ -1,0 +1,36 @@
+- @title = "Administración Players "
+
+#admin
+  %h1= "Administrando Players"
+
+  #admin_menu
+    = link_to "Nuevo player", new_admin_player_path
+
+  %table{:id=>"players_table"}
+    %thead
+      %tr  
+        %td Id
+        %td Name
+        %td Born_at
+        %td Country
+        %td Team
+        %td Created_at
+        %td Updated_at
+        %td Bio
+        %td
+        %td
+    %tbody
+    - @players.each do |player|
+      %tr{:class=>cycle('even','odd') }
+        %td= player.id
+        %td= player.name
+        %td= player.born_at
+        %td= player.country
+        %td= player.team
+        %td= player.created_at
+        %td= player.updated_at
+        %td= player.bio
+        %td= link_to 'Editar', edit_admin_player_path(player)
+        %td= link_to 'Eliminar', ["admin",player], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
+      
+  .pagination= will_paginate @players

@@ -1,0 +1,17 @@
+- @title = "Viendo badge"
+
+#admin
+
+  %h1 "Viendo badge"
+
+  - show_for @badge do |a| 
+    = a.attribute :id
+        = a.attribute :name
+        = a.attribute :description
+        = a.attribute :type
+    
+
+  .bottom_menu
+    = link_to "Ver todos", admin_badges_path
+    = link_to "Editar badge",  edit_admin_badge_path(badge)
+    = link_to "Crear otro", new_admin_badge_path

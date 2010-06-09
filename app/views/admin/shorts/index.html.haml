@@ -1,0 +1,28 @@
+- @title = "Administración Shorts "
+
+#admin
+  %h1= "Administrando Shorts"
+
+  #admin_menu
+    = link_to "Nuevo short", new_admin_short_path
+
+  %table{:id=>"shorts_table"}
+    %thead
+      %tr
+        %td Id
+        %td Name
+        %td Created_at
+        %td Updated_at
+        %td
+        %td
+    %tbody
+    - @shorts.each do |short|
+      %tr{:class=>cycle('even','odd') }
+        %td= short.id
+        %td= short.name
+        %td= short.created_at
+        %td= short.updated_at
+        %td= link_to 'Editar', edit_admin_short_path(short)
+        %td= link_to 'Eliminar', ["admin",short], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
+      
+  .pagination= will_paginate @shorts

@@ -1,0 +1,9 @@
+- @title = "Nuevo comment"
+
+#admin
+  %h1= "Nuevo comment"
+
+  = render :partial => 'form'
+
+  .bottom_menu
+    %p= link_to "Ver todos", admin_comments_path

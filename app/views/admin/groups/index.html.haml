@@ -1,0 +1,24 @@
+- @title = "Administración Groups "
+
+#admin
+  %h1= "Administrando Groups"
+
+  #admin_menu
+    = link_to "Nuevo group", new_admin_group_path
+
+  %table{:id=>"groups_table"}
+    %thead
+      %tr
+        %td Id
+        %td Name
+        %td
+        %td
+    %tbody
+    - @groups.each do |group|
+      %tr{:class=>cycle('even','odd') }
+        %td= group.id
+        %td= group.name
+        %td= link_to 'Editar', edit_admin_group_path(group)
+        %td= link_to 'Eliminar', ["admin",group], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
+      
+  .pagination= will_paginate @groups

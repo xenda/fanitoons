@@ -1,0 +1,15 @@
+- @title = "Viendo snicker"
+
+#admin
+
+  %h1 "Viendo snicker"
+
+  - show_for @snicker do |a| 
+    = a.attribute :id
+        = a.attribute :name
+    
+
+  .bottom_menu
+    = link_to "Ver todos", admin_snickers_path
+    = link_to "Editar snicker",  edit_admin_snicker_path(snicker)
+    = link_to "Crear otro", new_admin_snicker_path

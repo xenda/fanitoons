@@ -1,0 +1,9 @@
+- @title = "Nuevo group"
+
+#admin
+  %h1= "Nuevo group"
+
+  = render :partial => 'form'
+
+  .bottom_menu
+    %p= link_to "Ver todos", admin_groups_path

@@ -1,0 +1,15 @@
+- @title = "Viendo country"
+
+#admin
+
+  %h1 "Viendo country"
+
+  - show_for @country do |a| 
+    = a.attribute :id
+        = a.attribute :name
+    
+
+  .bottom_menu
+    = link_to "Ver todos", admin_countries_path
+    = link_to "Editar country",  edit_admin_country_path(country)
+    = link_to "Crear otro", new_admin_country_path

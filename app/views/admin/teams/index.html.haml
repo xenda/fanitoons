@@ -1,0 +1,28 @@
+- @title = "Administración Teams "
+
+#admin
+  %h1= "Administrando Teams"
+
+  #admin_menu
+    = link_to "Nuevo #{I18n.t 'activerecord.models.team'}", new_admin_team_path
+
+  %table{:id=>"teams_table"}
+    %thead
+      %tr
+        %td Id
+        %td Name
+        %td Bio
+        %td Country
+        %td
+        %td
+    %tbody
+    - @teams.each do |team|
+      %tr{:class=>cycle('even','odd') }
+        %td= team.id
+        %td= team.name
+        %td= truncate(strip_tags(team.bio),50)
+        %td= team.country.name
+        %td= link_to 'Editar', edit_admin_team_path(team)
+        %td= link_to 'Eliminar', ["admin",team], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
+      
+  .pagination= will_paginate @teams

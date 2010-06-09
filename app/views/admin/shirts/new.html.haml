@@ -1,0 +1,9 @@
+- @title = "Nuevo #{I18n.t 'activerecord.models.shirt'}"
+
+#admin
+  %h1= "Nuevo #{I18n.t 'activerecord.models.shirt'}"
+
+  = render :partial => 'form'
+
+  .bottom_menu
+    %p= link_to "Ver todos", admin_shirts_path

@@ -1,0 +1,9 @@
+- @title = "Nuevo friend"
+
+#admin
+  %h1= "Nuevo friend"
+
+  = render :partial => 'form'
+
+  .bottom_menu
+    %p= link_to "Ver todos", admin_friends_path

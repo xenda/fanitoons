@@ -1,0 +1,30 @@
+- @title = "Administración Stadia "
+
+#admin
+  %h1= "Administrando Stadia"
+
+  #admin_menu
+    = link_to "Nuevo stadium", new_admin_stadium_path
+
+  %table{:id=>"stadia_table"}
+    %thead
+      %tr
+        %td Id
+        %td Name
+        %td City
+        %td Bio
+        %td Country
+        %td
+        %td
+    %tbody
+    - @stadia.each do |stadium|
+      %tr{:class=>cycle('even','odd') }
+        %td= stadium.id
+        %td= stadium.name
+        %td= stadium.city
+        %td= truncate(strip_tags(stadium.bio),50)
+        %td= stadium.country.name
+        %td= link_to 'Editar', edit_admin_stadium_path(stadium)
+        %td= link_to 'Eliminar', ["admin",stadium], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
+      
+  .pagination= will_paginate @stadia

@@ -1,0 +1,204 @@
+/* @override http://localhost:3000/stylesheets/admin_style.css */
+
+div#header {
+	background: none;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+div#header_content {
+	background-color: white;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	padding-bottom: 10px;
+}
+
+div#logged_as {
+	float: none;
+	width: 920px;
+	overflow: hidden;
+	margin: 0px auto;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #624d35;
+	background-color: #f4f4a6;
+	border-style: none;
+	border-top: 1px solid #bcc05f;
+	border-bottom: 1px solid #bcc05f;
+	font-weight: bold;
+	font-family: Arial, Helvetica, Geneva, sans-serif;
+}
+
+div#container {
+	background-color: white;
+	padding: 10px;
+	padding-top: 20px;
+	padding-left: 20px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	height: auto !important;
+}
+
+#admin h1 {
+	font: 2.2em "Lucida Grande", Lucida, Verdana, sans-serif;
+	margin-bottom: 20px;
+	color: #5d5d5d;
+}
+
+div#admin_menu {
+	padding: 10px 15px;
+	width: 100%;
+	border-top: 2px solid #dbdd96;
+	border-bottom: 2px solid #dbdd96;
+	margin-bottom: 30px;
+	background-color: #fbfdad;
+}
+
+div#admin table {
+	width: 100%;
+}
+div#admin table thead tr {
+	background-color: #dbdd96;
+}
+div#admin table thead tr td {
+	padding: 10px 5px;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+#admin table tbody tr td a {
+	color: #a5392c;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+#admin div.pagination div.pagination {
+	margin-top: 30px;	
+	padding-top: 20px;
+	border-top: 2px solid #b69180;
+	font-size: 1.2em;
+	text-align: center;
+}
+#admin div.pagination div.pagination span,
+#admin div.pagination div.pagination a {
+	display: block;
+	float: left;
+	padding: 5px 10px;
+	border: 1px solid #dbdd96;
+	margin-right: 10px;
+	background-color: #fbfdad;
+	color: #c3655c;
+}
+div#admin table tbody tr.odd {
+	background-color: #fbfdad;
+}
+
+#admin table tbody tr:hover {
+	background-color: #e7f860 !important;
+}
+	
+div#admin table td {
+	padding: 5px;
+	text-align: center;
+}
+#admin_menu a {
+	display: block;
+	color: #c3655c;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 1.2em;
+}
+#admin_menu a:hover {
+	color: black;
+}
+div#container div#main {
+	width: 100% !important;
+	overflow: hidden;
+}
+
+#logged_as img {
+	display: none;
+}
+
+#header_content ul.menu   {
+	float: none;
+	overflow: auto;
+	margin-top: 10px;
+	margin-left: 10px;
+	text-align: center;
+}
+
+#header_content ul.menu ul li {
+	text-align: center;
+}
+
+#header_content ul.menu  li a {
+	color: #5d5d5d;
+	margin-right: 5px;
+	background-color: #bdd77b;
+	padding: 5px 15px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	text-decoration: none;
+}
+
+#header_content ul.menu  li a:hover {
+	background-color: #ffb74e;	
+	text-decoration: none;
+}
+
+#header_content ul.menu  li a:active {
+	background-color: #eaa949;	
+}
+
+/* @group form */
+
+	form.formtastic fieldset label {
+	display: block !important;
+	clear: both;
+	font-size: 1.4em;
+	color: #999272;
+}
+	form.formtastic fieldset select {
+	margin-bottom: 20px;
+}
+	form.formtastic fieldset input {
+	display: block;
+	clear: both;
+	border: 1px solid #a8a8a8;
+	padding: 5px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	color: #4a4135;
+	font: 12px "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+input.submit {
+	background-color: #ffb74e;
+	padding: 5px 20px !important;
+}
+	form.formtastic fieldset ol li fieldset ol {
+	overflow: auto;
+}
+	form.formtastic fieldset ol li fieldset ol li {
+	float: left !important;
+	margin: 0px !important;
+	clear: none;
+	width: auto;
+	margin-right: 10px !important;
+	margin-bottom: 20px !important;
+
+}
+	form.formtastic fieldset ol li fieldset ol li label {
+	font-size: 12px;
+	color: #4f4f4f;
+	margin-top: 10px;
+}
+	form.formtastic ol li {
+	  display: block;
+	  clear: both;
+	
+}
+
+/* @end */

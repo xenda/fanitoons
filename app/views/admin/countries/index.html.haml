@@ -1,0 +1,24 @@
+- @title = "Administración Countries "
+
+#admin
+  %h1= "Administrando Countries"
+
+  #admin_menu
+    = link_to "Nuevo country", new_admin_country_path
+
+  %table{:id=>"countries_table"}
+    %thead
+      %tr
+        %td Id
+        %td Name
+        %td
+        %td
+    %tbody
+    - @countries.each do |country|
+      %tr{:class=>cycle('even','odd') }
+        %td= country.id
+        %td= country.name
+        %td= link_to 'Editar', edit_admin_country_path(country)
+        %td= link_to 'Eliminar', ["admin",country], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
+      
+  .pagination= will_paginate @countries

@@ -1,0 +1,30 @@
+- @title = "Administración #{I18n.t('activerecord.models.post').pluralize} "
+
+#admin
+  %h1= "Administrando #{I18n.t('activerecord.models.post').pluralize}"
+
+  #admin_menu
+    = link_to "Nuevo #{I18n.t('activerecord.models.post')}", new_admin_post_path
+
+  %table{:id=>"posts_table"}
+    %thead
+      %tr
+        %td= I18n.t("activerecord.attributes.posts.title").humanize
+        %td= I18n.t("activerecord.attributes.posts.content").humanize
+        %td= I18n.t("activerecord.attributes.posts.created_at").humanize
+        %td= I18n.t("activerecord.attributes.posts.updated_at").humanize
+        %td= I18n.t("activerecord.attributes.posts.account").humanize
+        %td
+        %td
+    %tbody
+    - @posts.each do |post|
+      %tr{:class=>cycle('even','odd') }
+        %td= post.title
+        %td= summary post.content
+        %td= date post.created_at
+        %td= date post.updated_at
+        %td= post.account.name
+        %td= link_to 'Editar', edit_admin_post_path(post)
+        %td= link_to 'Eliminar', ["admin",post], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
+      
+  .pagination= will_paginate @posts

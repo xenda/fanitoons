@@ -1,0 +1,9 @@
+- @title = "Nuevo short"
+
+#admin
+  %h1= "Nuevo short"
+
+  = render :partial => 'form'
+
+  .bottom_menu
+    %p= link_to "Ver todos", admin_shorts_path

@@ -1,0 +1,28 @@
+- @title = "Administración #{I18n.t('activerecord.models.shirt').pluralize} "
+
+#admin
+  %h1= "Administrando #{I18n.t('activerecord.models.shirt').pluralize}"
+
+  #admin_menu
+    = link_to "Nuevo #{I18n.t('activerecord.models.shirt')}", new_admin_shirt_path
+
+  %table{:id=>"shirts_table"}
+    %thead
+      %tr
+        %td= I18n.t("activerecord.attributes.shirts.id").humanize
+        %td= I18n.t("activerecord.attributes.shirts.name").humanize
+        %td= I18n.t("activerecord.attributes.shirts.created_at").humanize
+        %td= I18n.t("activerecord.attributes.shirts.updated_at").humanize
+        %td
+        %td
+    %tbody
+    - @shirts.each do |shirt|
+      %tr{:class=>cycle('even','odd') }
+        %td= shirt.id
+        %td= shirt.name
+        %td= shirt.created_at
+        %td= shirt.updated_at
+        %td= link_to 'Editar', edit_admin_shirt_path(shirt)
+        %td= link_to 'Eliminar', ["admin",shirt], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
+      
+  .pagination= will_paginate @shirts

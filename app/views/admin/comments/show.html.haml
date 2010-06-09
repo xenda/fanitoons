@@ -1,0 +1,22 @@
+- @title = "Viendo comment"
+
+#admin
+
+  %h1 "Viendo comment"
+
+  - show_for @comment do |a| 
+    = a.attribute :id
+        = a.attribute :post
+        = a.attribute :title
+        = a.attribute :content
+        = a.attribute :email
+        = a.attribute :user
+        = a.attribute :website
+        = a.attribute :commentable
+        = a.attribute :commentable_type
+    
+
+  .bottom_menu
+    = link_to "Ver todos", admin_comments_path
+    = link_to "Editar comment",  edit_admin_comment_path(comment)
+    = link_to "Crear otro", new_admin_comment_path

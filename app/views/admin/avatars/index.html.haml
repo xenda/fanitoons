@@ -1,0 +1,46 @@
+- @title = "Administración Avatars "
+
+#admin
+  %h1= "Administrando Avatars"
+
+  #admin_menu
+    = link_to "Nuevo avatar", new_admin_avatar_path
+
+  %table{:id=>"avatars_table"}
+    %thead
+      %tr  
+        %td Id
+        %td User
+        %td Shirt
+        %td Short
+        %td Snicker
+        %td Shirt_rotation
+        %td Short_rotation
+        %td Snicker_rotation
+        %td Shirt_scale
+        %td Short_scale
+        %td Snicker_scale
+        %td Created_at
+        %td Updated_at
+        %td
+        %td
+    %tbody
+    - @avatars.each do |avatar|
+      %tr{:class=>cycle('even','odd') }
+        %td= avatar.id
+        %td= avatar.user
+        %td= avatar.shirt
+        %td= avatar.short
+        %td= avatar.snicker
+        %td= avatar.shirt_rotation
+        %td= avatar.short_rotation
+        %td= avatar.snicker_rotation
+        %td= avatar.shirt_scale
+        %td= avatar.short_scale
+        %td= avatar.snicker_scale
+        %td= avatar.created_at
+        %td= avatar.updated_at
+        %td= link_to 'Editar', edit_admin_avatar_path(avatar)
+        %td= link_to 'Eliminar', ["admin",avatar], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
+      
+  .pagination= will_paginate @avatars

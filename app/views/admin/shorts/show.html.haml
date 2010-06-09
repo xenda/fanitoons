@@ -1,0 +1,15 @@
+- @title = "Viendo short"
+
+#admin
+
+  %h1 "Viendo short"
+
+  - show_for @short do |a| 
+    = a.attribute :id
+        = a.attribute :name
+    
+
+  .bottom_menu
+    = link_to "Ver todos", admin_shorts_path
+    = link_to "Editar short",  edit_admin_short_path(short)
+    = link_to "Crear otro", new_admin_short_path

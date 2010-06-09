@@ -1,0 +1,16 @@
+- @title = "Viendo friend"
+
+#admin
+
+  %h1 "Viendo friend"
+
+  - show_for @friend do |a| 
+    = a.attribute :id
+        = a.attribute :name
+        = a.attribute :email
+    
+
+  .bottom_menu
+    = link_to "Ver todos", admin_friends_path
+    = link_to "Editar friend",  edit_admin_friend_path(friend)
+    = link_to "Crear otro", new_admin_friend_path

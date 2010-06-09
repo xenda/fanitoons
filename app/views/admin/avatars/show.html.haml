@@ -1,0 +1,24 @@
+- @title = "Viendo avatar"
+
+#admin
+
+  %h1 "Viendo avatar"
+
+  - show_for @avatar do |a| 
+    = a.attribute :id
+        = a.attribute :user
+        = a.attribute :shirt
+        = a.attribute :short
+        = a.attribute :snicker
+        = a.attribute :shirt_rotation
+        = a.attribute :short_rotation
+        = a.attribute :snicker_rotation
+        = a.attribute :shirt_scale
+        = a.attribute :short_scale
+        = a.attribute :snicker_scale
+    
+
+  .bottom_menu
+    = link_to "Ver todos", admin_avatars_path
+    = link_to "Editar avatar",  edit_admin_avatar_path(avatar)
+    = link_to "Crear otro", new_admin_avatar_path

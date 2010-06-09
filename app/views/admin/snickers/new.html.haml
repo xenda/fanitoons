@@ -1,0 +1,9 @@
+- @title = "Nuevo snicker"
+
+#admin
+  %h1= "Nuevo snicker"
+
+  = render :partial => 'form'
+
+  .bottom_menu
+    %p= link_to "Ver todos", admin_snickers_path

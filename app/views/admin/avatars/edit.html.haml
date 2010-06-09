@@ -1,0 +1,9 @@
+- @title = "Editando avatar"
+
+#admin
+  %h1= "Editando avatar"
+
+  = render :partial => 'form'
+
+  .bottom_menu
+    %p= link_to "Ver todos", admin_avatars_path
