@@ -32,10 +32,10 @@ test:
   host: localhost
 
 production:
-  adapter: postgresql
+  adapter: mysql
   encoding: utf8
   reconnect: false
-  database: postgres.user
-  username: postgres.user
-  password: postgres.password
-  host: postgres.host
+  database: patatoon_production
+  username: patatoon
+  password: patatoon7
+  host: localhost
