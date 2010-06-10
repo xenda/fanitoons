@@ -1,0 +1,18 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #274073;
+}
+ 
+h1 {
+	display:none }
+	
+p {
+	width: 910px;
+	height: 500px;
+	margin: 0px auto;
+	margin-top: 20px;
+	text-indent: -9999px;
+	background: url(home.png) no-repeat;
+}
+ 
