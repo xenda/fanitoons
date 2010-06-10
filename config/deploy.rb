@@ -14,6 +14,11 @@ role :db,  "patatoon.com", :primary => true # This is where Rails migrations wil
 set :user, "patatoon"
 set :port, 30000
 
+default_run_options[:pty] = true  # Must be set for the password prompt from git to work
+set :scm_passphrase, "patatoon7"  # The deploy user's password
+set :branch, "master"
+set :deploy_via, :remote_cache
+
 # If you are using Passenger mod_rails uncomment this:
 # if you're still using the script/reapear helper you will need
 # these http://github.com/rails/irs_process_scripts
