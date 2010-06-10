@@ -27,6 +27,6 @@ config.action_view.cache_template_loading            = true
 # Enable threaded mode
 # config.threadsafe!
 
-config.gem "pg"
+config.gem "mysql"
 
 config.action_mailer.default_url_options = { :host => 'patatoon.heroku.com' }
