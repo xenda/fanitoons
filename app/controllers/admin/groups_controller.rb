@@ -1,7 +1,7 @@
 class Admin::GroupsController < InheritedResources::Base
   
   layout "admin"
-  before_filter :authenticate_account!
+  before_filter :authenticate_admin!
   
   def create
     create! { admin_groups_path }

@@ -1,7 +1,7 @@
 class Admin::PostsController < InheritedResources::Base
   
   layout "admin"
-  before_filter :authenticate_account!
+  before_filter :authenticate_admin!
   
   def create
     create! { admin_posts_path }
