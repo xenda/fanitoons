@@ -1,20 +1,15 @@
 - semantic_form_for ["admin",@match] do |form|
   - form.inputs do
-    = form.input :id
-    = form.input :number
-    = form.input :played_at
-    = form.input :place
-    = form.input :stadium
-    = form.input :local
-    = form.input :visitor
-    = form.input :first_team_goals
-    = form.input :second_team_goals
-    = form.input :group
-    = form.input :picture_file_name
-    = form.input :picture_content_type
-    = form.input :picture_file_size
-    = form.input :picture_updated_at
-    = form.input :predictions_count
+    = form.input :number, :label => "Número"
+    = form.input :played_at, :label => "Fecha"
+    = form.input :place, :label => "Lugar"
+    = form.input :stadium, :label => "Estadio"
+    = form.input :local, :label => "Equipo Local"
+    = form.input :visitor, :label => "Equipo Visitante"
+    = form.input :first_team_goals, :label => "Goles Equipo Local"
+    = form.input :second_team_goals, :label => "Goles equipo visitante"
+    = form.input :group, :label => "Grupo"
+    = form.input :picture, :as => "file", :label => "La Foto"
     
   - form.buttons do
     = form.commit_button 'Grabar',:button_html => { :class => "submit" }

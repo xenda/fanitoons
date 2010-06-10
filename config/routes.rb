@@ -1,45 +1,18 @@
 ActionController::Routing::Routes.draw do |map|
   
 	map.namespace :admin do |admin| 
-		admin.resources :accounts 
+		admin.resources :places 
 	end
 
 
   
 	map.namespace :admin do |admin| 
-		admin.resources :shirts 
+		admin.resources :post_images 
 	end
 
 
-  
-	map.namespace :admin do |admin| 
-		admin.resources :posts 
-	end
 
-
-  
-	map.namespace :admin do |admin| 
-		admin.resources :posts 
-	end
-
-
-  
-	map.namespace :admin do |admin| 
-		admin.resources :posts 
-	end
-
-
-  
-	map.namespace :admin do |admin| 
-		admin.resources :posts 
-	end
-
-
-  
-	map.namespace :admin do |admin| 
-		admin.resources :posts 
-	end
-
+  map.resources :post_images
 
     
   map.resources :user_badges

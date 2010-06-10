@@ -1,0 +1,9 @@
+- @title = "Nuevo #{I18n.t 'activerecord.models.post_image'}"
+
+#admin
+  %h1= "Nuevo #{I18n.t 'activerecord.models.post_image'}"
+
+  = render :partial => 'form'
+
+  .bottom_menu
+    %p= link_to "Ver todos", admin_post_images_path

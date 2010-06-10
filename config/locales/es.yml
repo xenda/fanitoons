@@ -142,20 +142,39 @@ es:
       post: "entrada"
       prediction: "pronóstico"
       shirt: "camiseta"
-      short: "pantalon"
+      short: "pantalón"
       snicker: "zapatilla"
       stadium: "estadio"
       team: "equipo"
       user_badge: "medalla de usuario"
+      post_image: "Imágenes"
     attributes:
       posts:
         content: "contenido"
         title: "título"
         created_at: "creado"
         updated_at: "actualizado"
-        account: "Cuenta"
-      
-      
+        account: "cuenta"
+      accounts:
+        id: "id"
+        name: "nombre"
+        surname: "apellido"
+        email: "email"
+        crypted_password: "contraseña cifrada"
+        salt: "sal"
+        role: rol
+        picture: "foto"
+        fb_token: "id Facebook"
+        gender: "sexo"
+        current_sign_in_at: "sesión actual"
+        last_sign_in_at: "última sesión"
+        current_sign_in_ip: "ip actual"
+        last_sign_in_ip: "última ip"
+        birth_date: "cumpleaños"
+      post_images:
+        id: "id"
+        post: "Entrada"
+        picture_file_name: "Archivo"
       # Overrides model and default messages.
  
   date:

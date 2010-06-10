@@ -1,0 +1,11 @@
+- semantic_form_for ["admin",@post_image] do |form|
+  - form.inputs do
+    = form.input :id
+    = form.input :post
+    = form.input :picture_file_name
+    = form.input :picture_content_type
+    = form.input :picture_file_size
+    = form.input :picture_updated_at
+    
+  - form.buttons do
+    = form.commit_button 'Grabar',:button_html => { :class => "submit" }

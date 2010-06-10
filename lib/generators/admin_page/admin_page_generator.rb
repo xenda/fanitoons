@@ -17,7 +17,7 @@ class AdminPageGenerator < Rails::Generator::NamedBase
       base_column_names = class_name.constantize.column_names
       
       # We reject created_at and updated_at columns
-      column_names = base_column_names.map(&:dup).reject{|column| ["created_at","updated_at"].include? column }
+      column_names = base_column_names.map(&:dup).reject{|column| ["id","created_at","updated_at"].include? column }
       
       # We change the _id elements with association name
       column_names = column_names.map do |c| 

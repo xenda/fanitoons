@@ -8,6 +8,7 @@ module Admin::AdminHelper
     models 
   end
   
+    
   def display_app_models_links
     ul_tag(app_models)
   end
@@ -19,5 +20,16 @@ module Admin::AdminHelper
     content_tag(:ul,items_list,options)
   end
   
+  def summary(text)
+    truncate(strip_tags(text),50)
+  end
+  
+  def date(date_string)
+    l(date_string,:format=>:short)
+  end
+  
+  def image(picture)
+    image_tag(picture.url(:thumbnail)) if picture
+  end
   
 end

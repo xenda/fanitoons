@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100609101142) do
+ActiveRecord::Schema.define(:version => 20100609154650) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
@@ -82,6 +82,10 @@ ActiveRecord::Schema.define(:version => 20100609101142) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "type"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   create_table "comments", :force => true do |t|
@@ -98,7 +102,11 @@ ActiveRecord::Schema.define(:version => 20100609101142) do
   end
 
   create_table "countries", :force => true do |t|
-    t.string "name"
+    t.string   "name"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   create_table "favorite_teams", :force => true do |t|
@@ -157,6 +165,20 @@ ActiveRecord::Schema.define(:version => 20100609101142) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "bio"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
+  end
+
+  create_table "post_images", :force => true do |t|
+    t.integer  "post_id"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "posts", :force => true do |t|
@@ -165,6 +187,10 @@ ActiveRecord::Schema.define(:version => 20100609101142) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "account_id"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   create_table "predictions", :force => true do |t|
@@ -184,18 +210,30 @@ ActiveRecord::Schema.define(:version => 20100609101142) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   create_table "shorts", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   create_table "snickers", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   create_table "stadia", :force => true do |t|
@@ -206,6 +244,10 @@ ActiveRecord::Schema.define(:version => 20100609101142) do
     t.datetime "updated_at"
     t.text     "bio"
     t.integer  "country_id"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   create_table "teams", :force => true do |t|
@@ -215,6 +257,14 @@ ActiveRecord::Schema.define(:version => 20100609101142) do
     t.datetime "updated_at"
     t.text     "bio"
     t.integer  "country_id"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
+    t.string   "flag_file_name"
+    t.string   "flag_content_type"
+    t.integer  "flag_file_size"
+    t.datetime "flag_updated_at"
   end
 
   create_table "tolk_locales", :force => true do |t|

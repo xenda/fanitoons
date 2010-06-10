@@ -1,5 +1,9 @@
 /* @override http://localhost:3000/stylesheets/admin_style.css */
 
+body.post_images {
+	background: none;
+}
+
 div#header {
 	background: none;
 	height: auto;
@@ -55,19 +59,52 @@ div#admin_menu {
 	background-color: #fbfdad;
 }
 
-div#admin table {
+div#admin.index table {
 	width: 100%;
 }
-div#admin table thead tr {
+
+textarea#post_content {
+	width: 500px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+form.formtastic.post {
+	float: left;
+	width: 550px;
+}
+
+#blog_image h1 {
+	margin-bottom: 10px;
+	font: 2em "Lucida Grande", Lucida, Verdana, sans-serif;
+	color: #5d5d5d;
+
+}
+
+#blog_image li {
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+#blog_image h2 {
+	font: 2em "Lucida Grande", Lucida, Verdana, sans-serif;
+	color: #5d5d5d;
+
+}
+
+
+div#admin.index table thead tr {
 	background-color: #dbdd96;
 }
-div#admin table thead tr td {
+
+
+div#admin.index table thead tr td {
 	padding: 10px 5px;
 	font-weight: bold;
 	font-size: 12px;
 }
 
-#admin table tbody tr td a {
+#admin.index table tbody tr td a {
 	color: #a5392c;
 	font-size: 11px;
 	font-weight: bold;
@@ -90,15 +127,15 @@ div#admin table thead tr td {
 	background-color: #fbfdad;
 	color: #c3655c;
 }
-div#admin table tbody tr.odd {
+div#admin.index table tbody tr.odd {
 	background-color: #fbfdad;
 }
 
-#admin table tbody tr:hover {
+#admin.index table tbody tr:hover {
 	background-color: #e7f860 !important;
 }
 	
-div#admin table td {
+div#admin.index table td {
 	padding: 5px;
 	text-align: center;
 }

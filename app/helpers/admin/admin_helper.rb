@@ -5,7 +5,7 @@ module Admin::AdminHelper
     Dir.glob( RAILS_ROOT + '/app/models/*' ).each do |f| 
       models << File.basename( f ).gsub( /^(.+).rb/, '\1') 
     end 
-    models 
+    models.reject{|m| ["favorite_team","friendship", "friend","user_badge","admin",""].include? m }
   end
   
     
@@ -26,6 +26,10 @@ module Admin::AdminHelper
   
   def date(date_string)
     l(date_string,:format=>:short)
+  end
+  
+  def image(picture)
+    image_tag(picture.url(:thumbnail)) if picture
   end
   
 end

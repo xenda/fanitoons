@@ -1,0 +1,24 @@
+- @title = "Administración #{I18n.t('activerecord.models.place').pluralize} "
+
+#admin.index
+  %h1= "Administrando #{I18n.t('activerecord.models.place').pluralize}"
+
+  #admin_menu
+    = link_to "Nuevo #{I18n.t('activerecord.models.place')}", new_admin_place_path
+
+  %table{:id=>"places_table"}
+    %thead
+      %tr
+        %td= I18n.t("activerecord.attributes.places.id").humanize
+        %td= I18n.t("activerecord.attributes.places.name").humanize
+        %td
+        %td
+    %tbody
+    - @places.each do |place|
+      %tr{:class=>cycle('even','odd') }
+        %td= place.id
+        %td= place.name
+        %td= link_to 'Editar', edit_admin_place_path(place)
+        %td= link_to 'Eliminar', ["admin",place], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
+      
+  .pagination= will_paginate @places

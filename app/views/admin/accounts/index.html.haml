@@ -1,10 +1,10 @@
 - @title = "Administración #{I18n.t('activerecord.models.account').pluralize} "
 
-#admin
+#admin.index
   %h1= "Administrando #{I18n.t('activerecord.models.account').pluralize}"
 
   #admin_menu
-    = link_to "Nuevo #{I18n.t('activerecord.models.account')}", new_admin_account_path
+    = link_to "Nueva #{I18n.t('activerecord.models.account')}", new_admin_account_path
 
   %table{:id=>"accounts_table"}
     %thead
@@ -13,31 +13,12 @@
         %td= I18n.t("activerecord.attributes.accounts.name").humanize
         %td= I18n.t("activerecord.attributes.accounts.surname").humanize
         %td= I18n.t("activerecord.attributes.accounts.email").humanize
-        %td= I18n.t("activerecord.attributes.accounts.crypted_password").humanize
-        %td= I18n.t("activerecord.attributes.accounts.salt").humanize
-        %td= I18n.t("activerecord.attributes.accounts.role").humanize
-        %td= I18n.t("activerecord.attributes.accounts.picture_file_name").humanize
-        %td= I18n.t("activerecord.attributes.accounts.picture_content_type").humanize
-        %td= I18n.t("activerecord.attributes.accounts.picture_file_size").humanize
-        %td= I18n.t("activerecord.attributes.accounts.picture_updated_at").humanize
-        %td= I18n.t("activerecord.attributes.accounts.fb_token").humanize
-        %td= I18n.t("activerecord.attributes.accounts.fb_id").humanize
+        %td= I18n.t("activerecord.attributes.accounts.picture").humanize
         %td= I18n.t("activerecord.attributes.accounts.gender").humanize
-        %td= I18n.t("activerecord.attributes.accounts.encrypted_password").humanize
-        %td= I18n.t("activerecord.attributes.accounts.password_salt").humanize
-        %td= I18n.t("activerecord.attributes.accounts.confirmation_token").humanize
-        %td= I18n.t("activerecord.attributes.accounts.confirmed_at").humanize
-        %td= I18n.t("activerecord.attributes.accounts.confirmation_sent_at").humanize
-        %td= I18n.t("activerecord.attributes.accounts.reset_password_token").humanize
-        %td= I18n.t("activerecord.attributes.accounts.remember_token").humanize
-        %td= I18n.t("activerecord.attributes.accounts.remember_created_at").humanize
-        %td= I18n.t("activerecord.attributes.accounts.sign_in_count").humanize
         %td= I18n.t("activerecord.attributes.accounts.current_sign_in_at").humanize
         %td= I18n.t("activerecord.attributes.accounts.last_sign_in_at").humanize
         %td= I18n.t("activerecord.attributes.accounts.current_sign_in_ip").humanize
         %td= I18n.t("activerecord.attributes.accounts.last_sign_in_ip").humanize
-        %td= I18n.t("activerecord.attributes.accounts.invitation_token").humanize
-        %td= I18n.t("activerecord.attributes.accounts.invitation_sent_at").humanize
         %td= I18n.t("activerecord.attributes.accounts.birth_date").humanize
         %td
         %td
@@ -48,31 +29,12 @@
         %td= account.name
         %td= account.surname
         %td= account.email
-        %td= account.crypted_password
-        %td= account.salt
-        %td= account.role
-        %td= account.picture_file_name
-        %td= account.picture_content_type
-        %td= account.picture_file_size
-        %td= account.picture_updated_at
-        %td= account.fb_token
-        %td= account.fb_id
+        %td= image account.picture
         %td= account.gender
-        %td= account.encrypted_password
-        %td= account.password_salt
-        %td= account.confirmation_token
-        %td= account.confirmed_at
-        %td= account.confirmation_sent_at
-        %td= account.reset_password_token
-        %td= account.remember_token
-        %td= account.remember_created_at
-        %td= account.sign_in_count
-        %td= account.current_sign_in_at
-        %td= account.last_sign_in_at
+        %td= date account.current_sign_in_at
+        %td= date account.last_sign_in_at
         %td= account.current_sign_in_ip
         %td= account.last_sign_in_ip
-        %td= account.invitation_token
-        %td= account.invitation_sent_at
         %td= account.birth_date
         %td= link_to 'Editar', edit_admin_account_path(account)
         %td= link_to 'Eliminar', ["admin",account], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete

@@ -1,0 +1,36 @@
+- @title = "Administración #{I18n.t('activerecord.models.post_image').pluralize} "
+
+#admin.index
+  %h1= "Administrando #{I18n.t('activerecord.models.post_image').pluralize}"
+
+  #admin_menu
+    = link_to "Nuevo #{I18n.t('activerecord.models.post_image')}", new_admin_post_image_path
+
+  %table{:id=>"post_images_table"}
+    %thead
+      %tr
+        %td= I18n.t("activerecord.attributes.post_images.id").humanize
+        %td= I18n.t("activerecord.attributes.post_images.post_id").humanize
+        %td= I18n.t("activerecord.attributes.post_images.picture_file_name").humanize
+        %td= I18n.t("activerecord.attributes.post_images.picture_content_type").humanize
+        %td= I18n.t("activerecord.attributes.post_images.picture_file_size").humanize
+        %td= I18n.t("activerecord.attributes.post_images.picture_updated_at").humanize
+        %td= I18n.t("activerecord.attributes.post_images.created_at").humanize
+        %td= I18n.t("activerecord.attributes.post_images.updated_at").humanize
+        %td
+        %td
+    %tbody
+    - @post_images.each do |post_image|
+      %tr{:class=>cycle('even','odd') }
+        %td= post_image.id
+        %td= post_image.post_id
+        %td= post_image.picture_file_name
+        %td= post_image.picture_content_type
+        %td= post_image.picture_file_size
+        %td= post_image.picture_updated_at
+        %td= post_image.created_at
+        %td= post_image.updated_at
+        %td= link_to 'Editar', edit_admin_post_image_path(post_image)
+        %td= link_to 'Eliminar', ["admin",post_image], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
+      
+  .pagination= will_paginate @post_images

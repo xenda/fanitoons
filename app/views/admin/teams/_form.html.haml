@@ -5,6 +5,7 @@
     = form.input :country, :as => :select
     = form.input :bio, :input_html => {:class => "tinymce"}
     = form.input :country
-    
+    = form.input :flag  
+    = form.input :picture  
   - form.buttons do
     = form.commit_button 'Grabar',:button_html => { :class => "submit" }

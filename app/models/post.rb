@@ -6,6 +6,8 @@ class Post < ActiveRecord::Base
   validates_presence_of :title
   validates_presence_of :content
   
+  has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "50x50>" }
+  
 end
 
 # == Schema Information

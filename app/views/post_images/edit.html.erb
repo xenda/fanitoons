@@ -1,0 +1,16 @@
+<h1>Editing post_image</h1>
+
+<% form_for(@post_image) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :post_id %><br />
+    <%= f.text_field :post_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @post_image %> |
+<%= link_to 'Back', post_images_path %>

@@ -1,0 +1,32 @@
+<div id="blog_image">
+
+  <h1>Imágenes disponibles</h1>
+
+  <table>
+    <tr>
+    </tr>
+
+  <% @post_images.each do |post_image| %>
+    <tr>
+      <td><%= image_tag post_image.picture.url(:thumb) if post_image.picture %></td>
+       <td><%= image_tag( post_image.picture.url(:medium), :width=>"200") if post_image.picture %></td>
+      <td><%= link_to 'Eliminar', post_image, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+  </table>
+
+  <br />
+  <div class="pagination">
+    <%= will_paginate @post_images %>  
+  </div>
+
+
+  <h2>Subir nueva imagen</h2>
+
+  <% semantic_form_for(@post_image,:html=>{:multipart=>true}) do |f| %>
+    <%= f.error_messages %>
+    <%= f.input :picture, :as=>"file", :label => false %>
+    <%= f.submit 'Enviar' %>
+  <% end %>
+  
+</div>

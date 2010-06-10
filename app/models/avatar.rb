@@ -1,6 +1,11 @@
 class Avatar < ActiveRecord::Base
  belongs_to :account, :foreign_key => "user_id"
  has_many :comments, :as => :commentable
+ 
+ has_one :shirt
+ has_one :short
+ has_one :snicker
+ 
 end
 
 # == Schema Information

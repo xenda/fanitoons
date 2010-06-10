@@ -1,0 +1,15 @@
+- @title = "Viendo #{I18n.t 'activerecord.models.place'}"
+
+#admin
+
+  %h1= "Viendo #{I18n.t 'activerecord.models.place'}"
+
+  - show_for @place do |a| 
+    = a.attribute :id
+        = a.attribute :name
+    
+
+  .bottom_menu
+    = link_to "Ver todos", admin_places_path
+    = link_to "Editar #{I18n.t 'activerecord.models.place'}",  edit_admin_place_path(place)
+    = link_to "Crear otro", new_admin_place_path
