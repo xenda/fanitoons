@@ -2,7 +2,7 @@
   %h2 próximos partidos
   #counter-cont
     #vs
-      %a{:href="#"}
+      %a{:href=>"#"}
         .one.flag.medium{:title=>@last_match.local.name, :class=>@last_match.local.flag_name}= @last_match.try(:local).try(:short_name)
         vs
         .two.flag.medium{:title=>@last_match.visitor.name, :class=>@last_match.visitor.flag_name}= @last_match.try(:visitor).try(:short_name)
