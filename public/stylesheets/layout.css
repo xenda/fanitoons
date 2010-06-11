@@ -1,3 +1,8 @@
+/* @override 
+	http://patatoon.com/stylesheets/layout.css?1276279900
+	http://localhost:3000/stylesheets/layout.css
+*/
+
 @font-face {
 	font-family: 'HelveticaRounded';
 	src: url('../fonts/helveticardbd-webfont.eot');
@@ -358,6 +363,32 @@ a.register {
 	color: #211E0A;
 }
 
+#vs a {
+	display: block;
+	width: 320px;
+	color: #90a65c;
+}
+
+.matches a#new_session {
+	font-size: 1.3em;
+	text-decoration: underline;
+}
+
+#comment_form h4 {
+	font-size: 1.4em;
+	margin-top: 10px;
+}
+
+#comment_form h4 span {
+	color: #90a65c;
+}
+
+form#new_comment.formtastic.comment {
+	background: none;
+	padding: 0px;	
+	margin-top: 25px;
+}
+
 #nexts-games h2 {
 	margin:4px 0 20px 0;
 }
@@ -647,7 +678,23 @@ a.register {
 	background:url(../images/input-bg.png) no-repeat;
 	border:none;
 	margin-bottom:10px;
+	padding: 0px 10px;
+	font-size: 14px;
+	}
+
+#comment_form label {
+	display: block !important;
 }
+
+#comment_form input {
+	background: none !important;
+	border: 1px solid #423b13 !important;
+	padding: 0px 10px !important;
+	line-height: 10px;
+	font-size: 12px !important;
+	height: 30px !important;
+}
+	
 
 .register #content form input.submit{
 	width:149px;

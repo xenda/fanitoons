@@ -4,7 +4,6 @@ ActionController::Routing::Routes.draw do |map|
 		admin.resources :places 
 	end
 
-
   
 	map.namespace :admin do |admin| 
 		admin.resources :post_images 
@@ -49,14 +48,15 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :matches, :as =>"encuentros" do |matches|
     matches.resources :predictions, :as => "pronosticos"
+    matches.resources :comments, :as => "comentarios"
   end
   
-  map.resources :predictions, :as => "pronosticos"
+  map.resources :predictions, :as => "pronosticos", :has_many => :comments
   map.player_predictions "/cuentas/:account_id/predicciones/", :controller=>"predictions", :action=>"index"
   map.resources :players, :as => "jugadores"
-  map.resources :posts, :as => "entradas"
+  map.resources :posts, :as => "entradas", :has_many => :comments
   map.resources :stadia, :as => "estadios"
-  map.resources :teams, :as => "equipos"
+  map.resources :teams, :as => "equipos", :has_many => :comments
   
   # map.resources :accounts, :as=>"cuentas"
   map.invite_friends "/invitar", :controller => "home", :action=>"invite"
