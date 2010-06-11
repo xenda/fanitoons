@@ -1,6 +1,6 @@
 class Short < ActiveRecord::Base
 
-  has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "50x50>" },:path => ":rails_root/public/system/shorts/:attachment/:id/:style.:extension"
+  has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "50x50>" },:path => ":rails_root/public/system/shorts/:attachment/:id/:style.:extension", :url => "/system/shorts/:attachment/:id/:style.:extension"
 
 end
 

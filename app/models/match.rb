@@ -6,7 +6,7 @@ class Match < ActiveRecord::Base
   has_many :comments, :as => :commentable
   has_many :predictions
   
-  has_attached_file :picture, :styles => { :front=>"190x110#", :medium => "300x300#", :thumb => "50x50#" },:path => ":rails_root/public/system/matches/:attachment/:id/:style.:extension"
+  has_attached_file :picture, :styles => { :front=>"190x110#", :medium => "300x300#", :thumb => "50x50#" },:path => ":rails_root/public/system/matches/:attachment/:id/:style.:extension", :url => "/system/matches/:attachment/:id/:style.:extension"
   
   named_scope :most_popular, lambda{|limit| {:order=>"predictions_count DESC", :limit => limit } }
   

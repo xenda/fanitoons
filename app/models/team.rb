@@ -6,8 +6,8 @@ class Team < ActiveRecord::Base
   has_many :favorite_teams, :class_name => "FavoriteTeam", :foreign_key => "team_id"
   has_many :accounts, :through => :favorite_teams
   
-  has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "50x50>" },:path => ":rails_root/public/system/teams/:attachment/:id/:style.:extension"
-  has_attached_file :flag, :styles => { :medium => "300x300", :thumb => "50x50>" },:path => ":rails_root/public/system/flags/:attachment/:id/:style.:extension"
+  has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "50x50>" },:path => ":rails_root/public/system/teams/:attachment/:id/:style.:extension", :url => "/system/teams/:attachment/:id/:style.:extension"
+  has_attached_file :flag, :styles => { :medium => "300x300", :thumb => "50x50>" },:path => ":rails_root/public/system/flags/:attachment/:id/:style.:extension", :url => "/system/flags/:attachment/:id/:style.:extension"
   
   before_save :create_short_name
   

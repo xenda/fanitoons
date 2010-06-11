@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   validates_presence_of :title
   validates_presence_of :content
   
-  has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "50x50>", :home => "275x92#" },:path => ":rails_root/public/system/posts/:attachment/:id/:style.:extension"
+  has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "50x50>", :home => "275x92#" },:path => ":rails_root/public/system/posts/:attachment/:id/:style.:extension", :url => "/system/posts/:attachment/:id/:style.:extension"
 
   before_save :create_slug
   
