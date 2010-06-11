@@ -68,6 +68,12 @@
 	background:url(../images/flags/pry-small.png) no-repeat;
 }
 
+.srb.small {
+	background:url(../images/flags/srb-small.png) no-repeat;
+}
+.gha.small {
+	background:url(../images/flags/gha-small.png) no-repeat;
+}
 
 
 .nzl.medium {
@@ -124,6 +130,12 @@
 }
 .ury.medium {
 	background:url(../images/flags/ury-medium.png) no-repeat;
+}
+.srb.medium {
+	background:url(../images/flags/srb-medium.png) no-repeat;
+}
+.gha.medium {
+	background:url(../images/flags/gha-medium.png) no-repeat;
 }
 
 
