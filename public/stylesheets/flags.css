@@ -13,6 +13,58 @@
 .nga.small {
 	background:url(../images/flags/nga-small.png) no-repeat;
 }
+.kro.small {
+	background:url(../images/flags/kro-small.png) no-repeat;
+}
+.gre.small {
+	background:url(../images/flags/gre-small.png) no-repeat;
+}
+.ing.small {
+	background:url(../images/flags/ing-small.png) no-repeat;
+}
+.usa.small {
+	background:url(../images/flags/usa-small.png) no-repeat;
+}
+.deu.small {
+	background:url(../images/flags/deu-small.png) no-repeat;
+}
+.aus.small {
+	background:url(../images/flags/aus-small.png) no-repeat;
+}
+.dza.small {
+	background:url(../images/flags/dza-small.png) no-repeat;
+}
+.svn.small {
+	background:url(../images/flags/svn-small.png) no-repeat;
+}
+
+.dza.medium {
+	background:url(../images/flags/dza-medium.png) no-repeat;
+}
+.svn.medium {
+	background:url(../images/flags/svn-medium.png) no-repeat;
+}
+
+.deu.medium {
+	background:url(../images/flags/deu-medium.png) no-repeat;
+}
+.aus.medium {
+	background:url(../images/flags/aus-medium.png) no-repeat;
+}
+
+.ing.medium {
+	background:url(../images/flags/ing-medium.png) no-repeat;
+}
+.usa.medium {
+	background:url(../images/flags/usa-medium.png) no-repeat;
+}
+
+.kro.medium {
+	background:url(../images/flags/kro-medium.png) no-repeat;
+}
+.gre.medium{
+	background:url(../images/flags/gre-medium.png) no-repeat;
+}
 
 
 .rsa.medium {
