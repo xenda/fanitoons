@@ -67,7 +67,7 @@ ActionController::Routing::Routes.draw do |map|
   map.fb_connect_callback "/facebook/retorno", :controller=>"facebook", :action=>"fb_connect_callback"
   map.fb_invite_frients "/facebook/invitacion", :controller=>"facebook", :action=>"fb_invite_friends"
   map.profile "/perfil/:id", :controller=>"profiles", :action=>"show"
-  
+  map.admin_dashboard "/admin", :controller=>"admin/posts", :action=>"index"
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end
