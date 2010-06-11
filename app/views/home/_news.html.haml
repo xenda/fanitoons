@@ -1,8 +1,8 @@
 %li{:class=>(cycle("odd","even"))}
   %div
     = image_tag( news.picture.url(:home)) if news.picture_file_name
-    %a.plus{:href => "#"} +
-  %p.alt= truncate(news.title,30)
+    = link_to " +",news, :class => "plush"
+  %p.alt= link_to truncate(news.title,30), news
   - if news.published_at
     %p.date= l(news.published_at, :format=>:long)
   - else

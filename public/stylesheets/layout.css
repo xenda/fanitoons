@@ -388,46 +388,9 @@ form#new_comment.formtastic.comment {
 	padding: 0px;	
 	margin-top: 25px;
 }
-#comments_li {
-	margin-top: 15px;
-}
-#comments_li li {
-	margin-bottom: 10px;
-	padding-bottom: 20px;
-	overflow: auto;
-	clear: both;
-
-}
-
-#comments_li li div.meta {
-	float: left;
-	width: 90px;
-}
-
-#comments_li li div.meta p.title {
-	font-weight: bold;
-}
-
-#comments_li li div.content {
-	float: left;
-	overflow: hidden;
-	padding: 5px 10px;
-	padding-bottom: 20px;
-	padding-right: 20px;
-	width: 480px;
-	border: 1px solid #daeda8;
-}
-
-#comments_li li div.meta img.avatar {
-	margin: 0px 15px;
-}
 
 #nexts-games h2 {
 	margin:4px 0 20px 0;
-}
-
-#comments_li li div.meta p {
-	text-align: center;
 }
 
 #nexts-games li {
