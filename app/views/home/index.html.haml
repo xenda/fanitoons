@@ -19,34 +19,7 @@
 #news
   %h3 noticias
   %ul
-    %li.odd
-      %div
-        %img{:alt => "", :height => "92", :src => "/images/news-1.jpg", :width => "275"}/
-        %a.plus{:href => "#"} +
-      %p.alt Lorem ipsum
-      %p.date viernres 4 de junio 2010
-      %p Nunc sed nisl diam. Cras nibh nisi, dapibus eu congue id, pharetra non mi. Nunc et pulvinar ante. Proin et massa et augue lacinia
-    %li
-      %div
-        %img{:alt => "", :height => "92", :src => "/images/news-2.jpg", :width => "275"}/
-        %a.plus{:href => "#"} +
-      %p.alt Lorem ipsum
-      %p.date viernres 4 de junio 2010
-      %p Nunc sed nisl diam. Cras nibh nisi, dapibus eu congue id, pharetra non mi. Nunc et pulvinar ante. Proin et massa et augue lacinia
-    %li.odd
-      %div
-        %img{:alt => "", :height => "92", :src => "/images/news-3.jpg", :width => "275"}/
-        %a.plus{:href => "#"} +
-      %p.alt Lorem ipsum
-      %p.date viernres 4 de junio 2010
-      %p Nunc sed nisl diam. Cras nibh nisi, dapibus eu congue id, pharetra non mi. Nunc et pulvinar ante. Proin et massa et augue lacinia
-    %li
-      %div
-        %img{:alt => "", :height => "92", :src => "/images/news-4.jpg", :width => "275"}/
-        %a.plus{:href => "#"} +
-      %p.alt Lorem ipsum
-      %p.date viernres 4 de junio 2010
-      %p Nunc sed nisl diam. Cras nibh nisi, dapibus eu congue id, pharetra non mi. Nunc et pulvinar ante. Proin et massa et augue lacinia
+    = render :partial => "news", :collection => @posts
   .clear
   %a.more.button{:href => "#"} ver mas
 

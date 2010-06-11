@@ -13,6 +13,12 @@ class Admin::PostsController < InheritedResources::Base
     create! { admin_posts_path }
   end
   
+  def edit
+    @post = Post.find(params[:id])
+    @post.published_at ||= Time.zone.now
+    edit!
+  end
+  
   def update
     update! { admin_posts_path }
   end

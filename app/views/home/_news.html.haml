@@ -1,0 +1,7 @@
+%li{:class=>(cycle("odd","even"))}
+  %div
+    %img{:alt => "", :height => "92", :src => "/images/news-1.jpg", :width => "275"}/
+    %a.plus{:href => "#"} +
+  %p.alt= truncate(news.title,30)
+  %p.date= l(news.published_at, :format=>:long)
+  %p= truncate(news.content,100)
