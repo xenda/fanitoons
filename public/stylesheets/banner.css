@@ -1,0 +1,126 @@
+#banner-cont {
+	width:815px !important;
+	height:271px;
+	margin:0 auto;
+	background:url(../images/banner-bg.png) no-repeat left 42px;
+	position:relative;
+	z-index:20;
+	padding:52px 13px 18px 13px;
+	font-family: 'HelveticaRounded', Arial;
+	overflow:visible !important;
+}
+
+#banner-cont ul {
+	overflow:visible;
+}
+
+#banner-cont .banner {
+	overflow:hidden;
+	width:815px;
+	height:323px;	
+	position:absolute;
+	bottom:18px;
+}
+
+#banner-cont .arrow {
+	position:absolute;
+	top:138px;
+	width:63px;
+	height:63px;
+	z-index:50;
+}
+
+#banner-cont .arrow:hover {
+	cursor:pointer;
+}
+
+#banner-cont .prev {
+	left:-22px;
+}
+
+#banner-cont .next {
+	background-position: left -63px;
+	right:-22px;
+}
+
+#banner-cont li {
+	float:left !important;
+	width:815px;
+	height:323px;
+}
+
+#banner-cont div.facebook {
+	background:url(../images/banners/banner-1.png) no-repeat;
+	padding-left:348px;
+	padding-right:45px;
+}
+
+#banner-cont .html > div {
+	height:271px;
+	padding-top:52px;
+	background-position:left bottom;
+}
+
+#banner-cont li.img a {
+	display:block;
+	width:100%;
+	height:100%;
+	background:#12ff56;
+	}
+
+.banner li.img {
+	height:271px;
+	padding-top:52px;
+}
+
+.banner .html .facebook a {
+	width:165px;
+	height:27px;
+	background-position:-323px top;
+	display:block;
+	color:#1E61B6;
+	line-height:27px;
+	float:left;
+}
+
+.banner .html .facebook a.fb-btn {
+	background-position:-323px -27px;
+	margin-left:18px;
+}
+
+.banner .html .facebook a.fb-btn span{
+	padding-left:11px;
+	visibility:hidden;
+}
+
+.banner .html .facebook h3,
+.banner .html .facebook p {
+	color:#fff;
+}	
+
+.banner .html .facebook h3 {
+	font-size:2.5em;
+	margin-top:23px;
+	letter-spacing:-.02em;
+	word-spacing:-.04em;
+	line-height:35px;
+	height:70px;
+}
+
+.banner .html .facebook h4 {
+	color:#84C2F0;
+	font-size:1.5em;
+	letter-spacing:-.02em;
+	line-height:23px;
+	margin-top:7px;
+	height:54px;
+}
+
+.banner .html .facebook p {
+	font-family:Arial;
+	margin-top:6px;
+	padding-left:7px;
+	line-height:20px;
+	height:40px;
+	margin-bottom:12px;
+}
