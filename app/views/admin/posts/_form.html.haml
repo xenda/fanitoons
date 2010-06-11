@@ -1,5 +1,5 @@
 #post_form
-  - semantic_form_for (["admin",@post], :html=>{:multidata => true}) do |form|
+  - semantic_form_for (["admin",@post], :html=>{:multipart => true}) do |form|
     - form.inputs do
       = form.input :title, :label => "Título"      
       = form.input :picture, :label => "Foto portada"      
