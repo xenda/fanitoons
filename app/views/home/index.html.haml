@@ -3,58 +3,7 @@
 = display_flashes
 
 
-#nexts-games
-  %h2 próximos partidos
-  #counter-cont
-    #vs
-      .one.flag.medium.rsa rsa
-      vs
-      .two.flag.mex.medium mex
-    .counter
-      .day
-        %span 6
-        días
-      .hour
-        %span 15
-        horas
-      .minute
-        %span 14
-        minutos
-      .second
-        %span 20
-        segundos
-  %ul
-    %li
-      %a{:href => "#"}
-        .flag.ury.small uru
-        .flag.arg.small usa
-        %p 5 días
-    %li
-      %a{:href => "#"}
-        .flag.ury.small uru
-        .flag.arg.small usa
-        %p 5 días
-    %li.last
-      %a{:href => "#"}
-        .flag.ury.small uru
-        .flag.arg.small usa
-        %p 5 días
-    %li
-      %a{:href => "#"}
-        .flag.ury.small uru
-        .flag.arg.small usa
-        %p 5 días
-    %li
-      %a{:href => "#"}
-        .flag.ury.small uru
-        .flag.arg.small usa
-        %p 5 días
-    %li.last
-      %a{:href => "#"}
-        .flag.ury.small uru
-        .flag.arg.small usa
-        %p 5 días
-  .clear
+= render :partial => "next_games"
 
 #most-predicted
   %h3 los más pronosticados

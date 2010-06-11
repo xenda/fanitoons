@@ -27,8 +27,8 @@
       %tr{:class=>cycle('even','odd') }
         %td= match.id
         %td= match.number
-        %td= match.local.name if match.local
-        %td= match.visitor.name if match.visitor
+        %td= link_to match.local.name, edit_admin_team_path(match.local) if match.local
+        %td= link_to match.visitor.name, edit_admin_team_path(match.visitor) if match.visitor
         %td= match.first_team_goals
         %td= match.second_team_goals
         %td= l(match.played_at, :format=>:short)

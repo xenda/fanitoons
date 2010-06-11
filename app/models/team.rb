@@ -9,8 +9,18 @@ class Team < ActiveRecord::Base
   has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "50x50>" }
   has_attached_file :flag, :styles => { :medium => "300x300", :thumb => "50x50>" }
   
+  before_save :create_short_name
   
+  def create_short_name
+    self.short_name = self.name.upcase[0..2] unless self.short_name
+  end
+  
+  def flag_name
+    return self.name[0..2] unless short_name
+    self.short_name.downcase
+  end
 end
+
 
 
 # == Schema Information
@@ -32,5 +42,6 @@ end
 #  flag_content_type    :string(255)
 #  flag_file_size       :integer
 #  flag_updated_at      :datetime
+#  short_name           :string(255)
 #
 

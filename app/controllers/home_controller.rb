@@ -4,9 +4,11 @@ class HomeController < ApplicationController
   
   def index
     @posts = Post.all(:order => 'created_at desc')
-    @matches = Match.all(:order=> "played_at", :limit=>6, :include => [:local, :visitor])
+    @matches = Match.all(:order=> "played_at", :limit=>7, :include => [:local, :visitor])
     @predictions = Prediction.last(6).find(:all, :include => [:winner, {:match=>[:local,:visitor]}])
     @popular_predictions = Match.most_popular(6).find(:all, :include => [:local, :visitor])
+    @last_match = @matches.first
+    @matches = @matches[1..-1]
   end
 
   def show

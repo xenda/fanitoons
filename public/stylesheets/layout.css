@@ -375,6 +375,7 @@ a.register {
 	width:178px;
 	height:100%;
 	padding:0 8px 0 12px;
+	overflow: hidden;
 	}
 
 #nexts-games li .flag {
@@ -385,6 +386,7 @@ a.register {
 	width:36px;
 	background-position:left center;
 	text-transform:uppercase;
+  width:30px;	
 	}
 	
 #nexts-games li p{
@@ -392,6 +394,7 @@ a.register {
 	height:42px;
 	float:right;
 	font-weight:bold;
+  width:40px;	
 }
 
 #most-predicted {

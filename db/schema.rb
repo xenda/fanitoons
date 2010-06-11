@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100611024724) do
+ActiveRecord::Schema.define(:version => 20100611072739) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
@@ -268,6 +268,7 @@ ActiveRecord::Schema.define(:version => 20100611024724) do
     t.string   "flag_content_type"
     t.integer  "flag_file_size"
     t.datetime "flag_updated_at"
+    t.string   "short_name"
   end
 
   create_table "tolk_locales", :force => true do |t|

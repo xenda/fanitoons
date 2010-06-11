@@ -2,8 +2,16 @@
 	background:url(../images/flags/ury-small.png) no-repeat;
 }
 
+.fra.small {
+  background:url(../images/flags/fra-small.png) no-repeat;
+}
+
 .arg.small {
 	background:url(../images/flags/arg-small.png) no-repeat;
+}
+
+.nga.small {
+	background:url(../images/flags/nga-small.png) no-repeat;
 }
 
 
@@ -13,4 +21,13 @@
 
 .mex.medium {
 	background:url(../images/flags/mex-medium.png) no-repeat;
+}
+
+.fra.medium {
+	background:url(../images/flags/fra-medium.png) no-repeat;
+}
+
+
+.nga.medium {
+	background:url(../images/flags/nga-medium.png) no-repeat;
 }

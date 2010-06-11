@@ -1,0 +1,8 @@
+- last_class = ((next_match_counter + 1) % 3 == 0 ? "last" : "") unless next_match_counter == 0
+%li{:class => last_class}
+  %a{:href => "#"}
+    .flag.small{:class=> next_match.local.flag_name, :title=>next_match.local.name}
+      = next_match.local.short_name
+    .flag.small{:class=> next_match.visitor.flag_name, :title=>next_match.visitor.name}
+      = next_match.visitor.short_name
+    %p= distance_of_time_in_words_to_now(next_match.played_at).gsub "hace", ""
