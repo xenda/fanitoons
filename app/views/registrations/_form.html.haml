@@ -12,7 +12,7 @@
   =f.password_field :password_confirmation, :class => :password_field
 
   =f.submit "Registrarse", :class => "button submit"
-  =f.link_to "Cancelar", "#", :onclick => "window.location='#{root_path}';return false", :class => "button cancel"
+  =link_to "Cancelar", "#", :onclick => "window.location='#{root_path}';return false", :class => "button cancel"
   
   .clear
   = render :partial => "shared/devise_links" 
