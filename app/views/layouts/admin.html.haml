@@ -13,12 +13,12 @@
           %li= link_to 'Inicio', root_path
           = display_app_models_links
 
-    - if account_signed_in?
+    - if admin_signed_in?
       #logged_as
         = "Iniciada sesión como"
-        = image_tag current_account.picture.url(:thumb), :style=>"float:right;" if current_account.picture
-        = link_to current_account.email, profile_path(current_account.id) #edit_registration_path(current_account)
-        = link_to "salir", destroy_account_session_path
+        = current_admin.email
+        = link_to "salir", destroy_admin_session_path
+          
 
           
     #container
