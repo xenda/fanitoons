@@ -1,6 +1,6 @@
 %li{:class=>(cycle("odd","even"))}
   %div
-    = image_tag( news.picture.url(:front)) if news.picture_file_name
+    = image_tag( news.picture.url(:home)) if news.picture_file_name
     %a.plus{:href => "#"} +
   %p.alt= truncate(news.title,30)
   - if news.published_at
