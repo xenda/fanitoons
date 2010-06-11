@@ -1,0 +1,116 @@
+- @body_class = "register home"
+
+%h2 
+  %span Viendo predicción del partido
+  = #
+
+%h3= "Del #{l(@match.played_at, :format=>:short)}"
+
+%div{:style=>"margin-top:10;margin-bottom:20px"}
+#nexts-games
+  #counter-cont
+    #vs
+      %a{:href=>"#"}
+        .one.flag.medium{:title=>@match.local.name, :class=>@match.local.flag_name}= @match.try(:local).try(:short_name)
+        vs
+        .two.flag.medium{:title=>@match.visitor.name, :class=>@match.visitor.flag_name}= @match.try(:visitor).try(:short_name)
+    .counter
+      .day
+        %span= @match.first_team_goals
+        goles
+      .hour
+        %span= @match.second_team_goals
+        goles
+  
+  %div{:style=>"clear:both;overflow:auto;"}
+  #most-predicted
+    .nav
+      - if account_signed_in?
+        = link_to "deja tu pronóstico", match_prediction_path(@match), :class=>"predict button iframe"
+      - else
+        = link_to "inicia sesión para dejar tu pronóstico",new_account_session_path, {:id=>"new_session"}
+
+%div{:style=>"clear:both;overflow:auto;"}
+
+#last-predicted
+  %h3{:style=>"font-size:2em;"}= "#{@match.predictions.size} pronósticos"
+
+  %ul
+    - @match.predictions.each do |prediction|
+      %li{:class=>(cycle("odd","even"))}
+        .meta
+          %img.avatar{:alt => "", :height => "51", :src => "/images/missing.png", :width => "51"}/
+          %p= prediction.account.name
+          %p.title= prediction.account.title
+        %table{:cellpadding => "0", :cellspacing => "0"}
+          %tbody
+            %tr.header
+              %td.first Partido
+              %td
+                .flag.small{:class=>prediction.match.local.flag_name}= prediction.match.local.short_name
+              %td
+                .flag.small{:class=>prediction.match.visitor.flag_name}= prediction.match.visitor.short_name
+            %tr
+              %td.first goles
+              %td{:class=>("win" if prediction.local_winner?)}= prediction.first_team_result || "-"
+              %td{:class=>("win" if prediction.visitor_winner?)}= prediction.second_team_result || "-"
+
+.clear            
+
+= render :partial => "comments/comments_list", :locals => {:commentable => @match }
+  
+- content_for :sidebar do
+  #invite
+    %h3
+      invita a
+      %br>/
+      tus amigos
+    %ul
+      %li.facebook
+        %a{:href => "#"}
+      %li.twitter
+        %a{:href => "#"}
+      %li.email
+        %a{:href => "#"}
+  #chunteros
+    %h3 los chunteros
+    %ul.ranking
+      %li
+        %img.avatar{:alt => "", :height => "67", :src => "/images/avatar.jpg", :width => "67"}/
+        %h4= ""
+        %p 3 pronósticos
+        %p 0 aciertos
+        %p.title novato
+      %li
+        %img.avatar{:alt => "", :height => "67", :src => "/images/avatar.jpg", :width => "67"}/
+        %h4= ""
+        %p 2 pronósticos
+        %p 0 aciertos
+        %p.title novato
+      %li
+        %img.avatar{:alt => "", :height => "67", :src => "/images/avatar.jpg", :width => "67"}/
+        %h4= ""
+        %p 2 pronósticos
+        %p 0 aciertos
+        %p.title novato
+  #punteros
+    %h3 los punteros
+    %ul.ranking
+      %li
+        %img.avatar{:alt => "", :height => "67", :src => "/images/avatar.jpg", :width => "67"}/
+        %h4
+        %p 3 puntos
+        %p.title novato
+      %li
+        %img.avatar{:alt => "", :height => "67", :src => "/images/avatar.jpg", :width => "67"}/
+        %h4 
+        %p 2 puntos
+        %p.title novato
+      %li
+        %img.avatar{:alt => "", :height => "67", :src => "/images/avatar.jpg", :width => "67"}/
+        %h4
+        %p 1 puntos
+        %p.title novato
+  #facebook_likebox
+    %iframe{:allowtransparency => "true", :frameborder => "0", :scrolling => "no", :src => "http://www.facebook.com/plugins/likebox.php?id=129238740437455&amp;width=240&amp;connections=20&amp;stream=false&amp;header=false&amp;height=340", :style => "border:none; overflow:hidden; width:240px; height:340px;"}
+
