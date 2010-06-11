@@ -31,11 +31,12 @@
                 = link_to "mi perfil", profile_path(current_account.id)
               - else
                 = link_to "entrar", new_account_registration_path
+                
           #login
             - if account_signed_in?
-              = link_to current_account.email, profile_path(current_account.id), :class=>"button"
-              = link_to "salir", destroy_account_session_path, :class=>"button"
-              
+              #top_profile
+                = link_to current_account.email, profile_path(current_account.id)
+                = link_to "salir", destroy_account_session_path              
             - else
               = link_to "iniciar sesión", new_account_session_path, {:id=>"new_session", :class=>"button log-in"}
               = link_to "registrarse", new_registration_path("account"), {:id=>"register_new_user", :class=>"button register"}

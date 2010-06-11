@@ -18,6 +18,16 @@ class ApplicationController < ActionController::Base
        # OAuth2::Client.new($api_key, $secret_key, :site => 'https://graph.facebook.com')
   end
 
+
+  def after_sign_in_path_for(resource)
+     if resource.is_a?(Account)
+       root_path
+     else
+       super
+     end
+   end
+
+
   def facebook_authentication(redirect = nil)
     redirect_url = redirect || redirect_uri
     client.authorization.authorize_url(:redirect_uri => redirect_url , 
