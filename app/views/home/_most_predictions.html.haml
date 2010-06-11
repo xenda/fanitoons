@@ -1,0 +1,11 @@
+#most-predicted
+  %h3 los más pronosticados
+  .container
+    %ul= render :partial => "most_predicted", :collection => @popular_predictions
+
+    .clear
+  .nav
+    %a.prev.arrow{:href => "#"}
+    %a.next.arrow{:href => "#"}
+    %a.predict.button{:href => "#"} Deja tu pronóstico
+    .clear
