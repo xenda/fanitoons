@@ -44,8 +44,10 @@
             - else
               = link_to "iniciar sesión", new_account_session_path, {:id=>"new_session", :class=>"button log-in"}
               = link_to "registrarse", new_registration_path("account"), {:id=>"register_new_user", :class=>"button register"}
-      /[if IE] 
-        #the-banner
+      /[if IE]
+        :erb
+          <div id="the-banner">
+
       = yield :main_banner
 
       /[if IE] 

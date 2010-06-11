@@ -11,6 +11,7 @@
 	font-style: normal;
 }
 
+
 h2,h3,h4,h5,h6 {
 	font-family: 'HelveticaRounded', Arial;
 	overflow:visible;
@@ -372,6 +373,12 @@ a.register {
 .matches a#new_session {
 	font-size: 1.3em;
 	text-decoration: underline;
+	color: #748b3b;
+}
+
+#groups_match a#new_session {
+	margin-bottom: 10px;
+	display: block;
 }
 
 #comment_form h4 {
@@ -775,3 +782,36 @@ form#new_comment.formtastic.comment {
 .posts.register.home #content h3 {
 	margin-bottom: 20px;
 }
+
+div#groups_match {
+	margin-top: 30px;
+}
+
+#groups_match h2 {
+	margin-bottom: 10px;
+	color: #d87d13;
+}
+
+.matches.register #groups_match #last-predicted {
+	padding: 0px !important;
+	margin: 0px;
+}
+
+.matches.register #groups_match #last-predicted li {
+	text-align: left;
+	list-style: none;
+	height: auto;
+	width: auto;;
+}
+
+.matches.register #groups_match #last-predicted ul {
+	overflow: auto;
+	padding: 0px;
+	margin: 0px;
+}
+
+.matches.register #groups_match #last-predicted li table {
+	margin-bottom: 20px;
+	margin-right: 30px
+}
+

@@ -25,6 +25,21 @@ class Match < ActiveRecord::Base
     "Partido #{title}"
   end
   
+  def local_winner?
+    return false if first_team_goals.nil? or second_team_goals.nil?
+    first_team_goals > second_team_goals
+  end
+  
+  def visitor_winner?
+    return false if first_team_goals.nil? or second_team_goals.nil?
+    second_team_goals > first_team_goals
+  end
+  
+  def tie?
+    return false if first_team_goals.nil? or second_team_goals.nil?
+    first_team_goals = second_team_goals
+  end
+  
   def title
     "#{local.name} - #{visitor.name}" if local && visitor
   end
