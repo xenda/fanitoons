@@ -12,7 +12,7 @@ class Admin::MatchesController < InheritedResources::Base
   end
   
   def collection
-    @matches ||= end_of_association_chain.paginate :page => params[:page], :per_page => (params[:per_page] || 10), :order => "created_at DESC"
+    @matches ||= end_of_association_chain.paginate :page => params[:page], :per_page => (params[:per_page] || 10), :order => "played_at DESC"
   end
   
 end

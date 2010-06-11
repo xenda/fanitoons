@@ -1,7 +1,7 @@
-- @title = "Administración Matches "
+- @title = "Administración Partidos "
 
 #admin.index
-  %h1= "Administrando Matches"
+  %h1= "Administrando Partidos"
 
   #admin_menu
     = link_to "Nuevo match", new_admin_match_path
@@ -11,29 +11,29 @@
       %tr
         %td Id
         %td Número
+        %td Equipo
+        %td Equipo
+        %td Goles
+        %td Goles
         %td Fecha
         %td Estadio
-        %td Equipo
-        %td Equipo
-        %td Goles
-        %td Goles
         %td Grupo
         %td Foto
-        %td Predicciones
-        %td
+        %td # de Predicciones
+        %td 
         %td
     %tbody
     - @matches.each do |match|
       %tr{:class=>cycle('even','odd') }
         %td= match.id
         %td= match.number
-        %td= l(match.played_at, :format=>:short)
-        %td= match.stadium
         %td= match.local.name if match.local
         %td= match.visitor.name if match.visitor
         %td= match.first_team_goals
         %td= match.second_team_goals
-        %td= match.group
+        %td= l(match.played_at, :format=>:short)
+        %td= match.stadium.name
+        %td= match.group.name
         %td= match.picture.url(:thumbnail)
         %td= match.predictions_count
         %td= link_to 'Editar', edit_admin_match_path(match)
