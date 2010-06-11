@@ -84,10 +84,12 @@
   
   
 - content_for :main_banner do
-  #welcome
-    %h2 Bienvenidos a la nueva comunidad para los amantes del fútbol
-
-    - if account_signed_in?
-      = render "home/whats_new"
-    - else
-      = render "home/register"
+  #banner-cont
+    .prev.arrow
+    .next.arrow
+    .banner
+      %ul
+        %li
+          .banner-1
+            %img{:src => "/images/banners/banner-1.png"}/
+            %h3 Expr&eacute;sate, crea tu avatar, y s&eacute; un hincha más

@@ -41,16 +41,8 @@
               = link_to "registrarse", new_registration_path("account"), {:id=>"register_new_user", :class=>"button register"}
       /[if IE] 
         #the-banner
-      = #yield :main_banner
-      #banner-cont
-        .prev.arrow
-        .next.arrow
-        .banner
-          %ul
-            %li
-              .banner-1
-                %img{:src => "/images/banners/banner-1.png"}/
-                %h3 Expr&eacute;sate, crea tu avatar, y s&eacute; un hincha más
+      = yield :main_banner
+
       /[if IE] 
         :erb
           </div>
