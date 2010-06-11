@@ -1,3 +1,11 @@
+.team .flag.medium {
+  
+  height:48px;
+  margin:0 auto;
+  width:48px;
+  
+}
+
 .ury.small {
 	background:url(../images/flags/ury-small.png) no-repeat;
 }
