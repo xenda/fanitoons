@@ -2,9 +2,9 @@
   %h2 próximos partidos
   #counter-cont
     #vs
-      .one.flag.medium.rsa= @last_match.try(:local).try(:short_name)
+      .one.flag.medium.rsa{:title=>@last_match.local.name}= @last_match.try(:local).try(:short_name)
       vs
-      .two.flag.mex.medium= @last_match.try(:visitor).try(:short_name)
+      .two.flag.mex.medium{:title=>@last_match.visitor.name}= @last_match.try(:visitor).try(:short_name)
     .counter
       .day
         %span 6
