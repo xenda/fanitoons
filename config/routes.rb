@@ -17,7 +17,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :friendships
   map.resources :favorite_teams
   map.resources :friends
-
+  map.resources :post_images
 
   # map.new_account_session 'entrar', :controller => 'sessions', :action => 'new', :conditions => { :method => :get }
   #   map.account_session 'entrar', :controller => 'sessions', :action => 'create', :conditions => { :method => :post }
