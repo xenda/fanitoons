@@ -73,11 +73,17 @@ body {
 	background:url(../images/buttons.png) no-repeat;
 }
 
-a.button {
+a.button,
+input.submit {
 	color:#fff;
 	text-align:center;
 	font-family: 'HelveticaRounded', Arial;
 	letter-spacing:.05em;
+}
+
+input.submit:hover {
+	text-decoration:underline;
+	cursor:pointer;
 }
 
 .avatar {
@@ -101,10 +107,14 @@ a.button {
 
 
 
-#footer {
+.bg-footer {
 	background: url(../images/footer-bg.png) repeat-x center bottom;
-	padding-bottom:129px;
-	height:50px;
+	height:129px;
+}
+
+#footer {
+	height:150px;
+	margin-bottom:20px;
 }
 
 #footer li {
@@ -301,7 +311,6 @@ a.register {
 #counter-cont #vs .one{
 	float:left;
 	padding-left:60px;
-	
 }
 
 #counter-cont #vs .two{
@@ -359,15 +368,12 @@ a.register {
 	height:42px;
 	border: solid 1px #D8ECA3;
 	margin:0 15px 10px 0;
+	position:relative;
 }
 
 #nexts-games a:hover {
 	background: #F8FDED;
 	text-decoration:none;
-}
-
-#nexts-games li {
-       position:relative;
 }
 
 #nexts-games li.last {
@@ -379,7 +385,6 @@ a.register {
 	width:178px;
 	height:100%;
 	padding:0 8px 0 12px;
-	overflow: hidden;
 	}
 
 #nexts-games li .flag {
@@ -390,25 +395,15 @@ a.register {
 	width:36px;
 	background-position:left center;
 	text-transform:uppercase;
-  width:30px;	
 	}
 	
-/*#nexts-games li p{
-  line-height:42px;
-  height:42px;
-  float:right;
-  font-weight:bold;
-  width:40px; 
-}
-*/
 #nexts-games li p{
-       line-height:42px;
-       height:42px;
-       position: absolute;
-       right:8px;
-       font-weight:bold;
+	line-height:42px;
+	height:42px;
+	position: absolute;
+	right:8px;
+	font-weight:bold;
 }
-
 
 #most-predicted {
 	margin-top:22px;
@@ -625,4 +620,57 @@ a.register {
 #news li .date {
 	font-size:.9em;
 	margin-bottom:5px;
+}
+
+.register #content {
+	margin-top:15px;
+}
+
+.register h2 span{
+	color:#B3CF70;
+}
+
+.register #content form {
+	padding-left:365px;
+	padding-top:60px;
+	padding:60px 131px 0 365px;
+	background:url(../images/pata-1.png) no-repeat 103px 63px;
+}
+
+.register #content form fieldset{
+	margin-bottom:25px;
+}
+
+.register #content form input{
+	width:421px;
+	height:55px;
+	background:url(../images/input-bg.png) no-repeat;
+	border:none;
+	margin-bottom:10px;
+}
+
+.register #content form input.submit{
+	width:149px;
+	height:41px;
+	padding:0;
+	background:url(../images/buttons.png) no-repeat -169px top;
+	float:right;
+}
+
+.register #content form label {
+	display:block;
+	font-size:1.25em;
+	font-family: 'HelveticaRounded', Arial;
+	color:#6B6C6E;
+	letter-spacing:.05em;
+	margin-bottom:10px;
+}
+
+.register #content form .cancel {
+	float:right;
+	height:41px;
+	line-height:41px;
+	color:#423B13;
+	text-decoration:underline;
+	margin-right:15px;
 }
