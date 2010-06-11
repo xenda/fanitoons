@@ -10,21 +10,12 @@ ActionController::Routing::Routes.draw do |map|
 		admin.resources :post_images 
 	end
 
-
-
-  map.resources :post_images
-
+  map.avatar "/avatar", :controller=>"home", :action=>"index"
     
   map.resources :user_badges
-
   map.resources :badges
-
-  map.resources :badges
-
   map.resources :friendships
-
   map.resources :favorite_teams
-
   map.resources :friends
 
 
