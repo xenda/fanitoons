@@ -5,6 +5,7 @@ class Admin::PostsController < InheritedResources::Base
   
   def new
     @post = current_admin.posts.build
+    @post.published_at = Time.zone.now
     new!
   end
   
