@@ -6,6 +6,77 @@
   
 }
 
+.bra.medium {
+  background:url(/images/flags/bra-medium.png) no-repeat;
+}
+.bra.small {
+  background:url(/images/flags/bra-small.png) no-repeat;
+}
+
+.chl.medium {
+  background:url(/images/flags/chl-medium.png) no-repeat;
+}
+.chl.small {
+  background:url(/images/flags/chl-small.png) no-repeat;
+}
+.civ.medium {
+  background:url(/images/flags/civ-medium.png) no-repeat;
+}
+.civ.small {
+  background:url(/images/flags/civ-small.png) no-repeat;
+}
+
+.cmr.medium {
+  background:url(/images/flags/cmr-medium.png) no-repeat;
+}
+.cmr.small {
+  background:url(/images/flags/cmr-small.png) no-repeat;
+}
+.esp.medium {
+  background:url(/images/flags/esp-medium.png) no-repeat;
+}
+.esp.small {
+  background:url(/images/flags/esp-small.png) no-repeat;
+}
+
+.grc.medium {
+  background:url(/images/flags/grc-medium.png) no-repeat;
+}
+.grc.small {
+  background:url(/images/flags/grc-small.png) no-repeat;
+}
+.kor.medium {
+  background:url(/images/flags/kor-medium.png) no-repeat;
+}
+.mex.small {
+  background:url(/images/flags/mex-small.png) no-repeat;
+}
+.nld.medium {
+  background:url(/images/flags/nld-medium.png) no-repeat;
+}
+.nld.small {
+  background:url(/images/flags/nld-small.png) no-repeat;
+}
+.prk.medium {
+  background:url(/images/flags/prk-medium.png) no-repeat;
+}
+.prk.small {
+  background:url(/images/flags/prk-small.png) no-repeat;
+}
+.prt.medium {
+  background:url(/images/flags/prt-medium.png) no-repeat;
+}
+.prt.small {
+  background:url(/images/flags/prt-small.png) no-repeat;
+}
+
+.zaf.medium {
+  background:url(/images/flags/zaf-medium.png) no-repeat;
+}
+.zaf.small {
+  background:url(/images/flags/zaf-small.png) no-repeat;
+}
+
 .ury.small {
 	background:url(/images/flags/ury-small.png) no-repeat;
 }
