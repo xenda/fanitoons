@@ -16,10 +16,10 @@
         .two.flag.medium{:title=>@match.visitor.name, :class=>@match.visitor.flag_name}= @match.try(:visitor).try(:short_name)
     .counter
       .day
-        %span -
+        %span= @match.first_team_goals
         goles
       .hour
-        %span -
+        %span= @match.second_team_goals
         goles
   
   %div{:style=>"clear:both;overflow:auto;"}
