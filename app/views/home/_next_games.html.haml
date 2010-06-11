@@ -2,21 +2,21 @@
   %h2 próximos partidos
   #counter-cont
     #vs
-      .one.flag.medium.rsa{:title=>@last_match.local.name}= @last_match.try(:local).try(:short_name)
+      .one.flag.medium{:title=>@last_match.local.name, :class=>@last_match.local.flag_name}= @last_match.try(:local).try(:short_name)
       vs
-      .two.flag.mex.medium{:title=>@last_match.visitor.name}= @last_match.try(:visitor).try(:short_name)
+      .two.flag.medium{:title=>@last_match.visitor.name, :class=>@last_match.visitor.flag_name}= @last_match.try(:visitor).try(:short_name)
     .counter
       .day
-        %span 6
+        %span 0
         días
       .hour
-        %span 15
+        %span 0
         horas
       .minute
-        %span 14
+        %span 59
         minutos
       .second
-        %span 20
+        %span 12
         segundos
   %ul
     = render :partial => "home/next_match", :collection => @matches
