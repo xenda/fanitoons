@@ -1,6 +1,9 @@
 #comments
   %h3{:style=>"font-size:2em;"}= "#{commentable.comments.size} comentarios"
   
+  %ul#comments_li
+    = render :partial => "comments/comment", :collection => commentable.comments
+  
 #comment_form
   
   - if commentable.comments.size.zero?

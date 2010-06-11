@@ -1,11 +1,11 @@
 class CommentsController < InheritedResources::Base
   
   def create
-    create! { polymorphic_url [@comment.commentable,@comment]}
+    create! { polymorphic_url @comment.commentable}
   end
   
   def update
-    update! { polymorphic_url [@comment.commentable,@comment]}
+    update! { polymorphic_url @comment.commentable }
   end
   
 end
