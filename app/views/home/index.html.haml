@@ -89,36 +89,175 @@
 
 
 
-#main_content
-      
-  #match.block
-    %h2 Ultimos Partidos
-    %ul#matches.content_box
-      = render :partial=>"matches/home_match", :collection => @matches
-      
-  %div{:style=>"clear:both;overflow:auto;"}  
+#last-predicted
+  %h3 ultimos pronosticos
+  %ul
+    %li.odd
+      .meta
+        %img.avatar{:alt => "", :height => "51", :src => "/images/avatar.jpg", :width => "51"}/
+        %p Alvaro
+        %p.title Lord del futbol
+      %table{:cellpadding => "0", :cellspacing => "0"}
+        %tbody
+          %tr.header
+            %td.first Partido
+            %td
+              .flag.ury.small uru
+            %td
+              .flag.arg.small arg
+          %tr
+            %td.first goles
+            %td.win 4
+            %td 2
+    %li
+      .meta
+        %img.avatar{:alt => "", :height => "51", :src => "/images/avatar.jpg", :width => "51"}/
+        %p Alvaro
+        %p.title Lord del futbol
+      %table{:cellpadding => "0", :cellspacing => "0"}
+        %tbody
+          %tr.header
+            %td.first Partido
+            %td
+              .flag.ury.small uru
+            %td
+              .flag.arg.small arg
+          %tr
+            %td.first goles
+            %td 4
+            %td.win 2
+    %li.odd
+      .meta
+        %img.avatar{:alt => "", :height => "51", :src => "/images/avatar.jpg", :width => "51"}/
+        %p Alvaro
+        %p.title Lord del futbol
+      %table{:cellpadding => "0", :cellspacing => "0"}
+        %tbody
+          %tr.header
+            %td.first Partido
+            %td
+              .flag.ury.small uru
+            %td
+              .flag.arg.small arg
+          %tr
+            %td.first goles
+            %td.win 4
+            %td 2
+    %li
+      .meta
+        %img.avatar{:alt => "", :height => "51", :src => "/images/avatar.jpg", :width => "51"}/
+        %p Alvaro
+        %p.title Lord del futbol
+      %table{:cellpadding => "0", :cellspacing => "0"}
+        %tbody
+          %tr.header
+            %td.first Partido
+            %td
+              .flag.ury.small uru
+            %td
+              .flag.arg.small arg
+          %tr
+            %td.first goles
+            %td 4
+            %td.win 2
+  .clear
 
-  #last_predictions.block
-    %h2 Lo más pronosticado
-    .content_box
-      = render :partial=>"predictions/popular_prediction", :collection => @popular_predictions
-  
-  #predictions.block
-    %h2 Últimos pronósticos
-    .content_box
-      = render :partial=>"predictions/home_prediction", :collection => @predictions
-    
-  #posts.block
-    %h2 Noticias
-    .content_box= render :partial=>'posts/post', :collection => @posts
+
+#news
+  %h3 noticias
+  %ul
+    %li.odd
+      %div
+        %img{:alt => "", :height => "92", :src => "/images/news-1.jpg", :width => "275"}/
+        %a.plus{:href => "#"} +
+      %p.alt Lorem ipsum
+      %p.date viernres 4 de junio 2010
+      %p Nunc sed nisl diam. Cras nibh nisi, dapibus eu congue id, pharetra non mi. Nunc et pulvinar ante. Proin et massa et augue lacinia
+    %li
+      %div
+        %img{:alt => "", :height => "92", :src => "/images/news-2.jpg", :width => "275"}/
+        %a.plus{:href => "#"} +
+      %p.alt Lorem ipsum
+      %p.date viernres 4 de junio 2010
+      %p Nunc sed nisl diam. Cras nibh nisi, dapibus eu congue id, pharetra non mi. Nunc et pulvinar ante. Proin et massa et augue lacinia
+    %li.odd
+      %div
+        %img{:alt => "", :height => "92", :src => "/images/news-3.jpg", :width => "275"}/
+        %a.plus{:href => "#"} +
+      %p.alt Lorem ipsum
+      %p.date viernres 4 de junio 2010
+      %p Nunc sed nisl diam. Cras nibh nisi, dapibus eu congue id, pharetra non mi. Nunc et pulvinar ante. Proin et massa et augue lacinia
+    %li
+      %div
+        %img{:alt => "", :height => "92", :src => "/images/news-4.jpg", :width => "275"}/
+        %a.plus{:href => "#"} +
+      %p.alt Lorem ipsum
+      %p.date viernres 4 de junio 2010
+      %p Nunc sed nisl diam. Cras nibh nisi, dapibus eu congue id, pharetra non mi. Nunc et pulvinar ante. Proin et massa et augue lacinia
+  .clear
+  %a.more.button{:href => "#"} ver mas
+
 
 - content_for :sidebar do
-  = render "home/sidebar"
-
+  #invite
+    %h3
+      invita a
+      %br>/
+      tus amigos
+    %ul
+      %li.facebook
+        %a{:href => "#"}
+      %li.twitter
+        %a{:href => "#"}
+      %li.email
+        %a{:href => "#"}
+  #chunteros
+    %h3 los chunteros
+    %ul.ranking
+      %li
+        %img.avatar{:alt => "", :height => "67", :src => "/images/avatar.jpg", :width => "67"}/
+        %h4 alvaro pereyra
+        %p pronostico
+        %p 18 aciertos
+        %p.title Lord del Futbol
+      %li
+        %img.avatar{:alt => "", :height => "67", :src => "/images/avatar.jpg", :width => "67"}/
+        %h4 alvaro pereyra
+        %p pronostico
+        %p 18 aciertos
+        %p.title lord del futbol
+      %li
+        %img.avatar{:alt => "", :height => "67", :src => "/images/avatar.jpg", :width => "67"}/
+        %h4 alvaro pereyra
+        %p pronostico
+        %p 18 aciertos
+        %p.title lord del futbol
+  #punteros
+    %h3 los punteros
+    %ul.ranking
+      %li
+        %img.avatar{:alt => "", :height => "67", :src => "/images/avatar.jpg", :width => "67"}/
+        %h4 alvaro pereyra
+        %p 42 puntos
+        %p.title Lord del Futbol
+      %li
+        %img.avatar{:alt => "", :height => "67", :src => "/images/avatar.jpg", :width => "67"}/
+        %h4 alvaro pereyra
+        %p 0 puntos
+        %p.title Lord del Futbol
+      %li
+        %img.avatar{:alt => "", :height => "67", :src => "/images/avatar.jpg", :width => "67"}/
+        %h4 alvaro pereyra
+        %p 0 puntos
+        %p.title Lord del Futbol
+  #facebook-connect
+  
+  
+  
 - content_for :main_banner do
   #welcome
     %h2 Bienvenidos a la nueva comunidad para los amantes del fútbol
-  
+
     - if account_signed_in?
       = render "home/whats_new"
     - else
