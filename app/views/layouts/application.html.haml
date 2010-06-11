@@ -1,35 +1,71 @@
+!!! XML
 !!! Strict
-%html
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
   %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
     %title= [@title, "Patatoon"].compact.join(" | ")
-    = stylesheet_link_tag 'reset', '../javascripts/fancybox/jquery.fancybox-1.3.1','style','formtastic', 'formtastic_changes'
-    = yield :include
-        
-  %body{:class=>controller.controller_name}
-    #header
-      #header_content
-        %h1= link_to "Patatoon", root_path
-        %ul.menu
-          %li= link_to 'Inicio', root_path
-          %li= link_to 'Encuentros', matches_path        
-          %li= link_to 'Jugadores', players_path
-          %li= link_to 'Predicciones', predictions_path
-          %li= link_to 'Acerca de...', "#", :class=>"last" # url_for(:posts, :about)
-        - if account_signed_in?
-          #logged_as
-            = "Iniciada sesión como"
-            = image_tag current_account.picture.url(:thumb), :style=>"float:right;" if current_account.picture
-            = link_to current_account.email, profile_path(current_account.id) #edit_registration_path(current_account)
-            = link_to "salir", destroy_account_session_path
-    #container
-      
+    = stylesheet_link_tag 'reset','../javascripts/fancybox/jquery.fancybox-1.3.1','layout','sidebar','flags','formtastic','formtastic_changes'
+    /[if IE] 
+      = stylesheet_link_tag "ie"
+    = yield :include 
+    %body{:class=>"#{controller.controller_name} #{@body_class}"}
+      /[if IE] 
+        .ie
+      /[if IE 6] 
+        .ie6    
+      /[if IE 7] 
+        .ie7    
+      /[if gte IE 8] 
+        .ie8    
+      #clouds
+      #header
+        .wrapper
+          %h1= link_to content_tag(:span,"patatoon"), root_path
+          %ul#nav
+            %li.selected.first= link_to "inicio", root_path
+            %li= link_to "crea tu avatar", avatar_path
+            %li= link_to "campeonatos", matches_path
+            %li= link_to "predicciones", predictions_path
+            %li.last
+              - if account_signed_in?
+                = link_to "mi perfil", profile_path(current_account.id)
+              - else
+                = link_to "entrar", new_account_registration_path
+          #login
+            - if account_signed_in
+              = link_to current_account.email, profile_path(current_account.id)
+            - else
+              = link_to "iniciar sesión", new_account_session_path, {:id=>"new_session", :class=>"button log-in"}
+              = link_to "registrarse", new_registration_path("account"), {:id=>"register_new_user", :class=>"button register"}
+      /[if IE] 
+        #the-banner
       = yield :main_banner
-    
-      #main
-        = yield
-      #sidebar
-        = yield :sidebar
-
-    #footer
-      Copyright (c)
-    = javascript_include_tag 'jquery', 'jrails','fancybox/jquery.fancybox-1.3.1.pack','fancybox/jquery.easing-1.3.pack','fancybox/jquery.mousewheel-3.0.2.pack','application'
+      #banner-cont
+        .prev.arrow
+        .next.arrow
+        .banner
+          %ul
+            %li
+              .banner-1
+                %img{:src => "/images/banners/banner-1.png"}/
+                %h3 Expr&eacute;sate, crea tu avatar, y s&eacute; un hincha más
+      /[if IE] 
+        :erb
+          </div>
+      = yield
+      
+      #footer
+        .wrapper
+      /[if IE] 
+        :erb
+          </div>
+      /[if IE 6] 
+        :erb
+          </div><script src="/javascripts/DD_belatedPNG_0.0.8a.js" type="text/javascript"></script><script src="javascripts/pngfix.js" type="text/javascript"></script>
+      /[if IE 7]
+        :erb
+          </div>
+      /[if gte IE 8]
+        :erb
+          </div>
+      = javascript_include_tag 'jquery', 'jrails','fancybox/jquery.fancybox-1.3.1.pack','fancybox/jquery.easing-1.3.pack','fancybox/jquery.mousewheel-3.0.2.pack','application'
