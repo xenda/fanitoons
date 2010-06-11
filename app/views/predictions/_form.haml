@@ -15,7 +15,7 @@
 
     #first_team.team{:rel=>@prediction.match.local.id, :class=>("selected" if @prediction.local_winner?)}
       = f.label :winner_id, @prediction.match.local.name, :class=>"team_name"
-      = image_tag(random_flag)
+      .flag.medium{:class=>@prediction.match.local.flag_name}
 
       %a.small{:href => "#"} ¿Goles?
       .goals.hidden
@@ -28,7 +28,7 @@
 
     #second_team.team.last{:rel=>@prediction.match.visitor.id, :class=>("selected" if @prediction.visitor_winner?)}
       = f.label :winner_id, @prediction.match.visitor.name, :class=>"team_name"
-      = image_tag(random_flag)
+      .flag.medium{:class=>prediction.match.visitor.flag_name}
 
       %a.small{:href => "#"} ¿Goles?
       .goals.hidden
