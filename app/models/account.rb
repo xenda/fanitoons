@@ -229,6 +229,10 @@ class Account < ActiveRecord::Base
   def from_facebook?
     fb_token
   end
+  
+  def title
+    "Chalaca"
+  end
   ##
   # This method is used for retrive the original password.
   #
