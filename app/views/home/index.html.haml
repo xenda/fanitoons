@@ -2,6 +2,93 @@
 - @body_class = "home"
 = display_flashes
 
+
+#nexts-games
+  %h2 proximos partidos
+  #counter-cont
+    #vs
+      .one.flag.medium.rsa rsa
+      vs
+      .two.flag.mex.medium mex
+    .counter
+      .day
+        %span 6
+        dias
+      .hour
+        %span 15
+        horas
+      .minute
+        %span 14
+        minutos
+      .second
+        %span 20
+        segundos
+  %ul
+    %li
+      %a{:href => "#"}
+        .flag.ury.small uru
+        .flag.arg.small usa
+        %p 5 dias
+    %li
+      %a{:href => "#"}
+        .flag.ury.small uru
+        .flag.arg.small usa
+        %p 5 dias
+    %li.last
+      %a{:href => "#"}
+        .flag.ury.small uru
+        .flag.arg.small usa
+        %p 5 dias
+    %li
+      %a{:href => "#"}
+        .flag.ury.small uru
+        .flag.arg.small usa
+        %p 5 dias
+    %li
+      %a{:href => "#"}
+        .flag.ury.small uru
+        .flag.arg.small usa
+        %p 5 dias
+    %li.last
+      %a{:href => "#"}
+        .flag.ury.small uru
+        .flag.arg.small usa
+        %p 5 dias
+  .clear
+
+#most-predicted
+  %h3 los mas pronosticados
+  .container
+    %ul
+      %li
+        %a{:href => "#"}
+          .flag.ury.small uru
+          .flag.arg.small usa
+          %p 20 pronostico
+      %li
+        %a{:href => "#"}
+          .flag.ury.small uru
+          .flag.arg.small usa
+          %p 20 pronostico
+      %li
+        %a{:href => "#"}
+          .flag.ury.small uru
+          .flag.arg.small usa
+          %p 20 pronostico
+      %li.last
+        %a{:href => "#"}
+          .flag.ury.small uru
+          .flag.arg.small usa
+          %p 20 pronostico
+    .clear
+  .nav
+    %a.prev.arrow{:href => "#"}
+    %a.next.arrow{:href => "#"}
+    %a.predict.button{:href => "#"} Deja tu pronostico
+    .clear
+
+
+
 #main_content
       
   #match.block
