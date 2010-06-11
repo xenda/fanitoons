@@ -2,7 +2,7 @@ class Player < ActiveRecord::Base
   belongs_to :team
   belongs_to :country
   
-  has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "50x50>" }
+  has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "50x50>" },:path => ":rails_root/public/system/players/:attachment/:id/:style.:extension"
   
 end
 
