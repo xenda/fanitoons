@@ -11,6 +11,7 @@
       %tr
         %td Id
         %td Nombre
+        %td Abbr        
         %td Bio
         %td Pais
         %td
@@ -20,6 +21,7 @@
       %tr{:class=>cycle('even','odd') }
         %td= team.id
         %td= team.name
+        %td= team.short_name        
         %td= truncate(strip_tags(team.bio),50)
         %td= team.country.name
         %td= link_to 'Editar', edit_admin_team_path(team)
