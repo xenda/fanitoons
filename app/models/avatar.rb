@@ -6,6 +6,10 @@ class Avatar < ActiveRecord::Base
  has_one :short
  has_one :snicker
  
+ 
+ def name
+  "Avatar de #{account.name}"
+ end
 end
 
 # == Schema Information

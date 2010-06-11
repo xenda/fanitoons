@@ -21,6 +21,10 @@ class Match < ActiveRecord::Base
     end
   end
   
+  def name
+    "Partido #{title}"
+  end
+  
   def title
     "#{local.name} - #{visitor.name}" if local && visitor
   end

@@ -11,6 +11,10 @@ class Prediction < ActiveRecord::Base
   
   attr_accessor :to_facebook
   
+  def name
+    "#{match.local.name} (#{first_team_result}) vs #{match.visitor.name} (#{second_team_result})"
+  end
+  
   def teams
     [match.local,match.visitor]
   end

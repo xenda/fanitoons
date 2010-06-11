@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100609154650) do
+ActiveRecord::Schema.define(:version => 20100611022954) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
@@ -107,6 +107,7 @@ ActiveRecord::Schema.define(:version => 20100609154650) do
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
+    t.string   "iso_name"
   end
 
   create_table "favorite_teams", :force => true do |t|
@@ -191,6 +192,7 @@ ActiveRecord::Schema.define(:version => 20100609154650) do
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
+    t.string   "slug"
   end
 
   create_table "predictions", :force => true do |t|

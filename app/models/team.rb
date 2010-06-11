@@ -12,16 +12,25 @@ class Team < ActiveRecord::Base
   
 end
 
+
 # == Schema Information
 #
 # Table name: teams
 #
-#  id         :integer         not null, primary key
-#  name       :string(255)
-#  country    :string(255)
-#  created_at :datetime
-#  updated_at :datetime
-#  bio        :text
-#  country_id :integer
+#  id                   :integer         not null, primary key
+#  name                 :string(255)
+#  country              :string(255)
+#  created_at           :datetime
+#  updated_at           :datetime
+#  bio                  :text
+#  country_id           :integer
+#  picture_file_name    :string(255)
+#  picture_content_type :string(255)
+#  picture_file_size    :integer
+#  picture_updated_at   :datetime
+#  flag_file_name       :string(255)
+#  flag_content_type    :string(255)
+#  flag_file_size       :integer
+#  flag_updated_at      :datetime
 #
 

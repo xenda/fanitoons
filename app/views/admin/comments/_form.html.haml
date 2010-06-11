@@ -1,14 +1,11 @@
 - semantic_form_for ["admin",@comment] do |form|
   - form.inputs do
-    = form.input :id
-    = form.input :post
-    = form.input :title
-    = form.input :content
+    = form.input :title, :label => "Título"
+    = form.input :content, :label => "Contenido"
     = form.input :email
-    = form.input :user
-    = form.input :website
-    = form.input :commentable
-    = form.input :commentable_type
+    = form.input :user, :label => "Autor"
+    = form.input :website, :label => "Sitio web"
+    = form.input :commentable, :label => "Fuente"
     
   - form.buttons do
     = form.commit_button 'Grabar',:button_html => { :class => "submit" }

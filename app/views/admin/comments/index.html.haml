@@ -1,41 +1,33 @@
-- @title = "Administración Comments "
+- @title = "Administración Comentarios "
 
 #admin.index
-  %h1= "Administrando Comments"
+  %h1= "Administrando Comentarios"
 
   #admin_menu
-    = link_to "Nuevo comment", new_admin_comment_path
+    = link_to "Nuevo comentario", new_admin_comment_path
 
   %table{:id=>"comments_table"}
     %thead
       %tr  
         %td Id
-        %td Post
-        %td Title
-        %td Content
+        %td Fuente
+        %td Titulo
+        %td Contenido
         %td Email
         %td User
-        %td Website
-        %td Created_at
-        %td Updated_at
-        %td Commentable
-        %td Commentable_type
+        %td Fecha
         %td
         %td
     %tbody
     - @comments.each do |comment|
       %tr{:class=>cycle('even','odd') }
         %td= comment.id
-        %td= comment.post
+        %td= comment.commentable.name
         %td= comment.title
-        %td= comment.content
+        %td= summary comment.content
         %td= comment.email
-        %td= comment.user
-        %td= comment.website
-        %td= comment.created_at
-        %td= comment.updated_at
-        %td= comment.commentable
-        %td= comment.commentable_type
+        %td= comment.user.name
+        %td= date comment.created_at
         %td= link_to 'Editar', edit_admin_comment_path(comment)
         %td= link_to 'Eliminar', ["admin",comment], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
       
