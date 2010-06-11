@@ -37,6 +37,48 @@
 .svn.small {
 	background:url(../images/flags/svn-small.png) no-repeat;
 }
+.che.small {
+	background:url(../images/flags/che-small.png) no-repeat;
+}
+.hnd.small {
+	background:url(../images/flags/hnd-small.png) no-repeat;
+}
+.svk.small {
+	background:url(../images/flags/svk-small.png) no-repeat;
+}
+.ita.small {
+	background:url(../images/flags/ita-small.png) no-repeat;
+}
+.nzd.small {
+	background:url(../images/flags/nzd-small.png) no-repeat;
+}
+.pry.small {
+	background:url(../images/flags/pry-small.png) no-repeat;
+}
+
+
+
+
+.pry.medium {
+	background:url(../images/flags/pry-medium.png) no-repeat;
+}
+
+.nzd.medium {
+	background:url(../images/flags/nzd-medium.png) no-repeat;
+}
+.svk.medium {
+	background:url(../images/flags/svk-medium.png) no-repeat;
+}
+.ita.medium {
+	background:url(../images/flags/ita-medium.png) no-repeat;
+}
+.che.medium {
+	background:url(../images/flags/che-medium.png) no-repeat;
+}
+.hnd.small {
+	background:url(../images/flags/hnd-medium.png) no-repeat;
+}
+
 
 .dza.medium {
 	background:url(../images/flags/dza-medium.png) no-repeat;
