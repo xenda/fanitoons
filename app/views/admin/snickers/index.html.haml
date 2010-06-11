@@ -1,18 +1,16 @@
-- @title = "Administración Snickers "
+- @title = "Administración Zapatillas "
 
 #admin.index
-  %h1= "Administrando Snickers"
+  %h1= "Administrando Zapatillas"
 
   #admin_menu
-    = link_to "Nuevo snicker", new_admin_snicker_path
+    = link_to "Nueva zapatilla", new_admin_snicker_path
 
   %table{:id=>"snickers_table"}
     %thead
       %tr
         %td Id
         %td Name
-        %td Created_at
-        %td Updated_at
         %td
         %td
     %tbody
@@ -20,8 +18,6 @@
       %tr{:class=>cycle('even','odd') }
         %td= snicker.id
         %td= snicker.name
-        %td= snicker.created_at
-        %td= snicker.updated_at
         %td= link_to 'Editar', edit_admin_snicker_path(snicker)
         %td= link_to 'Eliminar', ["admin",snicker], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
       

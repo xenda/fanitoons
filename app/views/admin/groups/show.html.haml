@@ -1,15 +1,15 @@
-- @title = "Viendo group"
+- @title = "Viendo grupo"
 
 #admin
 
-  %h1 "Viendo group"
+  %h1 "Viendo grupo"
 
   - show_for @group do |a| 
     = a.attribute :id
-        = a.attribute :name
+    = a.attribute :name
     
 
   .bottom_menu
     = link_to "Ver todos", admin_groups_path
-    = link_to "Editar group",  edit_admin_group_path(group)
+    = link_to "Editar grupo",  edit_admin_group_path(group)
     = link_to "Crear otro", new_admin_group_path

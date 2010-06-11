@@ -1,18 +1,17 @@
-- @title = "Viendo team"
+- @title = "Viendo equipo"
 
 #admin
 
-  %h1 "Viendo team"
+  %h1 "Viendo equipo"
 
   - show_for @team do |a| 
-    = a.attribute :id
-        = a.attribute :name
-        = a.attribute :country
-        = a.attribute :bio
-        = a.attribute :country
+    = a.attribute :name
+    = a.attribute :country
+    = a.attribute :bio
+    = a.attribute :country
     
 
   .bottom_menu
     = link_to "Ver todos", admin_teams_path
-    = link_to "Editar team",  edit_admin_team_path(team)
+    = link_to "Editar equipo",  edit_admin_team_path(team)
     = link_to "Crear otro", new_admin_team_path

@@ -3,6 +3,11 @@ class Admin::PostsController < InheritedResources::Base
   layout "admin"
   before_filter :authenticate_admin!
   
+  def new
+    @post = current_admin.posts.build
+    new!
+  end
+  
   def create
     create! { admin_posts_path }
   end

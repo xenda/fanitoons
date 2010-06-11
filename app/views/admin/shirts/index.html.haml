@@ -11,8 +11,6 @@
       %tr
         %td= I18n.t("activerecord.attributes.shirts.id").humanize
         %td= I18n.t("activerecord.attributes.shirts.name").humanize
-        %td= I18n.t("activerecord.attributes.shirts.created_at").humanize
-        %td= I18n.t("activerecord.attributes.shirts.updated_at").humanize
         %td
         %td
     %tbody
@@ -20,8 +18,6 @@
       %tr{:class=>cycle('even','odd') }
         %td= shirt.id
         %td= shirt.name
-        %td= shirt.created_at
-        %td= shirt.updated_at
         %td= link_to 'Editar', edit_admin_shirt_path(shirt)
         %td= link_to 'Eliminar', ["admin",shirt], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
       

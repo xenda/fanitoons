@@ -1,22 +1,21 @@
-- @title = "Viendo prediction"
+- @title = "Viendo predicción"
 
 #admin
 
-  %h1 "Viendo prediction"
+  %h1 "Viendo predicción"
 
   - show_for @prediction do |a| 
-    = a.attribute :id
-        = a.attribute :user
-        = a.attribute :predicted_at
-        = a.attribute :match
-        = a.attribute :winner
-        = a.attribute :first_team_result
-        = a.attribute :second_team_result
-        = a.attribute :scoring_player
-        = a.attribute :victory_type
+    = a.attribute :account
+    = a.attribute :predicted_at
+    = a.attribute :match
+    = a.attribute :winner
+    = a.attribute :first_team_result
+    = a.attribute :second_team_result
+    = a.attribute :scoring_player
+    = a.attribute :victory_type
     
 
   .bottom_menu
     = link_to "Ver todos", admin_predictions_path
-    = link_to "Editar prediction",  edit_admin_prediction_path(prediction)
+    = link_to "Editar predicción",  edit_admin_prediction_path(prediction)
     = link_to "Crear otro", new_admin_prediction_path

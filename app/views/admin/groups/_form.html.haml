@@ -1,7 +1,6 @@
 - semantic_form_for ["admin",@group] do |form|
   - form.inputs do
-    = form.input :id
-    = form.input :name
+    = form.input :name, :label => "Nombre"
     
   - form.buttons do
     = form.commit_button 'Grabar',:button_html => { :class => "submit" }

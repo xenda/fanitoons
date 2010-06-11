@@ -1,14 +1,12 @@
 - semantic_form_for ["admin",@prediction] do |form|
   - form.inputs do
-    = form.input :id
-    = form.input :user
-    = form.input :predicted_at
-    = form.input :match
-    = form.input :winner
-    = form.input :first_team_result
-    = form.input :second_team_result
-    = form.input :scoring_player
-    = form.input :victory_type
+    = form.input :account, :label => "Usuario"
+    = form.input :predicted_at, :label => "Fecha predicción"
+    = form.input :match, :label => "Partido"
+    = form.input :winner, :label=> "Ganador"
+    = form.input :first_team_result, :label=>"Resultado Equipo Local"
+    = form.input :second_team_result, :label=>"Resultado Equipo Visitante"
+    = form.input :scoring_player, :label => "Jugador Goleador"
     
   - form.buttons do
     = form.commit_button 'Grabar',:button_html => { :class => "submit" }

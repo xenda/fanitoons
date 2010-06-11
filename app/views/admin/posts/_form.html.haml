@@ -3,6 +3,7 @@
     - form.inputs do
       = form.input :title, :label => "Título"
       = form.input :content, :label => "Contenido", :input_html => {:class => "tinymce"}
+      = form.input :published_at, :label => "Fecha publicación"
       = form.input :account, :label => "Autor"
   
     - form.buttons do

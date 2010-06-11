@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100611022954) do
+ActiveRecord::Schema.define(:version => 20100611024724) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
@@ -193,6 +193,7 @@ ActiveRecord::Schema.define(:version => 20100611022954) do
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
     t.string   "slug"
+    t.datetime "published_at"
   end
 
   create_table "predictions", :force => true do |t|

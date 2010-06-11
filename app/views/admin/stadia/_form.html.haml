@@ -1,11 +1,9 @@
 - semantic_form_for ["admin",@stadium] do |form|
   - form.inputs do
-    = form.input :id
-    = form.input :name
-    = form.input :city
-    = form.input :country
-    = form.input :bio
-    = form.input :country
+    = form.input :name, :label => "Nombre"
+    = form.input :city, :label => "Ciudad"
+    = form.input :country, :label => "País"
+    = form.input :bio, :label => "Bio", :input_html => {:class=>"tinymce"}
     
   - form.buttons do
     = form.commit_button 'Grabar',:button_html => { :class => "submit" }

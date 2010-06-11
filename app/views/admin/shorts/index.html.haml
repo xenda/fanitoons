@@ -10,9 +10,7 @@
     %thead
       %tr
         %td Id
-        %td Name
-        %td Created_at
-        %td Updated_at
+        %td Nombre
         %td
         %td
     %tbody
@@ -20,8 +18,6 @@
       %tr{:class=>cycle('even','odd') }
         %td= short.id
         %td= short.name
-        %td= short.created_at
-        %td= short.updated_at
         %td= link_to 'Editar', edit_admin_short_path(short)
         %td= link_to 'Eliminar', ["admin",short], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
       

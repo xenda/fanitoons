@@ -6,6 +6,9 @@ class Admin < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation
+  
+  has_many :posts, :class_name => "Post", :foreign_key => "account_id"
+  
 end
 
 # == Schema Information

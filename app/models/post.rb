@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
   
-  belongs_to :account
+  belongs_to :admin, :class_name => "Admin", :foreign_key => "account_id"
   has_many :comments
   
   validates_presence_of :title
@@ -23,6 +23,7 @@ class Post < ActiveRecord::Base
 end
 
 
+
 # == Schema Information
 #
 # Table name: posts
@@ -38,5 +39,6 @@ end
 #  picture_file_size    :integer
 #  picture_updated_at   :datetime
 #  slug                 :string(255)
+#  published_at         :datetime
 #
 
