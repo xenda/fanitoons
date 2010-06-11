@@ -1,0 +1,11 @@
+%li{:class=>(cycle("odd","even"))}
+  .meta
+    %img.avatar{:alt => "", :height => "51", :src => "/images/missing.png", :width => "51"}/
+    %p
+      - if comment.account
+        = comment.account.name
+      - else
+        Anónimo
+    %p.title= (comment.account.title if comment.account)
+  .content
+    = strip_tags(comment.content) 

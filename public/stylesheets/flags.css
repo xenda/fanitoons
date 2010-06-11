@@ -76,6 +76,11 @@
 }
 
 
+
+.arg.medium {
+	background:url(/images/flags/arg-medium.png) no-repeat;
+}
+
 .nzl.medium {
 	background:url(/images/flags/nzl-medium.png) no-repeat;
 }
