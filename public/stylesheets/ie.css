@@ -1,0 +1,105 @@
+#ie7 #nexts-games li .flag {
+	width:30px;
+}
+
+#ie6 #counter-cont #vs,
+#ie7 #counter-cont #vs {
+	position:relative;
+}
+
+#ie6 #counter-cont #vs .one,
+#ie7 #counter-cont #vs .one {
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+#ie6 #counter-cont #vs .two,
+#ie7 #counter-cont #vs .two {
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+#ie7 #header #nav li.last{
+	width:65px;
+}
+
+#ie6 #header,
+#ie6 #the-banner,
+#ie6 #container {
+	text-align:center;
+}
+
+#ie6 h2 {
+	font-size:2.3em;
+	letter-spacing:-.05em;
+}
+
+#ie6 h3 {
+	font-size:1.8em;
+	letter-spacing:-.02em;
+}
+
+#ie6 #header #login a {
+	font-size:1em;
+}
+
+#ie6 #header #nav {
+	width:960px;
+	overflow:hidden;
+	height:67px;
+}
+
+#ie6 #header #nav li {
+	padding:0 10px;
+}
+
+#ie6 #header #nav li a{
+	position:relative;
+	z-index:90
+	}
+
+#ie6 #header #nav li.last{
+	width:100px;
+}
+
+#ie6 #container .wrapper {
+	width:976px;
+	text-align:left;
+}
+
+#ie6 #nexts-games li a {
+	width:198px;
+}
+
+#ie6 #nexts-games li p {
+	font-size:.95em;
+}
+
+#ie6 #most-predicted li a {
+	width:146px;
+	}
+	
+#ie6 #most-predicted .nav .predict { 
+	font-size:.75em;
+}
+
+#ie6 #last-predicted li div.meta {
+	text-align:center;
+}
+
+#ie6 #last-predicted li div.meta .title { 
+	font-size:.75em;
+}
+
+#ie6 #news li { 
+	width:305px;
+	height:227px;
+}
+
+
+#ie6 #sidebar #invite {
+	width:250px;
+	height:127px;
+}

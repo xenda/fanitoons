@@ -1,0 +1,85 @@
+#container #sidebar {
+	float:right;
+	width:250px;
+	padding-top:15px;
+	}
+
+#sidebar #invite {
+	width:234px;
+	padding:9px 0 0 16px;
+	height:118px;
+	background:url(../images/invite.png) no-repeat;
+}
+
+#sidebar #invite h3 {
+	color:#fff;
+	line-height:33px;
+	margin-bottom:8px;
+	letter-spacing:.05em;
+}
+
+#sidebar #invite li {
+	width:32px;
+	height:32px;
+	float:left;
+	margin-right:3px;
+}
+
+#sidebar #invite li.facebook {
+	background:url(../images/facebook.png) no-repeat;
+}
+
+#sidebar #invite li.twitter {
+	background:url(../images/twitter.png) no-repeat;
+}
+
+#sidebar #invite li.email {
+	background:url(../images/email.png) no-repeat;
+}
+
+#sidebar #chunteros,
+#sidebar #punteros {
+	margin-top:27px;
+}
+
+#sidebar h3 {
+	margin-bottom:15px;
+}
+
+#sidebar .ranking li {
+	height:90px;
+	margin-bottom:15px;
+	position:relative;
+}
+
+#sidebar .ranking li .avatar {
+	float:left;
+	margin:0 10px 12px 0;
+}
+
+#sidebar .ranking li h4 {
+	height:22px;
+	line-height:22px;
+	font-size:1.35em;
+}
+
+#sidebar .ranking li p {
+	margin-bottom:7px;
+	}
+
+#sidebar .ranking li p.title {
+	position:absolute;
+	left:55px;
+	bottom:0;
+	height:25px;
+	line-height:25px;
+	padding:0 10px;
+	color:#fff;
+	background:#748B3B;
+	margin:0;
+}
+
+#facebook-connect {
+	background:url(../images/facebook-shit.jpg) no-repeat;
+	height:243px;
+}
