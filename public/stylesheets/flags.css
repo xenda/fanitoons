@@ -52,12 +52,19 @@
 .nzd.small {
 	background:url(../images/flags/nzd-small.png) no-repeat;
 }
+.nzl.small {
+	background:url(../images/flags/nzl-small.png) no-repeat;
+}
+
 .pry.small {
 	background:url(../images/flags/pry-small.png) no-repeat;
 }
 
 
 
+.nzl.medium {
+	background:url(../images/flags/nzl-medium.png) no-repeat;
+}
 
 .pry.medium {
 	background:url(../images/flags/pry-medium.png) no-repeat;
