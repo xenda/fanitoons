@@ -9,14 +9,18 @@
       = stylesheet_link_tag "ie"
     = yield :include 
     %body{:class=>"#{controller.controller_name} #{@body_class}"}
-      /[if IE] 
-        .ie
+      /[if IE]
+        :erb
+          <div class="ie">
       /[if IE 6] 
-        #ie6    
+        :erb
+          <div id="ie6">
       /[if IE 7] 
-        #ie7    
+        :erb
+          <div id="ie7">
       /[if gte IE 8] 
-        #ie8    
+        :erb
+          <div id="ie8">
       #clouds
       #header
         .wrapper
