@@ -8,16 +8,16 @@
         .two.flag.medium{:title=>@last_match.visitor.name, :class=>@last_match.visitor.flag_name}= @last_match.try(:visitor).try(:short_name)
     .counter
       .day
-        %span 0
+        %span -
         días
       .hour
-        %span 0
+        %span -
         horas
       .minute
-        %span 59
+        %span -
         minutos
       .second
-        %span 12
+        %span -
         segundos
   %ul
     = render :partial => "home/next_match", :collection => @matches
