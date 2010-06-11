@@ -3,6 +3,8 @@
     = image_tag news.picture.url(:front)
     %a.plus{:href => "#"} +
   %p.alt= truncate(news.title,30)
-  %p.date= l(news.published_at, :format=>:long)
-  %p= truncate(news.content,100)
-m
+  - if news.published_at
+    %p.date= l(news.published_at, :format=>:long)
+  - else
+    %p.date= l(news.created_at, :format=>:long)
+  %p= truncate(strip_tags(news.content),100)
