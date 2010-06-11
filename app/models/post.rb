@@ -6,8 +6,8 @@ class Post < ActiveRecord::Base
   validates_presence_of :title
   validates_presence_of :content
   
-  has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "50x50>" }
-  
+  has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "50x50>", :home => "275x92#" }
+
   before_save :create_slug
   
   def name

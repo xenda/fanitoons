@@ -7,7 +7,7 @@ class Account < ActiveRecord::Base
   EXISTING_ACCOUNT = "existing" 
   WRONG_ACCOUNT = "wrong_data"
   
-  devise :registerable, :database_authenticatable, :confirmable, :recoverable, :rememberable, :trackable, :validatable, :invitable, :encryptor => :bcrypt
+  devise :registerable, :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable, :invitable, :encryptor => :bcrypt
   
   
   # Validations
