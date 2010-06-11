@@ -5,7 +5,7 @@
       = form.input :picture, :label => "Foto portada"      
       = form.input :content, :label => "Contenido", :input_html => {:class => "tinymce"}      
       = form.input :published_at, :label => "Fecha publicación"
-      = form.input :admin, :label => "Autor"
+      = form.input :admin, :label => "Autor",:label_method=>:email
   
     - form.buttons do
       = form.commit_button 'Grabar',:button_html => { :class => "submit" }
