@@ -296,17 +296,19 @@ a.register {
 	padding:0 16px;
 }
 
+
 #counter-cont #vs {
-	float:left;
-	height:36px;
-	width:313px;
-	line-height:36px;
-	margin-top:27px;
-	font-size:2.5em;
-	color:#748B3B;
-	font-family: 'HelveticaRounded', Arial;
-	text-align:center;	
+    float:left;
+    height:46px;
+    width:323px;
+    line-height:36px;
+    margin-top:22px;
+    font-size:2.5em;
+    color:#748B3B;
+    font-family: 'HelveticaRounded', Arial;
+    text-align:center;    
 }
+
 
 #counter-cont #vs .one,
 #counter-cont #vs .two {
@@ -366,9 +368,17 @@ a.register {
 
 #vs a {
 	display: block;
-	width: 320px;
 	color: #90a65c;
+  padding: 5px;
 }
+/*
+#counter-cont #vs a{ 
+    color:#90A65C;
+    display:block;
+    padding:5px;
+}*/
+
+
 
 .matches a#new_session {
 	font-size: 1.3em;
@@ -627,6 +637,8 @@ form#new_comment.formtastic.comment {
 #last-predicted table td.win {
 	background: url("../images/win.png") no-repeat 15px center;
 }
+
+
 
 #news h3 {
 	margin-bottom:15px;
