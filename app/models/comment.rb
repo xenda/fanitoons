@@ -1,6 +1,11 @@
 class Comment < ActiveRecord::Base
   belongs_to :commentable, :polymorphic => true
   belongs_to :account, :class_name => "Account", :foreign_key => "user_id"
+  
+  validates_presence_of :post_id
+  validates_presence_of :content
+  validates_presence_of :email
+  
 end
 
 
