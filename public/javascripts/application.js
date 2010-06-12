@@ -13,11 +13,11 @@ $(document).ready(function() {
 	}  
 
 
-  date = $(".counter").attr("rel");
+  date = $("div.counter").attr("rel");
 
   var next_match = Date.parse(date);
     
-  $('body.counter .counter').countdown({
+  $('body.counter div.counter').countdown({
       until: next_match,
       layout: "<div class='day'><span>{dn}</span>días</div> "+
       "<div class='hour'><span>{hn}</span>horas</div>"+
