@@ -771,15 +771,19 @@ form#new_comment.formtastic.comment {
 }
 
 #comment_form input {
-	background: #423b13 none !important;
 	border: 1px solid #423b13 !important;
 	padding: 0px 10px !important;
 	line-height: 10px;
 	font-size: 12px;
 	height: 30px !important;
+}
+
+#comment_form input.create {
 	width: 100px !important;
+	background: #423b13 none !important;
 	color: #fffeff;
 	font-weight: bold;
+
 }
 
 #last-predicted ul li table tbody tr td a {

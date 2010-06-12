@@ -22,7 +22,7 @@
         = hidden_field_tag "comment[email]", current_account.email
       - else
         = f.input :email
-        = f.input :website, :label => "Sitio web"
+        = f.input :website, :label => "Sitio web", :required => false
       = f.input :content, :label => "Contenido"      
       = hidden_field_tag "comment[commentable_id]", commentable.id
       = hidden_field_tag "comment[commentable_type]", commentable.class
