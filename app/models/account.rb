@@ -36,8 +36,10 @@ class Account < ActiveRecord::Base
   
   has_many :friendsters, :through => :frienships, :source => :account 
   
-  has_many :user_badges, :class_name => "user_badge", :foreign_key => "user_id"
+  has_many :user_badges, :class_name => "UserBadge", :foreign_key => "user_id"
   has_many :badges, :through => :user_badges
+  
+  
   
   # Paperclip::Interpolations::RAILS_ROOT = "."
   # Paperclip::Storage::S3::RAILS_ENV = PADRINO_ENV
@@ -50,6 +52,14 @@ class Account < ActiveRecord::Base
     #                    :path => ":attachment/:id/:style.:extension"
     
 
+
+    def self.top_times
+      Account.find(:all, :select => "accounts.*, (select sum(points) from user_badges where user_badges.user_id = accounts.id) as points", :order => "points desc", :limit => 5 )
+    end
+    
+    def self.top_season
+      Account.find(:all, :select =>"accounts.*, (select sum(points) from user_badges where user_badges.user_id = accounts.id ) as points", :order => "points desc", :limit => 5)
+    end
 
     def score
       @score ||= self.user_badges.sum(:points)

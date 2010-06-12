@@ -54,6 +54,9 @@ class Prediction < ActiveRecord::Base
   end
   
   def closeness
+    return false unless first_team_result
+    return false unless second_team_result
+      
     first_team_abs = (first_team_result - match.first_team_goals).abs
     second_team_abs = (second_team_result - match.second_team_goals).abs
     

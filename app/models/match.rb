@@ -21,6 +21,11 @@ class Match < ActiveRecord::Base
     end
   end
   
+  def self.give_all_points
+    self.all.each do |m|
+      m.give_points
+    end
+  end
   
   def give_points 
     
@@ -50,9 +55,9 @@ class Match < ActiveRecord::Base
     end
     
 
-  rescue
+  #rescue
 
-  raise "You need to create a Badge called 'Pronóstico Correcto'"    # Score 1pto
+  #raise "You need to create a Badge called 'Pronóstico Correcto'"    # Score 1pto
     # Partido 2ptos
     
     
@@ -64,6 +69,7 @@ class Match < ActiveRecord::Base
   end
   
   def winner
+    return false unless first_team_goals and second_team_goals 
     return local if first_team_goals > second_team_goals
     return visitor if second_team_goals > first_team_goals
   end

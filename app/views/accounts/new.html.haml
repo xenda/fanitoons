@@ -19,12 +19,4 @@
     = link_to "o entra con Facebook", fb_connect_path, :id=>"register_facebook"
 
 - content_for :sidebar do
-
-  #ranking.block
-    %h2 Los que siempre aciertan
-
-    %h2 Los más rankeados
-
-  #featured_posts.block
-    %h2 Destacadas
-    .content_box Destacada
+  = render :partial => "home/sidebar"

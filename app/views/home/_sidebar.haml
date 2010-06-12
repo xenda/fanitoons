@@ -1,27 +1,22 @@
-- form_tag posts_path, :method => 'get' do
-  = label_tag "Buscar"
-  = text_field_tag 'query', params[:query], :id=>"search_input_field"
-  = submit_tag 'Search', :id=>"search_button"
-
-#invite_friends
-  %h2 Invita a tus amigos
-  #invite_img= link_to image_tag("",:id=>"invite_friends"), invite_friends_path #r new_account_invitation_path
-
-#ranking.block
-  %h2 Los que siempre aciertan
+#invite
+  %h3
+    invita a
+    %br>/
+    tus amigos
   %ul
-    - Account.all.each do |a|
-      %li
-        = link_to a.name, profile_path(a.id)
-        %strong{:style=>"font-size:20px;"}= rand(100) 
+    %li.facebook
+      %a{:href => "#"}
+    %li.twitter
+      %a{:href => "#"}
+    %li.email
+      %a{:href => "#"}
+#chunteros
+  %h3 los chunteros
+  %ul.ranking= render :partial => "home/top_season",:collection=>@top_season
 
-  %h2 Los más rankeados
-  %ul
-    - Account.all.each do |a|
-      %li
-        = link_to a.name, profile_path(a.id)
-        %strong{:style=>"font-size:20px;"}= rand(100) 
+#punteros
+  %h3 los punteros
+  %ul.ranking= render :partial => "home/top_times", :collection => @top_times
 
-#featured_posts.block
-  %h2 Destacadas
-  .content_box Destacada
+#facebook_likebox
+  %iframe{:allowtransparency => "true", :frameborder => "0", :scrolling => "no", :src => "http://www.facebook.com/plugins/likebox.php?id=129238740437455&amp;width=240&amp;connections=20&amp;stream=false&amp;header=false&amp;height=340&amp;show-faces=true", :style => "border:none; overflow:hidden; width:240px; height:340px;"}
