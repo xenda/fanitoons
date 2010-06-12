@@ -6,7 +6,7 @@ class Prediction < ActiveRecord::Base
   has_many :comments, :as => :commentable
 
 
-  named_scope :last, lambda{|last| {:limit => last, :order =>"predicted_at DESC"}}
+  named_scope :last, lambda{|last| {:limit => last, :order =>"created_at DESC"}}
   named_scope :most_commented, lambda{|limit| {:limit=> limit, :select =>"`predictions`.*, (select count(*) from comments where comments.commentable_id = `predictions`.id and comments.commentable_type like 'Prediction') as comments_count", :order => "comments_count DESC" }  }
   
   validates_presence_of :match_id
