@@ -772,11 +772,16 @@ form#new_comment.formtastic.comment {
 }
 
 #comment_form input {
-	border: 1px solid #423b13 !important;
 	padding: 0px 10px !important;
 	line-height: 10px;
 	font-size: 12px;
-	height: 30px !important;
+	height: 60px !important;
+}
+
+textarea#comment_content {
+	padding: 10px 10px;
+	width: 400px;
+	border: 1px solid #ccc;
 }
 
 #comment_form input.create {
