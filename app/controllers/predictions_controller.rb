@@ -61,6 +61,15 @@ class PredictionsController < ApplicationController
     @prediction.to_facebook ||= true
   end
 
+
+  def index
+    @predictions = Prediction.last(6).find(:all, :include => [:winner, {:match=>[:local,:visitor]}])
+    @popular_predictions = Match.most_popular(8).find(:all, :include => [:local, :visitor])
+    @most_commented = Prediction.most_commented(4).find(:all, :include => {:match =>[:local, :visitor]})
+    @matches = Match.all(:order=> "played_at", :limit=>7, :include => [:local, :visitor], :conditions => ["played_at >= ?",Time.zone.now])
+    render :action => "index", :layout=> "application"
+  end
+
   def update
     @prediction = Prediction.find(params[:id])
     if @prediction.update_attributes(params[:prediction])

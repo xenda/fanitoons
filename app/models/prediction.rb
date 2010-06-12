@@ -7,6 +7,8 @@ class Prediction < ActiveRecord::Base
 
 
   named_scope :last, lambda{|last| {:limit => last, :order =>"predicted_at DESC"}}
+  named_scope :most_commented, lambda{|limit| {:limit=> limit, :select =>"predictions.*, (select count (*) where comments.commentable_id like predictions.id) as comments_count", :order => "comments_count DESC", :joins => :comments }  }
+  
   validates_presence_of :match_id
   
   attr_accessor :to_facebook
