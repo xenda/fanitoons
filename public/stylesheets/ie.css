@@ -41,6 +41,12 @@
 	letter-spacing:-.02em;
 }
 
+#ie6 #header,
+#ie7 #header {
+	position:relative;
+	z-index:5;
+}
+
 #ie6 #header #login a {
 	font-size:1em;
 }
@@ -48,7 +54,9 @@
 #ie6 #header #nav {
 	width:960px;
 	overflow:hidden;
-	height:67px;
+	height:65px;
+	background:none;
+	background: url('../images/ie6/nav-bg.png') no-repeat;
 }
 
 #ie6 #header #nav li {
@@ -97,7 +105,6 @@
 	width:305px;
 	height:227px;
 }
-
 
 #ie6 #sidebar #invite {
 	width:250px;

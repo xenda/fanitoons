@@ -31,7 +31,7 @@
                   %td{:class=>("win" if match.local_winner?)}= match.first_team_goals
                   %td{:class=>("win" if match.visitor_winner?)}= match.second_team_goals
             - if account_signed_in?
-              = link_to "deja tu pronóstico", match_prediction_path(@match), :class=>"predict button iframe"
+              = link_to "deja tu pronóstico", match_prediction_path(match), :class=>"predict button iframe"
             
                   
 - content_for :sidebar do

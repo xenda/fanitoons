@@ -116,6 +116,10 @@
 	height:54px;
 }
 
+.banner .html .facebook h4 {
+	font-size:1.2em;
+	}
+
 .banner .html .facebook p {
 	font-family:Arial;
 	margin-top:6px;
@@ -123,4 +127,53 @@
 	line-height:20px;
 	height:40px;
 	margin-bottom:12px;
+}
+
+.banner .html .facebook p {
+	font-size:.9em;
+}
+
+
+#ie6 #banner-cont {
+	text-align:left;
+}
+
+
+#ie6 #banner-cont {
+	height:341px;
+	width:841px !important;
+}
+
+#ie6 .banner {
+	
+}
+
+#ie6 #banner-cont .banner {
+	left:13px;
+	bottom:-6px;
+	padding:0;
+}
+
+#ie6 #banner-cont .arrow {
+	visibility:hidden;
+	display:none;
+}
+
+#ie6 #banner-cont .html .facebook {
+	height:323px;
+}
+
+
+#ie6 .banner .html .facebook a {
+	font-size:.75em;
+}
+
+
+#ie6 .banner .html .facebook h3 {
+	font-size:2.1em;
+	margin-top:40px;
+}
+
+#ie6 #banner-cont .arrow {
+	height:62px;
 }
