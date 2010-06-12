@@ -195,7 +195,7 @@ class Account < ActiveRecord::Base
     #If it exists...
     if account
 
-      account.update_from_facebook(user,access_token)
+      account.update_with_facebook(user,access_token)
     
       logger.info account.inspect
       logger.info "Errors:"
