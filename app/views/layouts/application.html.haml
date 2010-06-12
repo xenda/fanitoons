@@ -4,7 +4,7 @@
   %head
     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
     %title= [@title, "Patatoon"].compact.join(" | ")
-    = stylesheet_link_tag 'reset','../javascripts/fancybox/jquery.fancybox-1.3.1','layout','sidebar','flags','formtastic','formtastic_changes','banner','countdown/jquery.countdown'
+    = stylesheet_link_tag 'reset','../javascripts/fancybox/jquery.fancybox-1.3.1','layout','sidebar','flags','formtastic','formtastic_changes','banner'
     /[if IE] 
       = stylesheet_link_tag "ie"
     = yield :include 
