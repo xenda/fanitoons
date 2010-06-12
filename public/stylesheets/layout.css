@@ -397,6 +397,7 @@ div#top_profile {
 	display: block;
 	color: #90a65c;
   padding: 5px;
+  width: 420px;
 }
 /*
 #counter-cont #vs a{ 
@@ -770,12 +771,28 @@ form#new_comment.formtastic.comment {
 }
 
 #comment_form input {
-	background: none !important;
+	background: #423b13 none !important;
 	border: 1px solid #423b13 !important;
 	padding: 0px 10px !important;
 	line-height: 10px;
-	font-size: 12px !important;
+	font-size: 12px;
 	height: 30px !important;
+	width: 100px !important;
+	color: #fffeff;
+	font-weight: bold;
+}
+
+#last-predicted ul li table tbody tr td a {
+	text-align: center;
+	padding: 0px;
+	display: block;
+	height: auto;
+	overflow: auto;
+	color: #E2871C;
+	text-align:center;
+	line-height:23px;
+	font-weight:bold;
+	font-size:1.1em;	
 }
 	
 
@@ -925,4 +942,13 @@ input#account_remember_me {
 	color: #d87d13;
 	display: block;
 	background:none;
+}
+
+.predictions.prediction.show #content h3 {
+margin-top: 45px;
+	color: #cd7711;
+}
+
+.predictions.prediction.show div#most-predicted {
+	overflow: auto;
 }

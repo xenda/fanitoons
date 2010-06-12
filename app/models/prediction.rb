@@ -13,6 +13,10 @@ class Prediction < ActiveRecord::Base
   
   attr_accessor :to_facebook
   
+  def to_param
+    "#{id}-name.parameterize"
+  end
+  
   def name
     "#{match.local.name} (#{first_team_result}) vs #{match.visitor.name} (#{second_team_result})"
   end

@@ -17,3 +17,7 @@
         - visitor_goals = last_prediction.second_team_result || "--"
         %td{:class=>("win" if last_prediction.local_winner?)}= local_goals
         %td{:class=>("win" if last_prediction.visitor_winner?)}= visitor_goals
+      %tr
+        %td{:colspan=>3}
+          = link_to "ver pronóstico", prediction_path(last_prediction.id)
+        

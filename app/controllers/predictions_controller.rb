@@ -69,6 +69,11 @@ class PredictionsController < ApplicationController
     @matches = Match.all(:order=> "played_at", :limit=>7, :include => [:local, :visitor], :conditions => ["played_at >= ?",Time.zone.now])
     render :action => "index", :layout=> "application"
   end
+  
+  def show
+    @prediction = Prediction.find(params[:id])
+    render :action => "show", :layout => "application"
+  end
 
   def update
     @prediction = Prediction.find(params[:id])
