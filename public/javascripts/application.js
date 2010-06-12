@@ -7,7 +7,7 @@ $(document).ready(function() {
 			btnPrev: '.prev',
 			speed: 800,
 			visible:1,
-			circular: true
+			circular: true,
 			auto: 5000
 		});	
 	}  
