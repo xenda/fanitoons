@@ -76,6 +76,12 @@
 .zaf.small {
   background:url(/images/flags/zaf-small.png) no-repeat;
 }
+.dnk.medium {
+  background:url(/images/flags/dnk-medium.png) no-repeat;
+}
+.dnk.small {
+  background:url(/images/flags/dnk-small.png) no-repeat;
+}
 
 .ury.small {
 	background:url(/images/flags/ury-small.png) no-repeat;
