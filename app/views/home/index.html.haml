@@ -95,6 +95,10 @@
             %p Acumula puntos, y gana increibles premios, junta a tus amigos y diviertete con Patatoon
             = link_to "Crea tu cuenta patatoon", new_registration_path("account"), {:id=>"register_new_user", :class=>"button"}
             = link_to "o entra con <span>Facebook</span>", fb_connect_path, {:id=>"register_facebook", :class=>"fb-btn button"}
-        %li.img
-          %a{:href => "#"}
-            %img{:height => "271", :src => "images/banners/banner-2.jpg", :width => "815"}/
+        %li.html
+          .facebook
+            %h3 ¡Viaja a Argentina con Patatoon!
+            %h4 Acierta en los pronósticos y gana puntos. Los que más tenga, participan en el concurso 
+        / %li.img
+        /   %a{:href => "#"}
+        /     %img{:height => "271", :src => "images/banners/banner-2.jpg", :width => "815"}/
