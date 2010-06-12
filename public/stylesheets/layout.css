@@ -880,3 +880,22 @@ input#account_remember_me {
 	width: 150px;
 	float: right;
 }
+
+#content div.flash span.message.notice {
+	display: block;
+	text-align: center;
+	padding: 10px;
+	background-color: #e6fcba;
+	border-top: 1px solid #c6c89c;
+	border-bottom: 1px solid #c6c89c;	
+	margin-bottom: 20px;
+	font-weight: bold;
+	color: #5c5c5c;
+}
+
+#last-predicted ul li table tbody tr td a.predict.button.iframe {
+
+	color: #d87d13;
+	display: block;
+	background:none;
+}
