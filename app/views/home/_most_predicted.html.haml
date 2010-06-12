@@ -1,7 +1,7 @@
 - last_class = ((most_predicted_counter + 1) % 4 == 0 ? "last" : "") unless most_predicted_counter == 0
 
 %li{:class=>last_class}
-  %a{:href => "#"}
+  %a{:href => match_path(most_predicted)}
     .flag.small{:class=>most_predicted.local.flag_name, :title=>most_predicted.local.name}= most_predicted.local.short_name
     .flag.small{:class=>most_predicted.visitor.flag_name, :title=>most_predicted.visitor.name}= most_predicted.visitor.short_name
     %p= "#{most_predicted.predictions_count} pronósticos"

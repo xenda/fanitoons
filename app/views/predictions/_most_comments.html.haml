@@ -1,7 +1,7 @@
 - last_class = ((most_comments_counter + 1) % 4 == 0 ? "last" : "") unless most_comments_counter == 0
 
 %li{:class=>last_class}
-  %a{:href => "#"}
+  %a{:href => match_path(most_comments.match)}
     .flag.small{:class=>most_comments.match.local.flag_name, :title=>most_comments.match.local.name}= most_comments.match.local.short_name
     .flag.small{:class=>most_comments.match.visitor.flag_name, :title=>most_comments.match.visitor.name}= most_comments.match.visitor.short_name
     %p= "#{most_comments.comments_count} comentarios"
