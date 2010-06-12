@@ -800,11 +800,11 @@ textarea#comment_content {
 	text-align: center;
 	padding: 0px;
 	display: block;
-	height: auto;
-	overflow: auto;
+	height: 25px;
+	overflow: hidden;
 	color: #E2871C;
 	text-align:center;
-	line-height:23px;
+	line-height:20px;
 	font-weight:bold;
 	font-size:1.1em;	
 }
