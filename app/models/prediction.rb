@@ -21,6 +21,12 @@ class Prediction < ActiveRecord::Base
     "#{match.local.name} (#{first_team_result}) vs #{match.visitor.name} (#{second_team_result})"
   end
   
+  def undoable?
+    #if less than 5 hours to the match
+   Time.zone.now + 5.hours > self.match.played_at
+   
+  end
+  
   def teams
     [match.local,match.visitor]
   end
@@ -36,6 +42,16 @@ class Prediction < ActiveRecord::Base
   def prediction_text
     "#{first_team_result} a #{second_team_result}"
   end  
+  
+  # Score complete
+  def totally_right?
+    closeness == 0
+  end
+  
+  # Just predicted winner
+  def just_right?
+    self.winner == match.winner
+  end
   
   def closeness
     first_team_abs = (first_team_result - match.first_team_goals).abs

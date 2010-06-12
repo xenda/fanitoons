@@ -33,26 +33,36 @@ class PredictionsController < ApplicationController
     
   def create
     @prediction = Prediction.new(params[:prediction])
-    if @prediction.save
-      flash[:prediction_notice] = '¡Muy bien tigre.! Veamos si resulta así.'
-      
-      if @prediction.to_facebook
-        
-        
-        if current_account.no_token?
-          redirect_to(facebook_authentication(redirect_uri)) 
-        else
-          post_to_wall("¡He pronosticado en Patatoon! Creo que #{@prediction.try(:winner).try(:name)} gana en el partido de #{@prediction.match.local.name} vs #{@prediction.match.try(:visitor).try(:name)}","Ganador: #{@prediction.try(:winner).try(:name)}","#{current_account.full_name} ha dejado su pronóstico en Patatoon y ha ganado puntos por eso. ¿No te animas?","http://patatoon.heroku.com#{match_path(@prediction.match)}")
-
-        end
-        
-      else
-        redirect_to edit_match_prediction_path(@prediction.match,@prediction)    
-      end      
-  
-  
+    
+    if @prediction.undoable?
+    flash[:prediction_notice] = 'Lo siento tigre, sólo puedes pronosticar hasta 5 horas antes del partido.'
+    render 'predictions/new'
+    
     else
-      render 'predictions/new'
+    
+      if @prediction.save
+        flash[:prediction_notice] = '¡Muy bien tigre.! Veamos si resulta así.'
+      
+        if @prediction.to_facebook
+        
+        
+          if current_account.no_token?
+            redirect_to(facebook_authentication(redirect_uri)) 
+          else
+            post_to_wall("¡He pronosticado en Patatoon! Creo que #{@prediction.try(:winner).try(:name)} gana en el partido de #{@prediction.match.local.name} vs #{@prediction.match.try(:visitor).try(:name)}","Ganador: #{@prediction.try(:winner).try(:name)}","#{current_account.full_name} ha dejado su pronóstico en Patatoon y ha ganado puntos por eso. ¿No te animas?","http://patatoon.heroku.com#{match_path(@prediction.match)}")
+
+          end
+        
+        else
+          redirect_to edit_match_prediction_path(@prediction.match,@prediction)    
+        end      
+  
+  
+      else
+        render 'predictions/new'
+      end
+      
+      
     end
   end
 
@@ -77,28 +87,38 @@ class PredictionsController < ApplicationController
 
   def update
     @prediction = Prediction.find(params[:id])
-    if @prediction.update_attributes(params[:prediction])
-      flash[:prediction_notice] = 'Listo campeón. Hemos actualizado tu predicción.'
-      logger.info "Token: #{current_account.fb_token}"
-      logger.info "Token? #{current_account.no_token?}"
-
-      if @prediction.to_facebook
-        
-        
-        if current_account.no_token?
-          redirect_to(facebook_authentication(redirect_uri)) 
-        else
-          post_to_wall("¡He pronosticado en Patatoon! Creo que #{@prediction.try(:winner).try(:name)} gana en el partido de #{@prediction.match.local.name} vs #{@prediction.match.try(:visitor).try(:name)}","Ganador: #{@prediction.try(:winner).try(:name)}","#{current_account.full_name} ha dejado su pronóstico en Patatoon y ha ganado puntos por eso. ¿No te animas?","http://patatoon.heroku.com#{match_path(@prediction.match)}")
-
-        end
-        
-      else
-        redirect_to edit_match_prediction_path(@prediction.match,@prediction)    
-      end      
-
-
+    
+    if @prediction.undoable?
+    flash[:prediction_notice] = 'Lo siento tigre, sólo puedes pronosticar hasta 5 horas antes del partido.'
+    
+    render 'predictions/edit'
+    
     else
-      render 'predictions/edit'
+    
+          if @prediction.update_attributes(params[:prediction])
+            flash[:prediction_notice] = 'Listo campeón. Hemos actualizado tu predicción.'
+            logger.info "Token: #{current_account.fb_token}"
+            logger.info "Token? #{current_account.no_token?}"
+
+            if @prediction.to_facebook
+        
+        
+              if current_account.no_token?
+                redirect_to(facebook_authentication(redirect_uri)) 
+              else
+                post_to_wall("¡He pronosticado en Patatoon! Creo que #{@prediction.try(:winner).try(:name)} gana en el partido de #{@prediction.match.local.name} vs #{@prediction.match.try(:visitor).try(:name)}","Ganador: #{@prediction.try(:winner).try(:name)}","#{current_account.full_name} ha dejado su pronóstico en Patatoon y ha ganado puntos por eso. ¿No te animas?","http://patatoon.heroku.com#{match_path(@prediction.match)}")
+
+              end
+        
+            else
+              redirect_to edit_match_prediction_path(@prediction.match,@prediction)    
+            end      
+
+
+          else
+            render 'predictions/edit'
+          end
+          
     end
   end
 

@@ -21,6 +21,57 @@ class Match < ActiveRecord::Base
     end
   end
   
+  
+  def give_points 
+    
+    
+    #runs from every prediction made
+    self.predictions.each do |prediction|
+      
+      #for each one, see if the prediction was right:
+      if prediction.just_right?
+        
+        badge = Badge.find_by_name("Pronóstico Correcto")
+        user_badge = UserBadge.new
+        user_badge.badge = badge
+        user_badge.account = prediction.account
+        user_badge.points = 2
+        
+        #if it choose the winner right, see if they get extra points for goals
+        if prediction.totally_right?
+          user_badge.points += 1
+        end
+        
+        user_badge.save
+        
+      end
+
+      
+    end
+    
+
+  rescue
+
+  raise "You need to create a Badge called 'Pronóstico Correcto'"    # Score 1pto
+    # Partido 2ptos
+    
+    
+    # Puntos por goles
+    # Puntos por aciertos
+    
+    # Puntos por Empate
+    
+  end
+  
+  def winner
+    return local if first_team_goals > second_team_goals
+    return visitor if second_team_goals > first_team_goals
+  end
+  
+  def tie?
+    first_team_goals == second_team_goals
+  end
+  
   def name
     "Partido #{title}"
   end

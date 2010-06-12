@@ -23,7 +23,7 @@
         %td= summary post.content
         %td= date post.created_at
         %td= date post.updated_at
-        %td= post.admin.email
+        %td= post.admin.email if post.admin
         %td= link_to 'Editar', edit_admin_post_path(post)
         %td= link_to 'Eliminar', ["admin",post], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
       
