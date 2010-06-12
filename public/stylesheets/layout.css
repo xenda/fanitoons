@@ -191,6 +191,20 @@ a.register {
 	z-index:5;
 }
 
+div#top_profile {
+	overflow: auto;
+	background-color: #a4ceea;
+	padding: 5px 25px;
+	border: 1px solid #6595ff;
+}
+
+#top_profile a {
+	margin-right: 10px;
+	height: auto !important;
+	color: #9abceb;
+	font: 14px Arial, Helvetica, Geneva, sans-serif !important;
+}
+
 #header #nav li {
 	float:left;
 	height:17px;
