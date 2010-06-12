@@ -841,4 +841,30 @@ input#account_remember_me {
 	clear: both;
 	display: block;
 }
+#footer {
+	margin-top: 20px;
+}
+#footer h2.creer {
+	background: url(/images/creerparacrear.png) no-repeat center;
+	text-indent: -9999px;
+	height: 150px;
+	float: left;
+	width: 150px;
+}
 
+#footer p {
+	margin-top: 50px;
+	float: left;
+	width: 600px;
+	text-align: center;
+	color: #827e5e;
+	font: 1.9em Arial, Helvetica, Geneva, sans-serif;
+}
+
+#footer h2.probide {
+	background: url(/images/probide.png) no-repeat center;
+	text-indent: -9999px;
+	height: 150px;
+	width: 150px;
+	float: right;
+}
