@@ -1,6 +1,18 @@
 // Put your application scripts here
 $(document).ready(function() {
   
+	if (document.ie != true)	{
+		$('#banner-cont').jCarouselLite({
+			btnNext: '.next',
+			btnPrev: '.prev',
+			speed: 600,
+			visible:1,
+			circular: true
+			//auto: 1000
+		});	
+	}  
+  
+  
   $("div.team a.small").css({'display':'block'});
   $(".hidden").hide();
   
