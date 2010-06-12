@@ -87,6 +87,10 @@
 	background:url(/images/flags/ury-small.png) no-repeat;
 }
 
+.jpn.small {
+	background:url(/images/flags/jpn-small.png) no-repeat;
+}
+
 .fra.small {
   background:url(/images/flags/fra-small.png) no-repeat;
 }
@@ -199,6 +203,9 @@
 }
 .ury.medium {
 	background:url(/images/flags/ury-medium.png) no-repeat;
+}
+.jpn.medium {
+	background:url(/images/flags/jpn-medium.png) no-repeat;
 }
 .srb.medium {
 	background:url(/images/flags/srb-medium.png) no-repeat;
