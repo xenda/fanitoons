@@ -5,10 +5,10 @@ $(document).ready(function() {
 		$('#banner-cont').jCarouselLite({
 			btnNext: '.next',
 			btnPrev: '.prev',
-			speed: 600,
+			speed: 800,
 			visible:1,
 			circular: true
-			//auto: 1000
+			auto: 5000
 		});	
 	}  
   
