@@ -408,7 +408,8 @@ div#top_profile {
 
 
 
-.matches a#new_session {
+.matches a#new_session,
+.predictions a#new_session {
 	font-size: 1.3em;
 	text-decoration: underline;
 	color: #748b3b;
@@ -784,6 +785,10 @@ form#new_comment.formtastic.comment {
 	color: #fffeff;
 	font-weight: bold;
 
+}
+
+.predictions.prediction.show #content h2 {
+	margin-bottom: 10px;
 }
 
 #last-predicted ul li table tbody tr td a {
