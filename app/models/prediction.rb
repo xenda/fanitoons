@@ -14,7 +14,7 @@ class Prediction < ActiveRecord::Base
   attr_accessor :to_facebook
   
   def to_param
-    "#{id}-name.parameterize"
+    "#{id}-#{name.parameterize}"
   end
   
   def name
