@@ -17,7 +17,7 @@ $(document).ready(function() {
 
   var next_match = Date.parse(date);
     
-  $('.counter').countdown({
+  $('body.counter .counter').countdown({
       until: next_match,
       layout: "<div class='day'><span>{dn}</span>días</div> "+
       "<div class='hour'><span>{hn}</span>horas</div>"+
