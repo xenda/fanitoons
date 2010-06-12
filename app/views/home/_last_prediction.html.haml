@@ -13,5 +13,7 @@
           .flag.small{:class=>last_prediction.match.visitor.flag_name}= last_prediction.match.visitor.short_name
       %tr
         %td.first goles
-        %td{:class=>("win" if last_prediction.local_winner?)}= last_prediction.first_team_result
-        %td{:class=>("win" if last_prediction.visitor_winner?)}= last_prediction.second_team_result
+        - local_goals = last_prediction.first_team_result || "--"
+        - visitor_goals = last_prediction.second_team_result || "--"
+        %td{:class=>("win" if last_prediction.local_winner?)}= local_goals
+        %td{:class=>("win" if last_prediction.visitor_winner?)}= visitor_goals

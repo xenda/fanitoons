@@ -614,7 +614,7 @@ form#new_comment.formtastic.comment {
 
 #last-predicted table tr,
 #last-predicted table td{
-	height:34px;
+/*  height:34px;*/
 	line-height:34px;
 }
 
