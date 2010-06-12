@@ -19,5 +19,5 @@
         %td{:class=>("win" if last_prediction.visitor_winner?)}= visitor_goals
       %tr
         %td{:colspan=>3}
-          = link_to "ver pronóstico", prediction_path(last_prediction.id)
+          = link_to "ver pronóstico", last_prediction
         
