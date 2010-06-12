@@ -11,7 +11,32 @@ $(document).ready(function() {
 			auto: 5000
 		});	
 	}  
+
+
+  date = $(".counter").attr("rel");
+
+  var next_match = Date.parse(date);
+    
+  $('.counter').countdown({
+      until: next_match,
+      layout: "<div class='day'><span>{dn}</span>días</div> "+
+      "<div class='hour'><span>{hn}</span>horas</div>"+
+      "<div class='minute'><span>{mn}</span>minutos</div>"+
+      "<div class='second'><span>{sn}</span>segundos</div>" });
   
+      // / .day
+      // /   %span -
+      // /   días
+      // / .hour
+      // /   %span -
+      // /   horas
+      // / .minute
+      // /   %span -
+      // /   minutos
+      // / .second
+      // /   %span -
+      // /   segundos
+      
   
   $("div.team a.small").css({'display':'block'});
   $(".hidden").hide();
