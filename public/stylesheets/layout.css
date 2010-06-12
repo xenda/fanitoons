@@ -757,6 +757,11 @@ form#new_comment.formtastic.comment {
 	margin-bottom:10px;
 }
 
+#new_account div.content_box div.content.login.box form div.group.wat-ct p label {
+	float: left;
+	margin-top: 20px;
+}
+
 .register #content form .cancel {
 	float:right;
 	height:41px;
@@ -813,5 +818,27 @@ div#groups_match {
 .matches.register #groups_match #last-predicted li table {
 	margin-bottom: 20px;
 	margin-right: 30px
+}
+
+body.sessions.register.home #new_account h3 {
+	margin-top: 35px;
+	color: #748b3b;
+}
+
+#new_account div.content_box div.content.login.box form {
+	background: none;
+	padding: 0px;
+	margin-top: 10px;
+}
+
+input#account_remember_me {
+	float: left;
+	width: 20px !important;
+	clear: both !important;
+}
+
+#new_account div.content_box div.content.login.box form div.group.navform.wat-cf div.right input.button {
+	clear: both;
+	display: block;
 }
 

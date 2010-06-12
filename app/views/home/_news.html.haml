@@ -1,4 +1,4 @@
-%li{:class=>(cycle("odd","even"))}
+%li{:class=>(cycle("even","odd"))}
   %div
     = image_tag( news.picture.url(:home)) if news.picture_file_name
     = link_to " +",news, :class => "plush"
