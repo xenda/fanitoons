@@ -233,11 +233,11 @@ a.register {
 	overflow:visible;
 }
 
-#banner-cont ul li,
+/*#banner-cont ul li,
 #banner-cont ul div {
-	width:815px;
-	height:271px;
-}
+  width:815px;
+  height:271px;
+}*/
 
 #banner-cont .arrow {
 	position:absolute;
