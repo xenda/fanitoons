@@ -651,7 +651,7 @@ form#new_comment.formtastic.comment {
 	line-height:28px;
 }
 
-#news li.odd {
+#news li.even {
 	margin-right: 20px;
 	}
 
