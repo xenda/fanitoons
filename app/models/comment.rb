@@ -6,6 +6,8 @@ class Comment < ActiveRecord::Base
   validates_presence_of :content
   validates_presence_of :email
   
+  record_activity_of :account, :actions => [:create, :update]
+  
 end
 
 

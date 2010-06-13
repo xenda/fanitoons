@@ -11,6 +11,9 @@ class Prediction < ActiveRecord::Base
   
   validates_presence_of :match_id
   
+  
+  record_activity_of :account, :actions => [:create, :update]
+      
   attr_accessor :to_facebook
   
   def to_param

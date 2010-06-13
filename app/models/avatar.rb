@@ -1,6 +1,8 @@
 class Avatar < ActiveRecord::Base
  belongs_to :account, :foreign_key => "user_id"
  has_many :comments, :as => :commentable
+
+record_activity_of :account, :actions => [:create, :update, :destroy]
  
  has_one :shirt
  has_one :short

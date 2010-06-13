@@ -16,7 +16,7 @@ class Activity < ActiveRecord::Base
   }
     
 
-  belongs_to :user
+  belongs_to :account, :class_name => "Account", :foreign_key => "user_id"
   belongs_to :item, :polymorphic => true
   validates_presence_of :user_id
 
@@ -36,7 +36,7 @@ class Activity < ActiveRecord::Base
     returning Activity.new do |a|
       a.item = object if object
       a.action = action.to_s
-      a.user = user
+      a.account = user
       a.save!
     end
   end

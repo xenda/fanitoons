@@ -9,7 +9,7 @@ class Account < ActiveRecord::Base
   
   devise :registerable, :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable, :invitable, :encryptor => :bcrypt
   
-  
+    
   # Validations
   # validates_presence_of     :email, :role
   # validates_presence_of     :password,                   :if => :password_required
