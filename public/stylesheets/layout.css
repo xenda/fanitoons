@@ -786,9 +786,10 @@ textarea#comment_content {
 
 #comment_form input.create {
 	width: 100px !important;
-	background: #423b13 none !important;
+	background: #90a65c none !important;
 	color: #fffeff;
 	font-weight: bold;
+	height: 25px !important;
 
 }
 
