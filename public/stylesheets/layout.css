@@ -793,6 +793,63 @@ textarea#comment_content {
 
 }
 
+#edit_account h3 {
+	margin-top: 10px;
+	color: #90a65c;
+	margin-bottom: 20px;
+}
+
+#edit_account label {
+	display: block;
+	margin-bottom: 10px;
+	font-weight: bold;
+	font-size: 1.3em;
+	color: #505151;
+	border-color: #818181;
+}
+
+#edit_account div.content_box form.form div.group.email label {
+	font-size: 15px;
+}
+#edit_account div.content_box form.form div.group.email {
+	font-size: 1.2em;
+	color: #bf0001;
+}
+
+#edit_account div.content_box form.form div.group.email span.description {
+	display: block;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	color: #4d4a4a;
+	font: normal normal 1em Arial, Helvetica, Geneva, sans-serif;
+}
+
+#edit_account div.cancel p a {
+	color: #708348;
+}
+
+#edit_account div.content_box form.form span.description.facebook {
+	color: #860000;
+	font-weight: bold;
+	margin-bottom: 20px;
+	display: block;
+}
+
+input#account_submit.button {
+	color: white;
+	height: 32px;
+	border: none;
+	width: 120px;
+}
+
+#edit_account input {
+	margin-bottom: 20px;
+	border: 1px solid #969599;
+	padding: 10px ;
+	color: #888581;
+	font-weight: bold;
+}
+
 .predictions.prediction.show #content h2 {
 	margin-bottom: 10px;
 }

@@ -30,7 +30,7 @@
           =f.file_field :picture, :class => :text_field
         .group
           = image_tag(@account.picture.url(:medium)) if  @account.picture
-        .group
+        .group.email
           =f.label :email, "Email", :class=>"label"
           =f.error_message_on :email
           = @account.email 
@@ -38,7 +38,7 @@
           %span.description Por seguridad, no puedes cambiar tu correo una vez creada tu cuenta
 
         - if @account.from_facebook?
-          %span.description Has enlazado tu cuenta en Facebook
+          %span.description.facebook Has enlazado tu cuenta en Facebook
           = f.hidden_field :fb_token
           = hidden_field_tag "account[current_password]", @account.fb_token
         - else
@@ -61,20 +61,8 @@
         .group.navform.wat-cf
           =f.submit "Actualizar", :class => :button
           =f.submit "Cancelar", :onclick => "window.location='#{root_path}';return false", :class => :button
-
-    %h3 Cancelar mi cuenta
-    %p 
-      ¿No te gustó? 
-      = link_to "Cancela tu cuenta", registration_path(resource_name), :confirm => "¿Estás seguro? Se borraran todos tus datos.", :method => :delete
-
-
-- content_for :sidebar do
-
-  #ranking.block
-    %h2 Los que siempre aciertan
-
-    %h2 Los más rankeados
-
-  #featured_posts.block
-    %h2 Destacadas
-    .content_box Destacada
+    .cancel
+      %h3 Cancelar mi cuenta
+      %p 
+        ¿No te gustó? 
+        = link_to "Cancela tu cuenta", registration_path(resource_name), :confirm => "¿Estás seguro? Se borraran todos tus datos.", :method => :delete
