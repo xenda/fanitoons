@@ -10,10 +10,7 @@ class Admin::PostsController < InheritedResources::Base
   end
   
   def create
-    @post = Post.new(params[:post])
-    @post.save
-    redirect_to admin_posts_path 
-    # create! {  }
+    create! { admin_posts_path  }
   end
   
   def edit

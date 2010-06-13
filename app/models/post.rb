@@ -9,7 +9,7 @@ class Post < ActiveRecord::Base
   has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "50x50>", :home => "275x92#", :post => "630x150#", :small_post=>"630x100#" },:path => ":rails_root/public/system/posts/:attachment/:id/:style.:extension", :url => "/system/posts/:attachment/:id/:style.:extension"
 
 
-  record_activity_of :admin, :actions => [:create, :update]
+  #record_activity_of :admin, :actions => [:create, :update]
     
   before_save :create_slug
   
