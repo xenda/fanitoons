@@ -1,10 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.routes_from_plugin 'tog_mail'
-
-  map.routes_from_plugin 'tog_social'
-
-  map.routes_from_plugin 'tog_core'
+  # map.routes_from_plugin 'tog_mail'
+  # 
+  # map.routes_from_plugin 'tog_social'
+  # 
+  # map.routes_from_plugin 'tog_core'
 
   
 	map.namespace :admin do |admin| 
