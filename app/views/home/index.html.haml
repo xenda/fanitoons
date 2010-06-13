@@ -21,7 +21,7 @@
   %ul
     = render :partial => "news", :collection => @posts
   .clear
-  %a.more.button{:href => "#"} ver mas
+  = link_to "ver más", posts_path, :class=>"more button"
 
 
 - content_for :sidebar do

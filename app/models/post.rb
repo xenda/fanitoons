@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   validates_presence_of :title
   validates_presence_of :content
   
-  has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "50x50>", :home => "275x92#", :post => "630x150#" },:path => ":rails_root/public/system/posts/:attachment/:id/:style.:extension", :url => "/system/posts/:attachment/:id/:style.:extension"
+  has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "50x50>", :home => "275x92#", :post => "630x150#", :small_post=>"630x100#" },:path => ":rails_root/public/system/posts/:attachment/:id/:style.:extension", :url => "/system/posts/:attachment/:id/:style.:extension"
 
 
   record_activity_of :admin, :actions => [:create, :update]

@@ -1,5 +1,18 @@
 - if post
-  .post
-    .title= link_to post.title, post
-    .date= "hace " + time_ago_in_words(post.created_at || Time.now)
-    .body= truncate(simple_format(post.content),:length=>400)
+  %h2 
+    %span= post.title 
+  %h3
+    - if post.published_at
+      = l(post.published_at, :format=>:short)
+    - else
+      = l(post.created_at, :format=>:short)
+
+  = image_tag (post.picture.url(:small_post)) if post.picture_file_name
+
+  .show{:style=>"margin-top:30px"}
+    .posts.block
+      .content_box
+        .post
+          .body= truncate(simple_format(post.content),100)
+
+  .clear

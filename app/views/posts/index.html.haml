@@ -1,3 +1,11 @@
-- @title = "Welcome"
+- @title = "Patatoon :: Noticias "
 
+- @body_class = "register home"
+  
 #posts= render 'posts/post', :collection => @posts
+
+.pagination
+  = will_paginate @posts
+
+- content_for :sidebar do
+  = render :partial => "home/sidebar"

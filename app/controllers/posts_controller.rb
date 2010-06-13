@@ -2,9 +2,9 @@ class PostsController < ApplicationController
   
   def index
     if params[:query]
-      @posts = Post.find(:all, :conditions=>["title like ? or content like ?","%#{params[:query]}%","%#{params[:query]}%"])
+      @posts = Post.paginate(:all, :conditions=>["title like ? or content like ?","%#{params[:query]}%","%#{params[:query]}%"],:page=>params[:page])
     else
-      @posts = Post.all(:order => 'created_at desc')
+      @posts = Post.paginate(:all,:order => 'created_at desc', :page => params[:page])
     end
   end
 
