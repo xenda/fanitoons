@@ -1,5 +1,9 @@
 - @body_class = "register home prediction show"
 - @title = "Pronóstico #{@prediction.name}"
+- content_for :meta_fb do
+  %meta{:content => "Prónóstico: #{@prediction.name}", :property => "og:site_name"}/
+
+
 %h2 
   %span Viendo predicción del partido
   %br
@@ -86,6 +90,13 @@
 /               %td{:class=>("win" if prediction.local_winner?)}= prediction.first_team_result || "-"
 /               %td{:class=>("win" if prediction.visitor_winner?)}= prediction.second_team_result || "-"
 
+
+%ul.extra_links
+  %li
+    %a.addthis_button{"addthis:description" => "Partido: #{@prediction.match.title}", "addthis:title" => @prediction.name, :href => "http://www.addthis.com/bookmark.php"}
+      %img{:alt => "Compartir", :border => "0", :height => "16", :src => "http://s7.addthis.com/static/btn/v2/sm-share-es.gif", :width => "83"}/
+  %li.last
+    %iframe{:allowtransparency => "true", :frameborder => "0", :scrolling => "no", :src => "http://www.facebook.com/plugins/like.php?href=#{prediction_url(@prediction)}&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35", :style => "border:none; overflow:hidden; width:450px; height:35px;"}
 
 
 = render :partial => "comments/comments_list", :locals => {:commentable => @prediction }

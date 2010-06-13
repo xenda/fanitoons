@@ -973,3 +973,13 @@ margin-top: 45px;
 	font-style: normal;
 	margin-right: 5px;
 }
+
+#content ul.extra_links {
+	overflow: auto;	
+	margin-bottom: 20px;
+}
+
+#content ul.extra_links li {
+	float: left;
+	margin-right: 20px ;
+}

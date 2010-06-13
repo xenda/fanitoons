@@ -1,6 +1,10 @@
 - @body_class = "register home"
 - @title = @post.title
 
+- content_for :meta_fb do
+  %meta{:content => "Entrada: #{@post.title}", :property => "og:site_name"}/
+
+
 %h2 
   %span= @post.title 
 %h3
@@ -18,6 +22,13 @@
         .body= simple_format(@post.content)
     
 %p=# link_to 'Ver todas las entradas', posts_path
+
+%ul.extra_links
+  %li
+    %a.addthis_button{"addthis:description" => truncate(strip_tags(@post.title),100), "addthis:title" => @post.title, :href => "http://www.addthis.com/bookmark.php"}
+      %img{:alt => "Compartir", :border => "0", :height => "16", :src => "http://s7.addthis.com/static/btn/v2/sm-share-es.gif", :width => "83"}/
+  %li.last
+    %iframe{:allowtransparency => "true", :frameborder => "0", :scrolling => "no", :src => "http://www.facebook.com/plugins/like.php?href=#{post_url(@post)}&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35", :style => "border:none; overflow:hidden; width:450px; height:35px;"}
 
 
 .clear            
