@@ -966,3 +966,10 @@ margin-top: 45px;
 .predictions.prediction.show div#most-predicted {
 	overflow: auto;
 }
+
+#last-predicted ul li table tbody tr.header td a div.flag.small {
+	color: #876b52;
+	font-weight: normal;
+	font-style: normal;
+	margin-right: 5px;
+}
