@@ -1,0 +1,59 @@
+<div class="detail detail1">
+    <div class="image"><%=icon_for_profile(@profile, 'big')%></div>
+    <div class="title"><%=@profile.full_name%></div>
+    <div class="subtitle"><%= I18n.t('tog_social.profiles.model.username') %>: <%=@profile.user.login%></div>
+    <div class="summary"><%= I18n.t('tog_social.profiles.site.summary') %></div>
+    <div class="portlet portletC" id="portlet_moreLinks">
+      <% if !@profile.user.groups.blank? %>
+        <h2><span><%= I18n.t('tog_social.groups.site.title') %></span></h2>
+        <div class="portlet_content">
+          <ul>
+              <% for group in @profile.user.groups %>
+                <li><%= link_to group.name, group_path(group) %></li>
+              <% end %>
+          </ul>
+        </div> 
+      <% else %>
+
+      <% end %>        
+    </div>    
+    
+    <div class="portlet portletC" id="portlet_moreLinks">
+        <h2><span><%= I18n.t('tog_social.more_links') %></span></h2>
+        <div class="portlet_content">
+            <ul>
+              <% if its_me? -%>         
+                <li><%= link_to I18n.t('tog_social.profiles.site.edit_profile'), edit_member_profile_path(@profile) %></li>
+              <% else -%>
+                <li><%= link_to I18n.t('tog_social.profiles.site.send_message'), member_new_message_to_path(@profile.user) %></li>
+                <li><%= report_abuse_link @profile %></li>
+                <li><%= following_options(@profile) %></li>
+              <% end -%>
+            </ul>
+        </div> 
+    </div>    
+    
+</div> <!-- /.detail1 -->    
+
+<% content_for :sidebar do %>
+
+<%= render :partial => "shared/profiles_portlet", :locals => { 
+  :items =>  @profile.friends, 
+  :style => :portletG, 
+  :title => I18n.t('tog_social.profiles.model.friends'), 
+  :no_items => I18n.t('tog_social.profiles.model.friends_not_found', :profile_full_name => @profile.full_name)} %>
+
+<%= render :partial => "shared/profiles_portlet", :locals => { 
+  :items =>  @profile.followers, 
+  :style => :portletG, 
+  :title => I18n.t('tog_social.profiles.model.followers'), 
+  :no_items => I18n.t('tog_social.profiles.model.followers_not_found', :profile_full_name => @profile.full_name) } %>
+
+<%= render :partial => "shared/profiles_portlet", :locals => { 
+  :items =>  @profile.followings, 
+  :style => :portletG, 
+  :title => I18n.t('tog_social.profiles.model.followings'), 
+  :no_items => I18n.t('tog_social.profiles.model.followings_not_found', :profile_full_name => @profile.full_name) } %>
+
+
+<% end %>

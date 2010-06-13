@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100612202834) do
+ActiveRecord::Schema.define(:version => 20100613221625) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20100612202834) do
     t.string   "invitation_token",     :limit => 20
     t.datetime "invitation_sent_at"
     t.date     "birth_date"
+    t.integer  "title"
   end
 
   add_index "accounts", ["invitation_token"], :name => "index_accounts_on_invitation_token"
@@ -282,6 +283,13 @@ ActiveRecord::Schema.define(:version => 20100612202834) do
     t.integer  "flag_file_size"
     t.datetime "flag_updated_at"
     t.string   "short_name"
+  end
+
+  create_table "titles", :force => true do |t|
+    t.integer  "score_needed"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "tolk_locales", :force => true do |t|

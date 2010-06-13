@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :titles
+
 
   # map.routes_from_plugin 'tog_mail'
   # 

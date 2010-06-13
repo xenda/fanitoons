@@ -1,0 +1,2 @@
+class TitlesController < ApplicationController
+end

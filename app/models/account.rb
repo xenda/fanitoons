@@ -1,7 +1,7 @@
 class Account < ActiveRecord::Base
   
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :name, :fb_token, :role, :gender, :fb_id, :surname, :picture, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :name, :fb_token, :role, :gender, :fb_id, :surname, :picture, :remember_me, :title
   
   NEW_ACCOUNT = "new"
   EXISTING_ACCOUNT = "existing" 
@@ -51,6 +51,10 @@ class Account < ActiveRecord::Base
     #                    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
     #                    :path => ":attachment/:id/:style.:extension"
     
+
+    def self.update_titles
+      #
+    end
 
 
     def self.top_times

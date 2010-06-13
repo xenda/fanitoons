@@ -1,0 +1,105 @@
+<div class="portletK" id="portlet_splashHome">
+  <h2><span><%=config['plugins.tog_core.site.name']%></span></h2>
+  <div class="portlet_content">
+    <p>
+      <%= I18n.t("tog_core.views.home.index.welcome_to", :site_name => config['plugins.tog_core.site.name']) %>.<br />
+      <%= I18n.t("tog_core.views.home.index.you_would_be_able_to") %>:
+    </p>
+    <ul>
+      <li><%= I18n.t("tog_core.views.home.index.create_your_own_profile") %></li>
+      <li><%= I18n.t("tog_core.views.home.index.find_your_friends_and_colleagues") %>.</li>
+      <li><%= I18n.t("tog_core.views.home.index.create_and_join_groups_of_interest") %>.</li>
+      <li><%= I18n.t("tog_core.views.home.index.and_enjoy_more") %></li>
+    </ul>
+    <div class="action"><a href="/signup"><strong><%= I18n.t("tog_core.views.home.index.sign_up_now") %></strong></a></div>
+  </div>
+</div>
+<br/>
+<div class="col_50_50 clearfix">
+
+        <div class="left_col">
+            <div class="portlet portletG" id="portlet_featuredUsers">
+                <h2><span><%= I18n.t("tog_core.views.home.index.featured_users") %></span></h2>
+                <div class="portlet_content">
+                    <ul class="clearfix">
+                      <% last_users.each do |user|%>
+                        <li><%=link_to icon_for_profile(user.profile, 'small'), profile_path(user.profile)%></li>
+                      <%end %>
+                    </ul>
+                </div>
+            </div>
+        </div> <!-- /.left_col -->
+
+        <div class="right_col">
+             <div class="portlet portletH" id="portlet_groups">
+                <h2><span><%= I18n.t("tog_core.views.home.index.groups") %></span></h2>
+                <div class="portlet_content">
+                    <ul>
+	                    <% last_groups.each do |group| %>
+	                        <li class="clearfix">
+	                            <div class="image"><%= link_to image_for_group(group, 'medium'), group_path(group) %></div>
+	                            <div class="title"><%= link_to group.name, group_path(group) %></div>
+	                            <div class="text">
+	                                <%=group.description%>
+	                            </div>
+	                            <div class="members"><a href="#"></a></div>
+	                        </li>
+                        <%end %>
+                    </ul>
+                </div>
+            </div>
+        </div> <!-- /.right_col -->
+
+
+    </div> <!-- /.col_50_50 -->
+
+   <hr class="wide" />
+   <br />
+   <br />
+
+<% content_for :sidebar do %>
+
+
+   <div class="portlet portletI" id="potlet_publicContinuum">
+     <h2><span><%= I18n.t("tog_core.views.home.index.the_public_continuum") %>...</span></h2>
+     <div class="portlet_content">
+       <ul>
+         <%= public_continuum(10) %>
+       </ul>
+     </div>
+   </div> <!-- /#potlet_featuredPosts -->
+
+   <br />
+
+    <div class="portlet portletJ" id="portlet_pluginsTog">
+        <h2><span><%= I18n.t("tog_core.views.home.index.discover_more_plugins_for_tog") %> </span></h2>
+        <div class="portlet_content">
+            <ul>
+                <li class="clearfix">
+                    <div class="image"><img src="/tog_core/images/promotion.png" alt="" /></div>
+                    <div class="title">Picto</div>
+                    <div class="text">
+                        <%= I18n.t("tog_core.views.home.index.picto_explanation") %>
+                    </div>
+                    <div class="more"><a href="http://www.toghq.com/tog_plugins/4-tog_picto"><strong><%= I18n.t("tog_core.views.home.index.see_more") %> »</strong></a></div>
+                </li>
+                <li class="clearfix">
+                    <div class="title">Vault</div>
+                    <div class="text">
+                        <%= I18n.t("tog_core.views.home.index.vault_explanation") %>
+                    </div>
+                    <div class="more"><a href="http://www.toghq.com/tog_plugins/7-tog_vault"><strong><%= I18n.t("tog_core.views.home.index.see_more") %> »</strong></a></div>
+                </li>
+                <li class="last clearfix">
+                    <div class="title">Conversatio</div>
+                    <div class="text">
+                        <%= I18n.t("tog_core.views.home.index.conversatio_explanation") %>
+                    </div>
+                    <div class="more"><a href="http://www.toghq.com/tog_plugins/2-tog_conversatio"><strong><%= I18n.t("tog_core.views.home.index.see_more") %> »</strong></a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+<% end %>
