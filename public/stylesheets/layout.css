@@ -975,7 +975,7 @@ margin-top: 45px;
 }
 
 #content ul.extra_links {
-	overflow: auto;	
+	overflow: hidden;	
 	margin-bottom: 20px;
 }
 
