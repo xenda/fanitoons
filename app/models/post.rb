@@ -13,8 +13,16 @@ class Post < ActiveRecord::Base
     
   before_save :create_slug
   
+  def to_param
+    if title
+      "#{id}-#{title.parameterize}"
+    else
+      "#{id}"
+    end
+  end
+  
   def name
-    "title"
+    title
   end
   
   private
