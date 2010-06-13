@@ -24,12 +24,6 @@
           =f.error_message_on :surname
           =f.text_field :surname, :class => :text_field
 
-        .group
-          =f.label :picture, "Foto", :class=>"label"
-          =f.error_message_on :picture
-          =f.file_field :picture, :class => :text_field
-        .group
-          = image_tag(@account.picture.url(:medium)) if  @account.picture
         .group.email
           =f.label :email, "Email", :class=>"label"
           =f.error_message_on :email
