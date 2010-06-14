@@ -34,6 +34,9 @@ class Message < ActiveRecord::Base
   def dispatch!
     copy = self.clone
     copy.folder = self.from.outbox
+    logger.info copy.class
+    logger.info copy.valid?
+    logger.info copy.errors.full_messages
     copy.save!
     copy.read!
     

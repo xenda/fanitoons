@@ -52,8 +52,8 @@ class Account < ActiveRecord::Base
 
 
 
-  has_one :inbox, :class_name => "Folder", :foreign_key => "account_id", :conditions => ["folder_type = 'Inbox'"]
-  has_one :outbox, :class_name => "Folder", :foreign_key => "account_id", :conditions => ["folder_type = 'Outbox'"]
+  has_one :inbox, :class_name => "Folder", :foreign_key => "account_id", :conditions => ["folder_type = 'Entrada'"]
+  has_one :outbox, :class_name => "Folder", :foreign_key => "account_id", :conditions => ["folder_type = 'Salida'"]
 
   has_many :folders, :dependent => :destroy
   has_many :sent_messages, :class_name => "Message", :foreign_key => "from_account_id", :dependent => :destroy
@@ -289,8 +289,8 @@ class Account < ActiveRecord::Base
   end 
 
   def create_default_folders!
-      default_folders = ""
-      default_folders.each(" "){|folder_type|
+      default_folders = ["Entrada","Salida"]
+      default_folders.each{|folder_type|
         folder_type.strip!
         unless self.folders.find_by_name(folder_type)
           self.folders.create(:name => folder_type, :deletable => false, :folder_type => folder_type)

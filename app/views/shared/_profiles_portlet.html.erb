@@ -4,7 +4,7 @@
       <ul class="clearfix">
         <% unless items.blank? %>
           <% for item in items %>
-            <li><%= link_to icon_for_profile(item, 'small'), profile_path(item), :title => item.full_name %></li>
+            <li><%= link_to "Perfil", profile_path(item), :title => item.full_name %></li>
           <% end %>
         <% else %>
           <li><%= no_items %></li>

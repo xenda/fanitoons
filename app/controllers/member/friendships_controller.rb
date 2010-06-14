@@ -7,7 +7,7 @@ class Member::FriendshipsController < Member::BaseController
       flash[:ok]= "Solicitud de amistad para #{@friend.full_name}"
       Message.new(
         :from => current_account,
-        :to   => @friend.user,
+        :to   => @friend.account,
         :subject => "Solicitud de amistad",
         :content => "Solicitud de amistad", 
                            :user_name   => current_account.profile.full_name, 
@@ -15,7 +15,7 @@ class Member::FriendshipsController < Member::BaseController
                            :user_profile_url => profile_url(current_account.profile) , 
                            :confirm_url      => member_confirm_friend_url(current_account.profile)).dispatch!
     end
-    redirect_back_or_default(profile_path(current_account.profile))
+    redirect_to(profile_path(current_account.profile))
   end
 
   def confirm_friend
@@ -23,7 +23,7 @@ class Member::FriendshipsController < Member::BaseController
       flash[:ok]="Solicitud de amistad confirmada"
       Message.new(
         :from => current_account,
-        :to   => @friend.user,
+        :to   => @friend.account,
         :subject => "Han acceptado tu solicitud de amistad",
         :content => "Tienes un nuevo amigo", 
                            :user_name   => current_account.profile.full_name, 
@@ -31,7 +31,7 @@ class Member::FriendshipsController < Member::BaseController
                            :user_profile_url => profile_url(current_account.profile)).dispatch! 
     end
 
-    redirect_back_or_default(profile_path(current_account.profile))
+    redirect_to(profile_path(current_account.profile))
   end
 
   def follow
@@ -39,21 +39,21 @@ class Member::FriendshipsController < Member::BaseController
       flash[:ok]= "#{@friend.full_name} está siendo seguido"
       Message.new(
         :from => current_account,
-        :to   => @friend.user,
+        :to   => @friend.account,
         :subject => "Estás siendo seguido por #{current_account.profile.full_name}", 
         :content => "", 
                            :user_name   => current_account.profile.full_name, 
                            :friend_name => @friend.full_name, 
                            :user_profile_url => profile_url(current_account.profile)).dispatch!
     end
-    redirect_back_or_default(profile_path(current_account.profile))    
+    redirect_to(profile_path(current_account.profile))    
   end
 
   def unfollow
     if @friend.remove_follower(current_account.profile)
       flash[:ok]="Se ha dejado de seguir a #{@friend.full_name}"
     end
-    redirect_back_or_default(profile_path(current_account.profile))    
+    redirect_to(profile_path(current_account.profile))    
   end
 
   private

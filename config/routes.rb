@@ -21,9 +21,15 @@ ActionController::Routing::Routes.draw do |map|
                          :search => :get
                        },
         :member => { :reply => :get }
-      messages.new_message_to 'messages/new/:account_id', :action => "new"
+      messages.new_message_to 'mensajes/nuevo/:account_id', :action => "new"
     end
 
+  end
+
+  map.with_options(:controller => 'abuse') do |abuse|
+    abuse.report_abuse    'reportar_abuso', :action => 'new',    :conditions => { :method => :get }
+    abuse.report_abuse_with_model 'reportar_abuso/:resource_type/:resource_id',    :action => 'new',    :conditions => { :method => :get }
+    abuse.report_abuse_create     'reportar_abuso',    :action => 'create', :conditions => { :method => :post }
   end
 
 

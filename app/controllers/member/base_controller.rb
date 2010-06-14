@@ -1,5 +1,4 @@
 class Member::BaseController < ApplicationController
-  layout "member"
 
   before_filter :authenticate_account!
 

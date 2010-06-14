@@ -1,12 +1,12 @@
 
 class Friendship  < ActiveRecord::Base
-   belongs_to :inviter, :class_name => 'Account'
-   belongs_to :invited, :class_name => 'Account'
+   belongs_to :inviter, :class_name => 'Profile'
+   belongs_to :invited, :class_name => 'Profile'
    
    PENDING  = 0
    ACCEPTED = 1
    
-   record_activity_of :account, :actions => [:create, :update]
+   #record_activity_of :account, :actions => [:create, :update]
    
    
    def validate
@@ -92,9 +92,16 @@ class Friendship  < ActiveRecord::Base
    end
 
    private
-   def profile_of(user)
-     user
-   end
+    def profile_of(user)
+      profile = case user
+      when User
+        user.profile
+      when Profile
+        user
+      else
+        nil
+      end
+    end
    
 end
 

@@ -19,7 +19,6 @@
       %h3 Nombre
       %h2= @account.full_name
 
-      = link_to("Actualizar datos", edit_account_registration_path ) if @account == current_account
 
     .clear
   
@@ -28,10 +27,12 @@
       .portlet_content
         %ul
           - if its_me?
-            %li= link_to I18n.t('tog_social.profiles.site.edit_profile'), edit_member_profile_path(@profile)
+            %li= link_to("Actualizar datos", edit_account_registration_path ) if @account == current_account
+            %li=# link_to I18n.t('tog_social.profiles.site.edit_profile'), edit_member_profile_path(@profile)
           - else 
             %li= link_to I18n.t('tog_social.profiles.site.send_message'), member_new_message_to_path(@profile.account)
             %li= report_abuse_link @profile
+            %li= friendship_options(@profile)
             %li= following_options(@profile)
 
 
