@@ -1,5 +1,6 @@
 %li
-  %img.avatar{:alt => "", :height => "67", :src => "/images/avatar.jpg", :width => "67"}/
+  %a{:href=>profile_path(top_times.to_param)}
+    %img.avatar{:alt => "", :height => "67", :src => "/images/avatar.jpg", :width => "67"}/
   %h4= top_times.name
   %p= "#{top_times.score} puntos"
   %p.title novato
