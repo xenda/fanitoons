@@ -73,7 +73,7 @@ class Account < ActiveRecord::Base
   # Paperclip::Interpolations::RAILS_ROOT = "."
   # Paperclip::Storage::S3::RAILS_ENV = PADRINO_ENV
   
-    has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "67x67#+0+0", :profile=>"300x200#" },:path => ":rails_root/public/system/accounts/:attachment/:id/:style.:extension", :url => "/system/accounts/:attachment/:id/:style.:extension"
+    has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "67x67#+0+0", :profile=>"300x200" },:path => ":rails_root/public/system/accounts/:attachment/:id/:style.:extension", :url => "/system/accounts/:attachment/:id/:style.:extension"
     
     # ,
     #                    :storage => :s3,
