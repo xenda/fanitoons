@@ -8,6 +8,39 @@ ActionController::Routing::Routes.draw do |map|
   # 
   # map.routes_from_plugin 'tog_core'
 
+
+  map.resources :streams, :only => [:index, :show], :member => {:network => :get}
+
+  map.with_options(:controller => 'gangs') do |group|
+    group.tag_groups       '/gangs/tag/:tag',                         :action => 'tag'
+  end
+
+  map.resources :gangs, :collection => { :search => :get }, :member => { :join => :get, :leave => :get, :accept_invitation => :get, :reject_invitation => :get }
+
+  map.namespace(:member) do |member|
+    member.resources :gangs
+    member.with_options(:controller => 'gangs') do |group|
+      group.group_pending_members '/:id/miembros/pendiente',         :action => 'pending_members'
+      group.group_accept_member   '/:id/miembros/:account_id/aceptar', :action => 'accept_member'
+      group.group_reject_member   '/:id/miembros/:account_id/rechazar', :action => 'reject_member'
+      group.group_invite          '/mancha/invitar',                :action => 'invite'
+    end
+    member.with_options(:controller => 'friendships') do |friendship|
+      friendship.add_friend     '/amigos/:friend_id/agregar',     :action => 'add_friend'
+      friendship.confirm_friend '/amigos/:friend_id/confirmar', :action => 'confirm_friend'
+      friendship.follow_user    '/seguir/:friend_id',         :action => 'follow'
+      friendship.unfollow_user  '/ignorar/:friend_id',       :action => 'unfollow'
+    end
+    member.with_options(:controller => 'sharings') do |sharing|
+      sharing.share '/sharings/share/:gang_id/:shareable_type/:shareable_id', :action => 'create', :conditions => { :method => :post }    
+      sharing.new_sharing '/sharings/:shareable_type/:shareable_id/new', :action => 'new'
+      sharing.sharings '/sharings', :action => 'index'
+      sharing.destroy_sharing '/sharings/:gang_id/:id', :action => 'destroy', :conditions => { :method => :delete }      
+  #    sharing.destroy_sharing '/group/:id/remove/:shareable_type/:shareable_id', :action => 'destroy', :method => :delete  
+    end
+  end
+
+
   
 	map.namespace :admin do |admin| 
 		admin.resources :places 

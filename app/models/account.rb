@@ -30,16 +30,34 @@ class Account < ActiveRecord::Base
   
   has_many :favorite_teams, :class_name => "FavoriteTeam", :foreign_key => "account_id"
   has_many :teams, :through => :favorite_teams
-  
-  has_many :friendships
-  has_many :friends, :through => :friendships, :source => :friend
-  
-  has_many :friendsters, :through => :frienships, :source => :account 
-  
   has_many :user_badges, :class_name => "UserBadge", :foreign_key => "user_id"
   has_many :badges, :through => :user_badges
   
   
+  before_create :create_profile
+
+  has_one :profile, :dependent => :destroy
+
+  has_many :memberships, :dependent => :destroy
+  has_many :plain_memberships, :class_name => 'Membership',
+                               :conditions => ['memberships.moderator <> ?', true]
+  has_many :moderator_memberships, :class_name => 'Membership',
+                                   :conditions => ['memberships.moderator = ?', true]
+
+  has_many :gangs, :through => :memberships,
+                    :conditions => "memberships.state='active' and gangs.state='active'"
+
+  has_many :moderated_groups, :through => :moderator_memberships,
+                    :conditions => "memberships.state='active' and gangs.state='active'", :source => :group
+
+  # has_many :sharings, :class_name => 'Share', :dependent => :destroy
+
+  accepts_nested_attributes_for :profile
+  attr_accessible :profile_attributes
+
+  def network
+    profile.network.collect{|profile| profile.user}
+  end
   
   # Paperclip::Interpolations::RAILS_ROOT = "."
   # Paperclip::Storage::S3::RAILS_ENV = PADRINO_ENV
@@ -246,8 +264,15 @@ class Account < ActiveRecord::Base
   end
   
   def title
-    "Chalaca"
+    "Novato"
   end
+  
+  protected
+
+    def create_profile
+      self.profile ||= Profile.new
+    end
+  
   ##
   # This method is used for retrive the original password.
   #
@@ -268,6 +293,7 @@ class Account < ActiveRecord::Base
   #     crypted_password.blank? || !password.blank?
   #   end
 end
+
 
 
 # == Schema Information
@@ -304,5 +330,6 @@ end
 #  invitation_token     :string(20)
 #  invitation_sent_at   :datetime
 #  birth_date           :date
+#  title                :integer
 #
 

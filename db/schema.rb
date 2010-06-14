@@ -9,7 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100613221625) do
+ActiveRecord::Schema.define(:version => 20100614050349) do
+
+  create_table "abuses", :force => true do |t|
+    t.string   "email"
+    t.string   "title"
+    t.string   "referer"
+    t.string   "description"
+    t.boolean  "confirmed",     :default => false
+    t.integer  "resource_id"
+    t.string   "resource_type"
+    t.datetime "created_at"
+  end
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
@@ -139,8 +150,23 @@ ActiveRecord::Schema.define(:version => 20100613221625) do
   end
 
   create_table "friendships", :force => true do |t|
-    t.integer  "account_id"
-    t.integer  "friend_id"
+    t.integer  "inviter_id"
+    t.integer  "invited_id"
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "gangs", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "image"
+    t.string   "state"
+    t.boolean  "private"
+    t.boolean  "moderated",                     :default => false
+    t.integer  "user_id"
+    t.string   "activation_code", :limit => 40
+    t.datetime "activated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -166,6 +192,17 @@ ActiveRecord::Schema.define(:version => 20100613221625) do
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
     t.integer  "predictions_count"
+  end
+
+  create_table "memberships", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "group_id"
+    t.boolean  "moderator",                     :default => false
+    t.string   "state"
+    t.string   "activation_code", :limit => 40
+    t.datetime "activated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "places", :force => true do |t|
@@ -219,6 +256,17 @@ ActiveRecord::Schema.define(:version => 20100613221625) do
     t.integer  "second_team_result"
     t.integer  "scoring_player_id"
     t.integer  "victory_type_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "profiles", :force => true do |t|
+    t.integer  "account_id"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "website"
+    t.string   "blog"
+    t.string   "icon"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
