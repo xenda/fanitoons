@@ -1,6 +1,7 @@
 /* @override 
 	http://patatoon.com/stylesheets/layout.css?1276279900
 	http://localhost:3000/stylesheets/layout.css
+	http://patatoon.com/stylesheets/layout.css?1276479266
 */
 
 @font-face {
@@ -1052,6 +1053,7 @@ margin-top: 45px;
 img#avatar_image {
 	width: 200px;
 	height: 300px;
+	display: block;
 }
 
 #profile_friends h2,
