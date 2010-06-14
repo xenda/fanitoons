@@ -50,6 +50,17 @@ class Account < ActiveRecord::Base
   has_many :moderated_groups, :through => :moderator_memberships,
                     :conditions => "memberships.state='active' and gangs.state='active'", :source => :group
 
+
+
+  has_one :inbox, :class_name => "Folder", :foreign_key => "account_id", :conditions => ["folder_type = 'Inbox'"]
+  has_one :outbox, :class_name => "Folder", :foreign_key => "account_id", :conditions => ["folder_type = 'Outbox'"]
+
+  has_many :folders, :dependent => :destroy
+  has_many :sent_messages, :class_name => "Message", :foreign_key => "from_account_id", :dependent => :destroy
+  has_many :received_messages, :class_name => "Message", :foreign_key => "to_account_id", :dependent => :destroy
+
+  after_save :create_default_folders!
+
   # has_many :sharings, :class_name => 'Share', :dependent => :destroy
 
   accepts_nested_attributes_for :profile
@@ -267,6 +278,28 @@ class Account < ActiveRecord::Base
     "Novato"
   end
   
+  
+
+  def get_message(id)
+    begin
+    sent_messages.find(id)
+    rescue
+      received_messages.find(id)
+    end
+  end 
+
+  def create_default_folders!
+      default_folders = ""
+      default_folders.each(" "){|folder_type|
+        folder_type.strip!
+        unless self.folders.find_by_name(folder_type)
+          self.folders.create(:name => folder_type, :deletable => false, :folder_type => folder_type)
+        end
+      }
+  end
+
+
+  
   protected
 
     def create_profile
@@ -332,36 +365,4 @@ end
 #  birth_date           :date
 #  title                :integer
 #
-
-
-has_one :inbox, :class_name => "Folder", :foreign_key => "account_id", :conditions => ["folder_type = 'Inbox'"]
-has_one :outbox, :class_name => "Folder", :foreign_key => "account_id", :conditions => ["folder_type = 'Outbox'"]
-
-has_many :folders, :dependent => :destroy
-has_many :sent_messages, :class_name => "Message", :foreign_key => "from_account_id", :dependent => :destroy
-has_many :received_messages, :class_name => "Message", :foreign_key => "to_account_id", :dependent => :destroy
-
-after_save :create_default_folders!
-
-def get_message(id)
-  begin
-  sent_messages.find(id)
-  rescue
-    received_messages.find(id)
-  end
-end
-
-private 
-
-def create_default_folders!
-  if self.recently_activated?
-    default_folders = ""
-    default_folders.each(" "){|folder_type|
-      folder_type.strip!
-      unless self.folders.find_by_name(folder_type)
-        self.folders.create(:name => folder_type, :deletable => false, :folder_type => folder_type)
-      end
-    }
-  end
-end
 

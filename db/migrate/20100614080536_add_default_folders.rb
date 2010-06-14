@@ -1,6 +1,6 @@
 class AddDefaultFolders < ActiveRecord::Migration
   def self.up
-    User.find(:all).each{|u|
+    Account.find(:all).each{|u|
       u.create_default_folders!
     }
   end
