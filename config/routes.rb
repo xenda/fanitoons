@@ -2,6 +2,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :titles
 
 
+  map.connect "/upload", :controller => "home", :action=>"upload"
   # map.routes_from_plugin 'tog_mail'
   # 
   # map.routes_from_plugin 'tog_social'

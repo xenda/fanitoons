@@ -11,6 +11,10 @@ class HomeController < ApplicationController
     @matches = @matches[1..-1]
   end
 
+  def upload
+    
+  end
+
   def show
     @post = Post.find(params[:id])
   end
