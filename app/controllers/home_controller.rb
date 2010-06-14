@@ -15,7 +15,7 @@ class HomeController < ApplicationController
 
   def upload
     
-    current_account.picture = File.open(params["Filedata"])
+    current_account.picture = File.read(params["Filedata"])
     current_account.save
     render :text => "Ok"
      #     
