@@ -2,6 +2,8 @@ class HomeController < ApplicationController
   
   before_filter :authenticate_account!, :only =>[:invite]
   
+  skip_before_filter :verify_authenticity_token, :only=>"upload"
+  
   def index
     @posts = Post.all(:order => 'published_at desc, created_at desc', :conditions=>["(published_at <= ?) or published_at is null",Time.zone.now])
     @matches = Match.all(:order=> "played_at", :limit=>7, :include => [:local, :visitor], :conditions => ["played_at >= ?",Time.zone.now - 2.hours])
