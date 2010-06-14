@@ -21,6 +21,10 @@ class HomeController < ApplicationController
      #     
      # {"Filename"=>"PIC_1276515600646.png", "dir"=>"../image/", "Upload"=>"Submit Query", "Filedata"=>#<File:/tmp/RackMultipart20100614-13168-82ot1k-0>
   end
+  
+  def post
+    render :text => "Ok"
+  end
 
   def show
     @post = Post.find(params[:id])
