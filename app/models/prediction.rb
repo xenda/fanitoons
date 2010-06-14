@@ -59,7 +59,7 @@ class Prediction < ActiveRecord::Base
   def closeness
     return false unless first_team_result
     return false unless second_team_result
-      
+    return 1000 if match.first_team_goals.nil? or match.second_team_goals.nil?
     first_team_abs = (first_team_result - match.first_team_goals).abs
     second_team_abs = (second_team_result - match.second_team_goals).abs
     
@@ -74,6 +74,8 @@ class Prediction < ActiveRecord::Base
         "<span class='close'>¡cerca!</span>"
       when 1..2
         "<span class='almost'>cerca.. cerca..</span>"
+      when 1000
+        ""
       else
         "<span class='wrong'>¡para nada!</span>"
       end
