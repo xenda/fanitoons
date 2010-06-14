@@ -9,11 +9,7 @@ class Member::FriendshipsController < Member::BaseController
         :from => current_account,
         :to   => @friend.account,
         :subject => "Solicitud de amistad",
-        :content => "Solicitud de amistad", 
-                           :user_name   => current_account.profile.full_name, 
-                           :friend_name => @friend.full_name, 
-                           :user_profile_url => profile_url(current_account.profile) , 
-                           :confirm_url      => member_confirm_friend_url(current_account.profile)).dispatch!
+        :content => "Solicitud de amistad").dispatch!
     end
     redirect_to(profile_path(current_account.profile))
   end
@@ -25,10 +21,7 @@ class Member::FriendshipsController < Member::BaseController
         :from => current_account,
         :to   => @friend.account,
         :subject => "Han acceptado tu solicitud de amistad",
-        :content => "Tienes un nuevo amigo", 
-                           :user_name   => current_account.profile.full_name, 
-                           :friend_name => @friend.full_name, 
-                           :user_profile_url => profile_url(current_account.profile)).dispatch! 
+        :content => "Tienes un nuevo amigo").dispatch! 
     end
 
     redirect_to(profile_path(current_account.profile))
@@ -41,10 +34,7 @@ class Member::FriendshipsController < Member::BaseController
         :from => current_account,
         :to   => @friend.account,
         :subject => "Estás siendo seguido por #{current_account.profile.full_name}", 
-        :content => "", 
-                           :user_name   => current_account.profile.full_name, 
-                           :friend_name => @friend.full_name, 
-                           :user_profile_url => profile_url(current_account.profile)).dispatch!
+        :content => "").dispatch!
     end
     redirect_to(profile_path(current_account.profile))    
   end
