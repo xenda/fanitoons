@@ -9,9 +9,9 @@
 		</item>
 		<item>
 			<id>7</id>
-			<name>australiaTshirt</name>
-			<picture_file_name>_W_australiaTshirt.swf</picture_file_name>
-            <sex>1</sex>
+			<name>nigeria_shirt_1_m</name>
+			<picture_file_name>nigeria_shirt_1_m.swf</picture_file_name>
+            <sex>0</sex>
 		</item>
 		<item>
 			<id>9</id>
@@ -60,8 +60,8 @@
 		</item>
 		<item>
 			<id>7</id>
-			<name>australiaShort</name>
-			<picture_file_name>australiaShort.swf</picture_file_name>
+			<name>nigeria_short_1_m</name>
+			<picture_file_name>nigeria_short_1_m.swf</picture_file_name>
             <sex>0</sex>
 		</item>
 		<item>
@@ -102,8 +102,8 @@
         
         <item>
 			<id>5</id>
-			<name>australiaSnickers</name>
-			<picture_file_name>_W_algeriaSnickers.swf</picture_file_name>
+			<name>nigeria_snickers_1_m</name>
+			<picture_file_name>nigeria_snickers_1_m.swf</picture_file_name>
 		<sex>1</sex>
 		</item>
 
