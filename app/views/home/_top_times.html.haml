@@ -1,6 +1,6 @@
 %li
   %a{:href=>profile_path(top_times.profile.id)}
-    - if top_season.picture_file_name
+    - if top_times.picture_file_name
       = image_tag top_times.picture(:thumb), :class => "avatar"
     - else
       %img.avatar{:alt => "", :height => "67", :src => "/images/avatar.jpg", :width => "67"}/
