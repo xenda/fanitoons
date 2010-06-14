@@ -69,13 +69,13 @@ class Prediction < ActiveRecord::Base
   def prediction_title
     case closeness
       when 0
-        "¡acertada!"
+        "<span class='right'>¡acertada!</span>"
       when 1
-        "¡cerca!"
+        "<span class='close'>¡cerca!</span>"
       when 1..2
-        "cerca.. cerca.."
+        "<span class='almost'>cerca.. cerca..</span>"
       else
-        "¡para nada!"
+        "<span class='wrong'>¡para nada!</span>"
       end
   end
   

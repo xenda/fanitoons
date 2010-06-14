@@ -1,16 +1,32 @@
 - if past_match
   .match
     .match_content
-      .match_time= distance_of_time_in_words_to_now(past_match.match.played_at)
-      .flag
-        = image_tag(random_flag)
-        %strong= past_match.match.first_team_goals
-      .flag
-        = image_tag(random_flag)
-        %strong= past_match.match.second_team_goals
-      .prediction
-        = "predicción (#{past_match.prediction_text})"
-        = link_to past_match.prediction_title, match_path(past_match.match), :class=>"small"
-    .match_links
-      .send= link_to "manda tu predicción", match_prediction_path(past_match.match), :class=>"small iframe"
-      .view= link_to "mira la de tus amigos", match_path(past_match.match), :class=>"small"
+      .flags
+        .flag
+          .image
+            %span.flag.small{:class => past_match.match.local.flag_name} --
+            %br
+            = past_match.match.local.short_name
+          .prediction_result
+            = (past_match.first_team_result || "--" )
+          .clear
+        .flag
+          .image
+            %span.flag.small{:class => past_match.match.visitor.flag_name} --
+            %br
+            = past_match.match.visitor.short_name
+          .prediction_result
+            = (past_match.second_team_result || "--")
+          .clear            
+        .clear
+      .match_message= past_match.prediction_title  
+    .real_result
+      %span Resultado real
+      .result
+        %strong
+          %span.flag.small{:class => past_match.match.local.flag_name} --
+          %span.goals= past_match.match.first_team_goals
+        %strong
+          %span.flag.small{:class => past_match.match.visitor.flag_name} --
+          %span.goals= past_match.match.second_team_goals
+      .clear
