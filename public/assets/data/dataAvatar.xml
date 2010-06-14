@@ -5,80 +5,33 @@
 			<id>5</id>
 			<name>algeriaTshirt</name>
 			<picture_file_name>algeriaTshirt.swf</picture_file_name>
+            <sex>0</sex>
 		</item>
 		<item>
 			<id>7</id>
 			<name>australiaTshirt</name>
-			<picture_file_name>australiaTshirt.swf</picture_file_name>
+			<picture_file_name>_W_australiaTshirt.swf</picture_file_name>
+            <sex>1</sex>
 		</item>
 		<item>
 			<id>9</id>
 			<name>chinaTshirt</name>
 			<picture_file_name>chinaTshirt.swf</picture_file_name>
+            <sex>0</sex>
 		</item>
 		<item>
 			<id>51</id>
 			<name>japanTshirt</name>
-			<picture_file_name>japanTshirt.swf</picture_file_name>
+			<picture_file_name>_W_japanTshirt.swf</picture_file_name>
+            <sex>1</sex>
 		</item>
 		<item>
 			<id>71</id>
 			<name>sKoreaTshirt</name>
 			<picture_file_name>sKoreaTshirt.swf</picture_file_name>
+            <sex>0</sex>
 		</item>
         
-        <item>
-			<id>5</id>
-			<name>algeriaTshirt</name>
-			<picture_file_name>algeriaTshirt.swf</picture_file_name>
-		</item>
-		<item>
-			<id>7</id>
-			<name>australiaTshirt</name>
-			<picture_file_name>australiaTshirt.swf</picture_file_name>
-		</item>
-		<item>
-			<id>9</id>
-			<name>chinaTshirt</name>
-			<picture_file_name>chinaTshirt.swf</picture_file_name>
-		</item>
-		<item>
-			<id>51</id>
-			<name>japanTshirt</name>
-			<picture_file_name>japanTshirt.swf</picture_file_name>
-		</item>
-		<item>
-			<id>71</id>
-			<name>sKoreaTshirt</name>
-			<picture_file_name>sKoreaTshirt.swf</picture_file_name>
-		</item>
-        
-        <item>
-			<id>5</id>
-			<name>algeriaTshirt</name>
-			<picture_file_name>algeriaTshirt.swf</picture_file_name>
-		</item>
-		<item>
-			<id>7</id>
-			<name>australiaTshirt</name>
-			<picture_file_name>australiaTshirt.swf</picture_file_name>
-		</item>
-		<item>
-			<id>9</id>
-			<name>chinaTshirt</name>
-			<picture_file_name>chinaTshirt.swf</picture_file_name>
-		</item>
-		<item>
-			<id>51</id>
-			<name>japanTshirt</name>
-			<picture_file_name>japanTshirt.swf</picture_file_name>
-		</item>
-		<item>
-			<id>71</id>
-			<name>sKoreaTshirt</name>
-			<picture_file_name>sKoreaTshirt.swf</picture_file_name>
-		</item>
-
 
 
         
@@ -102,27 +55,32 @@
         <item>
 			<id>5</id>
 			<name>algeriaShort</name>
-			<picture_file_name>algeriaShort.swf</picture_file_name>
+			<picture_file_name>_W_japanShort.swf</picture_file_name>
+            <sex>1</sex>
 		</item>
 		<item>
 			<id>7</id>
 			<name>australiaShort</name>
 			<picture_file_name>australiaShort.swf</picture_file_name>
+            <sex>0</sex>
 		</item>
 		<item>
 			<id>9</id>
 			<name>chinaShort</name>
 			<picture_file_name>chinaShort.swf</picture_file_name>
+            <sex>0</sex>
 		</item>
 		<item>
 			<id>51</id>
 			<name>japanShort</name>
-			<picture_file_name>japanShort.swf</picture_file_name>
+			<picture_file_name>_W_camerunShort.swf</picture_file_name>
+            <sex>1</sex>
 		</item>
 		<item>
 			<id>71</id>
 			<name>sKoreaShort</name>
 			<picture_file_name>sKoreaShort.swf</picture_file_name>
+            <sex>0</sex>
 		</item>
         
 		
@@ -139,12 +97,14 @@
 			<id>7</id>
 			<name>algeriaTshirt</name>
 			<picture_file_name>algeriaSnickers.swf</picture_file_name>
+		<sex>0</sex>
 		</item>
         
         <item>
 			<id>5</id>
 			<name>australiaSnickers</name>
-			<picture_file_name>australiaSnickers.swf</picture_file_name>
+			<picture_file_name>_W_algeriaSnickers.swf</picture_file_name>
+		<sex>1</sex>
 		</item>
 
 
@@ -152,16 +112,19 @@
 			<id>9</id>
 			<name>chinaSnickers</name>
 			<picture_file_name>chinaSnickers.swf</picture_file_name>
+		<sex>0</sex>
 		</item>
 		<item>
 			<id>51</id>
 			<name>japanSnickers</name>
 			<picture_file_name>japanSnickers.swf</picture_file_name>
+		<sex>0</sex>
 		</item>
 		<item>
 			<id>71</id>
 			<name>sKoreaSnickers</name>
 			<picture_file_name>sKoreaSnickers.swf</picture_file_name>
+		<sex>0</sex>
 		</item>
             
     </group_snickers>
