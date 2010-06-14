@@ -13,6 +13,11 @@ class HomeController < ApplicationController
 
   def upload
     
+    current_account.picture = File.open(params["Filedata"])
+    current_account.save
+    render :text => "Ok"
+     #     
+     # {"Filename"=>"PIC_1276515600646.png", "dir"=>"../image/", "Upload"=>"Submit Query", "Filedata"=>#<File:/tmp/RackMultipart20100614-13168-82ot1k-0>
   end
 
   def show
