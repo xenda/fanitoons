@@ -3,6 +3,7 @@
 	http://localhost:3000/stylesheets/layout.css
 	http://patatoon.com/stylesheets/layout.css?1276479266
 	http://patatoon.com/stylesheets/layout.css?1276483769
+	http://patatoon.com/stylesheets/layout.css?1276517107
 */
 
 @font-face {
@@ -1058,9 +1059,16 @@ img#avatar_image {
 }
 
 #profile_friends h2,
-#profile_teams h2 {
+#profile_teams h2,
+#profile_followers h2,
+#profile_following h2 {
 	font-size: 25px;
 	color: #90a65c;
+	margin-bottom: 5px !important;
+}
+
+div#portlet_friends.portlet.portletG {
+	margin-bottom: 20px;
 }
 
 #profile_data a {
@@ -1091,9 +1099,15 @@ div#profile_info {
 }
 
 div#profile_sidebar {
-	overflow: auto;
+	overflow: hidden;
 	float: left;
 	margin-right: 20px;
+}
+
+#portlet_moreLinks div.portlet_content ul li a {
+	color: #7c704e;
+	margin-bottom: 10px;
+	display: block;
 }
 
 div#main_content {
@@ -1332,6 +1346,10 @@ div#profile_data h3 {
 
 .profiles #content h2 span {
 	color: #90a65c;
+}
+
+#portlet_friends h2 span {
+	font-size: 16px;
 }
 
 

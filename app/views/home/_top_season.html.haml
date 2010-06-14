@@ -1,5 +1,5 @@
 %li
-  %a{:href=>profile_path(top_season.to_param)}
+  %a{:href=>profile_path(top_season.profile.id)}
     - if top_season.picture_file_name
       = image_tag top_season.picture(:thumb), :class => "avatar"
     - else

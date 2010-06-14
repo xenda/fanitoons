@@ -1,6 +1,9 @@
 %li
-  %a{:href=>profile_path(top_times.to_param)}
-    %img.avatar{:alt => "", :height => "67", :src => "/images/avatar.jpg", :width => "67"}/
+  %a{:href=>profile_path(top_times.profile.id)}
+    - if top_season.picture_file_name
+      = image_tag top_season.picture(:thumb), :class => "avatar"
+    - else
+      %img.avatar{:alt => "", :height => "67", :src => "/images/avatar.jpg", :width => "67"}/
   %h4= top_times.name
   %p= "#{top_times.score} puntos"
   %p.title novato
