@@ -2,6 +2,7 @@
 	http://patatoon.com/stylesheets/layout.css?1276279900
 	http://localhost:3000/stylesheets/layout.css
 	http://patatoon.com/stylesheets/layout.css?1276479266
+	http://patatoon.com/stylesheets/layout.css?1276483769
 */
 
 @font-face {
@@ -1337,9 +1338,10 @@ div#profile_data h3 {
 #profile_predictions div.done div.match div.match_content div.match_message {
 	font-family: 'HelveticaRounded', Arial;
 	overflow:visible;
-	font-size: 1.3em;
-	margin-top: 10px;
+	font-size: 1.2em;
+	margin-top: 14px;
 	margin-left: 20px;
+	width: 100px;
 }
 #profile_predictions div.done a,
 #profile_predictions div.incoming a {
