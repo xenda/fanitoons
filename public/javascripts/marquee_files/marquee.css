@@ -1,0 +1,128 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+
+#post_categories p {
+	float: left !important;
+	width: 1000px;
+	overflow: auto;
+}
+
+.pointer {
+	width: 1004px
+}
+
+.pointer div {
+	width: 400%;
+}
+
+#post_categories span {
+	float: left;
+	margin-left: 10px;
+	color: black;
+	font-weight: bold;
+	margin-top: 10px;
+	font-family: Arial, Helvetica, Geneva, sans-serif;
+}
+#post_categories p img{
+	float: left;
+}
+#post_categories p a {
+	color: #df0;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: Arial, Helvetica, Geneva, sans-serif;
+	float: left;
+	
+}
+
+
+div#post_categories {
+	width: 100%;
+	height: 40px;
+	
+	background: #528F3F url(../images/grass.png);
+	border: none;
+}
+
+#marquee_news {
+	background-color:transparent !important;
+}
+#marquee_news li {
+  background-color: transparent;
+/*  float: left;
+  width: 600px;
+*/
+}
+
+#marquee_news li img {
+	float: left;
+}
+
+#marquee_news li a {
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+	color: white;
+	text-decoration: none;
+	font-family: Arial, Helvetica, Geneva, sans-serif;
+}
+
+#post_list ul.category_list .ad_content  {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+
+}
+
+
+#post_list ul.category_list li.category_name ul.category_posts li div.post_list_item div.post_item div.post_title {
+	line-height: 1.4em;
+	color: #264f56;
+	font-size: 1.2em;
+}
