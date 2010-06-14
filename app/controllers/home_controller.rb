@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   
   before_filter :authenticate_account!, :only =>[:invite]
   
-  skip_before_filter :verify_authenticity_token, :only=>"upload"
+  skip_before_filter :verify_authenticity_token, :only=>["upload","post"]
   
   def index
     @posts = Post.all(:order => 'published_at desc, created_at desc', :conditions=>["(published_at <= ?) or published_at is null",Time.zone.now])
