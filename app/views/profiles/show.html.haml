@@ -46,16 +46,16 @@
     
     %ul
       %li
-        %strong= "Acertó #{@account.right_predictions_count} (#{@account.right_predictions_average})"
+        %strong= "Acertó #{@account.right_predictions_count} (#{@account.right_predictions_average}% de veces)"
         %span= "De #{Match.matches_count_till_now} partidos"
       %li
         %strong= "Ha participado en #{@account.predictions.size} predicciones" 
-        %span= "Más del 10% de tus amigos"
+        %span= ""
       %li
-        %strong= "Has ganado #{rand(100)}" 
-        %span= "2% más que tus amigos"
+        %strong= "Has ganado #{@account.score} puntos" 
+        %span= ""
       %li
-        %strong= "Te faltan 120 puntos para mejorar de título" 
-        %span= "Estás en el Top 10 de la semana"
+        / %strong= "Te faltan 120 puntos para mejorar de título" 
+        / %span= "Estás en el Top 10 de la semana"
     %div{:style=>"clear:both;"}
     
