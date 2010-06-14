@@ -1,0 +1,9 @@
+<p>
+Hola <%=@user.profile.full_name%>,
+</p>	
+<p>
+Tu solicitud de unirte a '<%= @group.name %>' ha sido rechazada. Lo sentimos :(
+</p>
+<p>
+Si crees que deberías ser parte del grupo, envíale un mensaje a <a href="<%=@moderator_url%>"><%=@moderator.profile.full_name %></a>
+</p>

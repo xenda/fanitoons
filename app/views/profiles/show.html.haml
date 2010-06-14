@@ -30,7 +30,7 @@
           - if its_me?
             %li= link_to I18n.t('tog_social.profiles.site.edit_profile'), edit_member_profile_path(@profile)
           - else 
-            %li= link_to I18n.t('tog_social.profiles.site.send_message'), member_new_message_to_path(@profile.user)
+            %li= link_to I18n.t('tog_social.profiles.site.send_message'), member_new_message_to_path(@profile.account)
             %li= report_abuse_link @profile
             %li= following_options(@profile)
 

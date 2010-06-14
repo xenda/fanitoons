@@ -1,0 +1,9 @@
+<p>
+El usuario  <%= @user.profile.full_name %> (<%= @user.login %>) ha solicitado unirse al grupo '<%= @group.name %>'. 
+</p>
+<p>
+Puedes tomar una decisión respecto eso en esta dirección:
+</p>
+<p>
+<a href="<%= @url %>"><%= @url %></a>
+</p>

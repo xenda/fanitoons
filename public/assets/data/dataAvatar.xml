@@ -3,8 +3,8 @@
 	<group_shirt>
 		<item>
 			<id>5</id>
-			<name>algeriaTshirt</name>
-			<picture_file_name>algeriaTshirt.swf</picture_file_name>
+			<name>camerun_shirt_1_m</name>
+			<picture_file_name>camerun_shirt_1_m.swf</picture_file_name>
             <sex>0</sex>
 		</item>
 		<item>
@@ -54,8 +54,8 @@
 		
         <item>
 			<id>5</id>
-			<name>algeriaShort</name>
-			<picture_file_name>_W_japanShort.swf</picture_file_name>
+			<name>camerun_short_1_m</name>
+			<picture_file_name>camerun_short_1_m.swf</picture_file_name>
             <sex>1</sex>
 		</item>
 		<item>
@@ -95,8 +95,8 @@
 		
         <item>
 			<id>7</id>
-			<name>algeriaTshirt</name>
-			<picture_file_name>algeriaSnickers.swf</picture_file_name>
+			<name>camerun_snickers_1_m</name>
+			<picture_file_name>camerun_snickers_1_m.swf</picture_file_name>
 		<sex>0</sex>
 		</item>
         

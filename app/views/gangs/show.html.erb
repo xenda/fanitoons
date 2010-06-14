@@ -1,0 +1,39 @@
+<div class="detail detail1">
+  <div class="title"><%= link_to @gang.name, gang_path(@gang) %></div>
+  <div class="subtitle">Creado <%= @gang.created_at.strftime("%d/%m/%Y") %>, <%= "#{@gang.members.size} miembros" %></div>
+  <div class="summary"><%= "Moderado por" %>:
+    <% for moderator in @gang.moderators -%>
+      <%=link_to moderator.profile.full_name, profile_path(moderator.profile), :class=> 'maincolor4'%>
+    <% end -%>
+    <br/>
+    <%= "Etiquetas" %>: 
+      <% for tag in @gang.tag_list %>
+        <%= link_to tag.to_s, tag_gangs_path(tag) %>
+      <% end %>   
+  </div>
+  <div class="text">
+    <p><%= @gang.description %></p>
+  </div>
+</div> <!-- /.detail1 --> 
+
+<% content_for :sidebar do %>
+
+<div class="portlet portletC" id="portlet_moreLinks">
+    <h2><span><%= "Enlaces adicionales" %></span></h2>
+    <div class="portlet_content">
+        <ul>
+          <% if i_am_member_of @gang -%>
+            <li><%= "Miembro de grupo" %><%= link_to "Abandonar", leave_gang_path(@gang), :confirm => "¿Estás seguro de abandonarlo?", :class => 'delete' %></li>
+          <% else -%>
+            <li><%= link_to "Unirse", join_gang_path(@gang), :class => 'add' %></li>
+          <% end -%>  
+        </ul>
+    </div> 
+</div>    
+
+<%= render :partial => "shared/profiles_portlet", :locals => { 
+  :items => @gang.members.collect(&:profile), 
+  :style => :portletG, 
+  :title => "#{@gang.members.size} miembros ",  
+  :no_items => "No se encontraron miembros para #{@gang.name}" } %>
+<% end %>

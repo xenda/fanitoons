@@ -9,6 +9,24 @@ ActionController::Routing::Routes.draw do |map|
   # map.routes_from_plugin 'tog_core'
 
 
+  map.namespace(:member) do |member|
+
+    member.with_options(:controller => 'messages') do |messages|
+    
+      messages.resources :messages,
+        :collection => { :move => :post,
+                         :copy => :post,
+                         :mark_as_read => :post,
+                         :mark_as_unread => :post,
+                         :search => :get
+                       },
+        :member => { :reply => :get }
+      messages.new_message_to 'messages/new/:account_id', :action => "new"
+    end
+
+  end
+
+
   map.resources :streams, :only => [:index, :show], :member => {:network => :get}
 
   map.with_options(:controller => 'gangs') do |group|
@@ -17,7 +35,10 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :gangs, :collection => { :search => :get }, :member => { :join => :get, :leave => :get, :accept_invitation => :get, :reject_invitation => :get }
 
+  map.resources :profiles
+
   map.namespace(:member) do |member|
+    member.resources :profiles, :as => "perfiles"
     member.resources :gangs
     member.with_options(:controller => 'gangs') do |group|
       group.group_pending_members '/:id/miembros/pendiente',         :action => 'pending_members'
