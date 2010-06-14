@@ -4,11 +4,11 @@ files = `ls`
 
 shirts_m = files.select {|file| file=~/shirt_1_m/ }
 shorts_m = files.select {|file| file=~/short_1_m/ }
-snickers_m = files.select {|file| file=~/snicker_1_m/ }
+snickers_m = files.select {|file| file=~/snickers_1_m/ }
 
 shirts_f = files.select {|file| file=~/shirt_1_f/ }
 shorts_f = files.select {|file| file=~/short_1_f/ }
-snickers_f = files.select {|file| file=~/snicker_1_f/ }
+snickers_f = files.select {|file| file=~/snickers_1_f/ }
 
 xml_file = "<root>"
 xml_file << "<group_shirt>"

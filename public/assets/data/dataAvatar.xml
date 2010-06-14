@@ -122,8 +122,8 @@
     </item>
     <item>
       <id>18</id>
-      <name>espana</name>
-      <picture_file_name>espana_shirt_1_m.swf
+      <name>espa&#xF1;a</name>
+      <picture_file_name>espa&#xF1;a_shirt_1_m.swf
 </picture_file_name>
       <sex>0</sex>
     </item>
@@ -473,5 +473,244 @@
       <sex>0</sex>
     </item>
   </group_shorts>
-  <group_snickers/>
+  <group_snickers>
+    <item>
+      <id>1</id>
+      <name>australia</name>
+      <picture_file_name>australia_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>2</id>
+      <name>china</name>
+      <picture_file_name>china_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>3</id>
+      <name>japon</name>
+      <picture_file_name>japon_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>4</id>
+      <name>koreadelsur</name>
+      <picture_file_name>koreadelsur_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>5</id>
+      <name>alemania</name>
+      <picture_file_name>alemania_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>6</id>
+      <name>argelia</name>
+      <picture_file_name>argelia_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>7</id>
+      <name>argentina</name>
+      <picture_file_name>argentina_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>8</id>
+      <name>australia</name>
+      <picture_file_name>australia_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>9</id>
+      <name>brasil</name>
+      <picture_file_name>brasil_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>10</id>
+      <name>camerun</name>
+      <picture_file_name>camerun_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>11</id>
+      <name>chile</name>
+      <picture_file_name>chile_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>12</id>
+      <name>china</name>
+      <picture_file_name>china_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>13</id>
+      <name>costademarfil</name>
+      <picture_file_name>costademarfil_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>14</id>
+      <name>dinamarca</name>
+      <picture_file_name>dinamarca_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>15</id>
+      <name>eeuu</name>
+      <picture_file_name>eeuu_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>16</id>
+      <name>eslovaquia</name>
+      <picture_file_name>eslovaquia_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>17</id>
+      <name>eslovenia</name>
+      <picture_file_name>eslovenia_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>18</id>
+      <name>espana</name>
+      <picture_file_name>espana_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>19</id>
+      <name>espa&#xF1;a</name>
+      <picture_file_name>espa&#xF1;a_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>20</id>
+      <name>francia</name>
+      <picture_file_name>francia_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>21</id>
+      <name>grecia</name>
+      <picture_file_name>grecia_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>22</id>
+      <name>holanda</name>
+      <picture_file_name>holanda_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>23</id>
+      <name>honduras</name>
+      <picture_file_name>honduras_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>24</id>
+      <name>inglaterra</name>
+      <picture_file_name>inglaterra_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>25</id>
+      <name>italia</name>
+      <picture_file_name>italia_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>26</id>
+      <name>japon</name>
+      <picture_file_name>japon_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>27</id>
+      <name>koreadelsur</name>
+      <picture_file_name>koreadelsur_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>28</id>
+      <name>mexico</name>
+      <picture_file_name>mexico_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>29</id>
+      <name>nigeria</name>
+      <picture_file_name>nigeria_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>30</id>
+      <name>nuevazelanda</name>
+      <picture_file_name>nuevazelanda_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>31</id>
+      <name>paraguay</name>
+      <picture_file_name>paraguay_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>32</id>
+      <name>portugal</name>
+      <picture_file_name>portugal_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>33</id>
+      <name>sudafrica</name>
+      <picture_file_name>sudafrica_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>34</id>
+      <name>suiza</name>
+      <picture_file_name>suiza_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+  </group_snickers>
 </root>
