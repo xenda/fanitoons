@@ -7,7 +7,7 @@
 
   #profile_info
     #profile_avatar
-      = image_tag (@account.picture.url(:original), :id=>"avatar_image") if @account.picture_file_name
+      = image_tag (@account.picture.url(:profile), :id=>"avatar_image") if @account.picture_file_name
     #profile_data
 
       %h3 Título
