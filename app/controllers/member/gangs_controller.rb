@@ -40,7 +40,7 @@ class Member::GangsController < Member::BaseController
 
         flash[:warning] = "Pendiente agregar miembros"
         redirect_to gangs_path
-      end
+      #end
     else
       render :action => 'new'
     end
