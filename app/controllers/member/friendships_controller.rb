@@ -13,8 +13,7 @@ class Member::FriendshipsController < Member::BaseController
                            :user_name   => current_account.profile.full_name, 
                            :friend_name => @friend.full_name, 
                            :user_profile_url => profile_url(current_account.profile) , 
-                           :confirm_url      => member_confirm_friend_url(current_account.profile))
-      ).dispatch!
+                           :confirm_url      => member_confirm_friend_url(current_account.profile)).dispatch!
     end
     redirect_back_or_default(profile_path(current_account.profile))
   end
@@ -29,8 +28,7 @@ class Member::FriendshipsController < Member::BaseController
         :content => "Tienes un nuevo amigo", 
                            :user_name   => current_account.profile.full_name, 
                            :friend_name => @friend.full_name, 
-                           :user_profile_url => profile_url(current_account.profile)) 
-      ).dispatch! 
+                           :user_profile_url => profile_url(current_account.profile)).dispatch! 
     end
 
     redirect_back_or_default(profile_path(current_account.profile))
@@ -46,8 +44,7 @@ class Member::FriendshipsController < Member::BaseController
         :content => "", 
                            :user_name   => current_account.profile.full_name, 
                            :friend_name => @friend.full_name, 
-                           :user_profile_url => profile_url(current_account.profile))
-      ).dispatch!
+                           :user_profile_url => profile_url(current_account.profile)).dispatch!
     end
     redirect_back_or_default(profile_path(current_account.profile))    
   end
