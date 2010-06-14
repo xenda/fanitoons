@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <root>
   <group_shirt>
+    <item><id>1</id><name>australia</name><picture_file_name>australia_shirt_1_f.swf
+    </picture_file_name><sex>1</sex></item>
+    
     <item>
       <id>1</id>
       <name>alemania</name>
@@ -213,6 +216,8 @@
     </item>
   </group_shirt>
   <group_shorts>
+    <item><id>1</id><name>australia</name><picture_file_name>australia_shirt_1_f.swf
+    </picture_file_name><sex>1</sex></item>
     <item>
       <id>1</id>
       <name>alemania</name>
@@ -607,5 +612,7 @@
 </picture_file_name>
       <sex>0</sex>
     </item>
+    <item><id>1</id><name>australia</name><picture_file_name>australia_snickers_1_f.swf
+    </picture_file_name><sex>1</sex></item>
   </group_snickers>
 </root>
