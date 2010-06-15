@@ -16,29 +16,29 @@
 	font-style: normal;
 }
 
-.streams #content li.odd {
+.streams #content li {
 	list-style: none;
 	overflow: hidden;
 }
 
-.streams #content li.odd div.meta {
+.streams #content li div.meta {
 	float: left;
 	margin-right: 10px;
 	text-align: center;
 }
 
-#content li.odd div.meta p.title {
+#content li div.meta p.title {
 	font-weight: bold;
 }
 
-.streams #content li.odd div.content {
+.streams #content li div.content {
 	float: left;
 	width: 500px;
 	border: 1px solid #8da15e;
 	padding: 10px 20px;
 }
 
-.streams #content li.odd div.content a {
+.streams #content li div.content a {
 	color: #3a9154;
 	font-weight: bold;
 }

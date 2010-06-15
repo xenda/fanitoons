@@ -43,11 +43,12 @@
             %li= link_to "crea tu avatar", avatar_path
             %li= link_to "campeonatos", matches_path
             %li= link_to "pronósticos", predictions_path
-            %li.last
-              - if account_signed_in?
-                = link_to "mi perfil", profile_path(current_account.profile.id)
-              - else
-                = link_to "entrar", new_account_registration_path
+            %li= link_to "actividades", stream_path
+            / %li.last
+            /   - if account_signed_in?
+            /     = link_to "mi perfil", profile_path(current_account.profile.id)
+            /   - else
+            /     = link_to "entrar", new_account_registration_path
                 
           #login
             - if account_signed_in?

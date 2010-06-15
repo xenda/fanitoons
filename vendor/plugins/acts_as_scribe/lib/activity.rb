@@ -12,7 +12,7 @@ class Activity < ActiveRecord::Base
   }
   
   named_scope :created_since, lambda { |time_ago| 
-    { :conditions => ['created_at > ?', time_ago]}
+    { :conditions => ['created_at > ?', time_ago], :order => "created_at DESC"}
   }
     
 
