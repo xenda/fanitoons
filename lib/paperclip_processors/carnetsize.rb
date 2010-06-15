@@ -4,10 +4,14 @@ module Paperclip
 
     def transformation_command
       result = super
-      if super.is_a? Array
-        result.map do |p|
-          crop_command + p.sub(/ -crop \S+/, '')  
+      if result.is_a? Array
+        
+        result = result.map do |p|
+          p.sub(/ -crop \S+/, '')  
         end
+        
+        result.unshift(crop_command)
+        
       else
         crop_command + result.sub(/ -crop \S+/, '')  
       end
