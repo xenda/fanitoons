@@ -39,13 +39,15 @@
   #profile_friends
     %h2 Mis patas
     = render :partial => "shared/profiles_portlet", :locals => { :items =>  @profile.friends, :style => :portletG, :title => I18n.t('tog_social.profiles.model.friends'), :no_items => I18n.t('tog_social.profiles.model.friends_not_found', :profile_full_name => @profile.full_name)}
+  .clear
   #profile_followers
     %h2 Mis seguidores
     = render :partial => "shared/profiles_portlet", :locals => { :items =>  @profile.followers, :style => :portletG, :title => I18n.t('tog_social.profiles.model.followers'), :no_items => I18n.t('tog_social.profiles.model.followers_not_found', :profile_full_name => @profile.full_name) }
+  .clear
   #profile_following
     %h2 A quiénes sigo
     = render :partial => "shared/profiles_portlet", :locals => { :items =>  @profile.followings,:style => :portletG,:title => I18n.t('tog_social.profiles.model.followings'),:no_items => I18n.t('tog_social.profiles.model.followings_not_found', :profile_full_name => @profile.full_name) }
-
+  .clear
 #main_content
   
   #profile_predictions.content
