@@ -121,7 +121,7 @@ class Account < ActiveRecord::Base
       @score ||= self.user_badges.sum(:points)
     end
 
-    def save_upload(file)
+    def self.save_upload(file)
       id = Time.zone.now
       logger.info "Id: #{id}"
       path = "#{RAILS_ROOT}/public/system/tempuploads"
