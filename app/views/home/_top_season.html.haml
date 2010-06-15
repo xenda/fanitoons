@@ -1,7 +1,7 @@
 %li
   %a{:href=>profile_path(top_season.profile.id)}
     - if top_season.picture_file_name
-      = image_tag top_season.picture(:thumb), :class => "avatar"
+      = image_tag top_season.thumbnail(:thumb), :class => "avatar"
     - else
       %img.avatar{:alt => "", :height => "67", :src => "/images/avatar.jpg", :width => "67"}/
   %h4= top_season.name
