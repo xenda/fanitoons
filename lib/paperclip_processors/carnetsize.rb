@@ -10,7 +10,10 @@ module Paperclip
           p.sub(/ -crop \S+/, '')  
         end
         
-        result.unshift(crop_command)
+        crop,size = crop_command.split(" ")
+        result.unshift(size)
+        result.unshift(crop)
+        result
         
       else
         crop_command + result.sub(/ -crop \S+/, '')  
@@ -19,7 +22,7 @@ module Paperclip
     end
 
     def crop_command
-        " -crop 167x185+0+0"
+        '-crop 167x185+0+0'
     end
 
   end
