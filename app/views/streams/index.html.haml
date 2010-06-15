@@ -1,0 +1,9 @@
+- @title = "Patatoon ::  ¿Qué hace la comunidad?"
+- @body_class = "home"
+= display_flashes
+
+%h2
+  Mira lo último
+  %span en Patatoon
+
+= render :partial => "streams/activity", :collection => @activities

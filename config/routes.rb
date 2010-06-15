@@ -132,6 +132,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :stadia, :as => "estadios"
   map.resources :teams, :as => "equipos", :has_many => :comments
   
+  map.stream "/actividades", :controller=>"streams",:action=>"index"
   # map.resources :accounts, :as=>"cuentas"
   map.invite_friends "/invitar", :controller => "home", :action=>"invite"
   map.match_prediction "/encuentros/:id/pronostico", :controller=>"matches", :action=>"prediction"

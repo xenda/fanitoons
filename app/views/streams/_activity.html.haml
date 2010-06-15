@@ -1,0 +1,28 @@
+%li{:class=>(cycle("odd","even"))}
+  .meta
+    %a{:href=>profile_path(activity.account.profile.id)}
+      - if activity.account.picture_file_name
+        = image_tag activty.account.thumbnail(:thumb),:size=>"51x51", :class => "avatar"
+      - else
+        %img.avatar{:alt => "", :height => "51", :src => "/images/avatar.jpg", :width => "51"}/
+    %p= activity.account.name
+    %p.title= activity.account.title
+  .content
+    %p
+      = activity.account.name
+      ha 
+      - case activity.item_type
+        - when "Prediction"
+          - if activity.action == "create"
+            = link_to "dejado un pronóstico", prediction_path(activity.item_id)
+          - if activity.activity == "update"
+            = link_to "actualizado su pronóstico", prediction_path(activity.item_id)
+          para el partido
+          = link_to "#{activity.item.match.name}", match_path(activity.item.match.id)
+        - when "Comment"
+          - if activity.action == "create"
+            dejado un comentario a
+            = link_to "#{activity.item.commentable.name}", polymorphic_url(activity.item.commentable)
+            %p= link_to truncate(activity.item.content,100), polymorphic_url(activity.item.commentable,:anchor=>"comment_#{activity.item.id}")
+        - when "Avatar"
+          = link_to "cambiado su avatar", profile_path(activity.account.profile.id)
