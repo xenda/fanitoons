@@ -147,7 +147,7 @@ class Account < ActiveRecord::Base
   
       FileUtils.makedirs(path)
       File.open("#{path}/#{file['original_name']}","wb"){ |stream| stream.write(f.read)}
-      "/system/tempuploads/#{file['original_name']}"
+      "system/tempuploads/#{file['original_name']}"
     end
     
     def get_avatar
