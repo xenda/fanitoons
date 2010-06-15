@@ -7,7 +7,7 @@ class Member::BaseController < ApplicationController
   private
 
   def bad_record
-     render :template => "member/site/not_found"
+     redirect_to root_path
   end
 
 end
