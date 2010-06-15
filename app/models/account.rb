@@ -84,12 +84,6 @@ class Account < ActiveRecord::Base
       end
     end    
 
-    private
-    # clean tmp directory used in handling new param
-    def clean_tmp_upload_dir
-      FileUtils.rm_r(tmp_upload_dir) if self.tmp_upload_dir && File.directory?(self.tmp_upload_dir)
-    end                     
-  end
 
 
   def network
@@ -356,6 +350,13 @@ class Account < ActiveRecord::Base
     def create_profile
       self.profile ||= Profile.new
     end
+  
+    private
+    # clean tmp directory used in handling new param
+    def clean_tmp_upload_dir
+      FileUtils.rm_r(tmp_upload_dir) if self.tmp_upload_dir && File.directory?(self.tmp_upload_dir)
+    end                     
+  
   
   ##
   # This method is used for retrive the original password.
