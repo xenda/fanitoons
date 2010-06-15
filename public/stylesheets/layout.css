@@ -110,6 +110,7 @@ body {
 
 #portlet_friends div.portlet_content ul.clearfix li {
 	float: left;
+	margin-right: 8px;
 }
 
 a.button,
