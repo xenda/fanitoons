@@ -24,6 +24,10 @@ class HomeController < ApplicationController
   end
   
   def post
+        render :text => "Ok"
+  end
+  
+  def carga
     url = current_account.save_upload(params["Filedata"])
     render :text => url
   end
