@@ -105,7 +105,11 @@ class Account < ActiveRecord::Base
 
     def save_upload(file)
       id = Time.zone.now
+      logger.info "Id: #{id}"
       path = "#{RAILS_ROOT}/public/system/tempuploads"
+      logger.info "Ruta: #{path}"
+      logger.info "Extension: #{extension(file)}"
+        
       FileUtils.makedirs(path)
       File.open("#{path}/#{id}.#{extension(file)}","w"){ |file| file.write(file.read)}
       "#{id}.#{extension}"
