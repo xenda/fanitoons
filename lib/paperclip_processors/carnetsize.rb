@@ -3,11 +3,15 @@ module Paperclip
   class Carnetsize < Thumbnail
 
     def transformation_command
-      if crop_command
-        crop_command + super.sub(/ -crop \S+/, '')
+      result = super
+      if super.is_a? Array
+        result.each do |p|
+          p.sub!(/ -crop \S+/, '')  
+        end
       else
-        super
+        crop_command + result.sub(/ -crop \S+/, '')  
       end
+      
     end
 
     def crop_command

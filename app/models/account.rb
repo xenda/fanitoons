@@ -75,9 +75,9 @@ class Account < ActiveRecord::Base
   # Paperclip::Interpolations::RAILS_ROOT = "."
   # Paperclip::Storage::S3::RAILS_ENV = PADRINO_ENV
   
-    has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "67x67+1+1", :profile=>"200x300#+0+0" },:path => ":rails_root/public/system/accounts/:attachment/:id/:style.:extension", :url => "/system/accounts/:attachment/:id/:style.:extension"
+    has_attached_file :picture, :styles => { :medium => ["300x300",:png], :profile=>["200x300",:png] },:path => ":rails_root/public/system/accounts/:attachment/:id/:style.:extension", :url => "/system/accounts/:attachment/:id/:style.:extension"
 
-    has_attached_file :thumbnail, :styles => { :thumb => "67x67"},:path => ":rails_root/public/system/thumbnails/:attachment/:id/:style.:extension", :url => "/system/thumbnails/:attachment/:id/:style.:extension", :processors => [:carnetsize]
+    has_attached_file :thumbnail, :styles => { :thumb => ["67x67",:png]},:path => ":rails_root/public/system/thumbnails/:attachment/:id/:style.:extension", :url => "/system/thumbnails/:attachment/:id/:style.:extension", :processors => [:carnetsize]
     
     def save_upload(file)
       id = Time.zone.now
