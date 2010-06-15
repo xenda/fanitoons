@@ -101,6 +101,17 @@ body {
 	color: #fffef6;
 }
 
+#portlet_friends div.portlet_content ul.clearfix li a {
+	overflow: hidden;
+	width: 55px;
+	height: 55px !important;
+	display: block;
+}
+
+#portlet_friends div.portlet_content ul.clearfix li {
+	float: left;
+}
+
 a.button,
 input.submit {
 	color:#fff;
