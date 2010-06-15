@@ -5,8 +5,8 @@ module Paperclip
     def transformation_command
       result = super
       if super.is_a? Array
-        result.each do |p|
-          p.sub!(/ -crop \S+/, '')  
+        result.map do |p|
+          crop_command + p.sub(/ -crop \S+/, '')  
         end
       else
         crop_command + result.sub(/ -crop \S+/, '')  
