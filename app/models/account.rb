@@ -146,8 +146,8 @@ class Account < ActiveRecord::Base
       f = File.new(tmp_file_path)
   
       FileUtils.makedirs(path)
-      File.open("#{path}/#{file['original_name']}","wb"){ |stream| stream.write(f.read)}
-      "system/tempuploads/#{file['original_name']}"
+      File.open("#{path}/#{file['original_name'].parameterize}","wb"){ |stream| stream.write(f.read)}
+      "system/tempuploads/#{file['original_name'].parameterize}"
     end
     
     def get_avatar
