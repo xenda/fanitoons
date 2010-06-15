@@ -15,7 +15,7 @@
         - when "Prediction"
           - if activity.action == "create"
             = link_to "dejado un pronóstico", prediction_path(activity.item_id)
-          - if activity.activity == "update"
+          - if activity.action == "update"
             = link_to "actualizado su pronóstico", prediction_path(activity.item_id)
           para el partido
           = link_to "#{activity.item.match.name}", match_path(activity.item.match.id)
