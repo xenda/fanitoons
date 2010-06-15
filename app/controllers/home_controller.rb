@@ -24,7 +24,13 @@ class HomeController < ApplicationController
   end
   
   def post
-        render :text => "Ok"
+    avatar = current_account.get_avatar
+    avatar.short_id = params["idShort"]
+    avatar.snicker_id = params["idZapatillas"]
+    avatar.shirt_id = params["idTshirt"]
+    avatar.save
+     
+    render :text => "Ok"
   end
   
   def carga

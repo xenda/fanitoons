@@ -87,6 +87,11 @@ class Account < ActiveRecord::Base
       "#{id}.#{extension}"
     end
     
+    def get_avatar
+      return self.avatar if self.avatar
+      return self.build_avatar 
+    end
+    
     def extension(file)
       file.original_filename.split(".").last
     end
