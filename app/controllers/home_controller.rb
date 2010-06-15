@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   
   def load_temp
     logger.info "Loading account"
-    url = Match.save_upload(params["Filedata"])
+    url = Account.save_upload(params["Filedata"])
     render :text => url
   end
     
