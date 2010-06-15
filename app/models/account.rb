@@ -79,22 +79,6 @@ class Account < ActiveRecord::Base
 
     has_attached_file :thumbnail, :styles => { :thumb => ["67x67",:png]},:path => ":rails_root/public/system/thumbnails/:attachment/:id/:style.:extension", :url => "/system/thumbnails/:attachment/:id/:style.:extension", :processors => [:carnetsize]
     
-    def save_upload(file)
-      id = Time.zone.now
-      path = "#{RAILS_ROOT}/public/system/tempuploads"
-      FileUtils.makedirs(path)
-      File.open("#{path}/#{id}.#{extension(file)}","w"){ |file| file.write(file.read)}
-      "#{id}.#{extension}"
-    end
-    
-    def get_avatar
-      return self.avatar if self.avatar
-      return self.build_avatar 
-    end
-    
-    def extension(file)
-      file.original_filename.split(".").last
-    end
     
     # ,
     #                    :storage => :s3,
@@ -118,6 +102,24 @@ class Account < ActiveRecord::Base
     def score
       @score ||= self.user_badges.sum(:points)
     end
+
+    def save_upload(file)
+      id = Time.zone.now
+      path = "#{RAILS_ROOT}/public/system/tempuploads"
+      FileUtils.makedirs(path)
+      File.open("#{path}/#{id}.#{extension(file)}","w"){ |file| file.write(file.read)}
+      "#{id}.#{extension}"
+    end
+    
+    def get_avatar
+      return self.avatar if self.avatar
+      return self.build_avatar 
+    end
+    
+    def extension(file)
+      file.original_filename.split(".").last
+    end
+
 
    def has_predicted_match?(match)
      not prediction_for_match(match).empty?

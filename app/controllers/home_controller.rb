@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   
-  before_filter :authenticate_account!, :only =>[:invite]
+  before_filter :authenticate_account!, :only =>[:invite, :upload,:post,:carga]
   
   skip_before_filter :verify_authenticity_token, :only=>["upload","post","carga"]
   
