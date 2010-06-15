@@ -4,6 +4,7 @@
 	http://patatoon.com/stylesheets/layout.css?1276479266
 	http://patatoon.com/stylesheets/layout.css?1276483769
 	http://patatoon.com/stylesheets/layout.css?1276517107
+	http://patatoon.com/stylesheets/layout.css?1276617126
 */
 
 @font-face {
@@ -95,6 +96,22 @@ body {
 
 .button {
 	background:url(../images/buttons.png) no-repeat;
+}
+
+.messages #content form div.actions a.button.mainaction {
+	padding: 5px 10px;
+	height: 10px !important;
+	display: block;
+	width: 90px;
+	border: none;
+	float: left;
+	color: white;
+	font-weight: normal;
+	font-family: Arial, Helvetica, Geneva, sans-serif;
+}
+
+#content form div.actions {
+	margin-top: 10px;
 }
 
 #content form div.actions input.button.mainaction {
@@ -1428,8 +1445,10 @@ div#profile_data h3 {
 }
 
 .messages #content form div.actions input.button.delete {
-	margin-top: 2em;
+
 	color: white;
+	border: none;
+	font-size: 1em;
 }
 
 .messages #content div.titleB a {
