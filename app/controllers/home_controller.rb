@@ -1,8 +1,15 @@
 class HomeController < ApplicationController
   
-  before_filter :authenticate_account!, :only =>[:invite, :upload,:post,:load_temp]
+  before_filter :authenticate_account!, :only =>[:invite, :upload,:post]
   
   skip_before_filter :verify_authenticity_token, :only=>["upload","post","load_temp"]
+  
+  def load_temp
+    logger.info "Loading account"
+    url = current_account.save_upload(params["Filedata"])
+    render :text => url
+  end
+    
   
   def index
     @posts = Post.all(:order => 'published_at desc, created_at desc', :conditions=>["(published_at <= ?) or published_at is null",Time.zone.now])
@@ -30,12 +37,7 @@ class HomeController < ApplicationController
      
     render :text => "Ok"
   end
-  
-  def load_temp
-    logger.info "Loading account"
-    url = current_account.save_upload(params["Filedata"])
-    render :text => url
-  end
+
 
   def show
     @post = Post.find(params[:id])
