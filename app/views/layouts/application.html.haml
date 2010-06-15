@@ -53,6 +53,7 @@
             - if account_signed_in?
               #top_profile
                 = link_to current_account.email, profile_path(current_account.profile.id)
+                = link_to "mensajes", member_messages_path
                 = link_to "salir", destroy_account_session_path              
             - else
               = link_to "iniciar sesión", new_account_session_path, {:id=>"new_session", :class=>"button log-in"}

@@ -97,6 +97,10 @@ body {
 	background:url(../images/buttons.png) no-repeat;
 }
 
+#content form div.actions input.button.mainaction {
+	color: #fffef6;
+}
+
 a.button,
 input.submit {
 	color:#fff;
@@ -1368,4 +1372,77 @@ div#profile_data h3 {
 	margin-left: 30px;
 	margin-top: 20px;
 	display: block;
+}
+
+.messages #content h3 {
+	font-size: 1.5em;
+	color: #a5c35f;
+}
+
+.messages #content h3 a {
+	font-size: 14px;
+	color: #423b13;
+}
+
+.messages #content h3 a.button.mainaction.add {
+	color: #91a75d;
+	background-image: none;
+	text-decoration: underline;
+}
+
+.messages #content table.tableB {
+	width: 100%;
+	margin-top: 10px;
+}
+
+.messages #content table.tableB td {
+	padding: 5px;
+}
+
+.messages #content table.tableB td a {
+	color: #94823a;
+	text-decoration: underline;
+}
+
+.messages #content div.titleB {
+	font-size: 2em;
+}
+
+.messages #content p strong {
+	font-size: 1.3em;
+	display: block;
+	color: #94823a;
+	margin-top: 10px;
+}
+
+.messages #content form div.actions input.button.delete {
+	margin-top: 2em;
+	color: white;
+}
+
+.messages #content div.titleB a {
+	color: #94823a;
+}
+
+.messages #content form fieldset div.fields p label {
+	font: 1.2em Arial, Helvetica, Geneva, sans-serif;
+	line-height: 1.4em;
+}
+
+.messages #content form fieldset div.fields p {
+	margin-bottom: 10px;
+}
+
+.messages #content form fieldset div.fields p label {
+	display: block;
+}
+.messages #content table.tableB thead tr th {
+	padding: 5px;
+	background-color: #383627;
+	color: white;
+	font-weight: bold;
+}
+
+.messages #content table.tableB tbody tr.pair {
+	background-color: #e6ebd6;
 }

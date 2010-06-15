@@ -1,4 +1,4 @@
-<h2><%= I18n.t("tog_mail.plugin_name") %></h2>
+<h2>Mensajes</h2>
 <h3>
 <% for folder in @folder.siblings  %>
    <%= link_to folder.name, {:controller=>"messages",:action=>"index",:id=>folder.id} -%> |
