@@ -4,7 +4,14 @@
       <ul class="clearfix">
         <% unless items.blank? %>
           <% for item in items %>
-            <li><%= link_to "Perfil", profile_path(item), :title => item.full_name %></li>
+            <li>
+              <%= link_to item.full_name, profile_path(item), :title => item.full_name %>
+              <%  if item.account.picture_file_name %>
+              <%= image_tag item.account.thumbnail(:thumb),:size=>"51x51", :class => "avatar" %>
+              <% else %>
+                <img src="/images/avatar.jpg" class="avatar" alt="" height="45",width="45" />
+              <%- end -%>
+            </li>
           <% end %>
         <% else %>
           <li><%= no_items %></li>
