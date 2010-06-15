@@ -1053,9 +1053,10 @@ margin-top: 45px;
 }
 
 img#avatar_image {
-	width: 200px;
-	height: 300px;
 	display: block;
+  height:300px;
+  width:111px;
+  margin-bottom:10px;
 }
 
 #profile_friends h2,
@@ -1368,8 +1369,3 @@ div#profile_data h3 {
 	margin-top: 20px;
 	display: block;
 }
-
-
-
-
-
