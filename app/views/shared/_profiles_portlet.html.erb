@@ -7,7 +7,7 @@
             <li>
               <% link_to profile_path(item), :title => item.full_name do %>
                 <%  if item.account.picture_file_name %>
-                <%= image_tag item.account.thumbnail(:thumb),:size=>"51x51", :class => "avatar" %>
+                <%= image_tag item.account.thumbnail(:thumb),:size=>"45x45", :class => "avatar" %>
                 <% else %>
                   <img src="/images/avatar.jpg" class="avatar" alt="" height="45",width="45" />
                 <%- end -%>
