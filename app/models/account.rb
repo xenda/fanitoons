@@ -1,3 +1,5 @@
+require 'ftools'
+
 class Account < ActiveRecord::Base
   
   # Setup accessible (or protected) attributes for your model
@@ -73,7 +75,21 @@ class Account < ActiveRecord::Base
   # Paperclip::Interpolations::RAILS_ROOT = "."
   # Paperclip::Storage::S3::RAILS_ENV = PADRINO_ENV
   
-    has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "67x67#+1+1", :profile=>"200x300#+0+0" },:path => ":rails_root/public/system/accounts/:attachment/:id/:style.:extension", :url => "/system/accounts/:attachment/:id/:style.:extension"
+    has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "67x67+1+1", :profile=>"200x300#+0+0" },:path => ":rails_root/public/system/accounts/:attachment/:id/:style.:extension", :url => "/system/accounts/:attachment/:id/:style.:extension"
+
+    has_attached_file :thumbnail, :styles => { :thumb => "67x67"},:path => ":rails_root/public/system/thumbnails/:attachment/:id/:style.:extension", :url => "/system/thumbnails/:attachment/:id/:style.:extension", :processors => [:carnetsize]
+    
+    def save_upload(file)
+      id = Time.zone.now
+      path = "#{RAILS_ROOT}/public/system/tempuploads"
+      FileUtils.makedirs(path)
+      File.open("#{path}/#{id}.#{extension}","w"){ |file| file.write(file.read)}
+      "#{id}.#{extension}"
+    end
+    
+    def extension(file)
+      file.original_filename.split(".").last
+    end
     
     # ,
     #                    :storage => :s3,

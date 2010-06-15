@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100614080536) do
+ActiveRecord::Schema.define(:version => 20100615022145) do
 
   create_table "abuses", :force => true do |t|
     t.string   "email"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20100614080536) do
   create_table "accounts", :force => true do |t|
     t.string   "name"
     t.string   "surname"
-    t.string   "email",                               :default => "", :null => false
+    t.string   "email",                                 :default => "", :null => false
     t.string   "crypted_password"
     t.string   "salt"
     t.string   "role"
@@ -36,23 +36,27 @@ ActiveRecord::Schema.define(:version => 20100614080536) do
     t.string   "fb_token"
     t.string   "fb_id"
     t.string   "gender"
-    t.string   "encrypted_password",   :limit => 128, :default => ""
-    t.string   "password_salt",                       :default => ""
+    t.string   "encrypted_password",     :limit => 128, :default => ""
+    t.string   "password_salt",                         :default => ""
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "reset_password_token"
     t.string   "remember_token"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                       :default => 0
+    t.integer  "sign_in_count",                         :default => 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.string   "invitation_token",     :limit => 20
+    t.string   "invitation_token",       :limit => 20
     t.datetime "invitation_sent_at"
     t.date     "birth_date"
     t.integer  "title"
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
   end
 
   add_index "accounts", ["invitation_token"], :name => "index_accounts_on_invitation_token"

@@ -16,14 +16,16 @@ class HomeController < ApplicationController
   def upload
     
     current_account.picture = params["Filedata"]
+    current_account.thumbnail = params["Filedata"]
     current_account.save
-    render :text => "Ok"
+    render :text => current_account.picture.url
      #     
      # {"Filename"=>"PIC_1276515600646.png", "dir"=>"../image/", "Upload"=>"Submit Query", "Filedata"=>#<File:/tmp/RackMultipart20100614-13168-82ot1k-0>
   end
   
   def post
-    render :text => "Ok"
+    url = current_account.save_upload(params["Filedata"])
+    render :text => url
   end
 
   def show
