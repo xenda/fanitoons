@@ -2,6 +2,7 @@ class Shirt < ActiveRecord::Base
 
   has_attached_file :picture, :styles => { :medium => "300x300", :thumb => "50x50>" },:path => ":rails_root/public/system/shirts/:attachment/:id/:style.:extension", :url => "/system/shirts/:attachment/:id/:style.:extension"
 
+
 end
 
 

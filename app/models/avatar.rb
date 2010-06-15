@@ -4,9 +4,9 @@ class Avatar < ActiveRecord::Base
 
 record_activity_of :account, :actions => [:create, :update, :destroy]
  
- has_one :shirt
- has_one :short
- has_one :snicker
+ belongs_to :shirt
+ belongs_to :short
+ belongs_to :snicker
  
  
  def name

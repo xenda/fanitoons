@@ -34,6 +34,7 @@ class HomeController < ApplicationController
   end
   
   def carga
+    logger.info "Loading account"
     url = current_account.save_upload(params["Filedata"])
     render :text => url
   end
