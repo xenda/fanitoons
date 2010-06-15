@@ -5,6 +5,7 @@
 	http://patatoon.com/stylesheets/layout.css?1276483769
 	http://patatoon.com/stylesheets/layout.css?1276517107
 	http://patatoon.com/stylesheets/layout.css?1276617126
+	http://trustart.heroku.com/stylesheets/layout.css?1276627313
 */
 
 @font-face {
@@ -103,7 +104,7 @@ body {
 	height: 10px !important;
 	display: block;
 	width: 90px;
-	border: none;
+	border: none !important;
 	float: left;
 	color: white;
 	font-weight: normal;
@@ -1447,7 +1448,7 @@ div#profile_data h3 {
 .messages #content form div.actions input.button.delete {
 
 	color: white;
-	border: none;
+	border: none !important;
 	font-size: 1em;
 }
 
