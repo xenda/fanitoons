@@ -33,9 +33,13 @@
 
 .streams #content li div.content {
 	float: left;
-	width: 500px;
+	width: 600px;
 	border: 1px solid #8da15e;
 	padding: 10px 20px;
+}
+
+.streams #content {
+	width: 900px !important;
 }
 
 .streams #content li div.content a {
