@@ -68,6 +68,30 @@ class Account < ActiveRecord::Base
   accepts_nested_attributes_for :profile
   attr_accessible :profile_attributes
 
+  attr_accessor :tmp_upload_dir
+  after_create  :clean_tmp_upload_dir
+
+
+  # handle new param
+    def fast_asset=(file)
+      if file && file.respond_to?('[]')
+        self.tmp_upload_dir = "#{file['filepath']}_1"
+        tmp_file_path = "#{self.tmp_upload_dir}/#{file['original_name']}"
+        FileUtils.mkdir_p(self.tmp_upload_dir)
+        FileUtils.mv(file['filepath'], tmp_file_path)
+        self.picture = File.new(tmp_file_path)
+        self.thumbnail = File.new(tmp_file_path)
+      end
+    end    
+
+    private
+    # clean tmp directory used in handling new param
+    def clean_tmp_upload_dir
+      FileUtils.rm_r(tmp_upload_dir) if self.tmp_upload_dir && File.directory?(self.tmp_upload_dir)
+    end                     
+  end
+
+
   def network
     profile.network.collect{|profile| profile.user}
   end
