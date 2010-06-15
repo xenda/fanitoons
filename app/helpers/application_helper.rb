@@ -3,7 +3,7 @@ module ApplicationHelper
   
   def display_flashes
 
-     flash_tags = [:error, :warning, :notice, :alert].map { |type| flash_tag(type, "message #{type}")}.join
+     flash_tags = [:error, :warning, :notice, :alert, :ok].map { |type| flash_tag(type, "message #{type}")}.join
      content_tag(:div,flash_tags,{:class=>"flash"})
 
    end
