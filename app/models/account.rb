@@ -137,7 +137,6 @@ class Account < ActiveRecord::Base
       logger.info "Id: #{id}"
       path = "#{RAILS_ROOT}/public/system/tempuploads"
       logger.info "Ruta: #{path}"
-      logger.info "Extension: #{extension(file)}"
       
       tmp_upload_dir = "#{file['filepath']}_1"
       tmp_file_path = "#{tmp_upload_dir}/#{file['original_name']}"
@@ -147,8 +146,8 @@ class Account < ActiveRecord::Base
       file = File.new(tmp_file_path)
   
       FileUtils.makedirs(path)
-      File.open("#{path}/#{id}.#{extension(file)}","wb"){ |stream| stream.write(file.read)}
-      "#{id}.#{extension}"
+      File.open("#{path}/#{file['original_name']}","wb"){ |stream| stream.write(file.read)}
+      "/system/tempuploads/#{file['original_name']}"
     end
     
     def get_avatar
