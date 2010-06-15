@@ -2,7 +2,7 @@
   .meta
     %a{:href=>profile_path(activity.account.profile.id)}
       - if activity.account.picture_file_name
-        = image_tag activty.account.thumbnail(:thumb),:size=>"51x51", :class => "avatar"
+        = image_tag activity.account.thumbnail(:thumb),:size=>"51x51", :class => "avatar"
       - else
         %img.avatar{:alt => "", :height => "51", :src => "/images/avatar.jpg", :width => "51"}/
     %p= activity.account.name
