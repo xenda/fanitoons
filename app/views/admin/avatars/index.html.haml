@@ -21,9 +21,9 @@
       %tr{:class=>cycle('even','odd') }
         %td= avatar.id
         %td= avatar.account
-        %td= image avatar.shirt_id
-        %td= image avatar.short_id
-        %td= image avatar.snicker_id
+        %td= avatar.shirt_id
+        %td= avatar.short_id
+        %td= avatar.snicker_id
         %td= link_to 'Editar', edit_admin_avatar_path(avatar)
         %td= link_to 'Eliminar', ["admin",avatar], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
       
