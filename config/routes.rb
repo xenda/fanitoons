@@ -3,8 +3,10 @@ ActionController::Routing::Routes.draw do |map|
 
 
   map.connect "/upload", :controller => "home", :action=>"upload"
+  
   map.connect "/post_face/", :controller => "home", :action => "post"
-  map.connect "/carga/", :controller => "home", :action => "carga"
+  
+  map.connect "/carga", :controller => "home", :action => "load_temp"
   # map.routes_from_plugin 'tog_mail'
   # 
   # map.routes_from_plugin 'tog_social'
