@@ -143,10 +143,10 @@ class Account < ActiveRecord::Base
       FileUtils.mkdir_p(tmp_upload_dir)
       FileUtils.mv(file['filepath'],tmp_file_path)
       
-      file = File.new(tmp_file_path)
+      f = File.new(tmp_file_path)
   
       FileUtils.makedirs(path)
-      File.open("#{path}/#{file['original_name']}","wb"){ |stream| stream.write(file.read)}
+      File.open("#{path}/#{file['original_name']}","wb"){ |stream| stream.write(f.read)}
       "/system/tempuploads/#{file['original_name']}"
     end
     
