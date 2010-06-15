@@ -121,15 +121,33 @@ class Account < ActiveRecord::Base
       @score ||= self.user_badges.sum(:points)
     end
 
+    def fast_asset=(file)
+      if file && file.respond_to?('[]')
+        self.tmp_upload_dir = "#{file['filepath']}_1"
+        tmp_file_path = "#{self.tmp_upload_dir}/#{file['original_name']}"
+        FileUtils.mkdir_p(self.tmp_upload_dir)
+        FileUtils.mv(file['filepath'], tmp_file_path)
+        self.picture = File.new(tmp_file_path)
+        self.thumbnail = File.new(tmp_file_path)
+      end
+    end
+
     def self.save_upload(file)
       id = Time.zone.now
       logger.info "Id: #{id}"
       path = "#{RAILS_ROOT}/public/system/tempuploads"
       logger.info "Ruta: #{path}"
       logger.info "Extension: #{extension(file)}"
-        
+      
+      tmp_upload_dir = "#{file['filepath']}_1"
+      tmp_file_path = "#{tmp_upload_dir}/#{file['original_name']}"
+      FileUtils.mkdir_p(tmp_upload_dir)
+      FileUtils.mv(file['filepath'],tmp_file_path)
+      
+      file = File.new(tmp_file_path)
+  
       FileUtils.makedirs(path)
-      File.open("#{path}/#{id}.#{extension(file)}","wb"){ |file| file.write(file.read)}
+      File.open("#{path}/#{id}.#{extension(file)}","wb"){ |stream| stream.write(file.read)}
       "#{id}.#{extension}"
     end
     
