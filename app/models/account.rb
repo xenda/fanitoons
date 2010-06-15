@@ -83,7 +83,7 @@ class Account < ActiveRecord::Base
       id = Time.zone.now
       path = "#{RAILS_ROOT}/public/system/tempuploads"
       FileUtils.makedirs(path)
-      File.open("#{path}/#{id}.#{extension}","w"){ |file| file.write(file.read)}
+      File.open("#{path}/#{id}.#{extension(file)}","w"){ |file| file.write(file.read)}
       "#{id}.#{extension}"
     end
     
