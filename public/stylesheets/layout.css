@@ -25,6 +25,7 @@
 	float: left;
 	margin-right: 10px;
 	text-align: center;
+	width: 100px;
 }
 
 #content li div.meta p.title {
