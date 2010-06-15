@@ -14,9 +14,7 @@ class HomeController < ApplicationController
   end
 
   def upload
-    
-    current_account.picture = params["Filedata"]
-    current_account.thumbnail = params["Filedata"]
+    current_account.fast_asset = params["upload"]["fast_asset"]
     current_account.save
     render :text => current_account.picture.url
      #     
