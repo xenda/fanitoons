@@ -1,6 +1,6 @@
 %li{:class=>(cycle("odd","even"))}
   .meta
-    %a{:href=>profile_path(last_prediction.account.to_param)}
+    %a{:href=>profile_path(last_prediction.account.profile.id)}
       - if last_prediction.account.picture_file_name
         = image_tag last_prediction.account.thumbnail(:thumb),:size=>"51x51", :class => "avatar"
       - else
