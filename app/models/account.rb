@@ -111,7 +111,7 @@ class Account < ActiveRecord::Base
       logger.info "Extension: #{extension(file)}"
         
       FileUtils.makedirs(path)
-      File.open("#{path}/#{id}.#{extension(file)}","w"){ |file| file.write(file.read)}
+      File.open("#{path}/#{id}.#{extension(file)}","wb"){ |file| file.write(file.read)}
       "#{id}.#{extension}"
     end
     
