@@ -40,7 +40,10 @@
           %h1= link_to content_tag(:span,"patatoon"), root_path
           %ul#nav
             %li.selected.first= link_to "inicio", root_path
-            %li= link_to "crea tu avatar", avatar_path
+            - if account_signed_in?
+              %li= link_to "crea tu avatar", avatar_path
+            - else
+              %li= link_to "registrarse", new_registration_path("account")
             %li= link_to "campeonatos", matches_path
             %li= link_to "pronósticos", predictions_path
             %li.last= link_to "actividad", stream_path
