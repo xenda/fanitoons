@@ -1525,6 +1525,7 @@ td.flag {
 }
 
 
+
 #about_us p,
 #rules p {
 	line-height: 1.6em;
@@ -1552,4 +1553,8 @@ td.flag {
 	border-width: 1px;
 	border-top: 1px solid #c3c6c6;
 	color: #303030;
+}
+
+#content h3 {
+	margin-bottom: 10px;
 }
