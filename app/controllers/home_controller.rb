@@ -27,6 +27,10 @@ class HomeController < ApplicationController
     @last_match = @matches.first
     @matches = @matches[1..-1]
   end
+  
+  def about_us
+    
+  end
 
   def upload
     current_account.fast_asset = params["upload"]["fast_asset"]
