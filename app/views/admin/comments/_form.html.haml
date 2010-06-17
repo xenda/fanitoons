@@ -5,6 +5,8 @@
     = form.input :email
     = form.input :name
     = form.input :account, :label => "Autor"
-    = form.input :website, :label => "Sitio web"    
+    = form.input :website, :label => "Sitio web"
+    = hidden_field_tag "comment[commentable_type]", (@comment.commentable_type || "Post")
+    = hidden_field_tag "comment[commentable_id]", (@comment.commentable_id || "1")    
   - form.buttons do
     = form.commit_button 'Grabar',:button_html => { :class => "submit" }
