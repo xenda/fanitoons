@@ -2,16 +2,20 @@
 %li{:class => last_class}
   - if current_account
     %a{:href=>match_prediction_path(next_match), :class => "iframe"} 
-      .flag.small{:class=> next_match.local.flag_name, :title=>next_match.local.name}
+      .flag
+        = flag_image(next_match.local.flag_name,"small","32x32")
         = next_match.local.short_name
-      .flag.small{:class=> next_match.visitor.flag_name, :title=>next_match.visitor.name}
+      .small
+        = flag_image(next_match.visitor.flag_name,"small","32x32")
         = next_match.visitor.short_name 
       %p= (distance_of_time_in_words_to_now(next_match.played_at).gsub("hace", "")) #.split(" ").join("<br/>")
   - else
     %a{:href=>match_path(next_match)}
-      .flag.small{:class=> next_match.local.flag_name, :title=>next_match.local.name}
+      .flag
+        = flag_image(next_match.local.flag_name,small,"32x32")
         = next_match.local.short_name
-      .flag.small{:class=> next_match.visitor.flag_name, :title=>next_match.visitor.name}
+      .flag
+        = flag_image(next_match.visitor.flag_name,small,"32x32")
         = next_match.visitor.short_name
       %p= (distance_of_time_in_words_to_now(next_match.played_at).gsub("hace", "")) #.split(" ").join("<br/>")
     

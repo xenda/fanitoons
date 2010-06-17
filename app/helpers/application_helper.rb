@@ -8,6 +8,12 @@ module ApplicationHelper
 
    end
 
+
+   def flag_image(flag_name,size="small",image_size="32x32")
+     filename = "/images/flags/#{flag_name}-#{size}.png"
+     image_tag(filename,{:size=>image_size, :class=>"flag"})
+   end
+
    def flash_tag(type,tag_class)
     content_tag(:span,flash[type],:class=>tag_class) unless flash[type].blank?
    end

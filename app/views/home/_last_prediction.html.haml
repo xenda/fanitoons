@@ -12,9 +12,11 @@
       %tr.header
         %td.first Partido
         %td
-          .flag{:class=>last_prediction.match.local.flag_name}= last_prediction.match.local.short_name
+          = flag_image(last_prediction.match.local.flag_name,"small")
+          = last_prediction.match.local.short_name
         %td
-          .flag.small{:class=>last_prediction.match.visitor.flag_name}= last_prediction.match.visitor.short_name
+          = flag_image(last_prediction.match.visitor.flag_name,"small")
+          = last_prediction.match.visitor.short_name
       %tr
         %td.first goles
         - local_goals = last_prediction.first_team_result || "--"

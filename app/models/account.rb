@@ -139,15 +139,22 @@ class Account < ActiveRecord::Base
       logger.info "Ruta: #{path}"
       
       tmp_upload_dir = "#{file['filepath']}_1"
-      tmp_file_path = "#{tmp_upload_dir}/#{file['original_name']}"
+      original_name = file['original_name']
+      extension = original_name[-4..-1]
+      original_name = original_name[0..5].parameterize
+      
+      tmp_file_path = "#{tmp_upload_dir}/#{original_name}#{extension}"
+      
       FileUtils.mkdir_p(tmp_upload_dir)
       FileUtils.mv(file['filepath'],tmp_file_path)
       
       f = File.new(tmp_file_path)
   
       FileUtils.makedirs(path)
-      File.open("#{path}/#{file['original_name'].parameterize}","wb"){ |stream| stream.write(f.read)}
-      "system/tempuploads/#{file['original_name'].parameterize}"
+      File.open("#{path}/#{original_name}#{extension}","wb"){ |stream| stream.write(f.read)}
+      result = "system/tempuploads/#{original_name}#{extension}"
+      logger.info result
+      result
     end
     
     def get_avatar

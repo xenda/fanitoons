@@ -3,9 +3,13 @@
   #counter-cont
     #vs
       %a{:href=>match_path(@last_match)}
-        .one.flag.medium{:title=>@last_match.local.name, :class=>@last_match.local.flag_name}= @last_match.try(:local).try(:short_name)
-        vs
-        .two.flag.medium{:title=>@last_match.visitor.name, :class=>@last_match.visitor.flag_name}= @last_match.try(:visitor).try(:short_name)
+        .one
+          = flag_image(@last_match.local.flag_name,"medium","48x48")
+          = @last_match.try(:local).try(:short_name)
+        %span vs
+        .two
+          = flag_image(@last_match.visitor.flag_name, "medium","48x48")
+          = @last_match.try(:visitor).try(:short_name)
     .counter{:rel=>@last_match.played_at }
     
       / .day
