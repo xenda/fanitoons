@@ -13,3 +13,6 @@
     %p.title= (comment.account.title if comment.account)
   .content
     = strip_tags(comment.content) 
+    %strong
+      dicho en
+      = l(comment.created_at, :format=>:short)
