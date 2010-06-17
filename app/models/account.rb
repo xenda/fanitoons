@@ -75,8 +75,15 @@ class Account < ActiveRecord::Base
   # handle new param
     def fast_asset=(file)
       if file && file.respond_to?('[]')
-        self.tmp_upload_dir = "#{file['filepath']}_1"
-        tmp_file_path = "#{self.tmp_upload_dir}/#{file['original_name']}"
+
+        if file['original_name'] =~ /^CAM_/
+          self.tmp_upload_dir = "#{RAILS_ROOT}/public"
+          tmp_file_path = "#{self.tmp_upload_dir}/#{file['original_name']}"
+        else
+          self.tmp_upload_dir = "#{file['filepath']}_1"
+          tmp_file_path = "#{self.tmp_upload_dir}/#{file['original_name']}"
+        end
+        
         FileUtils.mkdir_p(self.tmp_upload_dir)
         FileUtils.mv(file['filepath'], tmp_file_path)
         self.picture = File.new(tmp_file_path)
@@ -154,7 +161,7 @@ class Account < ActiveRecord::Base
       f = File.new(tmp_file_path)
   
       FileUtils.makedirs(path)
-      File.open("#{path}/#{original_name}#{id}#{extension}","wb"){ |stream| stream.write(f.read)} 
+      File.open("#{path}/#{original_name}#{id}#{extension}","wb"){ |stream| stream.write(f.read)}
       result = "system/tempuploads/#{original_name}#{id}#{extension}"
       logger.info result
       result
