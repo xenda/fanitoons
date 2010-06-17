@@ -1,6 +1,10 @@
 %li{:class=>(cycle("odd","even")), :id=>"comment_#{comment.id}"}
   .meta
-    %img.avatar{:alt => "", :height => "51", :src => "/images/missing.png", :width => "51"}/
+    %a{:href=>profile_path(comment.account.profile.id)}
+      - if comment.account.picture_file_name
+        = image_tag comment.account.thumbnail(:thumb),:size=>"51x51", :class => "avatar"
+      - else
+        %img.avatar{:alt => "", :height => "51", :src => "/images/avatar.jpg", :width => "51"}/
     %p
       - if comment.account
         = comment.account.name
