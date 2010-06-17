@@ -9,7 +9,7 @@
     %p.title= activity.account.title
   .content
     %p
-      = link_to activity.account.name profile_path(activity.account.profile.id)
+      = link_to activity.account.name, profile_path(activity.account.profile.id)
       ha 
       - case activity.item_type
         - when "Prediction"
