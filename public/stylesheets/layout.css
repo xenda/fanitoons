@@ -1525,9 +1525,31 @@ td.flag {
 }
 
 
-#about_us p {
+#about_us p,
+#rules p {
 	line-height: 1.6em;
 	margin-bottom: 20px;
 	font-size: 14px;
 	color: #595959;
+}
+
+#rules p a {
+	color: #89ba49;
+	font-weight: bold;
+}
+
+#rules table {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 14px;
+	border-bottom: 1px solid #c3c6c6;
+	background-color: #fff6b1;
+}
+
+#rules table td {
+	padding: 15px 10px;
+	border-color: #a7a7a7;
+	border-width: 1px;
+	border-top: 1px solid #c3c6c6;
+	color: #303030;
 }
