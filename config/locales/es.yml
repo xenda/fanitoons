@@ -148,6 +148,9 @@ es:
       team: "equipo"
       user_badge: "medalla de usuario"
       post_image: "Imágenes"
+      gang: "mancha"
+      profile: "perfil"
+      title: "título"
     attributes:
       posts:
         content: "contenido"

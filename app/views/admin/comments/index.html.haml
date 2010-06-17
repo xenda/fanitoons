@@ -22,11 +22,11 @@
     - @comments.each do |comment|
       %tr{:class=>cycle('even','odd') }
         %td= comment.id
-        %td= comment.commentable.name
+        %td= link_to comment.commentable.name, polymorphic_url(comment.commentable)
         %td= comment.title
         %td= summary comment.content
         %td= comment.email
-        %td= comment.user.name
+        %td= comment.account.name
         %td= date comment.created_at
         %td= link_to 'Editar', edit_admin_comment_path(comment)
         %td= link_to 'Eliminar', ["admin",comment], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
