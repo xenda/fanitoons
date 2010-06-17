@@ -1272,7 +1272,6 @@ div#game_status.content {
 #profile_predictions div.done div.match div.real_result span {
 	color: #697b3f;
 	float: left;
-	width:80px;
 	margin-right: 10px;
 	height: 20px;
 	margin-top: 5px;
@@ -1300,7 +1299,7 @@ div#game_status.content {
 
 #profile_predictions div.done div.match div.real_result div.result {
 	float: left;
-	width: 80px;
+	width: 120px;
 	overflow: auto;
 }
 
@@ -1366,7 +1365,7 @@ div#game_status.content {
 	-webkit-border-top-left-radius: 0px;
 	-webkit-border-top-right-radius: 0px;
 	background-color: #c7d79f;
-	width: 170px;
+	width: 215px;
 }
 
 #profile_predictions div.done div.match div.match_content div.match_message {
