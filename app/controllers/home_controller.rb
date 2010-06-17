@@ -32,6 +32,10 @@ class HomeController < ApplicationController
     
   end
 
+  def rules
+    
+  end
+
   def upload
     current_account.fast_asset = params["upload"]["fast_asset"]
     current_account.save
