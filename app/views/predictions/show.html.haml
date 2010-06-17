@@ -18,9 +18,9 @@
   %ul
     %li{:class=>(cycle("odd","even"))}
       .meta
-        %a{:href=>profile_path(last_prediction.account.profile.id)}
-          - if last_prediction.account.picture_file_name
-            = image_tag last_prediction.account.thumbnail(:thumb),:size=>"51x51", :class => "avatar"
+        %a{:href=>profile_path(@prediction.account.profile.id)}
+          - if @prediction.account.picture_file_name
+            = image_tag @prediction.account.thumbnail(:thumb),:size=>"51x51", :class => "avatar"
           - else
             %img.avatar{:alt => "", :height => "51", :src => "/images/avatar.jpg", :width => "51"}/
         %p= @prediction.account.name
@@ -30,11 +30,11 @@
           %tr.header
             %td.first Partido
             %td.flag
-              = flag_image(last_prediction.match.local.flag_name,"small")
-              = last_prediction.match.local.short_name
+              = flag_image(@prediction.match.local.flag_name,"small")
+              = @prediction.match.local.short_name
             %td.flag
-              = flag_image(last_prediction.match.visitor.flag_name,"small")
-              = last_prediction.match.visitor.short_name
+              = flag_image(@prediction.match.visitor.flag_name,"small")
+              = @prediction.match.visitor.short_name
           %tr
             %td.first goles
             - local_goals = @prediction.first_team_result || "-"
