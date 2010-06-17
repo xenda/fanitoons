@@ -15,9 +15,13 @@
   #counter-cont
     #vs
       %a{:href=>"#"}
-        .one.flag.medium{:title=>@match.local.name, :class=>@match.local.flag_name}= @match.try(:local).try(:short_name)
-        vs
-        .two.flag.medium{:title=>@match.visitor.name, :class=>@match.visitor.flag_name}= @match.try(:visitor).try(:short_name)
+        .one
+          = flag_image @match.local.name, "medium", "48x48"
+          = @match.try(:local).try(:short_name)
+        %span vs
+        .two
+          = flag_image @match.visitor.name, "medium", "48x48"
+          = @match.try(:visitor).try(:short_name)
     .counter
       .day
         %span= @match.first_team_goals
@@ -54,10 +58,12 @@
           %tbody
             %tr.header
               %td.first Partido
-              %td
-                .flag.small{:class=>prediction.match.local.flag_name}= prediction.match.local.short_name
-              %td
-                .flag.small{:class=>prediction.match.visitor.flag_name}= prediction.match.visitor.short_name
+              %td.flag
+                = flag_image prediction.match.local.flag_name, "small", "32x32"
+                = prediction.match.local.short_name
+              %td.flag
+                = flag_image prediction.match.visitor.flag_name, "small", "32x32"
+                = prediction.match.visitor.short_name
             %tr
               %td.first goles
               %td{:class=>("win" if prediction.local_winner?)}= prediction.first_team_result

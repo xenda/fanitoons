@@ -29,12 +29,12 @@
       .result
         %strong
           %span.flag
-            = flag_name(past_match.match.local.flag_name,"small","16x16") 
+            = flag_image(past_match.match.local.flag_name,"small","16x16") 
             = "--"
           %span.goals= past_match.match.first_team_goals
         %strong
           %span.flag
-            = flag_name(past_match.match.visitor.flag_name,"small","16x16") 
+            = flag_image(past_match.match.visitor.flag_name,"small","16x16") 
             = "--"
           %span.goals= past_match.match.second_team_goals
       .clear

@@ -23,12 +23,14 @@
               %tbody
                 %tr.header
                   %td.first Partido
-                  %td
+                  %td.flag
                     %a{:href=>match_path(match)}
-                      .flag.small{:class=>match.local.flag_name}= match.local.short_name
-                  %td
+                      = flag_image(match.local.flag_name,"small","32x32")
+                      = match.local.short_name
+                  %td.flag
                     %a{:href=>match_path(match)}
-                      .flag.small{:class=>match.visitor.flag_name}= match.visitor.short_name
+                      = flag_iamge(match.visitor.flag_name,"small","32x32")
+                      = match.visitor.short_name
                 %tr
                   %td.first goles
                   %td{:class=>("win" if match.local_winner?)}= (match.first_team_goals || "--")
