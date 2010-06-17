@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
   
   belongs_to :admin, :class_name => "Admin", :foreign_key => "account_id"
-  has_many :comments
+  has_many :comments, :as => :commentable
   
   validates_presence_of :title
   validates_presence_of :content
