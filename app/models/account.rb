@@ -133,7 +133,10 @@ class Account < ActiveRecord::Base
     end
 
     def self.save_upload(file)
-      id = Time.zone.now
+      
+      require 'uri'
+      
+      id = URI.escape(Time.zone.now.to_s.parameterize)
       logger.info "Id: #{id}"
       path = "#{RAILS_ROOT}/public/system/tempuploads"
       logger.info "Ruta: #{path}"
@@ -143,7 +146,7 @@ class Account < ActiveRecord::Base
       extension = original_name[-4..-1]
       original_name = original_name[0..5].parameterize
       
-      tmp_file_path = "#{tmp_upload_dir}/#{original_name}-#{id.to_s.parameterize}#{extension}"
+      tmp_file_path = "#{tmp_upload_dir}/#{original_name}-#{id}#{extension}"
       
       FileUtils.mkdir_p(tmp_upload_dir)
       FileUtils.mv(file['filepath'],tmp_file_path)
