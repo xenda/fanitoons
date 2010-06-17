@@ -3,9 +3,9 @@
 %li{:class=>last_class}
   %a{:href => match_path(most_comments.match)}
     .flag
-      = flag_image("most_comments.match.local.flag_name","small","32x32")
+      = flag_image(most_comments.match.local.flag_name,"small","32x32")
       = most_comments.match.local.short_name
     .flag
-      = flag_image("most_comments.match.visitor.flag_name","small","32x32")
+      = flag_image(most_comments.match.visitor.flag_name,"small","32x32")
       = most_comments.match.visitor.short_name
     %p= "#{most_comments.comments_count} comentarios"
