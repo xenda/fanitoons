@@ -584,12 +584,6 @@ form#new_comment.formtastic.comment {
   	width:65px;	
   	text-transform:uppercase;	
   }
-
-  li img.flag,
-  td img.flag{	
-  	float:left;
-  	margin-right:5px;
-  }
 	
 #nexts-games li p{
 	line-height:42px;

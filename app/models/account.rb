@@ -143,7 +143,7 @@ class Account < ActiveRecord::Base
       extension = original_name[-4..-1]
       original_name = original_name[0..5].parameterize
       
-      tmp_file_path = "#{tmp_upload_dir}/#{original_name}-#{id.parameterize}#{extension}"
+      tmp_file_path = "#{tmp_upload_dir}/#{original_name}-#{id.to_s.parameterize}#{extension}"
       
       FileUtils.mkdir_p(tmp_upload_dir)
       FileUtils.mv(file['filepath'],tmp_file_path)
