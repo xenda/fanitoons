@@ -423,18 +423,6 @@ float:left;
 float:right;
 }
 
-
-#counter-cont #vs .one{
-	float:left;
-	padding-left:60px;
-}
-
-#counter-cont #vs .two{
-	float:right;
-	padding-right:60px;
-	background-position:right top;
-}
-
 #counter-cont .counter {
 	float:right;
 	margin-top:15px;
