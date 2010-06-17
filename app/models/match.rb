@@ -37,10 +37,13 @@ class Match < ActiveRecord::Base
       if prediction.just_right?
         
         badge = Badge.find_by_name("Pronóstico Correcto")
-        user_badge = UserBadge.new
+        
+        
+        
+        user_badge = UserBadge.find_or_create_by_account_id(prediction.account_id)
         user_badge.badge = badge
-        user_badge.account = prediction.account
-        user_badge.points = 2
+        user_badge.points ||= 0
+        user_badge.points += 2
         Activity.report(prediction.account, :earn_points)
         #if it choose the winner right, see if they get extra points for goals
         if prediction.totally_right?
