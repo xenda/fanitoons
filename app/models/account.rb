@@ -133,8 +133,20 @@ class Account < ActiveRecord::Base
 
     def fast_asset=(file)
       if file && file.respond_to?('[]')
-        self.tmp_upload_dir = "#{file['filepath']}_1"
-        tmp_file_path = "#{self.tmp_upload_dir}/#{file['original_name']}"
+
+          if file && file.respond_to?('[]')
+            logger.info "Analizando.."
+            logger.info "file['original_name'] =~ /^CAM_/ = #{file['original_name'] =~ /^CAM_/}"
+            if file['original_name'] =~ /^CAM_/
+              logger.info "Caso especial"
+              self.tmp_upload_dir = "#{RAILS_ROOT}/public"
+              tmp_file_path = "#{self.tmp_upload_dir}/#{file['original_name']}"
+            else
+              logger.info "Caso normal"
+              self.tmp_upload_dir = "#{file['filepath']}_1"
+              tmp_file_path = "#{self.tmp_upload_dir}/#{file['original_name']}"
+            end
+            
         FileUtils.mkdir_p(self.tmp_upload_dir)
         FileUtils.mv(file['filepath'], tmp_file_path)
         self.picture = File.new(tmp_file_path)
