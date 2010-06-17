@@ -1,0 +1,20 @@
+%li{:class=>(cycle("odd","even"))}
+  %table{:cellpadding => "0", :cellspacing => "0"}
+    %tbody
+      %tr.header
+        %td.first Partido
+        %td.flag
+          = flag_image(own_prediction.match.local.flag_name,"small")
+          = own_prediction.match.local.short_name
+        %td.flag
+          = flag_image(own_prediction.match.visitor.flag_name,"small")
+          = own_prediction.match.visitor.short_name
+      %tr
+        %td.first goles
+        - local_goals = own_prediction.first_team_result || "--"
+        - visitor_goals = own_prediction.second_team_result || "--"
+        %td{:class=>("win" if own_prediction.local_winner?)}= local_goals
+        %td{:class=>("win" if own_prediction.visitor_winner?)}= visitor_goals
+      %tr
+        %td{:colspan=>3}
+          = link_to "ver pronóstico", own_prediction

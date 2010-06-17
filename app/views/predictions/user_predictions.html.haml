@@ -1,0 +1,20 @@
+- @title = "Patatoon ::  Revisando tus pronósticos"
+- @body_class = "home"
+= display_flashes
+
+%h2
+  Mira tus pronósticos 
+  %span en Patatoon
+
+#last-predicted
+  %h3 Viendo todos los pronósticos
+  %ul
+    = render :partial => "predictions/own_prediction", :collection=>@predictions
+  .clear
+  
+  .pagination= will_paginate @predictions
+  
+  .clear
+
+- content_for :sidebar do
+  = render :partial => "home/sidebar"

@@ -73,11 +73,25 @@ class PredictionsController < ApplicationController
 
 
   def index
-    @predictions = Prediction.last(6).find(:all, :include => [:winner, {:match=>[:local,:visitor]}])
+    
+    if params[:account_id]
+      @predictions = Account.find(params[:account_id]).predictions.paginate(:all, :include => [:winner, {:match=>[:local,:visitor]}], :page => params[:page])
+
+    else
+      @predictions = Prediction.last(6).find(:all, :include => [:winner, {:match=>[:local,:visitor]}])
+      
+    end
+    
+    
     @popular_predictions = Match.most_popular(8).find(:all, :include => [:local, :visitor])
     @most_commented = Prediction.most_commented(4).find(:all, :include => {:match =>[:local, :visitor]})
     @matches = Match.all(:order=> "played_at", :limit=>7, :include => [:local, :visitor], :conditions => ["played_at >= ?",Time.zone.now])
-    render :action => "index", :layout=> "application"
+    
+    if params[:account_id]
+      render :action => "user_predictions", :layout => "application"
+    else
+      render :action => "index", :layout=> "application"
+    end
   end
   
   def show
