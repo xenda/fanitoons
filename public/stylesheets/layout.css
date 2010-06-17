@@ -397,23 +397,32 @@ div#top_profile {
 
 
 #counter-cont #vs {
-    float:left;
-    height:46px;
-    width:323px;
-    line-height:36px;
-    margin-top:22px;
-    font-size:2.5em;
-    color:#748B3B;
-    font-family: 'HelveticaRounded', Arial;
-    text-align:center;    
+  color:#748B3B;
+  float:left;
+  font-family:'HelveticaRounded',Arial;
+  font-size:2.5em;
+  height:58px;
+  line-height:48px;
+  margin-top:13px;
+  text-align:center;
+  width:323px;  
 }
 
 
 #counter-cont #vs .one,
 #counter-cont #vs .two {
-	width:25%;
+	width:40%;
 	text-transform:uppercase;
 }
+
+#counter-cont #vs .one, #counter-cont #vs .one img {
+float:left;
+}
+
+#counter-cont #vs .two, #counter-cont #vs .two img {
+float:right;
+}
+
 
 #counter-cont #vs .one{
 	float:left;
@@ -568,21 +577,11 @@ form#new_comment.formtastic.comment {
 
 #nexts-games li a{
 	display:block;
-	width:182px;
+	width:178px;
 	height:100%;
-	padding:0 8px;
+	padding:0 8px 0 12px;
 	}
 
-#nexts-games li .flag {
-	float:left;
-	line-height:42px;
-	height:42px;
-	padding-left:36px;
-	width:29px;
-	background-position:left center;
-	text-transform:uppercase;
-	}
-	
 	
   li div.flag {
   	float:left;
@@ -661,17 +660,7 @@ form#new_comment.formtastic.comment {
 	width:146px;
 	color:#fff;
 }
-	
-#most-predicted li .flag {
-	float:left;
-	line-height:45px;
-	height:45px;
-	padding-left:36px;
-	width:29px;
-	background-position:left center;
-	text-transform:uppercase;
-	}
-	
+
 #most-predicted li p{
 	font-weight:bold;
 	text-align:center;
