@@ -16,11 +16,11 @@
     #vs
       %a{:href=>"#"}
         .one
-          = flag_image @match.local.name, "medium", "48x48"
+          = flag_image(@match.local.flag_name, "medium", "48x48")
           = @match.try(:local).try(:short_name)
         %span vs
         .two
-          = flag_image @match.visitor.name, "medium", "48x48"
+          = flag_image(@match.visitor.flag_name, "medium", "48x48")
           = @match.try(:visitor).try(:short_name)
     .counter
       .day
