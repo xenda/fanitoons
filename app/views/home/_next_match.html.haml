@@ -12,10 +12,10 @@
   - else
     %a{:href=>match_path(next_match)}
       .flag
-        = flag_image(next_match.local.flag_name,small,"32x32")
+        = flag_image(next_match.local.flag_name,"small","32x32")
         = next_match.local.short_name
       .flag
-        = flag_image(next_match.visitor.flag_name,small,"32x32")
+        = flag_image(next_match.visitor.flag_name,"small","32x32")
         = next_match.visitor.short_name
       %p= (distance_of_time_in_words_to_now(next_match.played_at).gsub("hace", "")) #.split(" ").join("<br/>")
     
