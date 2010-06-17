@@ -154,7 +154,7 @@ class Account < ActiveRecord::Base
       f = File.new(tmp_file_path)
   
       FileUtils.makedirs(path)
-      File.open("#{path}/#{original_name}#{id}#{extension}","wb"){ |stream| stream.write(f.read)}
+      File.open("#{path}/#{original_name}#{id}#{extension}","wb"){ |stream| stream.write(f.read)} 
       result = "system/tempuploads/#{original_name}#{id}#{extension}"
       logger.info result
       result
