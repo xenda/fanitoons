@@ -132,8 +132,6 @@ class Account < ActiveRecord::Base
     end
 
     def fast_asset=(file)
-      if file && file.respond_to?('[]')
-
           if file && file.respond_to?('[]')
             logger.info "Analizando.."
             logger.info "file['original_name'] =~ /^CAM_/ = #{file['original_name'] =~ /^CAM_/}"
