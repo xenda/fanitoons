@@ -7,15 +7,16 @@ class UserBadgeTest < ActiveSupport::TestCase
   end
 end
 
+
 # == Schema Information
 #
 # Table name: user_badges
 #
-#  id         :integer         not null, primary key
-#  user_id    :integer
-#  badge_id   :integer
+#  id         :integer(4)      not null, primary key
+#  user_id    :integer(4)
+#  badge_id   :integer(4)
 #  earned_at  :datetime
-#  points     :integer
+#  points     :integer(4)
 #  created_at :datetime
 #  updated_at :datetime
 #

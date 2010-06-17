@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100615022145) do
+ActiveRecord::Schema.define(:version => 20100617213318) do
 
   create_table "abuses", :force => true do |t|
     t.string   "email"
@@ -128,6 +128,7 @@ ActiveRecord::Schema.define(:version => 20100615022145) do
     t.datetime "updated_at"
     t.integer  "commentable_id"
     t.string   "commentable_type"
+    t.string   "name"
   end
 
   create_table "countries", :force => true do |t|

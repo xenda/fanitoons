@@ -46,3 +46,19 @@ class Message < ActiveRecord::Base
     MessageMailer.deliver_email_copy(self)
   end
 end
+
+# == Schema Information
+#
+# Table name: messages
+#
+#  id              :integer(4)      not null, primary key
+#  subject         :string(255)
+#  content         :text
+#  folder_id       :integer(4)
+#  is_read         :boolean(1)      default(FALSE)
+#  from_account_id :integer(4)
+#  to_account_id   :integer(4)
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+

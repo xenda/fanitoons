@@ -428,40 +428,45 @@ end
 
 
 
+
 # == Schema Information
 #
 # Table name: accounts
 #
-#  id                   :integer         not null, primary key
-#  name                 :string(255)
-#  surname              :string(255)
-#  email                :string(255)     default(""), not null
-#  crypted_password     :string(255)
-#  salt                 :string(255)
-#  role                 :string(255)
-#  picture_file_name    :string(255)
-#  picture_content_type :string(255)
-#  picture_file_size    :integer
-#  picture_updated_at   :datetime
-#  fb_token             :string(255)
-#  fb_id                :string(255)
-#  gender               :string(255)
-#  encrypted_password   :string(128)     default("")
-#  password_salt        :string(255)     default("")
-#  confirmation_token   :string(255)
-#  confirmed_at         :datetime
-#  confirmation_sent_at :datetime
-#  reset_password_token :string(255)
-#  remember_token       :string(255)
-#  remember_created_at  :datetime
-#  sign_in_count        :integer         default(0)
-#  current_sign_in_at   :datetime
-#  last_sign_in_at      :datetime
-#  current_sign_in_ip   :string(255)
-#  last_sign_in_ip      :string(255)
-#  invitation_token     :string(20)
-#  invitation_sent_at   :datetime
-#  birth_date           :date
-#  title                :integer
+#  id                     :integer(4)      not null, primary key
+#  name                   :string(255)
+#  surname                :string(255)
+#  email                  :string(255)     default(""), not null
+#  crypted_password       :string(255)
+#  salt                   :string(255)
+#  role                   :string(255)
+#  picture_file_name      :string(255)
+#  picture_content_type   :string(255)
+#  picture_file_size      :integer(4)
+#  picture_updated_at     :datetime
+#  fb_token               :string(255)
+#  fb_id                  :string(255)
+#  gender                 :string(255)
+#  encrypted_password     :string(128)     default("")
+#  password_salt          :string(255)     default("")
+#  confirmation_token     :string(255)
+#  confirmed_at           :datetime
+#  confirmation_sent_at   :datetime
+#  reset_password_token   :string(255)
+#  remember_token         :string(255)
+#  remember_created_at    :datetime
+#  sign_in_count          :integer(4)      default(0)
+#  current_sign_in_at     :datetime
+#  last_sign_in_at        :datetime
+#  current_sign_in_ip     :string(255)
+#  last_sign_in_ip        :string(255)
+#  invitation_token       :string(20)
+#  invitation_sent_at     :datetime
+#  birth_date             :date
+#  title                  :integer(4)
+#  thumbnail_file_name    :string(255)
+#  thumbnail_content_type :string(255)
+#  thumbnail_file_size    :integer(4)
+#  thumbnail_updated_at   :datetime
 #
 

@@ -83,19 +83,20 @@ class Prediction < ActiveRecord::Base
   
 end
 
+
 # == Schema Information
 #
 # Table name: predictions
 #
-#  id                 :integer         not null, primary key
-#  user_id            :integer
+#  id                 :integer(4)      not null, primary key
+#  user_id            :integer(4)
 #  predicted_at       :datetime
-#  match_id           :integer
-#  winner_id          :integer
-#  first_team_result  :integer
-#  second_team_result :integer
-#  scoring_player_id  :integer
-#  victory_type_id    :integer
+#  match_id           :integer(4)
+#  winner_id          :integer(4)
+#  first_team_result  :integer(4)
+#  second_team_result :integer(4)
+#  scoring_player_id  :integer(4)
+#  victory_type_id    :integer(4)
 #  created_at         :datetime
 #  updated_at         :datetime
 #

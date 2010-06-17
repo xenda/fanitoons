@@ -14,21 +14,22 @@ record_activity_of :account, :actions => [:create, :update, :destroy]
  end
 end
 
+
 # == Schema Information
 #
 # Table name: avatars
 #
-#  id               :integer         not null, primary key
-#  user_id          :integer
-#  shirt_id         :integer
-#  short_id         :integer
-#  snicker_id       :integer
-#  shirt_rotation   :integer
-#  short_rotation   :integer
-#  snicker_rotation :integer
-#  shirt_scale      :integer
-#  short_scale      :integer
-#  snicker_scale    :integer
+#  id               :integer(4)      not null, primary key
+#  user_id          :integer(4)
+#  shirt_id         :integer(4)
+#  short_id         :integer(4)
+#  snicker_id       :integer(4)
+#  shirt_rotation   :integer(4)
+#  short_rotation   :integer(4)
+#  snicker_rotation :integer(4)
+#  shirt_scale      :integer(4)
+#  short_scale      :integer(4)
+#  snicker_scale    :integer(4)
 #  created_at       :datetime
 #  updated_at       :datetime
 #

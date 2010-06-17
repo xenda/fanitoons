@@ -8,14 +8,15 @@ class FriendshipTest < ActiveSupport::TestCase
 end
 
 
+
 # == Schema Information
 #
 # Table name: friendships
 #
-#  id         :integer         not null, primary key
-#  inviter_id :integer
-#  invited_id :integer
-#  status     :integer
+#  id         :integer(4)      not null, primary key
+#  inviter_id :integer(4)
+#  invited_id :integer(4)
+#  status     :integer(4)
 #  created_at :datetime
 #  updated_at :datetime
 #

@@ -8,15 +8,24 @@ class Comment < ActiveRecord::Base
   
   record_activity_of :account, :actions => [:create, :update]
   
+  before_save :add_name
+  
+  
+  def add_name
+    return if self.name
+    self.name = self.email
+  end
+  
 end
+
 
 
 # == Schema Information
 #
 # Table name: comments
 #
-#  id               :integer         not null, primary key
-#  post_id          :integer
+#  id               :integer(4)      not null, primary key
+#  post_id          :integer(4)
 #  title            :string(255)
 #  content          :text
 #  email            :string(255)
@@ -24,7 +33,8 @@ end
 #  website          :string(255)
 #  created_at       :datetime
 #  updated_at       :datetime
-#  commentable_id   :integer
+#  commentable_id   :integer(4)
 #  commentable_type :string(255)
+#  name             :string(255)
 #
 

@@ -12,3 +12,18 @@ class Folder < ActiveRecord::Base
     messages.size == 0
   end
 end
+
+# == Schema Information
+#
+# Table name: folders
+#
+#  id           :integer(4)      not null, primary key
+#  name         :string(255)
+#  account_id   :integer(4)
+#  deletable    :boolean(1)      default(FALSE)
+#  folder_type  :string(255)
+#  lock_version :integer(4)      default(0)
+#  created_at   :datetime
+#  updated_at   :datetime
+#
+

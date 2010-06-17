@@ -145,26 +145,27 @@ end
 
 
 
+
 # == Schema Information
 #
 # Table name: matches
 #
-#  id                   :integer         not null, primary key
-#  number               :integer
+#  id                   :integer(4)      not null, primary key
+#  number               :integer(4)
 #  played_at            :datetime
 #  place                :string(255)
-#  stadium_id           :integer
-#  first_team_id        :integer
-#  second_team_id       :integer
-#  first_team_goals     :integer
-#  second_team_goals    :integer
+#  stadium_id           :integer(4)
+#  first_team_id        :integer(4)
+#  second_team_id       :integer(4)
+#  first_team_goals     :integer(4)
+#  second_team_goals    :integer(4)
 #  created_at           :datetime
 #  updated_at           :datetime
-#  group_id             :integer
+#  group_id             :integer(4)
 #  picture_file_name    :string(255)
 #  picture_content_type :string(255)
-#  picture_file_size    :integer
+#  picture_file_size    :integer(4)
 #  picture_updated_at   :datetime
-#  predictions_count    :integer
+#  predictions_count    :integer(4)
 #
 

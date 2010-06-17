@@ -21,6 +21,7 @@
         = hidden_field_tag "comment[user_id]", current_account.id
         = hidden_field_tag "comment[email]", current_account.email
       - else
+        = f.input :name, :label => "Tu nombre"
         = f.input :email
         = f.input :website, :label => "Sitio web", :required => false
       = f.input :content, :label => "¡Comenta!"      

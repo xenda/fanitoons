@@ -128,12 +128,13 @@ class Profile < ActiveRecord::Base
 
 end
 
+
 # == Schema Information
 #
 # Table name: profiles
 #
-#  id         :integer         not null, primary key
-#  account_id :integer
+#  id         :integer(4)      not null, primary key
+#  account_id :integer(4)
 #  first_name :string(255)
 #  last_name  :string(255)
 #  website    :string(255)
