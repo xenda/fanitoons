@@ -1,6 +1,7 @@
 /* @override 
 	http://localhost:3000/stylesheets/style.css?1275259398
 	http://localhost:3000/stylesheets/style.css
+	http://patatoon.com/stylesheets/styles.css?1276797444
 */
 
 body {
@@ -835,3 +836,17 @@ div#profile_sidebar {
 	margin-bottom: 20px;
 	color: #3c392a;
 }
+
+
+/* @group My Group */
+
+ /**/
+ #about_us p {
+	margin-bottom: 10px !important;  
+	display: block !important;
+	line-height: 1.4em;
+	font-family: Arial, Helvetica, Geneva, sans-serif;
+	color: #525252;
+}
+
+/* @end */
