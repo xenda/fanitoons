@@ -1,13 +1,21 @@
 class HomeController < ApplicationController
   
   before_filter :authenticate_account!, :only =>[:invite, :upload,:post]
-  
+  before_filter :set_cache_buster, :only => [:load_temp,:upload,:post]
+
+   
   skip_before_filter :verify_authenticity_token, :only=>["upload","post","load_temp"]
   
   def load_temp
     logger.info "Loading account"
     url = Account.save_upload(params["carga"]["fast_asset"])
     render :text => url
+  end
+
+  def set_cache_buster
+    response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"
+    response.headers["Pragma"] = "no-cache"
+    response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
   end
     
   
