@@ -4,7 +4,8 @@
       .flags
         .flag
           .image
-            %span.flag.small{:class => past_match.match.local.flag_name} --
+            %span.flag
+              = flag_image (past_match.match.local.flag_name,"small","32x32") --
             %br
             = past_match.match.local.short_name
           .prediction_result
@@ -12,7 +13,8 @@
           .clear
         .flag
           .image
-            %span.flag.small{:class => past_match.match.visitor.flag_name} --
+            %span.flag
+              = flag_image (past_match.match.visitor.flag_name,"small","32x32") --
             %br
             = past_match.match.visitor.short_name
           .prediction_result
@@ -24,9 +26,11 @@
       %span Resultado real
       .result
         %strong
-          %span.flag.small{:class => past_match.match.local.flag_name} --
+          %span.flag
+            = flag_name(past_match.match.local.flag_name,"small","16x16") --
           %span.goals= past_match.match.first_team_goals
         %strong
-          %span.flag.small{:class => past_match.match.visitor.flag_name} --
+          %span.flag
+            = flag_name(past_match.match.visitor.flag_name,"small","16x16") --
           %span.goals= past_match.match.second_team_goals
       .clear
