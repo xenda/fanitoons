@@ -3,8 +3,9 @@
 = display_flashes
 
 %h2
-  Mira tus pronósticos 
-  %span en Patatoon
+  Mira los pronósticos de  
+  %span= @predictions.first.account.name
+  en Patatoon
 
 #last-predicted
   %h3 Viendo todos los pronósticos

@@ -18,17 +18,23 @@
   %ul
     %li{:class=>(cycle("odd","even"))}
       .meta
-        %img.avatar{:alt => "", :height => "51", :src => "/images/missing.png", :width => "51"}/
+        %a{:href=>profile_path(last_prediction.account.profile.id)}
+          - if last_prediction.account.picture_file_name
+            = image_tag last_prediction.account.thumbnail(:thumb),:size=>"51x51", :class => "avatar"
+          - else
+            %img.avatar{:alt => "", :height => "51", :src => "/images/avatar.jpg", :width => "51"}/
         %p= @prediction.account.name
         %p.title= @prediction.account.title
       %table{:cellpadding => "0", :cellspacing => "0"}
         %tbody
           %tr.header
             %td.first Partido
-            %td
-              .flag.small{:class=>@prediction.match.local.flag_name}= @prediction.match.local.short_name
-            %td
-              .flag.small{:class=>@prediction.match.visitor.flag_name}= @prediction.match.visitor.short_name
+            %td.flag
+              = flag_image(last_prediction.match.local.flag_name,"small")
+              = last_prediction.match.local.short_name
+            %td.flag
+              = flag_image(last_prediction.match.visitor.flag_name,"small")
+              = last_prediction.match.visitor.short_name
           %tr
             %td.first goles
             - local_goals = @prediction.first_team_result || "-"
@@ -51,10 +57,14 @@
 #nexts-games
   #counter-cont
     #vs
-      %a{:href=>"#"}
-        .one.flag.medium{:title=>@prediction.match.local.name, :class=>@prediction.match.local.flag_name}= @prediction.match.try(:local).try(:short_name)
-        vs
-        .two.flag.medium{:title=>@prediction.match.visitor.name, :class=>@prediction.match.visitor.flag_name}= @prediction.match.try(:visitor).try(:short_name)
+      %a{:href=>match_path(@prediction.match)}
+        .one
+          = flag_image(@prediction.match.local.flag_name,"medium","48x48")
+          = @prediction.match.try(:local).try(:short_name)
+        %span vs
+        .two
+          = flag_image(@prediction.match.visitor.flag_name, "medium","48x48")
+          = @prediction.match.try(:visitor).try(:short_name)   
     .counter
       .day
         %span= @prediction.match.first_team_goals
