@@ -694,12 +694,6 @@ line-height:34px;
 	font-weight:bold;
 	}
 
-#last-predicted li img {
-	display:block;
-	margin:0 auto 3px auto;
-	margin-right: 5px;
-}
-	
 #last-predicted li p {
 	text-align:center;
 }
