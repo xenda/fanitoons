@@ -1,4 +1,7 @@
-<div class="titleB"><%=h @message.subject %></div>
+<div class="titleB"><%= link_to "Mensajes", member_messages_path %> / <%= I18n.t("tog_mail.member.reply_message") %></div>
+
+<h3><%=h @message.subject %></h3>
+
 <br />
 <p>
   <strong><%= I18n.t("tog_mail.model.from") %>:</strong>
