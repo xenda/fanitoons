@@ -31,9 +31,9 @@
             %li=# link_to I18n.t('tog_social.profiles.site.edit_profile'), edit_member_profile_path(@profile)
           - else 
             %li= link_to I18n.t('tog_social.profiles.site.send_message'), member_new_message_to_path(@profile.account)
-            %li= report_abuse_link @profile.account
-            %li= friendship_options(@profile.account)
-            %li= following_options(@profile.account)
+            %li= report_abuse_link @profile
+            %li= friendship_options(@profile)
+            %li= following_options(@profile)
 
 
   #profile_friends

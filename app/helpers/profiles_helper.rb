@@ -16,17 +16,17 @@ module ProfilesHelper
 
   def following_options(profile=@profile)
     if account_signed_in? && current_account.profile.follows?(profile)
-      link_to "Dejar de seguir a #{profile.full_name}", member_unfollow_user_path(profile.account)
+      link_to "Dejar de seguir a #{profile.full_name}", member_unfollow_user_path(profile)
     else
-      link_to "Seguir a #{profile.full_name}", member_follow_user_path(profile.account)
+      link_to "Seguir a #{profile.full_name}", member_follow_user_path(profile)
     end
   end
 
   def friendship_options(profile=@profile)
     if account_signed_in? && current_account.profile.is_friend_of?(profile)
-      link_to "Remover amigo", member_unfollow_user_path(profile.account)
+      link_to "Remover amigo", member_unfollow_user_path(profile)
     else
-      link_to "Agregar amigo", member_add_friend_path(profile.account)
+      link_to "Agregar amigo", member_add_friend_path(profile)
     end
   end
 
