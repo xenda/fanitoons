@@ -19,3 +19,9 @@
     <%= submit_tag I18n.t("tog_mail.member.delete"), :disable_with => I18n.t("tog_mail.member.wait"), :class=>"button delete" %>
   </div>
 <% end -%>
+
+<div class="clear" />
+<div>
+ <%= render :partial => "comments/comments_list", :locals => {:commentable => @message } %>  
+</div>
+

@@ -1,7 +1,7 @@
 class Message < ActiveRecord::Base
 
   belongs_to :folder
-
+  has_many :comments, :as=> :commentable
   belongs_to :from, :class_name => "Account", :foreign_key => "from_account_id"
   belongs_to :to,   :class_name => "Account", :foreign_key => "to_account_id"
   
