@@ -9,7 +9,11 @@
     %p.title= activity.account.title
   .content
     %p
-      = link_to activity.account.name, profile_path(activity.account.profile.id)
+      - if activity.account.name
+        - text = activity.account.name
+      - else
+        - text = "Un miembro de la comunidad"
+      = link_to text, profile_path(activity.account.profile.id)
       ha 
       - case activity.item_type
         - when "Prediction"
@@ -28,5 +32,5 @@
           = link_to "cambiado su avatar", profile_path(activity.account.profile.id)
         - else
           pasado un buen rato con sus amigos en Patatoon
-      en
-      = l(activity.created_at, :format => :short)
+      el
+      %strong= l(activity.created_at, :format => :short)
