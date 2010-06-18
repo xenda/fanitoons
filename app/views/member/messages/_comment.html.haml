@@ -1,0 +1,18 @@
+%li{:class=>(cycle("odd","even")), :id=>"comment_#{comment.id}"}
+  .meta
+    %a{:href=>profile_path(comment.account.profile.id)}
+      - if comment.account.picture_file_name
+        = image_tag comment.account.thumbnail(:thumb),:size=>"51x51", :class => "avatar"
+      - else
+        %img.avatar{:alt => "", :height => "51", :src => "/images/avatar.jpg", :width => "51"}/
+    %p
+      - if comment.account
+        = comment.account.name
+      - else  
+        Anónimo
+    %p.title= (comment.account.title if comment.account)
+  .content
+    = strip_tags(comment.content) 
+    %strong
+      dicho en
+      = l(comment.created_at, :format=>:short)

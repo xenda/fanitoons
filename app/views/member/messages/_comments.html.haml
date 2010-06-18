@@ -1,0 +1,31 @@
+#comments
+  %h3{:style=>"font-size:2em;"}= "#{commentable.comments.size} comentarios"
+  
+  %ul#comments_li
+    = render :partial => "member/messages/comment", :collection => commentable.comments
+  
+#comment_form
+  
+  - if commentable.comments.size.zero?
+    %h4 
+      Sé el primero en
+      %span dejar un comentario
+  -  else
+    %h4 
+      Únete a la comunidad
+      %span y exprésate
+      
+  - semantic_form_for ["member",commentable,commentable.comments.build] do |f|
+    - f.inputs do 
+      - if current_account
+        = hidden_field_tag "comment[user_id]", current_account.id
+        = hidden_field_tag "comment[email]", current_account.email
+      - else
+        = f.input :name, :label => "Tu nombre"
+        = f.input :email
+        = f.input :website, :label => "Sitio web", :required => false
+      = f.input :content, :label => "¡Comenta!"      
+      = hidden_field_tag "comment[commentable_id]", commentable.id
+      = hidden_field_tag "comment[commentable_type]", commentable.class
+    - f.buttons do
+      = f.commit_button "Enviar"
