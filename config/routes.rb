@@ -37,6 +37,7 @@ ActionController::Routing::Routes.draw do |map|
     abuse.report_abuse_create     'reportar_abuso',    :action => 'create', :conditions => { :method => :post }
   end
 
+  map.resources :messages, :has_many => :comments
 
   map.resources :streams, :only => [:index, :show], :member => {:network => :get}
 
