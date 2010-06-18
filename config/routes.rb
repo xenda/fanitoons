@@ -51,6 +51,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.namespace(:member) do |member|
     member.resources :profiles, :as => "perfiles"
+    member.resources :comments, :as => "comentarios"    
     member.resources :gangs
     member.with_options(:controller => 'gangs') do |group|
       group.group_pending_members '/:id/miembros/pendiente',         :action => 'pending_members'
