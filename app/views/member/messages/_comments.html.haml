@@ -15,7 +15,7 @@
       Únete a la comunidad
       %span y exprésate
       
-  - semantic_form_for ["member",commentable,commentable.comments.build] do |f|
+  - semantic_form_for ["member",commentable.comments.build] do |f|
     - f.inputs do 
       - if current_account
         = hidden_field_tag "comment[user_id]", current_account.id
