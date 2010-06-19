@@ -4,8 +4,8 @@
 - content_for :meta_fb do
   %meta{:content => "Entrada: #{@post.title}", :property => "og:site_name"}/
   - if @post.picture_file_name
-    %meta{:content => @post.picture.url(:post), :property => "og:image"}  
-    %link{:rel=>"image_src", :href=>@post.picture.url(:post)}
+    %meta{:content => "http://patatoon.com" + @post.picture.url(:post), :property => "og:image"}  
+    %link{:rel=>"image_src", :href=> "http://patatoon.com" + @post.picture.url(:post)}
 
 
 
