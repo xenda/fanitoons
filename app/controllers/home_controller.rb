@@ -60,7 +60,7 @@ class HomeController < ApplicationController
   end
   
   def about
-    render :text => "FaniToons"
+    render :text => "Patatoon"
   end
 
   def invite

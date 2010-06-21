@@ -40,7 +40,7 @@ class Match < ActiveRecord::Base
         
         
         
-        user_badge = UserBadge.find_or_create_by_account_id(prediction.account_id)
+        user_badge = UserBadge.find_or_create_by_account_id(prediction.user_id)
         user_badge.badge = badge
         user_badge.points ||= 0
         user_badge.points += 2
