@@ -1,18 +1,20 @@
-- @title = "Administración Medallas "
+- @title = "Administración Badges "
 
 #admin.index
-  %h1= "Administrando Medallas"
+  %h1= "Administrando Badges"
 
   #admin_menu
-    = link_to "Nueva medalla", new_admin_badge_path
+    = link_to "Nuevo badge", new_admin_badge_path
 
   %table{:id=>"badges_table"}
     %thead
       %tr
         %td Id
-        %td Nombre
-        %td Descripción
-        %td Tipo
+        %td Name
+        %td Description
+        %td Created_at
+        %td Updated_at
+        %td Type
         %td
         %td
     %tbody
@@ -20,7 +22,9 @@
       %tr{:class=>cycle('even','odd') }
         %td= badge.id
         %td= badge.name
-        %td= summary badge.description
+        %td= badge.description
+        %td= badge.created_at
+        %td= badge.updated_at
         %td= badge.type
         %td= link_to 'Editar', edit_admin_badge_path(badge)
         %td= link_to 'Eliminar', ["admin",badge], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete

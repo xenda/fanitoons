@@ -1,19 +1,19 @@
-- @title = "Viendo jugador"
+- @title = "Viendo player"
 
 #admin
 
-  %h1 "Viendo jugador"
+  %h1 "Viendo player"
 
-  - show_for @jugador do |a| 
+  - show_for @player do |a| 
     = a.attribute :id
-    = a.attribute :name
-    = a.attribute :born_at
-    = a.attribute :country
-    = a.attribute :team
-    = a.attribute :bio
+        = a.attribute :name
+        = a.attribute :born_at
+        = a.attribute :country
+        = a.attribute :team
+        = a.attribute :bio
     
 
   .bottom_menu
     = link_to "Ver todos", admin_players_path
-    = link_to "Editar jugador",  edit_admin_player_path(player)
+    = link_to "Editar player",  edit_admin_player_path(player)
     = link_to "Crear otro", new_admin_player_path

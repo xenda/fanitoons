@@ -1,19 +1,19 @@
-- @title = "Administración Estadios "
+- @title = "Administración Stadia "
 
 #admin.index
-  %h1= "Administrando Estadios"
+  %h1= "Administrando Stadia"
 
   #admin_menu
-    = link_to "Nuevo estadio", new_admin_stadium_path
+    = link_to "Nuevo stadium", new_admin_stadium_path
 
   %table{:id=>"stadia_table"}
     %thead
       %tr
         %td Id
-        %td Nombre
-        %td Ciudad
+        %td Name
+        %td City
         %td Bio
-        %td País
+        %td Country
         %td
         %td
     %tbody
@@ -22,7 +22,7 @@
         %td= stadium.id
         %td= stadium.name
         %td= stadium.city
-        %td= summary stadium.bio
+        %td= truncate(strip_tags(stadium.bio),50)
         %td= stadium.country.name
         %td= link_to 'Editar', edit_admin_stadium_path(stadium)
         %td= link_to 'Eliminar', ["admin",stadium], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete

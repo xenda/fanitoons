@@ -1,10 +1,11 @@
 - semantic_form_for ["admin",@team] do |form|
   - form.inputs do
-    = form.input :name, :label => "Nombre"
-    = form.input :short_name, :label => "Abreviación"
-    = form.input :country, :as => :select, :label => "País"
+    = form.input :id
+    = form.input :name
+    = form.input :country, :as => :select
     = form.input :bio, :input_html => {:class => "tinymce"}
-    = form.input :flag, :label => "Bandera"
-    = form.input :picture, :label => "Imagen"
+    = form.input :country
+    = form.input :flag  
+    = form.input :picture  
   - form.buttons do
     = form.commit_button 'Grabar',:button_html => { :class => "submit" }

@@ -1,6 +1,7 @@
 - semantic_form_for ["admin",@shirt] do |form|
   - form.inputs do
-    = form.input :name, :label => "Nombre"
-    = form.input :picture, :label => "Imagen"
+    = form.input :id
+    = form.input :name
+    = form.input :picture    
   - form.buttons do
     = form.commit_button 'Grabar',:button_html => { :class => "submit" }

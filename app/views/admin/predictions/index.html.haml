@@ -1,22 +1,24 @@
-- @title = "Administración Predicciones "
+- @title = "Administración Predictions "
 
 #admin.index
-  %h1= "Administrando Predicciones"
+  %h1= "Administrando Predictions"
 
   #admin_menu
-    = link_to "Nuevo predicción", new_admin_prediction_path
+    = link_to "Nuevo prediction", new_admin_prediction_path
 
   %table{:id=>"predictions_table"}
     %thead
       %tr  
         %td Id
-        %td Usuario
-        %td Fecha
-        %td Partido
-        %td Ganador
-        %td Goles Local
-        %td Goles Visitante
-        %td Jugador Goleador
+        %td User
+        %td Predicted_at
+        %td Match
+        %td Winner
+        %td First_team_result
+        %td Second_team_result
+        %td Scoring_player
+        %td Created_at
+        %td Updated_at
         %td
         %td
     %tbody
@@ -24,12 +26,14 @@
       %tr{:class=>cycle('even','odd') }
         %td= prediction.id
         %td= prediction.account
-        %td= date prediction.predicted_at
+        %td= prediction.predicted_at
         %td= prediction.match.title
         %td= prediction.winner.name if prediction.winner
         %td= prediction.first_team_result
         %td= prediction.second_team_result
         %td= prediction.scoring_player.name if prediction.scoring_player
+        %td= prediction.created_at
+        %td= prediction.updated_at
         %td= link_to 'Editar', edit_admin_prediction_path(prediction)
         %td= link_to 'Eliminar', ["admin",prediction], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
       

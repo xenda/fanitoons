@@ -1,7 +1,7 @@
-- @title = "Administración Equipos "
+- @title = "Administración Teams "
 
 #admin.index
-  %h1= "Administrando Equipos"
+  %h1= "Administrando Teams"
 
   #admin_menu
     = link_to "Nuevo #{I18n.t 'activerecord.models.team'}", new_admin_team_path
@@ -10,10 +10,9 @@
     %thead
       %tr
         %td Id
-        %td Nombre
-        %td Abbr        
+        %td Name
         %td Bio
-        %td Pais
+        %td Country
         %td
         %td
     %tbody
@@ -21,7 +20,6 @@
       %tr{:class=>cycle('even','odd') }
         %td= team.id
         %td= team.name
-        %td= team.short_name        
         %td= truncate(strip_tags(team.bio),50)
         %td= team.country.name
         %td= link_to 'Editar', edit_admin_team_path(team)
