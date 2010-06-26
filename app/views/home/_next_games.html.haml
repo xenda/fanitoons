@@ -2,15 +2,15 @@
   %h2 próximos partidos
   #counter-cont
   - if @last_match
-      #vs
-        %a{:href=>match_path(@last_match)}
-          .one
-            = flag_image(@last_match.local.flag_name,"medium","48x48")
-            = @last_match.try(:local).try(:short_name)
-          %span vs
-          .two
-            = flag_image(@last_match.visitor.flag_name, "medium","48x48")
-            = @last_match.try(:visitor).try(:short_name)
+    #vs
+      %a{:href=>match_path(@last_match)}
+        .one
+          = flag_image(@last_match.local.flag_name,"medium","48x48")
+          = @last_match.try(:local).try(:short_name)
+        %span vs
+        .two
+          = flag_image(@last_match.visitor.flag_name, "medium","48x48")
+          = @last_match.try(:visitor).try(:short_name)
       .counter{:rel=>@last_match.played_at }    
       / .day
       /   %span -
