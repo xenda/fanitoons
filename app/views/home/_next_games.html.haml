@@ -11,7 +11,7 @@
           .two
             = flag_image(@last_match.visitor.flag_name, "medium","48x48")
             = @last_match.try(:visitor).try(:short_name)
-        .counter{:rel=>@last_match.played_at }    
+      .counter{:rel=>@last_match.played_at }    
         / .day
         /   %span -
         /   días
