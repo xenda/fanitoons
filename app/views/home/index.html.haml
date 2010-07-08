@@ -15,6 +15,13 @@
 
   .clear
 
+#actities
+  %h3 lo último
+  %ul
+    = render :partial => "streams/activity", :collection => @activities
+  .clear
+  = link_to "ver más", stream_path, :class=>"more button"
+
 
 #news
   %h3 noticias

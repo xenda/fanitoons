@@ -2,7 +2,7 @@
 
 - @body_class = "register home"
   
-#posts= render 'posts/post', :collection => @posts
+#posts= render :partial => 'posts/post', :collection => @posts
 
 .pagination
   = will_paginate @posts

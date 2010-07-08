@@ -1,3 +1,14 @@
+#facebook_likebox
+  %iframe{:allowtransparency => "true", :frameborder => "0", :scrolling => "auto", :src => "http://www.facebook.com/plugins/likebox.php?id=129238740437455&amp;width=240&amp;connections=20&amp;stream=false&amp;header=false&amp;height=340&amp;show-faces=true&amp;scroll=true", :style => "border:none; overflow:hidden; width:240px; height:340px;"}
+
+#chunteros
+  %h3 los chunteros
+  %ul.ranking= render :partial => "home/top_season",:collection=>@top_season
+
+#punteros
+  %h3 los punteros
+  %ul.ranking= render :partial => "home/top_times", :collection => @top_times
+
 #invite
   %h3
     invita a
@@ -10,13 +21,3 @@
       %a{:href => "#"}
     %li.email
       %a{:href => "#"}
-#chunteros
-  %h3 los chunteros
-  %ul.ranking= render :partial => "home/top_season",:collection=>@top_season
-
-#punteros
-  %h3 los punteros
-  %ul.ranking= render :partial => "home/top_times", :collection => @top_times
-
-#facebook_likebox
-  %iframe{:allowtransparency => "true", :frameborder => "0", :scrolling => "auto", :src => "http://www.facebook.com/plugins/likebox.php?id=129238740437455&amp;width=240&amp;connections=20&amp;stream=false&amp;header=false&amp;height=340&amp;show-faces=true&amp;scroll=true", :style => "border:none; overflow:hidden; width:240px; height:340px;"}
