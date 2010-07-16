@@ -76,7 +76,6 @@ class PredictionsController < ApplicationController
     
     if params[:account_id]
       @predictions = Account.find(params[:account_id]).predictions.paginate(:all, :include => [:winner, {:match=>[:local,:visitor]}], :page => params[:page])
-
     else
       @predictions = Prediction.last(6).find(:all, :include => [:winner, {:match=>[:local,:visitor]}])
       
