@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :championship_teams
+
+  map.resources :championships
+
   map.resources :titles
 
 

@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  started_at: 2010-07-16 11:40:28
+  finished_at: 2010-07-16 11:40:28
+  description: MyText
+  place: MyString
+  winner_id: 1
+
+two:
+  name: MyString
+  started_at: 2010-07-16 11:40:28
+  finished_at: 2010-07-16 11:40:28
+  description: MyText
+  place: MyString
+  winner_id: 1
