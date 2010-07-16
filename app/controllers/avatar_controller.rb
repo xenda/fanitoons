@@ -6,4 +6,9 @@ class AvatarController < ApplicationController
     
   end
   
+  
+  def beta
+    
+  end
+  
 end
