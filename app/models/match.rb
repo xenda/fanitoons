@@ -5,6 +5,7 @@ class Match < ActiveRecord::Base
   belongs_to :group
   has_many :comments, :as => :commentable
   has_many :predictions
+  belongs_to :championship
   
   has_attached_file :picture, :styles => { :front=>"190x110#", :medium => "300x300#", :thumb => "50x50#" },:path => ":rails_root/public/system/matches/:attachment/:id/:style.:extension", :url => "/system/matches/:attachment/:id/:style.:extension"
   
@@ -12,6 +13,7 @@ class Match < ActiveRecord::Base
   
   validates_presence_of :first_team_id
   validates_presence_of :second_team_id
+  
   
   def to_param
     if local and visitor
@@ -146,6 +148,7 @@ end
 
 
 
+
 # == Schema Information
 #
 # Table name: matches
@@ -167,5 +170,6 @@ end
 #  picture_file_size    :integer(4)
 #  picture_updated_at   :datetime
 #  predictions_count    :integer(4)
+#  championship_id      :integer(4)
 #
 

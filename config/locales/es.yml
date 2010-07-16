@@ -151,6 +151,7 @@ es:
       gang: "mancha"
       profile: "perfil"
       title: "título"
+      championship: "campeonato"
     attributes:
       posts:
         content: "contenido"
@@ -178,6 +179,15 @@ es:
         id: "id"
         post: "Entrada"
         picture_file_name: "Archivo"
+      championships:
+          id: "Id"
+          name: "Nombre"
+          started_at: "Fecha de Inicio"
+          finished_at: "Fecha de Fin"
+          description: "Resumen"
+          place: "Lugar"
+          winner: "Ganador"
+          
       # Overrides model and default messages.
  
   date:

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100617213318) do
+ActiveRecord::Schema.define(:version => 20100716180323) do
 
   create_table "abuses", :force => true do |t|
     t.string   "email"
@@ -117,6 +117,24 @@ ActiveRecord::Schema.define(:version => 20100617213318) do
     t.datetime "picture_updated_at"
   end
 
+  create_table "championship_teams", :force => true do |t|
+    t.integer  "team_id"
+    t.integer  "championship_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "championships", :force => true do |t|
+    t.string   "name"
+    t.datetime "started_at"
+    t.datetime "finished_at"
+    t.text     "description"
+    t.string   "place"
+    t.integer  "winner_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "comments", :force => true do |t|
     t.integer  "post_id"
     t.string   "title"
@@ -187,7 +205,8 @@ ActiveRecord::Schema.define(:version => 20100617213318) do
   end
 
   create_table "groups", :force => true do |t|
-    t.string "name"
+    t.string  "name"
+    t.integer "championship_id"
   end
 
   create_table "matches", :force => true do |t|
@@ -207,6 +226,7 @@ ActiveRecord::Schema.define(:version => 20100617213318) do
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
     t.integer  "predictions_count"
+    t.integer  "championship_id"
   end
 
   create_table "memberships", :force => true do |t|

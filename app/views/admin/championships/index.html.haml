@@ -1,0 +1,34 @@
+- @title = "Administración #{I18n.t('activerecord.models.championship').pluralize} "
+
+#admin.index
+  %h1= "Administrando #{I18n.t('activerecord.models.championship').pluralize}"
+
+  #admin_menu
+    = link_to "Nuevo #{I18n.t('activerecord.models.championship')}", new_admin_championship_path
+
+  %table{:id=>"championships_table"}
+    %thead
+      %tr
+        %td= I18n.t("activerecord.attributes.championships.id").humanize
+        %td= I18n.t("activerecord.attributes.championships.name").humanize
+        %td= I18n.t("activerecord.attributes.championships.started_at").humanize
+        %td= I18n.t("activerecord.attributes.championships.finished_at").humanize
+        %td= I18n.t("activerecord.attributes.championships.description").humanize
+        %td= I18n.t("activerecord.attributes.championships.place").humanize
+        %td= I18n.t("activerecord.attributes.championships.winner_id").humanize
+        %td
+        %td
+    %tbody
+    - @championships.each do |championship|
+      %tr{:class=>cycle('even','odd') }
+        %td= championship.id
+        %td= championship.name
+        %td= championship.started_at
+        %td= championship.finished_at
+        %td= championship.description
+        %td= championship.place
+        %td= championship.try(:winner).try(:name)
+        %td= link_to 'Editar', edit_admin_championship_path(championship)
+        %td= link_to 'Eliminar', ["admin",championship], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
+      
+  .pagination= will_paginate @championships

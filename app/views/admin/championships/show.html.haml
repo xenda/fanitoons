@@ -1,0 +1,19 @@
+- @title = "Viendo #{I18n.t 'activerecord.models.championship'}"
+
+#admin
+
+  %h1= "Viendo #{I18n.t 'activerecord.models.championship'}"
+
+  - show_for @championship do |a| 
+    = a.attribute :name
+        = a.attribute :started_at
+        = a.attribute :finished_at
+        = a.attribute :description
+        = a.attribute :place
+        = a.attribute :winner
+    
+
+  .bottom_menu
+    = link_to "Ver todos", admin_championships_path
+    = link_to "Editar #{I18n.t 'activerecord.models.championship'}",  edit_admin_championship_path(championship)
+    = link_to "Crear otro", new_admin_championship_path

@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  
+	map.namespace :admin do |admin| 
+		admin.resources :championships 
+	end
+
+
   map.resources :championship_teams
 
   map.resources :championships

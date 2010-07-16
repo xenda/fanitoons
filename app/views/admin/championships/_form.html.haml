@@ -1,0 +1,11 @@
+- semantic_form_for ["admin",@championship] do |form|
+  - form.inputs do
+    = form.input :name, :label => "Nombre"
+    = form.input :started_at, :label => "Fecha de Inicio"
+    = form.input :finished_at, :label => "Fecha de Fin"
+    = form.input :description, :label=> "Descripcion"
+    = form.input :place, :label => "Lugar"
+    = form.input :teams, :label => "Equipos"
+    = form.input :winner, :label => "Ganador"
+  - form.buttons do
+    = form.commit_button 'Grabar',:button_html => { :class => "submit" }

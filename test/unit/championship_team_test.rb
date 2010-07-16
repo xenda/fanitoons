@@ -6,3 +6,15 @@ class ChampionshipTeamTest < ActiveSupport::TestCase
     assert true
   end
 end
+
+# == Schema Information
+#
+# Table name: championship_teams
+#
+#  id              :integer(4)      not null, primary key
+#  team_id         :integer(4)
+#  championship_id :integer(4)
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+

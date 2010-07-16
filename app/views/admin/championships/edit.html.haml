@@ -1,0 +1,9 @@
+- @title = "Editando #{I18n.t 'activerecord.models.championship'}"
+
+#admin
+  %h1= "Editando #{I18n.t 'activerecord.models.championship'}"
+
+  = render :partial => 'form'
+
+  .bottom_menu
+    %p= link_to "Ver todos", admin_championships_path
