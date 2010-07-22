@@ -112,10 +112,21 @@ body {
 	width:100%;
 }
 
-#city {
+#city,
+body.matches.register #city {
 	background:url(../images/city.png) center top no-repeat;
 	height:161px;
 	width:100%;
+	margin-bottom: -10em;
+}
+
+body.home #city {
+	margin-bottom: 0px;
+}
+
+body.predictions.home #city {
+	margin-top: 5em;
+	margin-bottom: -5em;
 }
 
 .wrapper {
@@ -180,6 +191,11 @@ input.submit {
 	text-align:center;
 	font-family: 'HelveticaRounded', Arial;
 	letter-spacing:.05em;
+	text-decoration: none;
+}
+
+#last-predicted a {
+	text-decoration: none;
 }
 
 input.submit:hover {
@@ -312,6 +328,11 @@ div#top_profile {
 	line-height:15px;
 	border-left: solid 1px #4A68A4;
 	padding:0 20px;
+	text-decoration: none;
+}
+
+#header #nav li a {
+	text-decoration: none;
 }
 
 #header #nav li.first {
@@ -404,7 +425,7 @@ div#chatango {
 	padding:31px 28px 0 28px;
 	width:920px;
 	background: url(../images/wrapper.png) no-repeat left top;
-	
+	margin-bottom: 2em;
 }
 
 .home #container #content {
@@ -642,6 +663,7 @@ form#new_comment.formtastic.comment {
 	width:130px;
 	padding:0 8px;
 	height:100%;
+	text-decoration: none;
 	}
 
 #most-predicted li.last {
@@ -988,12 +1010,19 @@ input#account_submit.button {
 }
 
 .register #content form .cancel {
-	float:right;
-	height:41px;
-	line-height:41px;
-	color:#423B13;
-	text-decoration:underline;
+	float:left;
+	height:24px;
+	padding-top: 8px;
+	color: #ffec66;
+	text-decoration: none;
 	margin-right:15px;
+	display: block;
+	width: 115px;
+}
+
+a {
+	color: #636363;
+	text-decoration: underline;
 }
 
 #news ul li p.alt a {
