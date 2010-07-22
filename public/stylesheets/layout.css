@@ -30,6 +30,16 @@
 
 #content li div.meta p.title {
 	font-weight: bold;
+	font-size: 12px;
+	padding-top: 2px;
+}
+
+#actities a.more.button {
+	padding: 5px;
+	padding-top: 7px;
+	width: 110px !important;
+	height: 18px;
+	display: block;
 }
 
 .streams #content li div.content {
@@ -199,13 +209,19 @@ input.submit:hover {
 
 
 .bg-footer {
-	background: url(../images/footer-bg.png) repeat-x center bottom;
+	/*background: url(../images/footer-bg.png) repeat-x center bottom;*/
 	height:129px;
+	background: #303030 url(../images/background.png) center -371px;
+	overflow: hidden;
 }
 
 #footer {
 	height:150px;
 	margin-bottom:20px;
+	border-top: 1px dotted #a6c6e1;
+	border-bottom: 1px dotted #a6c6e1;
+	padding-top: 2em;
+	padding-bottom: 2em;
 }
 
 #footer li {
@@ -328,6 +344,14 @@ div#top_profile {
 	font-family: 'HelveticaRounded', Arial;
 }
 
+div#chatango {
+	margin-top: 20px;
+	padding-bottom: 2em;
+	border-bottom: 1px dotted #a6c6e1;
+	padding-top: 2em;
+	border-top: 1px dotted #a6c6e1;
+}
+
 #banner ul {
 	overflow:visible;
 }
@@ -356,7 +380,7 @@ div#top_profile {
 }
 
 .home #container {
-	margin-top:-84px;
+	margin-top:-154px;
 }
 
 .register #container {
@@ -536,7 +560,9 @@ form#new_comment.formtastic.comment {
 #comments_li li div.meta img.avatar {
 	margin: 0px 15px;
 }
-
+#nexts-games {
+	margin-bottom:22px;
+}
 #nexts-games h2 {
 	margin:4px 0 20px 0;
 }
@@ -594,7 +620,9 @@ form#new_comment.formtastic.comment {
 }
 
 #most-predicted {
-	margin-top:22px;
+	
+	border-bottom: 1px dotted #a6c6e1;
+	padding-bottom: 2em;
 }
 
 #most-predicted h3{
@@ -646,6 +674,7 @@ form#new_comment.formtastic.comment {
 #most-predicted li p{
 	font-weight:bold;
 	text-align:center;
+	color: #ab8c59;
 }
 	
 #most-predicted li a:hover {
@@ -659,7 +688,15 @@ form#new_comment.formtastic.comment {
 
 
 #last-predicted {
-	margin-top:22px;
+	margin-top:20px;
+	border-bottom: 1px dotted #a6c6e1;
+	padding-bottom: 1em;
+}
+
+div#actities {
+	border-bottom: 1px dotted #a6c6e1;
+	padding-bottom: 1em;
+	margin-top: 1em;
 }
 
 #last-predicted h3{
@@ -682,12 +719,13 @@ form#new_comment.formtastic.comment {
 
 #last-predicted li div.meta{
 	float:left;
-	width:90px;
+	width:60px;
 }
 
 #last-predicted table tr, #last-predicted table td {
 /*height:34px;*/
 line-height:24px;
+	color: #4c4c4c;
 }
 
 #last-predicted li div.meta .title {
@@ -696,6 +734,7 @@ line-height:24px;
 
 #last-predicted li p {
 	text-align:center;
+	color: #867b35;
 }
 
 #last-predicted table {
@@ -750,7 +789,7 @@ line-height:24px;
 	line-height:28px;
 }
 
-#news li.even {
+#news li.odd {
 	margin-right: 20px;
 	}
 
@@ -1549,35 +1588,46 @@ td.flag {
 }
 
 #content h3 {
-	margin-bottom: 10px;
+	margin-bottom: 20px;
+	color: #94aa5f;
+	line-height: 25px;
 }
 
 
 div.bg-footer ul {
 	overflow: hidden;	
-	width: 180px;
+	width: 590px;
 	padding-top: 30px; 
 	display: block;
 	margin: 0px auto;
+	margin-top: 2em;
+}
+
+#footnotes_debug {
+	display: none;
 }
 
 div.bg-footer ul li {
-	float: left;
+	float: left !important;
 	margin-right: 20px;
+	font-size: 26px;
 	font-size: 16px;
+	font-family: 'HelveticaRounded', Arial;
+
 }
 
 div.bg-footer ul li.last {
 	margin-right: 0px;
 }
 div.bg-footer ul li a {
-	color: white;
-	text-decoration: underline;
+	color: #2f66b2;
+	text-decoration: none;
 	text-transform: lowercase;
-	font-size: 13px;
+
 }
 
 img#lan_ad {
 	margin-left: 200px !important;
+	margin-top: 1.3em;
 }
 

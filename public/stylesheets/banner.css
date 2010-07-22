@@ -1,3 +1,5 @@
+/* @override http://localhost:3000/stylesheets/banner.css */
+
 #banner-cont {
 	width:815px !important;
 	height:271px;

@@ -1,16 +1,17 @@
 #facebook_likebox
   %iframe{:allowtransparency => "true", :frameborder => "0", :scrolling => "auto", :src => "http://www.facebook.com/plugins/likebox.php?id=129238740437455&amp;width=240&amp;connections=20&amp;stream=false&amp;header=false&amp;height=340&amp;show-faces=true&amp;scroll=true", :style => "border:none; overflow:hidden; width:240px; height:340px;"}
 
-:erb
+#chatango
+  :erb
 
-  <object width="250" height="400" id="obj_1279297776238"><param name="movie" value="http://patatoon.chatango.com/group"/><param name="wmode" value="transparent"/><param name="AllowScriptAccess" VALUE="always"/><param name="AllowNetworking" VALUE="all"/><param name="AllowFullScreen" VALUE="true"/><param name="flashvars" value="cid=1279297776238&a=DFFB73&b=60&c=838200&f=50&l=999999&o=72&q=B7D274&r=100&t=0&w=0&ab=0"/><embed id="emb_1279297776238" src="http://patatoon.chatango.com/group" width="250" height="400" wmode="transparent" allowScriptAccess="always" allowNetworking="all" type="application/x-shockwave-flash" allowFullScreen="true" flashvars="cid=1279297776238&a=DFFB73&b=60&c=838200&f=50&l=999999&o=72&q=B7D274&r=100&t=0&w=0&ab=0"></embed></object>
+    <object width="250" height="400" id="obj_1279297776238"><param name="movie" value="http://patatoon.chatango.com/group"/><param name="wmode" value="transparent"/><param name="AllowScriptAccess" VALUE="always"/><param name="AllowNetworking" VALUE="all"/><param name="AllowFullScreen" VALUE="true"/><param name="flashvars" value="cid=1279297776238&a=DFFB73&b=60&c=838200&f=50&l=999999&o=72&q=B7D274&r=100&t=0&w=0&ab=0"/><embed id="emb_1279297776238" src="http://patatoon.chatango.com/group" width="250" height="400" wmode="transparent" allowScriptAccess="always" allowNetworking="all" type="application/x-shockwave-flash" allowFullScreen="true" flashvars="cid=1279297776238&a=DFFB73&b=60&c=838200&f=50&l=999999&o=72&q=B7D274&r=100&t=0&w=0&ab=0"></embed></object>
 
-#chunteros
-  %h3 los chunteros
-  %ul.ranking= render :partial => "home/top_season",:collection=>@top_season
+/ #chunteros
+/   %h3 los chunteros
+/   %ul.ranking= render :partial => "home/top_season",:collection=>@top_season
 
 #punteros
-  %h3 los punteros
+  %h3 los patatooneros
   %ul.ranking= render :partial => "home/top_times", :collection => @top_times
 
 #invite
