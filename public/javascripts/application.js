@@ -12,7 +12,8 @@ $(document).ready(function() {
 		});	
 	}  
 
-
+  $.pop();
+  
   date = $("div.counter").attr("rel");
 
   var next_match = Date.parse(date);

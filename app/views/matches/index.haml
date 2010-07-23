@@ -5,9 +5,15 @@
   %span Viendo 
   encuentros deportivo
 
-%h3= "Mundial Sudáfrica 2010"
-
-
+%h3= @championship.name
+.change 
+  .change_title Cambiar de campeonato
+  .pop
+    #championships
+      - Championship.all.each do |c|
+        .champ= link_to c.name, {:filter=>URI.encode(c.name)}
+  
+.clear
 #groups_match
 
   - unless account_signed_in?

@@ -4,8 +4,14 @@ class MatchesController < ApplicationController
 
 
   def index
-    @championship = Championship.last
-    @groups = Group.all(:order => "name", :include => [:matches => [:local,:visitor,:stadium]])
+    if params[:filter]
+      @championship = Championship.find_by_name(URI.decode(params[:filter]))
+    else
+      @championship = Championship.last
+    end
+    
+    @groups = @championship.groups.all(:order => "name", :include => [:matches => [:local,:visitor,:stadium]])
+    
   end
 
   def show
