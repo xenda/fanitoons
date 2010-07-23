@@ -1,7 +1,7 @@
 class Team < ActiveRecord::Base
   has_many :matches, :foreign_key => "first_team_id"
   has_many :matches2, :class_name => "Match", :foreign_key => "second_team_id"
-  # belongs_to :country
+  belongs_to :country
   has_many :comments, :as => :commentable
   
   has_many :favorite_teams, :class_name => "FavoriteTeam", :foreign_key => "team_id"

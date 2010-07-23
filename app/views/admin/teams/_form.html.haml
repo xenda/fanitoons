@@ -1,7 +1,7 @@
 - semantic_form_for ["admin",@team] do |form|
   - form.inputs do
     = form.input :name
-    = form.input :country
+    = form.input :country, :as => :select, :collection => Country.all
     = form.input :bio, :input_html => {:class => "tinymce"}
     = form.input :flag  
     = form.input :picture  
