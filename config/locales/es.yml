@@ -175,6 +175,7 @@ es:
         current_sign_in_ip: "ip actual"
         last_sign_in_ip: "última ip"
         birth_date: "cumpleaños"
+        
       post_images:
         id: "id"
         post: "Entrada"
@@ -187,6 +188,7 @@ es:
           description: "Resumen"
           place: "Lugar"
           winner: "Ganador"
+          winner_id: "Ganador"
           
       # Overrides model and default messages.
  

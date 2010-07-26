@@ -200,6 +200,17 @@ div#container div#main {
 	form.formtastic fieldset select {
 	margin-bottom: 20px;
 }
+
+select#championship_team_ids {
+	width: 400px;
+	padding: 5px;
+}
+
+select#championship_team_ids option {
+	padding: 10px;
+	font-size: 12px !important;
+}
+
 	form.formtastic fieldset input {
 	display: block;
 	clear: both;

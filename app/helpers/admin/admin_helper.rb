@@ -5,7 +5,7 @@ module Admin::AdminHelper
     Dir.glob( RAILS_ROOT + '/app/models/*' ).each do |f| 
       models << File.basename( f ).gsub( /^(.+).rb/, '\1') 
     end 
-    models.reject{|m| ["favorite_team","friendship", "friend","user_badge","admin","","gang_mailer","message","membership","message_mailer","folder","championship_team",""].include? m }
+    models.reject{|m| ["favorite_team","friendship", "friend","user_badge","admin","","gang_mailer","message","membership","message_mailer","folder","championship_team",""].include? m }.sort! {|a,b| I18n.t("activerecord.models.#{a.downcase}") <=> I18n.t("activerecord.models.#{b.downcase}")}
   end
   
     

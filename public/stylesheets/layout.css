@@ -920,6 +920,19 @@ line-height:24px;
 	font-size: 14px;
 	}
 
+#new_account div.content_box div.content.login.box form div.group.navform.wat-cf div.right input.button {
+	background: url(../images/buttons.png) no-repeat;
+	height: 30px;
+	width: 120px;
+	color: white;
+}
+#new_account div.content_box div.content.login.box form div.group.navform.wat-cf div.right input.button:hover {
+	color: #dbdbdb;
+}
+input#admin_remember_me {
+	width: 20px !important;
+}
+
 #comment_form label {
 	display: block !important;
 }
@@ -1157,7 +1170,11 @@ input#account_remember_me {
 	float: right;
 }
 
-#content div.flash span.message.notice {
+#content div.flash span.message.notice,
+#content div.flash span.message.alert,
+#content div.flash span.message.info,
+#content div.flash span.message.warning,
+#content div.flash span.message.error {
 	display: block;
 	text-align: center;
 	padding: 10px;
