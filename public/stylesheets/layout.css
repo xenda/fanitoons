@@ -1711,3 +1711,45 @@ img#lan_ad {
 	margin-top: 1.3em;
 }
 
+
+    #news ul li a {
+  	text-decoration: none;	
+  }
+
+  #actities ul li div.meta {
+  	float: left;
+  	width: 60px;
+  	margin-right: 10px;	
+  	text-align: center;
+  }
+  #actities ul li {
+  	overflow: hidden;
+  	margin-bottom: 1em;
+  	padding-bottom: 1em;
+  	border-bottom: 1px dotted #a6c6e1;
+  }
+  #actities ul li div.content {
+  	float: left;
+  	font-size: 13px;
+  	line-height: 1.6em;
+  	padding: 15px;
+  	border: 1px solid #daeda8;
+  	color: #686868;
+  }
+
+  #actities ul li div.content a {
+  	text-decoration: none;
+  	color: #b8d377;
+  }
+  #actities ul li div.content strong {
+  	font-size: 10px;
+  	color: #777878;
+  }
+  #actities ul li div.meta a {
+  	overflow: hidden;
+  	display: block;
+  }
+  #actities ul li div.meta a img {
+  	margin: 0px auto;
+  }
+
