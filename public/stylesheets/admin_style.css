@@ -204,6 +204,8 @@ div#container div#main {
 select#championship_team_ids {
 	width: 400px;
 	padding: 5px;
+	font-size:1.2em;
+ /* Bigger text */
 }
 
 select#championship_team_ids option {

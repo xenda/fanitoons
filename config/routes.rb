@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
 		admin.resources :championships 
 	end
 
-  map.avatar_beta "/avatar/beta", :controller => "avatar", :action=>"beta"
+  map.avatar_beta "/beta", :controller => "avatar", :action=>"beta"
 
   map.resources :championship_teams
 
