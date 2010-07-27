@@ -34,6 +34,12 @@ class Gang < ActiveRecord::Base
         :small  => "25x25#",
         :tiny   => "12x12#"
       }}
+      
+      attr_accessor :image_file_name
+      attr_accessor :image_content_type
+      attr_accessor :image_file_size
+      attr_accessor :image_updated_at
+       
   
   validates_uniqueness_of :name
   validates_presence_of :name
