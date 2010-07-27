@@ -1,4 +1,4 @@
-<div class="titleB"><%= I18n.t('tog_social.gangs.member.edit_gang', :gang => @gang.name) %></div>
+<h2><%= I18n.t('tog_social.gangs.member.edit_gang', :gang => @gang.name) %></h2>
 <br/>
 <%= error_messages_for :gang %>
 
@@ -36,6 +36,6 @@
   </fieldset>
 
   <div class="actions">
-    <%= f.submit I18n.t('tog_social.gangs.member.update'),:class=>"button mainaction" %>
+    <%= f.submit "Actualizar",:class=>"button mainaction" %>
   </div>
 <% end %>

@@ -242,30 +242,47 @@ input.submit {
 #portlet_gangs div.description {
 	width: 500px;
 	margin-bottom: 10px;
-	font: 14px/1.6em Helvetica, "Helvetica Neue", Arial, Geneva, sans-serif;
+	font: normal 14px/1.6em Helvetica, "Helvetica Neue", Arial, Geneva, sans-serif;
 	color: #484848;
 }
 
-#content div.detail.detail1 div.title a{
+#content div.title a{
 	margin-bottom: 20px;
 	display: block;
 	text-decoration: none;
-	font: 35px 'HelveticaRounded',Helvetica, "Helvetica Neue", Arial, Geneva, sans-serif;
+	font: normal 35px 'HelveticaRounded',Helvetica, "Helvetica Neue", Arial, Geneva, sans-serif;
 	color: #f4a233;
 }
 
-#content div.detail.detail1 div.subtitle {
-	font: bold 20px 'HelveticaRounded', Helvetica, "Helvetica Neue", Arial, Geneva, sans-serif;
+#content div.subtitle {
+	font: normal 20px 'HelveticaRounded', Helvetica, "Helvetica Neue", Arial, Geneva, sans-serif;
 	color: #6e766f;
 	margin-bottom: 20px;
 }
 
-#content div.detail.detail1 div.summary {
+#content div.summary {
 	font-size: 16px;
 	line-height: 1.6em;
 	color: #8f8f8f;
+	font-weight: normal;
+	font-style: normal;
 }
 
+#profiles_list div.portlet_content ul li div.info {
+	margin-bottom: 2em;
+	font-weight: normal;
+	font-style: normal;
+}
+
+#actions a {
+	padding: 10px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+#actions a:hover {
+	color: #a95d13;
+} 
 #content div.detail.detail1 div.text {
 	font-size: 20px;
 	margin-top: 10px;
@@ -1923,4 +1940,20 @@ img#lan_ad {
   #actities ul li div.meta a img {
   	margin: 0px auto;
   }
+  
+  body.gangs #content p a.button.add {
+	width: 114px;
+	height: 23px;
+	display: block;
+	padding-top: 8px;
+	margin-bottom: 1em;
+}
+
+#content div.gang_list {
+	float: left;
+	width: 650px;
+}
+
+
+
 

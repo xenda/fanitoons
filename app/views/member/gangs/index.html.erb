@@ -1,42 +1,53 @@
-<p><%= link_to I18n.t('tog_social.gangs.site.create_gang'), new_member_gang_path, :class => 'button add' %></p>
+<p><%= link_to "Nueva mancha", new_member_gang_path, :class => 'button add' %></p>
 
-<div class="portlet portletB" id="profiles_list">
-    <h2><span><%= I18n.t('tog_social.gangs.model.moderated_by_you') %></span></h2>
-    <div class="portlet_content">
-        <ul>
-          <% @moderator_memberships.each do |membership|%>
-            <li>
-              <div class="img"><%=link_to image_for_gang(membership.gang, 'small'), gang_path(membership.gang)%></div>
-              <div class="info">
-                <div class="title"><%= link_to membership.gang.name, gang_path(membership.gang) %></div>
-                <div id="actions">
-                <%= link_to I18n.t('tog_social.gangs.member.edit'), edit_member_gang_path(membership.gang) -%>
-                <%= link_to I18n.t('tog_social.gangs.member.members_pending', :size => membership.gang.pending_members.size), member_gang_pending_members_path(membership.gang) %>
-                </div>
-              </div><!--  fin info -->
-            <li>
-          <%end%>
-        </ul>
-    </div>
+<div class="gang_list">
+  
+  <div class="portlet portletB" id="profiles_list">
+      <h2><span>Manchas que moderas</span></h2>
+      <div class="portlet_content">
+          <ul>
+            <% @moderator_memberships.each do |membership|%>
+              <li>
+                <div class="img"><%=link_to image_for_gang(membership.gang, 'small'), gang_path(membership.gang)%></div>
+                <div class="info">
+                  <div class="title"><%= link_to membership.gang.name, gang_path(membership.gang) %></div>
+                  <div id="actions">
+                  <%= link_to I18n.t('tog_social.gangs.member.edit'), edit_member_gang_path(membership.gang) -%>
+                  <%= link_to I18n.t('tog_social.gangs.member.members_pending', :size => membership.gang.pending_members.size), member_gang_pending_members_path(membership.gang) %>
+                  </div>
+                </div><!--  fin info -->
+              <li>
+            <%end%>
+          </ul>
+      </div>
+  </div>
+
+  <div class="portlet portletB" id="profiles_list">
+      <h2><span><%= I18n.t('tog_social.gangs.member.gang_member') %></span></h2>
+      <div class="portlet_content">
+          <ul>
+            <% @plain_memberships.each do |membership|%>
+              <li>
+                <div class="img"><%=link_to image_for_gang(membership.gang, 'small'), gang_path(membership.gang)%></div>
+                <div class="info">
+                  <div class="title"><%= link_to membership.gang.name, gang_path(membership.gang) %></div>
+                  <div id="actions">
+                    <%= I18n.t('tog_social.gangs.model.member_status') %>: <%=membership.state%>
+                  <br/>
+                  <%= link_to I18n.t('tog_social.gangs.site.leave'), leave_gang_path(membership.gang), :confirm => I18n.t('tog_social.gangs.site.leave_confirm'), :class => 'delete' %>
+                  </div>
+                </div><!--  fin info -->
+              <li>
+            <%end%>
+          </ul>
+      </div>
+  </div>
+
+
+
 </div>
 
-<div class="portlet portletB" id="profiles_list">
-    <h2><span><%= I18n.t('tog_social.gangs.member.gang_member') %></span></h2>
-    <div class="portlet_content">
-        <ul>
-          <% @plain_memberships.each do |membership|%>
-            <li>
-              <div class="img"><%=link_to image_for_gang(membership.gang, 'small'), gang_path(membership.gang)%></div>
-              <div class="info">
-                <div class="title"><%= link_to membership.gang.name, gang_path(membership.gang) %></div>
-                <div id="actions">
-                  <%= I18n.t('tog_social.gangs.model.member_status') %>: <%=membership.state%>
-                <br/>
-                <%= link_to I18n.t('tog_social.gangs.site.leave'), leave_gang_path(membership.gang), :confirm => I18n.t('tog_social.gangs.site.leave_confirm'), :class => 'delete' %>
-                </div>
-              </div><!--  fin info -->
-            <li>
-          <%end%>
-        </ul>
-    </div>
-</div>
+<% content_for :sidebar do %>
+  <%=  render :partial => "home/sidebar" %>
+<% end %>
+

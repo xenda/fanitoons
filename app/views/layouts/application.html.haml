@@ -56,7 +56,8 @@
           #login
             - if account_signed_in?
               #top_profile
-                = link_to current_account.email, profile_path(current_account.profile.id)
+                = link_to "mi perfil", profile_path(current_account.profile.id)
+                = link_to "mis manchas", member_gangs_path
                 = link_to "mensajes", member_messages_path
                 = link_to "salir", destroy_account_session_path              
             - else
