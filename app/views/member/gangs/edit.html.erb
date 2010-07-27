@@ -1,0 +1,41 @@
+<div class="titleB"><%= I18n.t('tog_social.gangs.member.edit_gang', :gang => @gang.name) %></div>
+<br/>
+<%= error_messages_for :gang %>
+
+<% form_for(@gang, :url => member_gang_path(@gang), :html => { :multipart => true, :method => :put}) do |f| %>
+  <fieldset>
+    <div class="fields">
+      <p>
+        <label for="gang_name"><%= I18n.t('tog_social.gangs.model.name') %></label>
+        <%= f.text_field  :name, :class => 'fieldbox wide' %>
+      </p>
+      <p>
+        <label for="gang_description"><%= I18n.t('tog_social.gangs.model.description') %></label>
+        <%= f.text_area  :description, :class => 'fieldbox wide', :size => '60x10' %></dd>
+      </p>
+      <p>
+        <label for="gang_tag_list"><%= I18n.t('tog_social.tags.tags') %></label>
+        <%= f.text_field  :tag_list, :class => 'fieldbox' %><br/>
+        <span class="helpinfo"><%= I18n.t('tog_social.tags.separated_by_comma') %></span>
+      </p>
+      <p>
+        <label for="gang_image"><%= I18n.t('tog_social.gangs.model.image') %></label>
+        <%= image_for_gang(@gang, 'medium') %><br/>
+        <%= file_field "gang", "image" %><br/>
+        <span class="helpinfo"><%= I18n.t('tog_social.gangs.model.image_help') %></span>
+      </p>
+      <p>
+        <label for="gang_private" class="nolabel"><%= f.check_box :private %> <%= I18n.t('tog_social.gangs.model.private') %></label><br/>
+        <span class="helpinfo"><%= I18n.t('tog_social.gangs.model.private_help') %></span>
+      </p>
+      <p>
+        <label for="gang_moderated" class="nolabel"><%= f.check_box :moderated %> <%= I18n.t('tog_social.gangs.model.moderated') %></label><br/>
+        <span class="helpinfo"><%= I18n.t('tog_social.gangs.model.moderated_help') %></span>
+      </p>
+    </div>
+  </fieldset>
+
+  <div class="actions">
+    <%= f.submit I18n.t('tog_social.gangs.member.update'),:class=>"button mainaction" %>
+  </div>
+<% end %>

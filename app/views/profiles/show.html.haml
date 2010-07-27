@@ -40,6 +40,22 @@
     %h2 Mis patas
     = render :partial => "shared/profiles_portlet", :locals => { :items =>  @profile.friends, :style => :portletG, :title => I18n.t('tog_social.profiles.model.friends'), :no_items => I18n.t('tog_social.profiles.model.friends_not_found', :profile_full_name => @profile.full_name)}
   .clear
+    
+  #profile_groups
+    %h2 Mis grupos
+    #portlet_moreLinks.portlet.portletC
+      - if !@profile.account.gangs.blank?
+        .portlet_content
+          %ul
+            - @profile.account.gangs.each do |gang|
+              %li
+                - link_to gang_path(gang) do
+                  = image(gang.image, :medium)
+              
+                = link_to gang.name, gang_path(gang)
+
+  .clear
+  
   #profile_followers
     %h2 Mis seguidores
     = render :partial => "shared/profiles_portlet", :locals => { :items =>  @profile.followers, :style => :portletG, :title => I18n.t('tog_social.profiles.model.followers'), :no_items => I18n.t('tog_social.profiles.model.followers_not_found', :profile_full_name => @profile.full_name) }

@@ -28,8 +28,8 @@ module Admin::AdminHelper
     l(date_string,:format=>:short)
   end
   
-  def image(picture)
-    image_tag(picture.url(:thumbnail)) if picture
+  def image(picture,type=:thumbnail)
+    image_tag(picture.url(type)) if picture
   end
   
 end

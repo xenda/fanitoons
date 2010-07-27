@@ -17,11 +17,10 @@ class Admin::GangsController < InheritedResources::Base
   
   def activate
     @gang = Gang.find(params[:id])
-    @gang.activate!
     respond_to do |wants|
       if @gang.activate!
         wants.html do
-          render :text => "<span>Grupo #{@gang.full_name} activado</span>"
+          render :text => "<span>Mancha #{@gang.name} activada</span>"
         end
       end
     end

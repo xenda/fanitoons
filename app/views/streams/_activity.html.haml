@@ -1,35 +1,38 @@
-%li{:class=>(cycle("odd","even"))}
-  .meta
-    %a{:href=>profile_path(activity.account.profile.id)}
-      - if activity.account.picture_file_name
-        = image_tag activity.account.thumbnail(:thumb),:size=>"51x51", :class => "avatar"
-      - else
-        %img.avatar{:alt => "", :height => "51", :src => "/images/avatar.jpg", :width => "51"}/
-    %p= activity.account.name
-    %p.title= activity.account.title
-  .content
-    %p
-      - if activity.account.name
-        - text = activity.account.name
-      - else
-        - text = "Un miembro de la comunidad"
-      = link_to text, profile_path(activity.account.profile.id)
-      ha 
-      - case activity.item_type
-        - when "Prediction"
-          - if activity.action == "create"
-            = link_to "dejado un pronóstico", prediction_path(activity.item_id)
-          - if activity.action == "update"
-            = link_to "actualizado su pronóstico", prediction_path(activity.item_id)
-          para el partido
-          = link_to "#{activity.item.match.name}", match_path(activity.item.match.id)
-        - when "Comment"
-          - if activity.action == "create"
-            dejado un comentario a
-            = link_to "#{activity.item.commentable.name}", polymorphic_url(activity.item.commentable)
-            %p= link_to truncate(activity.item.content,100), polymorphic_url(activity.item.commentable,:anchor=>"comment_#{activity.item.id}")
-        - when "Avatar"
-          = link_to "cambiado su avatar", profile_path(activity.account.profile.id)
+- if activity.account.profile
+  %li{:class=>(cycle("odd","even"))}
+    .meta
+      = logger.info activity.account.profile.inspect
+      = logger.info activity.account.profile.id
+      %a{:href=>profile_path(activity.try(:account).try(:profile).try(:id))}
+        - if activity.account.picture_file_name
+          = image_tag activity.account.thumbnail(:thumb),:size=>"51x51", :class => "avatar"
         - else
-          pasado un buen rato con sus amigos en Patatoon
-      %strong= l(activity.created_at, :format => :short)
+          %img.avatar{:alt => "", :height => "51", :src => "/images/avatar.jpg", :width => "51"}/
+      %p= activity.account.name
+      %p.title= activity.account.title
+    .content
+      %p
+        - if activity.account.name
+          - text = activity.account.name
+        - else
+          - text = "Un miembro de la comunidad"
+        = link_to text, profile_path(activity.account.profile.id)
+        ha 
+        - case activity.item_type
+          - when "Prediction"
+            - if activity.action == "create"
+              = link_to "dejado un pronóstico", prediction_path(activity.item_id)
+            - if activity.action == "update"
+              = link_to "actualizado su pronóstico", prediction_path(activity.item_id)
+            para el partido
+            = link_to "#{activity.item.match.name}", match_path(activity.item.match.id)
+          - when "Comment"
+            - if activity.action == "create"
+              dejado un comentario a
+              = link_to "#{activity.item.commentable.name}", polymorphic_url(activity.item.commentable)
+              %p= link_to truncate(activity.item.content,100), polymorphic_url(activity.item.commentable,:anchor=>"comment_#{activity.item.id}")
+          - when "Avatar"
+            = link_to "cambiado su avatar", profile_path(activity.account.profile.id)
+          - else
+            pasado un buen rato con sus amigos en Patatoon
+        %strong= l(activity.created_at, :format => :short)

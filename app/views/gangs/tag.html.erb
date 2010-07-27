@@ -1,16 +1,16 @@
-<div class="portlet portletH" id="portlet_groups">
-    <h2><span><%= I18n.t('tog_social.groups.site.group_tagged', :tag => @tag) %></span></h2>
-    <p><%= link_to I18n.t('tog_social.groups.site.create_group'), new_member_gang_path, :class => 'button add' %></p>
+<div class="portlet portletH" id="portlet_gangs">
+    <h2><span><%= I18n.t('tog_social.gangs.site.gang_tagged', :tag => @tag) %></span></h2>
+    <p><%= link_to "Crear mancha", new_member_gang_path, :class => 'button add' %></p>
     <div class="portlet_content">
         <ul>
-          <% @gangs.each do |group|%>
+          <% @gangs.each do |gang|%>
           <li class="clearfix">
-              <div class="title"><%= link_to group.name, gang_path(group) %></div>
+              <div class="title"><%= link_to gang.name, gang_path(gang) %></div>
               <div class="text">
-                 <%=group.description%>
+                 <%=gang.description%>
               </div>
               <div class="members"><strong>
-              <%= I18n.t('tog_social.groups.model.members', :count => group.members.size) %></strong></div>
+              <%= I18n.t('tog_social.gangs.model.members', :count => gang.members.size) %></strong></div>
           </li>          
           <%end%>          
         </ul>
@@ -21,6 +21,6 @@
 
   <% 'render :partial => "search_box" ' %>
 
-  <%= render :partial => "last_groups" %>
+  <%= render :partial => "last_gangs" %>
 
 <% end %>

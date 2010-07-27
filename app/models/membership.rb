@@ -40,18 +40,19 @@ class Membership < ActiveRecord::Base
 end
 
 
+
 # == Schema Information
 #
 # Table name: memberships
 #
 #  id              :integer(4)      not null, primary key
 #  user_id         :integer(4)
-#  group_id        :integer(4)
 #  moderator       :boolean(1)      default(FALSE)
 #  state           :string(255)
 #  activation_code :string(40)
 #  activated_at    :datetime
 #  created_at      :datetime
 #  updated_at      :datetime
+#  gang_id         :integer(4)
 #
 

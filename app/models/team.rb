@@ -29,13 +29,13 @@ end
 
 
 
+
 # == Schema Information
 #
 # Table name: teams
 #
 #  id                   :integer(4)      not null, primary key
 #  name                 :string(255)
-#  country              :string(255)
 #  created_at           :datetime
 #  updated_at           :datetime
 #  bio                  :text

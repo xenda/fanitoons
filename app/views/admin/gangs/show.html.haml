@@ -1,0 +1,22 @@
+- @title = "Viendo #{I18n.t 'activerecord.models.gang'}"
+
+#admin
+
+  %h1= "Viendo #{I18n.t 'activerecord.models.gang'}"
+
+  - show_for @gang do |a| 
+    = a.attribute :name
+        = a.attribute :description
+        = a.attribute :image
+        = a.attribute :state
+        = a.attribute :private
+        = a.attribute :moderated
+        = a.attribute :user
+        = a.attribute :activation_code
+        = a.attribute :activated_at
+    
+
+  .bottom_menu
+    = link_to "Ver todos", admin_gangs_path
+    = link_to "Editar #{I18n.t 'activerecord.models.gang'}",  edit_admin_gang_path(gang)
+    = link_to "Crear otro", new_admin_gang_path

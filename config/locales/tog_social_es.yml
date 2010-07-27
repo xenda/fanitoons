@@ -1,16 +1,16 @@
 es:
   interface:
     admin:
-      groups: Grupos
+      gangs: Manchas
     member:
-      my_groups: Mis grupos
+      my_gangs: Mis manchas
       my_sharings: Cosas que he compartido      
     site:
       profiles: Gente
-      groups: Grupos
+      gangs: Manchas
   tog_social:
     plugin_name: Social
-    plugin_description: Gestión de objetos sociales básicos (perfiles, grupos y amistades)
+    plugin_description: Gestión de objetos sociales básicos (perfiles, manchas y amistades)
     cancel: Cancelar
     back: Volver    
     msg_yes: Si
@@ -26,7 +26,7 @@ es:
         name: Objecto compartido  
         created_at: Compartido el
         shared_by: Compartido por
-        group: Grupo       
+        gang: Mancha       
       member:
         already_shared: Ya compartido      
         share: Compartir '{{name}}'
@@ -35,10 +35,10 @@ es:
         remove_share_from: Eliminar de '{{name}}'
         shared_ok: Objecto compartido con "{{name}}"!
         shared_nok: Este objeto ya estaba compartido con "{{name}}"! 
-        not_member: Tienes que ser miembro de ese grupo para poder compartir cosas con él
+        not_member: Tienes que ser miembro de ese mancha para poder compartir cosas con él
         remove_share_ok: Objeto eliminado de '{{name}}'
         remove_share_nok: No se ha eliminado el objeto de '{{name}}'
-        remove_confirmation: ¿Estas seguro de dejar de compartir '{{object}}' con el grupo '{{group}}' ?                   
+        remove_confirmation: ¿Estas seguro de dejar de compartir '{{object}}' con el mancha '{{gang}}' ?                   
     profiles:
       model:
         first_name: Nombre
@@ -68,101 +68,101 @@ es:
         unfollow_user: Dejar de seguir a {{name}}
         add_friend: Añadir a {{name}} a tu lista de amigos
         remove_friend: Eliminar a {{name}} de tu lista de amigos        
-    groups:
+    gangs:
       model:
         members:
           one: "1 miembro"
           other: "{{count}} miembros"
-        members_not_found: "{{group_name}} tiene 0 miembros."      
+        members_not_found: "{{gang_name}} tiene 0 miembros."      
         name: Nombre
         description: Descripción
-        image: Imagen
+        image: Logo
         image_help: Si no quieres cambiar la imagen deja este campo en blanco.
         created_by: Creado por
-        private: Privado
-        private_help: Un grupo privado no aparecerá en los listados públicos.
-        moderated: Moderado
-        moderated_help: En un grupo moderado cada solicitud de netrada debe ser aprobada.
-        moderated_by: Moderador por
-        moderated_by_you: Moderador por tí
+        private: Privada
+        private_help: Una mancha privada no aparecerá en las listas públicas.
+        moderated: Moderada
+        moderated_help: En una mancha moderada, cada persona que se quiera unir deberá ser aprobada.
+        moderated_by: Moderado por
+        moderated_by_you: Moderado por tí
         active: Activo
         icon: Icono
         created_at: Creado el
         updated_at: Actualizado el
         member_status: Status        
       site:
-        share: Compartir con tus grupos
-        share_title: Compartir con el grupo '{{name}}'        
-        member: Eres miembro de este grupo.
-        already_member: Ya eres un miembro de este grupo.
-        not_member: No eres un miembro de este grupo.
-        request_received: Su petición ha sido recibida. Los moderadores del grupo tomarán una decisión en breve.
-        request_waiting: Su petición de unirse al grupo está siendo procesada. Por favor tenga un poco de paciencia.
-        welcome: Bienvenido al grupo '{{name}}'. Disfrute su participación!
-        leave: Abandonar este grupo
-        leave_confirm: ¿Seguro que quieres abandonar este grupo?
-        leaved: Has dejado de pertenecer a este grupo
-        join: Únete a este grupo
-        last_moderator: Eres el último moderador de este grupo.No puedes abandonarlo hasta que nomines a un nuevo moderador
-        not_found: Error. Este grupo no está activo o no existe
-        unactive: Error. Este grupo no está activo
+        share: Compartir con tus manchas
+        share_title: Compartir con la mancha '{{name}}'        
+        member: Eres miembro de esta mancha.
+        already_member: Ya eres un miembro de esta mancha.
+        not_member: No eres un miembro de esta mancha.
+        request_received: Su petición ha sido recibida. Los moderadores de la mancha tomarán una decisión en breve.
+        request_waiting: Su petición de unirse a la mancha está siendo procesada. Por favor tenga un poco de paciencia.
+        welcome: Bienvenido a la mancha '{{name}}'. Disfrute su participación!
+        leave: Abandonar esta mancha
+        leave_confirm: ¿Seguro que quieres abandonar esta mancha?
+        leaved: Has dejado de pertenecer a esta mancha
+        join: Únete a esta mancha
+        last_moderator: Eres el último moderador de esta mancha. No puedes abandonarla hasta que nomines a un nuevo moderador
+        not_found: Error. Esta mancha no esta activa o no existe
+        unactive: Error. Esta mancha no esta activa
         invite: 
-          already_member: El usuario ya es miembro del grupo
-          already_invited: El usuario ya ha sido invitado al grupo
-          invited: Invitación al grupo enviada
-          you_are_not_invited: No has sido invitado al grupo
+          already_member: El usuario ya es miembro de la mancha
+          already_invited: El usuario ya ha sido invitado a la mancha
+          invited: Invitación a la mancha enviada
+          you_are_not_invited: No has sido invitado a la mancha
           invitation_accepted: Invitación aceptada
           invitation_rejected: Invitación rechazada
-          you_could_not_invite: No tienes permisos para invitar a este grupo
-        title: Grupos
-        create_group: Crear un grupo nuevo
+          you_could_not_invite: No tienes permisos para invitar a esta mancha
+        title: Manchas
+        create_gang: Crear una mancha nueva
         create: Crear
-        details: Detalles del grupo
-        last_groups: Últimos grupos creados
-        search_groups: Busca entre los grupos
-        group_tagged: Grupos etiquetados {{tag}}
-        group_tags: Tags de grupos
+        details: Detalles de la mancha
+        last_gangs: Últimas manchas creadas
+        search_gangs: Busca entre las manchas
+        gang_tagged: Manchas etiquetadas {{tag}}
+        gang_tags: Etiquetas de manchas
       member:
-        created: Grupo creado con éxito.
-        pending: Tu grupo ha sido creado pero está pendiente de aprobación por un administrador
-        group_member: Grupos de los que eres miembro
+        created: Mancha creada con éxito.
+        pending: Tu mancha ha sido creada pero está pendiente de aprobación por un administrador
+        gang_member: Manchas de los que eres miembro
         members_pending: "{{size}} solicitudes esperando aprobación"
         pending_members: Solicitudes pendientes
         accept: Aceptar
         accept_title: Acetar usuario
         reject: Rechazar
         reject_title: Rechazar usuario
-        edit: Editar grupo
-        edit_group: Editar grupo {{group}}
+        edit: Editar mancha
+        edit_gang: Editar mancha {{gang}}
         update: Update
-        updated: Grupo '{{name}}' actualizado con éxito"
+        updated: Mancha '{{name}}' actualizada con éxito"
         user_doesnt_exist: El usuario no existe
-        user_rejected: El usuario '{{name}}' ha sido rechazado para este grupo
-        user_accepted: El usuario '{{name}}' ha sido aceptado para este grupo
+        user_rejected: El usuario '{{name}}' ha sido rechazado para esta mancha
+        user_accepted: El usuario '{{name}}' ha sido aceptado para esta mancha
         error: Oooops. Algo ha ido mal
-        not_moderator: No eres un moderador de este grupo
+        not_moderator: No eres un moderador de este mancha
         mail:
           activation_request:
-            subject: Solicitud de nuevo grupo '{{group_name}}'
-            content: "<p>El usuario '{{user_name}}' ha solicitado la creación de un nuevo grupo llamado '{{group_name}}'.</p><p><a href=\"{{activation_url}}\">{{activation_url}}</a></p>"
+            subject: Solicitud de nuevo mancha '{{gang_name}}'
+            content: "<p>El usuario '{{user_name}}' ha solicitado la creación de un nuevo mancha llamado '{{gang_name}}'.</p><p><a href=\"{{activation_url}}\">{{activation_url}}</a></p>"
           invitation:
-            subject: Invitación al grupo {{group}}
+            subject: Invitación al mancha {{gang}}
             accept: Aceptar
             reject: Rechazar
       admin:
-        groups: Grupos
-        deleted: Grupo eliminado
-        activated: El grupo está ahora activo
-        edit_group: Editar grupo  
+        gangs: Manchas
+        deleted: Mancha eliminada
+        activated: La mancha está ahora activa
+        edit_gang: Editar mancha
         activate: Activar
-        group_details: Detalles del grupo
+        gang_details: Detalles de la mancha
         memberships: Membresías
         moderators: Moderadores
         members: Miembros
         pending_members: Miembros pendientes
-        delete_group: Eliminar grupo
+        delete_gang: Eliminar mancha
         please_wait: Por favor espere...
-        updated: Grupo '{{name}}' actualizado con éxito"                        
+        updated: Mancha '{{name}}' actualizado con éxito"                        
     friendships: 
       member:
         not_found: No existe ningún usuario con el id '{{id}}'

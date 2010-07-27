@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  
+    
 	map.namespace :admin do |admin| 
 		admin.resources :championships 
 	end
@@ -23,6 +23,7 @@ ActionController::Routing::Routes.draw do |map|
   # map.routes_from_plugin 'tog_social'
   # 
   # map.routes_from_plugin 'tog_core'
+
 
 
   map.namespace(:member) do |member|
@@ -53,10 +54,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :streams, :only => [:index, :show], :member => {:network => :get}
 
   map.with_options(:controller => 'gangs') do |group|
-    group.tag_groups       '/gangs/tag/:tag',                         :action => 'tag'
+    group.tag_gangs       '/manchas/tag/:tag',                         :action => 'tag'
   end
 
-  map.resources :gangs, :collection => { :search => :get }, :member => { :join => :get, :leave => :get, :accept_invitation => :get, :reject_invitation => :get }
+  map.resources :gangs, :collection => { :search => :get }, :member => { :join => :get, :leave => :get, :accept_invitation => :get, :reject_invitation => :get }, :as => "manchas"
 
   map.resources :profiles
 
@@ -89,11 +90,6 @@ ActionController::Routing::Routes.draw do |map|
   
 	map.namespace :admin do |admin| 
 		admin.resources :places 
-	end
-
-  
-	map.namespace :admin do |admin| 
-		admin.resources :post_images 
 	end
 
   map.avatar "/avatar", :controller=>"avatar", :action=>"index"
@@ -130,6 +126,8 @@ ActionController::Routing::Routes.draw do |map|
 		admin.resources :comments, :as => "comentarios" 
 		admin.resources :badges, :as => "medallas" 
 		admin.resources :avatars, :as => "avatares" 
+		admin.resources :gangs, :member => { :activate => :post} 
+		admin.resources :post_images 
 		
   end
   

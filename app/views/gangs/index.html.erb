@@ -1,16 +1,27 @@
-<div class="portlet portletH" id="portlet_groups">
-    <h2><span><%= "Grupos de Patatoon" %></span></h2>
-    <p><%= link_to "Crear grupo", new_member_gang_path, :class => 'button add' %></p>
+<div class="portlet portletH" id="portlet_gangs">
+    <h2><span><%= "Manchas de Patatoon" %></span></h2>
+
+    <div class="description">
+      <p>Las manchas de Patatoon permite unirte a tus amigos en común. En el futuro, nos permitirá compartir
+      elementos, historias, momentos, fotos y todo lo que deseen. </p>
+    </div>
+
+    <p><%= link_to "Crear mancha", new_member_gang_path, :class => 'button add' %></p>
+    
+
     <div class="portlet_content">
         <ul>
-          <% @gangs.each do |group|%>
+          <% @gangs.each do |gang|%>
           <li class="clearfix">
-              <div class="title"><%= link_to group.name, gang_path(group) %></div>
+              <div class="image">
+                <%= link_to image(gang.image, :medium), gang_path(gang) %>
+              </div>
+              <div class="title"><%= link_to gang.name, gang_path(gang) %></div>
               <div class="text">
-                 <%=group.description%>
+                 <%= summary gang.description%>
               </div>
               <div class="members"><strong>
-              <%= "#{group.members.size} miembros" %></strong></div>
+              <%= "#{gang.members.size} miembros" %></strong></div>
           </li>          
           <%end%>          
         </ul>
@@ -24,6 +35,6 @@
 
   <% 'render :partial => "search_box" ' %>
 
-  <%= render :partial => "last_groups" %>
+  <%= render :partial => "last_gangs" %>
 
 <% end %>

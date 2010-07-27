@@ -1,0 +1,20 @@
+<div class="portlet portletJ" id="portlet_last_gangs">
+    <h2><span>Ultimas manchas</span></h2>
+    <div class="portlet_content">
+        <ul>
+            <% last_gangs(3).each do |gang| -%>
+              <li class="clearfix">
+                  <div class="image">
+                    <%= link_to image(gang.image, :medium), gang_path(gang) %>
+                  </div>
+                  <div class="title"><%= gang.name -%></div>
+                  <div class="text">
+                      <%= "#{gang.members.size} miembros" %>
+                  </div>
+                  <div class="more"><%= link_to "más información", gang_path(gang) -%></div>
+              </li>            
+            <% end -%>            
+        </ul> 
+        <%= link_to "Crear mancha", new_member_gang_path, :class => 'button add' %>
+    </div>    
+</div> <!-- /.portlet_pluginsTog -->

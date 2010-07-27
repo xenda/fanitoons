@@ -11,6 +11,9 @@
         <%= link_to tag.to_s, tag_gangs_path(tag) %>
       <% end %>   
   </div>
+   <div class="image">
+      <%= link_to image(@gang.image, :big), gang_path(@gang) %>
+    </div>
   <div class="text">
     <p><%= @gang.description %></p>
   </div>

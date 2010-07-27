@@ -1,0 +1,33 @@
+<div class="detail detail1">
+  
+    <div class="image"><%=link_to image_for_gang(@gang, 'medium', :class=>"img"), gang_path(@gang)%></div>
+    <div class="title"><%= link_to @gang.name, gang_path(@gang) %></div>
+    <div class="subtitle"><%= I18n.t('tog_social.gangs.model.created_at') %> <%=h @gang.created_at.strftime("%d/%m/%Y") %>, <%=@gang.members.size%> members</div>
+    <div class="summary"><%= I18n.t('tog_social.gangs.model.moderated_by') %>:
+        <% for moderator in @gang.moderators %>
+            <%=link_to moderator.profile.full_name, profile_path(moderator.profile), :class=> 'maincolor4'%>
+        <% end %>
+        <br/>
+        <%= I18n.t('tog_social.tags.tags') %>: 
+        <% for tag in @gang.tag_list %>
+          <%= link_to tag.to_s, tag_gangs_path(tag) %>
+        <% end %>   
+    </div>
+    
+    <div class="portlet portletC" id="portlet_moreLinks">
+        <h2><span><%= I18n.t('tog_social.gangs.member.pending_members') %></span></h2>
+        <div class="portlet_content">
+            <ul>
+                <% @gang.pending_members.each do |user| %>
+                  <li>
+                    <%= link_to user.profile.full_name, profile_path(user.profile) -%> 
+                    [<%= link_to I18n.t('tog_social.gangs.member.accept'), member_gang_accept_member_path(@gang, user), {:class => "add", :title => I18n.t('tog_social.gangs.member.accept_title')} -%>]               
+                                 --
+                    [<%= link_to I18n.t('tog_social.gangs.member.reject'), member_gang_reject_member_path(@gang, user), {:class => "delete", :title => I18n.t('tog_social.gangs.member.reject_title')} -%>]
+                  </li>
+                  <% end %>
+            </ul>
+        </div> 
+    </div>    
+    
+</div> <!-- /.detail1 -->

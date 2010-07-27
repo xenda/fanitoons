@@ -7,13 +7,13 @@ class Gang < ActiveRecord::Base
   has_many :moderator_memberships, :class_name => 'Membership',
                                    :conditions => ['memberships.moderator = ?', true]
 
-  has_many :members,    :through => :memberships, :source => :user,
+  has_many :members,    :through => :memberships, :source => :account,
                         :conditions => ['memberships.state = ?', 'active']
 
-  has_many :pending_members,  :through => :memberships, :source => :user,
+  has_many :pending_members,  :through => :memberships, :source => :account,
                               :conditions => ['memberships.state = ?', 'pending']
 
-  has_many :moderators, :through => :moderator_memberships, :source => :user,
+  has_many :moderators, :through => :moderator_memberships, :source => :account,
                         :conditions => ['memberships.state = ?', 'active']
                         
   # has_many :sharings, :class_name => 'Share', :dependent => :destroy, :as => :shared_to
@@ -22,6 +22,18 @@ class Gang < ActiveRecord::Base
   has_many :invited_members,  :through => :memberships, :source => :account, :conditions => ['memberships.state = ?', 'invited']
   named_scope :can_invite, :include => :memberships, 
                            :conditions => ["memberships.state='active' and gangs.state='active' and(memberships.moderator = ? or gangs.moderated = ?)", true, false]  
+  
+  
+   before_create :set_default_image
+
+    has_attached_file :image, {
+      :url => "/system/:class/:attachment/:id/:style_:basename.:extension",
+      :styles => { 
+        :big    => "128x128#",
+        :medium => "72x72#",
+        :small  => "25x25#",
+        :tiny   => "12x12#"
+      }}
   
   validates_uniqueness_of :name
   validates_presence_of :name
@@ -80,6 +92,10 @@ class Gang < ActiveRecord::Base
     grant_moderator(user) if moderator
     mem.activate! unless self.moderated?
   end
+  
+  def private?
+    self.send(:private)
+  end
 
   def leave(user)
     mem = membership_of(user)
@@ -136,6 +152,14 @@ class Gang < ActiveRecord::Base
     self.moderator_memberships.each{|mod| mod.activate! unless mod.active?}
   end
 
+
+  def set_default_image
+    unless self.image?
+        default_group_image = File.join(RAILS_ROOT, 'public', 'images', "default_group.png")
+        self.image = File.new(default_group_image)
+    end
+  end
+  
 end
 
 

@@ -1,0 +1,14 @@
+- semantic_form_for ["admin",@gang] do |form|
+  - form.inputs do
+    = form.input :name
+    = form.input :description
+    = form.input :image
+    = form.input :state
+    = form.input :private
+    = form.input :moderated
+    = form.input :user
+    = form.input :activation_code
+    = form.input :activated_at
+    
+  - form.buttons do
+    = form.commit_button 'Grabar',:button_html => { :class => "submit" }

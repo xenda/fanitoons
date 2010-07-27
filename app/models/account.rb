@@ -40,7 +40,7 @@ class Account < ActiveRecord::Base
 
   has_one :profile, :dependent => :destroy
 
-  has_many :memberships, :dependent => :destroy
+  has_many :memberships, :dependent => :destroy, :foreign_key => "user_id"
   has_many :plain_memberships, :class_name => 'Membership',
                                :conditions => ['memberships.moderator <> ?', true]
   has_many :moderator_memberships, :class_name => 'Membership',

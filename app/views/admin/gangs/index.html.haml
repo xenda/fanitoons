@@ -1,0 +1,42 @@
+- @title = "Administración #{I18n.t('activerecord.models.gang').pluralize} "
+
+#admin.index
+  %h1= "Administrando #{I18n.t('activerecord.models.gang').pluralize}"
+
+  #admin_menu
+    = link_to "Nueva #{I18n.t('activerecord.models.gang')}", new_admin_gang_path
+
+  %table{:id=>"gangs_table"}
+    %thead
+      %tr
+        %td= I18n.t("activerecord.attributes.gangs.id").humanize
+        %td= I18n.t("activerecord.attributes.gangs.name").humanize
+        %td Autor
+        %td= I18n.t("activerecord.attributes.gangs.description").humanize
+        %td= I18n.t("activerecord.attributes.gangs.image").humanize
+        %td Privado
+        %td Moderado
+        %td Activo
+        %td
+        %td
+        %td
+    %tbody
+    - @gangs.each do |gang|
+      %tr{:class=>cycle('even','odd') }
+        %td= gang.id
+        %td= gang.name
+        %td= gang.author.profile.full_name
+        %td= summary gang.description
+        %td= image gang.image, :medium
+        %td= gang.private? ? "Si" : "No"
+        %td= gang.moderated ? "Si" : "No"
+        %td= gang.active? ? "Si" : "No"
+        %td= link_to 'Editar', edit_admin_gang_path(gang)
+        %td 
+          - unless gang.active?
+            %span#deactivated_status
+            = link_to_remote "Activar",  :url => activate_admin_gang_url(gang), :update => "deactivated_status", :html => {:class => 'button'}
+        %td= link_to 'Eliminar', ["admin",gang], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
+      
+  .pagination= will_paginate @gangs
+  

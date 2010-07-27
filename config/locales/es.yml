@@ -181,15 +181,19 @@ es:
         post: "Entrada"
         picture_file_name: "Archivo"
       championships:
-          id: "Id"
-          name: "Nombre"
-          started_at: "Fecha de Inicio"
-          finished_at: "Fecha de Fin"
-          description: "Resumen"
-          place: "Lugar"
-          winner: "Ganador"
-          winner_id: "Ganador"
-          
+        id: "Id"
+        name: "Nombre"
+        started_at: "Fecha de Inicio"
+        finished_at: "Fecha de Fin"
+        description: "Resumen"
+        place: "Lugar"
+        winner: "Ganador"
+        winner_id: "Ganador"
+      gangs:
+        id: "Id"
+        name: "Nombre"
+        description: "Descripción"
+        image: "Imagen"
       # Overrides model and default messages.
  
   date:

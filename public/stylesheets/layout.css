@@ -205,6 +205,10 @@ body.predictions.home #city {
 
 #content form div.actions input.button.mainaction {
 	color: #fffef6;
+	width: 120px;
+	height: 30px;
+	border: none;
+	cursor: pointer;
 }
 
 #portlet_friends div.portlet_content ul.clearfix li a {
@@ -228,6 +232,71 @@ input.submit {
 	text-decoration: none;
 }
 
+.portlet a.button.add {
+	width: 113px;
+	padding-top: 5px;
+	display: block;
+	height: 24px;
+}
+
+#portlet_gangs div.description {
+	width: 500px;
+	margin-bottom: 10px;
+	font: 14px/1.6em Helvetica, "Helvetica Neue", Arial, Geneva, sans-serif;
+	color: #484848;
+}
+
+#content div.detail.detail1 div.title a{
+	margin-bottom: 20px;
+	display: block;
+	text-decoration: none;
+	font: 35px 'HelveticaRounded',Helvetica, "Helvetica Neue", Arial, Geneva, sans-serif;
+	color: #f4a233;
+}
+
+#content div.detail.detail1 div.subtitle {
+	font: bold 20px 'HelveticaRounded', Helvetica, "Helvetica Neue", Arial, Geneva, sans-serif;
+	color: #6e766f;
+	margin-bottom: 20px;
+}
+
+#content div.detail.detail1 div.summary {
+	font-size: 16px;
+	line-height: 1.6em;
+	color: #8f8f8f;
+}
+
+#content div.detail.detail1 div.text {
+	font-size: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px dotted #f4a233;
+}
+
+#content div.detail.detail1 {
+	float: left;
+	width: 600px;
+}
+
+#portlet_moreLinks h2 span {
+	margin-bottom: 30px;
+	line-height: 1.0em;
+	display: block;
+}
+
+#portlet_moreLinks div.portlet_content ul {
+	margin-top: 4em;
+}
+#portlet_moreLinks div.portlet_content ul li {
+	font-size: 15px;
+	line-height: 1.6em;
+	color: #767676;
+}
+
+#profile_sidebar #portlet_moreLinks div.portlet_content ul {
+	margin-top: 0px;
+}
 #last-predicted a {
 	text-decoration: none;
 }
@@ -750,9 +819,51 @@ form#new_comment.formtastic.comment {
 }
 
 div#actities {
-	border-bottom: 1px dotted #a6c6e1;
 	padding-bottom: 1em;
 	margin-top: 1em;
+	margin-bottom: 2em;
+}
+
+div.portlet_content ul {
+	margin-top: 20px;
+}
+
+div.portlet_content ul li.clearfix div.more a {
+	color: #9fb960;
+	text-decoration: none;
+	font-size: 11px;
+}
+
+div.portlet_content ul li.clearfix {
+	text-align: center;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px dotted #c7ff86;
+}
+
+div.portlet_content ul li.clearfix div.title,
+div.portlet_content ul li.clearfix div.title a {
+	font-weight: bold;
+	border-bottom-color: #b53430;
+	color: #e48927;
+	font-size: 17px;
+	text-decoration: none;
+}
+
+#portlet_gangs div.portlet_content {
+	width: 200px;
+	float: left;
+}
+
+div.portlet_content ul li.clearfix div.text {
+	font-size: 11px;
+	color: #6b6b6b;
+	margin-bottom: 10px;
+}
+div.portlet_content ul li.clearfix div.image img {
+	width: 70px;
+	margin: 0px auto;
+
 }
 
 #last-predicted h3{
@@ -1234,10 +1345,24 @@ img#avatar_image {
 #profile_friends h2,
 #profile_teams h2,
 #profile_followers h2,
-#profile_following h2 {
+#profile_following h2,
+#profile_groups h2 {
 	font-size: 25px;
 	color: #90a65c;
 	margin-bottom: 5px !important;
+}
+
+#portlet_moreLinks div.portlet_content ul li a div.group_image img {
+	clear: both;
+	
+}
+
+#profile_sidebar #portlet_moreLinks div.portlet_content ul {
+	width: 200px;
+	margin-top: 10px;
+}
+#profile_sidebar #portlet_moreLinks div.portlet_content ul li {
+	text-align: center;
 }
 
 div#portlet_friends.portlet.portletG {
@@ -1269,6 +1394,52 @@ div#profile_info {
 
 #content h2 {
 	margin-bottom: 20px;
+	color: #95ae5d;
+}
+
+#portlet_last_gangs h2 {
+	color: #adca68;
+	font-size: 24px;
+}
+
+.gangs #content form fieldset legend {
+	font-size: 18px;
+	margin-bottom: 10px;
+	float: none;
+	clear: both;
+	position: relative;
+}
+
+.gangs #content form fieldset div.fields p label {
+	display: block;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	font: bold 14px "HelveticaRounded", Helvetica, "Helvetica Neue", Arial, Geneva, sans-serif;
+	color: #a47147;
+}
+
+.gangs #content form fieldset div.fields p span.helpinfo {
+	font-size: 11px;
+	font-style: italic;
+	color: #666767;
+	margin-left: 10px;
+}
+
+.gangs #content form fieldset div.fields p label.nolabel {
+	margin-bottom: 0px;
+}
+
+.gangs input.fieldbox,
+.gangs textarea {
+	padding: 5px;
+	border: 1px solid #becb6d;
+	color: #323232;
+}
+
+.gangs #content form fieldset div.fields {
+	clear: both;
+	overflow: hidden;
+
 }
 
 div#profile_sidebar {
