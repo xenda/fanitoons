@@ -32,7 +32,7 @@ class Gang < ActiveRecord::Base
         :medium => "72x72#",
         :small  => "25x25#",
         :tiny   => "12x12#"
-      },:path => ":rails_root/public/system/gangs/:attachment/:id/:style.:extension", :url => "/system/gangs/:attachment/:id/:style.:extension"}
+      },:path => ":rails_root/public/system/gangs/:attachment/:id/:style.:extension", :url => "/system/gangs/:attachment/:id/:style.:extensionn"}
       
       attr_accessor :image_file_name
       attr_accessor :image_content_type
