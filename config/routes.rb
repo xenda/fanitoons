@@ -64,12 +64,12 @@ ActionController::Routing::Routes.draw do |map|
   map.namespace(:member) do |member|
     member.resources :profiles, :as => "perfiles"
     member.resources :comments, :as => "comentarios"    
-    member.resources :gangs
+    member.resources :gangs, :as => "manchas"
     member.with_options(:controller => 'gangs') do |group|
-      group.group_pending_members '/:id/miembros/pendiente',         :action => 'pending_members'
-      group.group_accept_member   '/:id/miembros/:account_id/aceptar', :action => 'accept_member'
-      group.group_reject_member   '/:id/miembros/:account_id/rechazar', :action => 'reject_member'
-      group.group_invite          '/mancha/invitar',                :action => 'invite'
+      group.gang_pending_members '/:id/miembros/pendiente',         :action => 'pending_members'
+      group.gang_accept_member   '/:id/miembros/:account_id/aceptar', :action => 'accept_member'
+      group.gang_reject_member   '/:id/miembros/:account_id/rechazar', :action => 'reject_member'
+      group.gang_invite          '/mancha/invitar',                :action => 'invite'
     end
     member.with_options(:controller => 'friendships') do |friendship|
       friendship.add_friend     '/amigos/:friend_id/agregar',     :action => 'add_friend'
