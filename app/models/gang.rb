@@ -27,13 +27,12 @@ class Gang < ActiveRecord::Base
    before_create :set_default_image
 
     has_attached_file :image, {
-      :url => "/system/:class/:attachment/:id/:style_:basename.:extension",
       :styles => { 
         :big    => "128x128#",
         :medium => "72x72#",
         :small  => "25x25#",
         :tiny   => "12x12#"
-      }}
+      },:path => ":rails_root/public/system/gangs/:attachment/:id/:style.:extension", :url => "/system/gangs/:attachment/:id/:style.:extension"}
       
       attr_accessor :image_file_name
       attr_accessor :image_content_type
