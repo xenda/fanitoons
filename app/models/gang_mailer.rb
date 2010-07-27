@@ -10,7 +10,7 @@ class GangMailer < ActionMailer::Base
     
   def accept_join_request(group, moderator, user)
       setup_email(moderator.email, user.email)
-      @subject    += " Tu solicituda de unirte a #{group.name} ha sido aceptada"
+      @subject    += " Tu solicitud de unirte a #{group.name} ha sido aceptada"
       @body[:url]  = group_url(group)
       @body[:group] = group
       @body[:user] = user           
@@ -18,7 +18,7 @@ class GangMailer < ActionMailer::Base
 
   def reject_join_request(group, moderator, user)
       setup_email(moderator.email, user.email)
-      @subject    += " Tu solicituda de unirte a #{group.name} ha sido rechazada"
+      @subject    += " Tu solicitud de unirte a #{group.name} ha sido rechazada"
       @body[:url]  = group_url(group)
       @body[:group] = group
       @body[:user] = user

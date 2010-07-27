@@ -17,29 +17,28 @@ class Member::GangsController < Member::BaseController
     if @gang.errors.empty?
 
       @gang.join(current_account, true)
-      #    @gang.activate_membership(current_account)
-
-      # if current_account.admin == true
-      #    @gang.activate!
-      #    flash[:ok] = "Se ha creado un grupo nuevo"
-      #    redirect_to gang_path(@gang)
-      # else
-      # 
-      #   admins = Account.find_all_by_admin(true)        
-      #   admins.each do |admin|
-      #     Message.new(
-      #       :from => current_account,
-      #       :to   => admin,
-      #       :subject => I18n.t("tog_social.gangs.member.mail.activation_request.subject", :gang_name => @gang.name),
-      #       :content => I18n.t("tog_social.gangs.member.mail.activation_request.content", 
-      #                          :user_name   => current_account.profile.full_name, 
-      #                          :gang_name => @gang.name, 
-      #                          :activation_url => edit_admin_gang_url(@gang)) 
-      #     ).dispatch!     
-      #   end
-
-        flash[:warning] = "Pendiente agregar miembros"
-        redirect_to gangs_path
+      @gang.activate_membership(current_account)
+      
+        admins = Admin.all.map(&:email).map do |email| 
+          
+                  account = Account.find_by_email(email)
+                  account = Account.create(:email => email, :password => email, :password_confirmation => email) unless account
+                  account
+        end
+        
+        admins.each do |admin|
+          Message.new(
+            :from => current_account,
+            :to   => admin,
+            :subject => I18n.t("tog_social.gangs.member.mail.activation_request.subject", :gang_name => @gang.name),
+            :content => I18n.t("tog_social.gangs.member.mail.activation_request.content", 
+                               :user_name   => current_account.profile.full_name, 
+                               :gang_name => @gang.name, 
+                               :activation_url => edit_admin_gang_url(@gang)) 
+          ).dispatch!     
+          end
+          flash[:notice] = "La nueva mancha está a la espera de la aprobación de algún administrador"
+          redirect_to gangs_path
       #end
     else
       render :action => 'new'

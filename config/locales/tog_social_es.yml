@@ -144,9 +144,9 @@ es:
         mail:
           activation_request:
             subject: Solicitud de nuevo mancha '{{gang_name}}'
-            content: "<p>El usuario '{{user_name}}' ha solicitado la creación de un nuevo mancha llamado '{{gang_name}}'.</p><p><a href=\"{{activation_url}}\">{{activation_url}}</a></p>"
+            content: "<p>El usuario '{{user_name}}' ha solicitado la creación de una nuevo mancha llamada '{{gang_name}}'.</p><p><a href=\"{{activation_url}}\">{{activation_url}}</a></p>"
           invitation:
-            subject: Invitación al mancha {{gang}}
+            subject: Invitación a la mancha {{gang}}
             accept: Aceptar
             reject: Rechazar
       admin:

@@ -1,14 +1,16 @@
 - semantic_form_for ["admin",@gang] do |form|
   - form.inputs do
-    = form.input :name
-    = form.input :description
-    = form.input :image
-    = form.input :state
-    = form.input :private
-    = form.input :moderated
-    = form.input :user
-    = form.input :activation_code
-    = form.input :activated_at
+  
+    - unless @gang.active?
+      %span#deactivated_status
+      = link_to_remote "Activar",  :url => activate_admin_gang_url(@gang), :update => "deactivated_status", :html => {:class => 'button'}
+  
+    = form.input :name, :label => "Nombre"
+    = form.input :description, :label => "Descripción"
+    = form.input :image, :label => "Imagen"
+    = form.input :private, :label => "¿Privado?"
+    = form.input :moderated, :label => "¿Moderado?"
+    = form.input :author, :label => "Dueño"
     
   - form.buttons do
     = form.commit_button 'Grabar',:button_html => { :class => "submit" }
