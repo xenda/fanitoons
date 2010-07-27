@@ -41,9 +41,9 @@ class Account < ActiveRecord::Base
   has_one :profile, :dependent => :destroy
 
   has_many :memberships, :dependent => :destroy, :foreign_key => "user_id"
-  has_many :plain_memberships, :class_name => 'Membership',
+  has_many :plain_memberships, :class_name => 'Membership', :foreign_key => "user_id",
                                :conditions => ['memberships.moderator <> ?', true]
-  has_many :moderator_memberships, :class_name => 'Membership',
+  has_many :moderator_memberships, :class_name => 'Membership', :foreign_key => "user_id",
                                    :conditions => ['memberships.moderator = ?', true]
 
   has_many :gangs, :through => :memberships,
