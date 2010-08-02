@@ -16,7 +16,7 @@ heads_f = files.select {|file| file=~/head_1_f/ }
 
 def clean(name)
   
-  [/club_/, /_1_[mf]/, ".swf", "shirt", "short","snickers","head","shoes" ].each do |token| 
+  [/_1_[mf]/, ".swf", "shirt", "short","snickers","head","shoes" ].each do |token| 
     name = name.gsub(token,"")
   end
   name = name.gsub("-","_")
