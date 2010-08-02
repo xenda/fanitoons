@@ -2207,20 +2207,27 @@
     </item>
     <item>
       <id>2</id>
+      <name>verde</name>
+      <picture_file_name>verde_shoes_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>3</id>
       <name>algeria</name>
       <picture_file_name>algeria_shoes_1_m.swf
 </picture_file_name>
       <sex>0</sex>
     </item>
     <item>
-      <id>3</id>
+      <id>4</id>
       <name>rojos</name>
       <picture_file_name>rojos_shoes_1_m.swf
 </picture_file_name>
       <sex>0</sex>
     </item>
     <item>
-      <id>4</id>
+      <id>5</id>
       <name>spain</name>
       <picture_file_name>spain_shoes_1_m.swf
 </picture_file_name>
@@ -2232,6 +2239,13 @@
       <id>1</id>
       <name>algeria</name>
       <picture_file_name>algeria_head_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>2</id>
+      <name>raya al centro</name>
+      <picture_file_name>raya-al-centro_head_1_m.swf
 </picture_file_name>
       <sex>0</sex>
     </item>
