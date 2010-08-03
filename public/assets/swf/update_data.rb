@@ -3,14 +3,14 @@ files = `ls`
 # puts files.split("\n").inspect
 
 shirts_m = files.select {|file| file=~/club_.*_shirt_1_m/ }
-shorts_m = files.select {|file| file=~/short_.*_1_m/ }
-snickers_m = files.select {|file| file=~/snickers_.*_1_m/ }
+shorts_m = files.select {|file| file=~/club_.*_1_m/ }
+snickers_m = files.select {|file| file=~/club_.*_1_m/ }
 shoes_m = files.select {|file| file=~/shoes_1_m/ }
 heads_m = files.select {|file| file=~/head_1_m/ }
 
-shirts_f = files.select {|file| file=~/shirt_.*_1_f/ }
-shorts_f = files.select {|file| file=~/short_.*_1_f/ }
-snickers_f = files.select {|file| file=~/snickers_.*_1_f/ }
+shirts_f = files.select {|file| file=~/club_.*_1_f/ }
+shorts_f = files.select {|file| file=~/club_.*_1_f/ }
+snickers_f = files.select {|file| file=~/club_.*_1_f/ }
 shoes_f = files.select {|file| file=~/shoes_1_f/ }
 heads_f = files.select {|file| file=~/head_1_f/ }
 
