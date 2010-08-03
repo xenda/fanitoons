@@ -191,6 +191,20 @@
     </item>
     <item>
       <id>2</id>
+      <name>mohawk</name>
+      <picture_file_name>mohawk_head_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>3</id>
+      <name>rasta</name>
+      <picture_file_name>rasta_head_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>4</id>
       <name>raya al centro</name>
       <picture_file_name>raya-al-centro_head_1_m.swf
 </picture_file_name>
