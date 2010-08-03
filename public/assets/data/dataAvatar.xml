@@ -154,27 +154,48 @@
     </item>
     <item>
       <id>2</id>
+      <name>amarillo</name>
+      <picture_file_name>amarillo_shoes_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>3</id>
+      <name>negro</name>
+      <picture_file_name>negro_shoes_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>4</id>
+      <name>turquesa</name>
+      <picture_file_name>turquesa_shoes_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>5</id>
       <name>verde</name>
       <picture_file_name>verde_shoes_1_f.swf
 </picture_file_name>
       <sex>1</sex>
     </item>
     <item>
-      <id>3</id>
+      <id>6</id>
       <name>algeria</name>
       <picture_file_name>algeria_shoes_1_m.swf
 </picture_file_name>
       <sex>0</sex>
     </item>
     <item>
-      <id>4</id>
+      <id>7</id>
       <name>rojos</name>
       <picture_file_name>rojos_shoes_1_m.swf
 </picture_file_name>
       <sex>0</sex>
     </item>
     <item>
-      <id>5</id>
+      <id>8</id>
       <name>spain</name>
       <picture_file_name>spain_shoes_1_m.swf
 </picture_file_name>
