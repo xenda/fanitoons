@@ -92,7 +92,7 @@ ActionController::Routing::Routes.draw do |map|
 		admin.resources :places 
 	end
 
-  map.avatar "/avatar", :controller=>"avatar", :action=>"index"
+  map.avatar "/avatar", :controller=>"avatar", :action=>"beta"
     
   map.resources :user_badges
   map.resources :badges
