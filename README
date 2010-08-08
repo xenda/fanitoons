@@ -1,5 +1,3 @@
-# 
-# For better performance replace the dispatcher with the fastcgi one
 #
 # Example:
 #   RewriteRule ^(.*)$ dispatch.fcgi [QSA,L]
