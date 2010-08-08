@@ -1,5 +1,3 @@
-#   RewriteRule .* - [L]
-
 # Redirect all requests not available on the filesystem to Rails
 # By default the cgi dispatcher is used which is very slow
 # 
