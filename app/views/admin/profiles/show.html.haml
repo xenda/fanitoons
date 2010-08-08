@@ -1,0 +1,19 @@
+- @title = "Viendo #{I18n.t 'activerecord.models.profile'}"
+
+#admin
+
+  %h1= "Viendo #{I18n.t 'activerecord.models.profile'}"
+
+  - show_for @profile do |a| 
+    = a.attribute :account
+        = a.attribute :first_name
+        = a.attribute :last_name
+        = a.attribute :website
+        = a.attribute :blog
+        = a.attribute :icon
+    
+
+  .bottom_menu
+    = link_to "Ver todos", admin_profiles_path
+    = link_to "Editar #{I18n.t 'activerecord.models.profile'}",  edit_admin_profile_path(profile)
+    = link_to "Crear otro", new_admin_profile_path

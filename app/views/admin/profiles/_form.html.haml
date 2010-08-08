@@ -1,0 +1,10 @@
+- semantic_form_for ["admin",@profile] do |form|
+  - form.inputs do
+    = form.input :account, :label => "Nombre"
+    = form.input :first_name, :label => "Nombres"
+    = form.input :last_name, :label => "Apellidos"
+    = form.input :website
+    = form.input :blog
+    
+  - form.buttons do
+    = form.commit_button 'Grabar',:button_html => { :class => "submit" }

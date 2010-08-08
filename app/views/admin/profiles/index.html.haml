@@ -1,0 +1,34 @@
+- @title = "Administración #{I18n.t('activerecord.models.profile').pluralize} "
+
+#admin.index
+  %h1= "Administrando #{I18n.t('activerecord.models.profile').pluralize}"
+
+  #admin_menu
+    = link_to "Nuevo #{I18n.t('activerecord.models.profile')}", new_admin_profile_path
+
+  %table{:id=>"profiles_table"}
+    %thead
+      %tr
+        %td= I18n.t("activerecord.attributes.profiles.id").humanize
+        %td= I18n.t("activerecord.attributes.profiles.account_id").humanize
+        %td= I18n.t("activerecord.attributes.profiles.first_name").humanize
+        %td= I18n.t("activerecord.attributes.profiles.last_name").humanize
+        %td= I18n.t("activerecord.attributes.profiles.website").humanize
+        %td= I18n.t("activerecord.attributes.profiles.blog").humanize
+
+        %td
+        %td
+    %tbody
+    - @profiles.each do |profile|
+      %tr{:class=>cycle('even','odd') }
+        %td= profile.id
+        %td= profile.account_id
+        %td= profile.first_name
+        %td= profile.last_name
+        %td= profile.website
+        %td= profile.blog
+
+        %td= link_to 'Editar', edit_admin_profile_path(profile)
+        %td= link_to 'Eliminar', ["admin",profile], :confirm => '¿Estas seguro? Se borraran todos los datos relacionados', :method => :delete
+      
+  .pagination= will_paginate @profiles

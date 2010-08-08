@@ -138,6 +138,7 @@ es:
       group: "grupo"
       match: "partido"
       place: "lugar"
+      profile: "perfil"
       player: "jugador"
       post: "entrada"
       prediction: "pronóstico"
@@ -195,6 +196,13 @@ es:
         description: "Descripción"
         image: "Imagen"
       # Overrides model and default messages.
+      profiles:
+        id: "Id"
+        account_id: "Cuenta"
+        first_name: "Nombres"
+        last_name: "Apellidos"
+        website: "Sitio web"
+        blog: "Blog"
  
   date:
     formats:
