@@ -1,8 +1,3 @@
-	
-# use the following rewrite rules so that Apache won't rewrite certain requests
-# 
-# Example:
-#   RewriteCond %{REQUEST_URI} ^/notrails.*
 #   RewriteRule .* - [L]
 
 # Redirect all requests not available on the filesystem to Rails
