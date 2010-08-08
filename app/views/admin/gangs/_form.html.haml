@@ -1,4 +1,4 @@
-- semantic_form_for ["admin",@gang] do |form|
+- semantic_form_for (["admin",@gang], :html=>{:multipart => true}) do |form|
   - form.inputs do
   
     - unless @gang.active?
@@ -7,6 +7,7 @@
   
     = form.input :name, :label => "Nombre"
     = form.input :description, :label => "Descripción"
+    = image_tag @gang.image.url(:thumb) if @gang.image_file_name
     = form.input :image, :label => "Imagen"
     = form.input :private, :label => "¿Privado?"
     = form.input :moderated, :label => "¿Moderado?"

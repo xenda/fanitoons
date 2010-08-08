@@ -3,7 +3,9 @@
     = form.input :name, :label => "Nombre"
     = form.input :country, :as => :select, :collection => Country.all, :label => "País"
     = form.input :bio, :input_html => {:class => "tinymce"}
+    = image_tag @team.flag.url(:thumb) if @team.flag_file_name
     = form.input :flag, :label => "Bandera"
+    = image_tag @team.picture.url(:thumb) if @team.picture_file_name
     = form.input :picture, :label => "Logo"  
   - form.buttons do
     = form.commit_button 'Grabar',:button_html => { :class => "submit" }
