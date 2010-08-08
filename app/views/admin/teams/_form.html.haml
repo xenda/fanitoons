@@ -1,9 +1,9 @@
 - semantic_form_for (["admin",@team], :html=>{:multipart => true}) do |form|
   - form.inputs do
-    = form.input :name
-    = form.input :country, :as => :select, :collection => Country.all
+    = form.input :name, :label => "Nombre"
+    = form.input :country, :as => :select, :collection => Country.all, :label => "País"
     = form.input :bio, :input_html => {:class => "tinymce"}
-    = form.input :flag  
-    = form.input :picture  
+    = form.input :flag, :label => "Bandera"
+    = form.input :picture, :label => "Logo"  
   - form.buttons do
     = form.commit_button 'Grabar',:button_html => { :class => "submit" }
