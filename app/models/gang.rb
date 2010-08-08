@@ -168,21 +168,25 @@ class Gang < ActiveRecord::Base
 end
 
 
+
 # == Schema Information
 #
 # Table name: gangs
 #
-#  id              :integer(4)      not null, primary key
-#  name            :string(255)
-#  description     :string(255)
-#  image           :string(255)
-#  state           :string(255)
-#  private         :boolean(1)
-#  moderated       :boolean(1)      default(FALSE)
-#  user_id         :integer(4)
-#  activation_code :string(40)
-#  activated_at    :datetime
-#  created_at      :datetime
-#  updated_at      :datetime
+#  id                 :integer(4)      not null, primary key
+#  name               :string(255)
+#  description        :string(255)
+#  state              :string(255)
+#  private            :boolean(1)
+#  moderated          :boolean(1)      default(FALSE)
+#  user_id            :integer(4)
+#  activation_code    :string(40)
+#  activated_at       :datetime
+#  created_at         :datetime
+#  updated_at         :datetime
+#  image_file_name    :string(255)
+#  image_content_type :string(255)
+#  image_file_size    :integer(4)
+#  image_updated_at   :datetime
 #
 

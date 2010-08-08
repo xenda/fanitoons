@@ -1,4 +1,4 @@
-- semantic_form_for ["admin",@team] do |form|
+- semantic_form_for (["admin",@team], :html=>{:multipart => true}) do |form|
   - form.inputs do
     = form.input :name
     = form.input :country, :as => :select, :collection => Country.all
