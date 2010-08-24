@@ -9,7 +9,7 @@ $(document).ready(function() {
       // General options
 
        mode : "textareas",
-       language: "es",
+       language: "en",
        // 
        plugins : "autosave,safari,pagebreak,style,table,advhr,advimage,advlink,iespell,inlinepopups,preview,media,print,contextmenu,paste,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras",
 
