@@ -1,148 +1,1056 @@
-<root><group_shirt id="shirt"><item><id>1</id><name>club alianza atletico de sullana</name><picture_file_name>club_alianza-atletico-de-sullana_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>2</id><name>club alianza lima</name><picture_file_name>club_alianza-lima_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>3</id><name>club atletico minero</name><picture_file_name>club_atletico-minero_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>4</id><name>club colegio nacional de iquitos</name><picture_file_name>club_colegio-nacional-de-iquitos_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>5</id><name>club deportivo guadalajara</name><picture_file_name>club_deportivo-guadalajara_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>6</id><name>club deportivo universidad cesar vallejo</name><picture_file_name>club_deportivo-universidad-cesar-vallejo_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>7</id><name>club deportivo universidad san martin de porres</name><picture_file_name>club_deportivo-universidad-san-martin-de-porres_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>8</id><name>club fbc melgar</name><picture_file_name>club_fbc-melgar_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>9</id><name>club inti gas deportes</name><picture_file_name>club_inti-gas-deportes_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>10</id><name>club jose galvez fbc</name><picture_file_name>club_jose-galvez-fbc_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>11</id><name>club juan aurich</name><picture_file_name>club_juan-aurich_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>12</id><name>club leon de huanuco</name><picture_file_name>club_leon-de-huanuco_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>13</id><name>club sao paulo futebol club</name><picture_file_name>club_sao-paulo-futebol-club_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>14</id><name>club sport boys association</name><picture_file_name>club_sport-boys-association_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>15</id><name>club sport club internacional</name><picture_file_name>club_sport-club-internacional_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>16</id><name>club sport huancayo</name><picture_file_name>club_sport-huancayo_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>17</id><name>club sporting cristal</name><picture_file_name>club_sporting-cristal_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>18</id><name>club sportivo cienciano</name><picture_file_name>club_sportivo-cienciano_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>19</id><name>club total chalaco futbol club</name><picture_file_name>club_total-chalaco-futbol-club_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>20</id><name>club universidad de chile</name><picture_file_name>club_universidad-de-chile_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>21</id><name>club universitario de deportes</name><picture_file_name>club_universitario-de-deportes_shirt_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>22</id><name>club alianza atletico de sullana</name><picture_file_name>club_alianza-atletico-de-sullana_shirt_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>23</id><name>club alianza lima</name><picture_file_name>club_alianza-lima_shirt_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>24</id><name>club colegio nacional de iquitos</name><picture_file_name>club_colegio-nacional-de-iquitos_shirt_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>25</id><name>club deportivo guadalajara</name><picture_file_name>club_deportivo-guadalajara_shirt_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>26</id><name>club deportivo universidad cesar vallejo</name><picture_file_name>club_deportivo-universidad-cesar-vallejo_shirt_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>27</id><name>club deportivo universidad san martin de porres</name><picture_file_name>club_deportivo-universidad-san-martin-de-porres_shirt_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>28</id><name>club fbc melgar</name><picture_file_name>club_fbc-melgar_shirt_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>29</id><name>club inti gas deportes</name><picture_file_name>club_inti-gas-deportes_shirt_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>30</id><name>club jose galvez fbc</name><picture_file_name>club_jose-galvez-fbc_shirt_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>31</id><name>club juan aurich</name><picture_file_name>club_juan-aurich_shirt_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>32</id><name>club leon de huanuco</name><picture_file_name>club_leon-de-huanuco_shirt_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>33</id><name>club sao paulo futebol club</name><picture_file_name>club_sao-paulo-futebol-club_shirt_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>34</id><name>club sport boys association</name><picture_file_name>club_sport-boys-association_shirt_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>35</id><name>club sport club internacional</name><picture_file_name>club_sport-club-internacional_shirt_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>36</id><name>club sport huancayo</name><picture_file_name>club_sport-huancayo_shirt_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>37</id><name>club sporting cristal</name><picture_file_name>club_sporting-cristal_shirt_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>38</id><name>club sportivo cienciano</name><picture_file_name>club_sportivo-cienciano_shirt_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>39</id><name>club total chalaco futbol club</name><picture_file_name>club_total-chalaco-futbol-club_shirt_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>40</id><name>club universidad de chile</name><picture_file_name>club_universidad-de-chile_shirt_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>41</id><name>club universitario de deportes</name><picture_file_name>club_universitario-de-deportes_shirt_1_m.swf
-</picture_file_name><sex>0</sex></item></group_shirt><group_shorts id="shorts"><item><id>1</id><name>club alianza atletico de sullana</name><picture_file_name>club_alianza-atletico-de-sullana_short_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>2</id><name>club alianza lima</name><picture_file_name>club_alianza-lima_short_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>3</id><name>club colegio nacional de iquitos</name><picture_file_name>club_colegio-nacional-de-iquitos_short_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>4</id><name>club deportivo guadalajara</name><picture_file_name>club_deportivo-guadalajara_short_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>5</id><name>club deportivo universidad cesar vallejo</name><picture_file_name>club_deportivo-universidad-cesar-vallejo_short_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>6</id><name>club deportivo universidad san martin de porres</name><picture_file_name>club_deportivo-universidad-san-martin-de-porres_short_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>7</id><name>club fbc melgar</name><picture_file_name>club_fbc-melgar_short_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>8</id><name>club inti gas deportes</name><picture_file_name>club_inti-gas-deportes_short_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>9</id><name>club jose galvez fbc</name><picture_file_name>club_jose-galvez-fbc_short_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>10</id><name>club juan aurich</name><picture_file_name>club_juan-aurich_short_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>11</id><name>club leon de huanuco</name><picture_file_name>club_leon-de-huanuco_short_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>12</id><name>club sao paulo futebol club</name><picture_file_name>club_sao-paulo-futebol-club_short_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>13</id><name>club sport boys association</name><picture_file_name>club_sport-boys-association_short_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>14</id><name>club sport club internacional</name><picture_file_name>club_sport-club-internacional_short_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>15</id><name>club sport huancayo</name><picture_file_name>club_sport-huancayo_short_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>16</id><name>club sporting cristal</name><picture_file_name>club_sporting-cristal_short_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>17</id><name>club sportivo cienciano</name><picture_file_name>club_sportivo-cienciano_short_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>18</id><name>club total chalaco futbol club</name><picture_file_name>club_total-chalaco-futbol-club_short_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>19</id><name>club universidad de chile</name><picture_file_name>club_universidad-de-chile_short_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>20</id><name>club universitario de deportes</name><picture_file_name>club_universitario-de-deportes_short_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>21</id><name>club alianza atletico de sullana</name><picture_file_name>club_alianza-atletico-de-sullana_short_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>22</id><name>club alianza lima</name><picture_file_name>club_alianza-lima_short_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>23</id><name>club colegio nacional de iquitos</name><picture_file_name>club_colegio-nacional-de-iquitos_short_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>24</id><name>club deportivo guadalajara</name><picture_file_name>club_deportivo-guadalajara_short_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>25</id><name>club deportivo universidad cesar vallejo</name><picture_file_name>club_deportivo-universidad-cesar-vallejo_short_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>26</id><name>club deportivo universidad san martin de porres</name><picture_file_name>club_deportivo-universidad-san-martin-de-porres_short_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>27</id><name>club fbc melgar</name><picture_file_name>club_fbc-melgar_short_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>28</id><name>club inti gas deportes</name><picture_file_name>club_inti-gas-deportes_short_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>29</id><name>club jose galvez fbc</name><picture_file_name>club_jose-galvez-fbc_short_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>30</id><name>club juan aurich</name><picture_file_name>club_juan-aurich_short_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>31</id><name>club leon de huanuco</name><picture_file_name>club_leon-de-huanuco_short_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>32</id><name>club sao paulo futebol club</name><picture_file_name>club_sao-paulo-futebol-club_short_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>33</id><name>club sport boys association</name><picture_file_name>club_sport-boys-association_short_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>34</id><name>club sport club internacional</name><picture_file_name>club_sport-club-internacional_short_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>35</id><name>club sport huancayo</name><picture_file_name>club_sport-huancayo_short_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>36</id><name>club sporting cristal</name><picture_file_name>club_sporting-cristal_short_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>37</id><name>club sportivo cienciano</name><picture_file_name>club_sportivo-cienciano_short_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>38</id><name>club total chalaco futbol club</name><picture_file_name>club_total-chalaco-futbol-club_short_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>39</id><name>club universidad de chile</name><picture_file_name>club_universidad-de-chile_short_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>40</id><name>club universitario de deportes</name><picture_file_name>club_universitario-de-deportes_short_1_m.swf
-</picture_file_name><sex>0</sex></item></group_shorts><group_snickers id="snickers"><item><id>1</id><name>club alianza atletico de sullana</name><picture_file_name>club_alianza-atletico-de-sullana_snickers_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>2</id><name>club alianza lima</name><picture_file_name>club_alianza-lima_snickers_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>3</id><name>club colegio nacional de iquitos</name><picture_file_name>club_colegio-nacional-de-iquitos_snickers_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>4</id><name>club deportivo guadalajara</name><picture_file_name>club_deportivo-guadalajara_snickers_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>5</id><name>club deportivo universidad cesar vallejo</name><picture_file_name>club_deportivo-universidad-cesar-vallejo_snickers_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>6</id><name>club deportivo universidad san martin de porres</name><picture_file_name>club_deportivo-universidad-san-martin-de-porres_snickers_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>7</id><name>club fbc melgar</name><picture_file_name>club_fbc-melgar_snickers_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>8</id><name>club inti gas deportes</name><picture_file_name>club_inti-gas-deportes_snickers_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>9</id><name>club jose galvez fbc</name><picture_file_name>club_jose-galvez-fbc_snickers_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>10</id><name>club juan aurich</name><picture_file_name>club_juan-aurich_snickers_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>11</id><name>club leon de huanuco</name><picture_file_name>club_leon-de-huanuco_snickers_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>12</id><name>club sao paulo futebol club</name><picture_file_name>club_sao-paulo-futebol-club_snickers_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>13</id><name>club sport boys association</name><picture_file_name>club_sport-boys-association_snickers_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>14</id><name>club sport club internacional</name><picture_file_name>club_sport-club-internacional_snickers_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>15</id><name>club sport huancayo</name><picture_file_name>club_sport-huancayo_snickers_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>16</id><name>club sporting cristal</name><picture_file_name>club_sporting-cristal_snickers_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>17</id><name>club sportivo cienciano</name><picture_file_name>club_sportivo-cienciano_snickers_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>18</id><name>club total chalaco futbol club</name><picture_file_name>club_total-chalaco-futbol-club_snickers_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>19</id><name>club universidad de chile</name><picture_file_name>club_universidad-de-chile_snickers_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>20</id><name>club universitario de deportes</name><picture_file_name>club_universitario-de-deportes_snickers_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>21</id><name>club alianza atletico de sullana</name><picture_file_name>club_alianza-atletico-de-sullana_snickers_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>22</id><name>club alianza lima</name><picture_file_name>club_alianza-lima_snickers_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>23</id><name>club colegio nacional de iquitos</name><picture_file_name>club_colegio-nacional-de-iquitos_snickers_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>24</id><name>club deportivo guadalajara</name><picture_file_name>club_deportivo-guadalajara_snickers_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>25</id><name>club deportivo universidad cesar vallejo</name><picture_file_name>club_deportivo-universidad-cesar-vallejo_snickers_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>26</id><name>club deportivo universidad san martin de porres</name><picture_file_name>club_deportivo-universidad-san-martin-de-porres_snickers_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>27</id><name>club fbc melgar</name><picture_file_name>club_fbc-melgar_snickers_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>28</id><name>club inti gas deportes</name><picture_file_name>club_inti-gas-deportes_snickers_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>29</id><name>club jose galvez fbc</name><picture_file_name>club_jose-galvez-fbc_snickers_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>30</id><name>club juan aurich</name><picture_file_name>club_juan-aurich_snickers_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>31</id><name>club leon de huanuco</name><picture_file_name>club_leon-de-huanuco_snickers_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>32</id><name>club sao paulo futebol club</name><picture_file_name>club_sao-paulo-futebol-club_snickers_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>33</id><name>club sport boys association</name><picture_file_name>club_sport-boys-association_snickers_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>34</id><name>club sport club internacional</name><picture_file_name>club_sport-club-internacional_snickers_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>35</id><name>club sport huancayo</name><picture_file_name>club_sport-huancayo_snickers_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>36</id><name>club sporting cristal</name><picture_file_name>club_sporting-cristal_snickers_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>37</id><name>club sportivo cienciano</name><picture_file_name>club_sportivo-cienciano_snickers_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>38</id><name>club total chalaco futbol club</name><picture_file_name>club_total-chalaco-futbol-club_snickers_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>39</id><name>club universidad de chile</name><picture_file_name>club_universidad-de-chile_snickers_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>40</id><name>club universitario de deportes</name><picture_file_name>club_universitario-de-deportes_snickers_1_m.swf
-</picture_file_name><sex>0</sex></item></group_snickers><group_shoes id="shoes"><item><id>1</id><name>amarillo</name><picture_file_name>amarillo_shoes_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>2</id><name>negro</name><picture_file_name>negro_shoes_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>3</id><name>turquesa</name><picture_file_name>turquesa_shoes_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>4</id><name>verde</name><picture_file_name>verde_shoes_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>5</id><name>blanco</name><picture_file_name>blanco_shoes_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>6</id><name>celeste</name><picture_file_name>celeste_shoes_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>7</id><name>naranja</name><picture_file_name>naranja_shoes_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>8</id><name>rojo</name><picture_file_name>rojo_shoes_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>9</id><name>rojos</name><picture_file_name>rojos_shoes_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>10</id><name>spain</name><picture_file_name>spain_shoes_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>11</id><name>verde</name><picture_file_name>verde_shoes_1_m.swf
-</picture_file_name><sex>0</sex></item></group_shoes><group_head id="head"><item><id>1</id><name>armado</name><picture_file_name>armado_head_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>2</id><name>cola2</name><picture_file_name>cola2_head_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>3</id><name>cola</name><picture_file_name>cola_head_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>4</id><name>corto</name><picture_file_name>corto_head_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>5</id><name>emo</name><picture_file_name>emo_head_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>6</id><name>ondulado</name><picture_file_name>ondulado_head_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>7</id><name>rasta</name><picture_file_name>rasta_head_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>8</id><name>rubio</name><picture_file_name>rubio_head_1_f.swf
-</picture_file_name><sex>1</sex></item><item><id>9</id><name>algeria</name><picture_file_name>algeria_head_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>10</id><name>emo</name><picture_file_name>emo_head_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>11</id><name>mohawk</name><picture_file_name>mohawk_head_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>12</id><name>rasta 2</name><picture_file_name>rasta_2_head_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>13</id><name>rasta</name><picture_file_name>rasta_head_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>14</id><name>raya al centro</name><picture_file_name>raya-al-centro_head_1_m.swf
-</picture_file_name><sex>0</sex></item><item><id>15</id><name>rulo</name><picture_file_name>rulo_head_1_m.swf
-</picture_file_name><sex>0</sex></item></group_head></root>
+<?xml version="1.0"?>
+<root>
+  <group_shirt id="shirt">
+    <item>
+      <id>1</id>
+      <name>club alianza atletico de sullana</name>
+      <picture_file_name>club_alianza-atletico-de-sullana_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>2</id>
+      <name>club alianza lima</name>
+      <picture_file_name>club_alianza-lima_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>3</id>
+      <name>club atletico minero</name>
+      <picture_file_name>club_atletico-minero_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>4</id>
+      <name>club colegio nacional de iquitos</name>
+      <picture_file_name>club_colegio-nacional-de-iquitos_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>5</id>
+      <name>club deportivo guadalajara</name>
+      <picture_file_name>club_deportivo-guadalajara_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>6</id>
+      <name>club deportivo universidad cesar vallejo</name>
+      <picture_file_name>club_deportivo-universidad-cesar-vallejo_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>7</id>
+      <name>club deportivo universidad san martin de porres</name>
+      <picture_file_name>club_deportivo-universidad-san-martin-de-porres_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>8</id>
+      <name>club fbc melgar</name>
+      <picture_file_name>club_fbc-melgar_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>9</id>
+      <name>club inti gas deportes</name>
+      <picture_file_name>club_inti-gas-deportes_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>10</id>
+      <name>club jose galvez fbc</name>
+      <picture_file_name>club_jose-galvez-fbc_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>11</id>
+      <name>club juan aurich</name>
+      <picture_file_name>club_juan-aurich_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>12</id>
+      <name>club leon de huanuco</name>
+      <picture_file_name>club_leon-de-huanuco_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>13</id>
+      <name>club sao paulo futebol club</name>
+      <picture_file_name>club_sao-paulo-futebol-club_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>14</id>
+      <name>club sport boys association</name>
+      <picture_file_name>club_sport-boys-association_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>15</id>
+      <name>club sport club internacional</name>
+      <picture_file_name>club_sport-club-internacional_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>16</id>
+      <name>club sport huancayo</name>
+      <picture_file_name>club_sport-huancayo_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>17</id>
+      <name>club sporting cristal</name>
+      <picture_file_name>club_sporting-cristal_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>18</id>
+      <name>club sportivo cienciano</name>
+      <picture_file_name>club_sportivo-cienciano_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>19</id>
+      <name>club total chalaco futbol club</name>
+      <picture_file_name>club_total-chalaco-futbol-club_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>20</id>
+      <name>club universidad de chile</name>
+      <picture_file_name>club_universidad-de-chile_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>21</id>
+      <name>club universitario de deportes</name>
+      <picture_file_name>club_universitario-de-deportes_shirt_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>22</id>
+      <name>club alianza atletico de sullana</name>
+      <picture_file_name>club_alianza-atletico-de-sullana_shirt_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>23</id>
+      <name>club alianza lima</name>
+      <picture_file_name>club_alianza-lima_shirt_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>24</id>
+      <name>club colegio nacional de iquitos</name>
+      <picture_file_name>club_colegio-nacional-de-iquitos_shirt_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>25</id>
+      <name>club deportivo guadalajara</name>
+      <picture_file_name>club_deportivo-guadalajara_shirt_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>26</id>
+      <name>club deportivo universidad cesar vallejo</name>
+      <picture_file_name>club_deportivo-universidad-cesar-vallejo_shirt_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>27</id>
+      <name>club deportivo universidad san martin de porres</name>
+      <picture_file_name>club_deportivo-universidad-san-martin-de-porres_shirt_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>28</id>
+      <name>club fbc melgar</name>
+      <picture_file_name>club_fbc-melgar_shirt_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>29</id>
+      <name>club inti gas deportes</name>
+      <picture_file_name>club_inti-gas-deportes_shirt_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>30</id>
+      <name>club jose galvez fbc</name>
+      <picture_file_name>club_jose-galvez-fbc_shirt_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>31</id>
+      <name>club juan aurich</name>
+      <picture_file_name>club_juan-aurich_shirt_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>32</id>
+      <name>club leon de huanuco</name>
+      <picture_file_name>club_leon-de-huanuco_shirt_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>33</id>
+      <name>club sao paulo futebol club</name>
+      <picture_file_name>club_sao-paulo-futebol-club_shirt_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>34</id>
+      <name>club sport boys association</name>
+      <picture_file_name>club_sport-boys-association_shirt_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>35</id>
+      <name>club sport club internacional</name>
+      <picture_file_name>club_sport-club-internacional_shirt_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>36</id>
+      <name>club sport huancayo</name>
+      <picture_file_name>club_sport-huancayo_shirt_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>37</id>
+      <name>club sporting cristal</name>
+      <picture_file_name>club_sporting-cristal_shirt_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>38</id>
+      <name>club sportivo cienciano</name>
+      <picture_file_name>club_sportivo-cienciano_shirt_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>39</id>
+      <name>club total chalaco futbol club</name>
+      <picture_file_name>club_total-chalaco-futbol-club_shirt_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>40</id>
+      <name>club universidad de chile</name>
+      <picture_file_name>club_universidad-de-chile_shirt_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>41</id>
+      <name>club universitario de deportes</name>
+      <picture_file_name>club_universitario-de-deportes_shirt_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+  </group_shirt>
+  <group_shorts id="shorts">
+    <item>
+      <id>1</id>
+      <name>club alianza atletico de sullana</name>
+      <picture_file_name>club_alianza-atletico-de-sullana_short_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>2</id>
+      <name>club alianza lima</name>
+      <picture_file_name>club_alianza-lima_short_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>3</id>
+      <name>club colegio nacional de iquitos</name>
+      <picture_file_name>club_colegio-nacional-de-iquitos_short_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>4</id>
+      <name>club deportivo guadalajara</name>
+      <picture_file_name>club_deportivo-guadalajara_short_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>5</id>
+      <name>club deportivo universidad cesar vallejo</name>
+      <picture_file_name>club_deportivo-universidad-cesar-vallejo_short_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>6</id>
+      <name>club deportivo universidad san martin de porres</name>
+      <picture_file_name>club_deportivo-universidad-san-martin-de-porres_short_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>7</id>
+      <name>club fbc melgar</name>
+      <picture_file_name>club_fbc-melgar_short_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>8</id>
+      <name>club inti gas deportes</name>
+      <picture_file_name>club_inti-gas-deportes_short_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>9</id>
+      <name>club jose galvez fbc</name>
+      <picture_file_name>club_jose-galvez-fbc_short_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>10</id>
+      <name>club juan aurich</name>
+      <picture_file_name>club_juan-aurich_short_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>11</id>
+      <name>club leon de huanuco</name>
+      <picture_file_name>club_leon-de-huanuco_short_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>12</id>
+      <name>club sao paulo futebol club</name>
+      <picture_file_name>club_sao-paulo-futebol-club_short_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>13</id>
+      <name>club sport boys association</name>
+      <picture_file_name>club_sport-boys-association_short_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>14</id>
+      <name>club sport club internacional</name>
+      <picture_file_name>club_sport-club-internacional_short_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>15</id>
+      <name>club sport huancayo</name>
+      <picture_file_name>club_sport-huancayo_short_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>16</id>
+      <name>club sporting cristal</name>
+      <picture_file_name>club_sporting-cristal_short_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>17</id>
+      <name>club sportivo cienciano</name>
+      <picture_file_name>club_sportivo-cienciano_short_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>18</id>
+      <name>club total chalaco futbol club</name>
+      <picture_file_name>club_total-chalaco-futbol-club_short_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>19</id>
+      <name>club universidad de chile</name>
+      <picture_file_name>club_universidad-de-chile_short_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>20</id>
+      <name>club universitario de deportes</name>
+      <picture_file_name>club_universitario-de-deportes_short_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>21</id>
+      <name>club alianza atletico de sullana</name>
+      <picture_file_name>club_alianza-atletico-de-sullana_short_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>22</id>
+      <name>club alianza lima</name>
+      <picture_file_name>club_alianza-lima_short_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>23</id>
+      <name>club colegio nacional de iquitos</name>
+      <picture_file_name>club_colegio-nacional-de-iquitos_short_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>24</id>
+      <name>club deportivo guadalajara</name>
+      <picture_file_name>club_deportivo-guadalajara_short_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>25</id>
+      <name>club deportivo universidad cesar vallejo</name>
+      <picture_file_name>club_deportivo-universidad-cesar-vallejo_short_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>26</id>
+      <name>club deportivo universidad san martin de porres</name>
+      <picture_file_name>club_deportivo-universidad-san-martin-de-porres_short_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>27</id>
+      <name>club fbc melgar</name>
+      <picture_file_name>club_fbc-melgar_short_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>28</id>
+      <name>club inti gas deportes</name>
+      <picture_file_name>club_inti-gas-deportes_short_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>29</id>
+      <name>club jose galvez fbc</name>
+      <picture_file_name>club_jose-galvez-fbc_short_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>30</id>
+      <name>club juan aurich</name>
+      <picture_file_name>club_juan-aurich_short_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>31</id>
+      <name>club leon de huanuco</name>
+      <picture_file_name>club_leon-de-huanuco_short_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>32</id>
+      <name>club sao paulo futebol club</name>
+      <picture_file_name>club_sao-paulo-futebol-club_short_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>33</id>
+      <name>club sport boys association</name>
+      <picture_file_name>club_sport-boys-association_short_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>34</id>
+      <name>club sport club internacional</name>
+      <picture_file_name>club_sport-club-internacional_short_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>35</id>
+      <name>club sport huancayo</name>
+      <picture_file_name>club_sport-huancayo_short_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>36</id>
+      <name>club sporting cristal</name>
+      <picture_file_name>club_sporting-cristal_short_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>37</id>
+      <name>club sportivo cienciano</name>
+      <picture_file_name>club_sportivo-cienciano_short_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>38</id>
+      <name>club total chalaco futbol club</name>
+      <picture_file_name>club_total-chalaco-futbol-club_short_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>39</id>
+      <name>club universidad de chile</name>
+      <picture_file_name>club_universidad-de-chile_short_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>40</id>
+      <name>club universitario de deportes</name>
+      <picture_file_name>club_universitario-de-deportes_short_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+  </group_shorts>
+  <group_snickers id="snickers">
+    <item>
+      <id>1</id>
+      <name>club alianza atletico de sullana</name>
+      <picture_file_name>club_alianza-atletico-de-sullana_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>2</id>
+      <name>club alianza lima</name>
+      <picture_file_name>club_alianza-lima_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>3</id>
+      <name>club colegio nacional de iquitos</name>
+      <picture_file_name>club_colegio-nacional-de-iquitos_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>4</id>
+      <name>club deportivo guadalajara</name>
+      <picture_file_name>club_deportivo-guadalajara_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>5</id>
+      <name>club deportivo universidad cesar vallejo</name>
+      <picture_file_name>club_deportivo-universidad-cesar-vallejo_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>6</id>
+      <name>club deportivo universidad san martin de porres</name>
+      <picture_file_name>club_deportivo-universidad-san-martin-de-porres_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>7</id>
+      <name>club fbc melgar</name>
+      <picture_file_name>club_fbc-melgar_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>8</id>
+      <name>club inti gas deportes</name>
+      <picture_file_name>club_inti-gas-deportes_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>9</id>
+      <name>club jose galvez fbc</name>
+      <picture_file_name>club_jose-galvez-fbc_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>10</id>
+      <name>club juan aurich</name>
+      <picture_file_name>club_juan-aurich_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>11</id>
+      <name>club leon de huanuco</name>
+      <picture_file_name>club_leon-de-huanuco_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>12</id>
+      <name>club sao paulo futebol club</name>
+      <picture_file_name>club_sao-paulo-futebol-club_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>13</id>
+      <name>club sport boys association</name>
+      <picture_file_name>club_sport-boys-association_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>14</id>
+      <name>club sport club internacional</name>
+      <picture_file_name>club_sport-club-internacional_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>15</id>
+      <name>club sport huancayo</name>
+      <picture_file_name>club_sport-huancayo_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>16</id>
+      <name>club sporting cristal</name>
+      <picture_file_name>club_sporting-cristal_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>17</id>
+      <name>club sportivo cienciano</name>
+      <picture_file_name>club_sportivo-cienciano_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>18</id>
+      <name>club total chalaco futbol club</name>
+      <picture_file_name>club_total-chalaco-futbol-club_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>19</id>
+      <name>club universidad de chile</name>
+      <picture_file_name>club_universidad-de-chile_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>20</id>
+      <name>club universitario de deportes</name>
+      <picture_file_name>club_universitario-de-deportes_snickers_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>21</id>
+      <name>club alianza atletico de sullana</name>
+      <picture_file_name>club_alianza-atletico-de-sullana_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>22</id>
+      <name>club alianza lima</name>
+      <picture_file_name>club_alianza-lima_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>23</id>
+      <name>club colegio nacional de iquitos</name>
+      <picture_file_name>club_colegio-nacional-de-iquitos_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>24</id>
+      <name>club deportivo guadalajara</name>
+      <picture_file_name>club_deportivo-guadalajara_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>25</id>
+      <name>club deportivo universidad cesar vallejo</name>
+      <picture_file_name>club_deportivo-universidad-cesar-vallejo_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>26</id>
+      <name>club deportivo universidad san martin de porres</name>
+      <picture_file_name>club_deportivo-universidad-san-martin-de-porres_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>27</id>
+      <name>club fbc melgar</name>
+      <picture_file_name>club_fbc-melgar_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>28</id>
+      <name>club inti gas deportes</name>
+      <picture_file_name>club_inti-gas-deportes_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>29</id>
+      <name>club jose galvez fbc</name>
+      <picture_file_name>club_jose-galvez-fbc_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>30</id>
+      <name>club juan aurich</name>
+      <picture_file_name>club_juan-aurich_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>31</id>
+      <name>club leon de huanuco</name>
+      <picture_file_name>club_leon-de-huanuco_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>32</id>
+      <name>club sao paulo futebol club</name>
+      <picture_file_name>club_sao-paulo-futebol-club_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>33</id>
+      <name>club sport boys association</name>
+      <picture_file_name>club_sport-boys-association_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>34</id>
+      <name>club sport club internacional</name>
+      <picture_file_name>club_sport-club-internacional_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>35</id>
+      <name>club sport huancayo</name>
+      <picture_file_name>club_sport-huancayo_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>36</id>
+      <name>club sporting cristal</name>
+      <picture_file_name>club_sporting-cristal_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>37</id>
+      <name>club sportivo cienciano</name>
+      <picture_file_name>club_sportivo-cienciano_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>38</id>
+      <name>club total chalaco futbol club</name>
+      <picture_file_name>club_total-chalaco-futbol-club_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>39</id>
+      <name>club universidad de chile</name>
+      <picture_file_name>club_universidad-de-chile_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>40</id>
+      <name>club universitario de deportes</name>
+      <picture_file_name>club_universitario-de-deportes_snickers_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+  </group_snickers>
+  <group_shoes id="shoes">
+    <item>
+      <id>1</id>
+      <name>amarillo</name>
+      <picture_file_name>amarillo_shoes_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>2</id>
+      <name>negro</name>
+      <picture_file_name>negro_shoes_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>3</id>
+      <name>turquesa</name>
+      <picture_file_name>turquesa_shoes_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>4</id>
+      <name>verde</name>
+      <picture_file_name>verde_shoes_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>5</id>
+      <name>blanco</name>
+      <picture_file_name>blanco_shoes_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>6</id>
+      <name>celeste</name>
+      <picture_file_name>celeste_shoes_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>7</id>
+      <name>naranja</name>
+      <picture_file_name>naranja_shoes_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>8</id>
+      <name>rojo</name>
+      <picture_file_name>rojo_shoes_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>9</id>
+      <name>rojos</name>
+      <picture_file_name>rojos_shoes_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>10</id>
+      <name>spain</name>
+      <picture_file_name>spain_shoes_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>11</id>
+      <name>verde</name>
+      <picture_file_name>verde_shoes_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+  </group_shoes>
+  <group_head id="head">
+    <item>
+      <id>1</id>
+      <name>armado</name>
+      <picture_file_name>armado_head_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>2</id>
+      <name>cola2</name>
+      <picture_file_name>cola2_head_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>3</id>
+      <name>cola</name>
+      <picture_file_name>cola_head_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>4</id>
+      <name>corto</name>
+      <picture_file_name>corto_head_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>5</id>
+      <name>emo</name>
+      <picture_file_name>emo_head_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>6</id>
+      <name>ondulado</name>
+      <picture_file_name>ondulado_head_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>7</id>
+      <name>rasta</name>
+      <picture_file_name>rasta_head_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>8</id>
+      <name>rubio</name>
+      <picture_file_name>rubio_head_1_f.swf
+</picture_file_name>
+      <sex>1</sex>
+    </item>
+    <item>
+      <id>9</id>
+      <name>algeria</name>
+      <picture_file_name>algeria_head_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>10</id>
+      <name>default</name>
+      <picture_file_name>default_head_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>11</id>
+      <name>emo</name>
+      <picture_file_name>emo_head_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>12</id>
+      <name>mohawk</name>
+      <picture_file_name>mohawk_head_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>13</id>
+      <name>ondulado</name>
+      <picture_file_name>ondulado_head_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>14</id>
+      <name>rasta 2</name>
+      <picture_file_name>rasta_2_head_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>15</id>
+      <name>rasta</name>
+      <picture_file_name>rasta_head_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>16</id>
+      <name>raya al centro</name>
+      <picture_file_name>raya-al-centro_head_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+    <item>
+      <id>17</id>
+      <name>rulo</name>
+      <picture_file_name>rulo_head_1_m.swf
+</picture_file_name>
+      <sex>0</sex>
+    </item>
+  </group_head>
+</root>
